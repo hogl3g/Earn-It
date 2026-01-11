@@ -21,6 +21,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Debug workspace
+        run: |
+          pwd
+          ls -la
+          ls -la ..
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -29,14 +35,17 @@ jobs:
 
       - name: Install deps
         run: npm ci
+        working-directory: ${{ github.workspace }}
 
       - name: Run projector (Talisman, today UTC)
         run: |
           DATE=$(date -u +%F)
           npx tsx "server/cli/sports app 1.ts" --source talisman --date "$DATE"
+        working-directory: ${{ github.workspace }}
 
       - name: Build static page
         run: node scripts/generate_picks_html.mjs
+        working-directory: ${{ github.workspace }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
