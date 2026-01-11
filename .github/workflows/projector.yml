@@ -1,0 +1,55 @@
+name: Projector Pages
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '15 11 * * *' # 11:15 UTC daily
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Run projector (Talisman, today UTC)
+        run: |
+          DATE=$(date -u +%F)
+          npx tsx "server/cli/sports app 1.ts" --source talisman --date "$DATE"
+
+      - name: Build static page
+        run: node scripts/generate_picks_html.mjs
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
