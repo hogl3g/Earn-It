@@ -29,7 +29,11 @@ const escaped = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt
 
 const tableRows = rows.map((line) => {
   const cols = line.split(',');
-  return `<tr>${cols.map((c) => `<td>${escaped(c)}</td>`).join('')}</tr>`;
+  // Add asterisk to team_a (index 1) - the projected pick
+  return `<tr>${cols.map((c, idx) => {
+    const val = escaped(c);
+    return `<td>${idx === 1 ? val + ' *' : val}</td>`;
+  }).join('')}</tr>`;
 }).join('\n');
 
 const html = `<!DOCTYPE html>

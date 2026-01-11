@@ -563,7 +563,7 @@ async function main() {
     }
 
     // Rank picks by EV per $1 (descending) and write CSV + summary
-    const ranked = picks.filter(p => typeof p.ev_per_1 === "number" && (p.coverProb ?? 0) > 0.50).sort((a,b) => (b.ev_per_1 ?? 0) - (a.ev_per_1 ?? 0));
+    const ranked = picks.filter(p => typeof p.ev_per_1 === "number" && (p.coverProb ?? 0) > 0.75).sort((a,b) => (b.ev_per_1 ?? 0) - (a.ev_per_1 ?? 0));
     const top = ranked.slice(0, 20);
     const csvRows = [
       ["date","team_a","team_b","market_spread","model_spread","coverProb","impliedProb","edge","ev_per_1","kelly","stake_dollars"].join(",")
