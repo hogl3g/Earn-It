@@ -3,7 +3,7 @@ name: Projector Pages
 on:
   workflow_dispatch:
   schedule:
-    - cron: '15 11 * * *' # 11:15 UTC daily
+    - cron: '0 13 * * *' # 8:00 AM EST daily (1:00 PM UTC)
 
 permissions:
   contents: read
