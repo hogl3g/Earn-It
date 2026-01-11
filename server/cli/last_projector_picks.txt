@@ -1,0 +1,11 @@
+1. UAB vs East Carolina — EV/$1=0.649 Kelly=0.714 Stake=$713.98 Cover=86.4%
+2. Marist vs Rider — EV/$1=0.632 Kelly=0.695 Stake=$694.66 Cover=85.5%
+3. Quinnipiac vs Sacred Heart — EV/$1=0.366 Kelly=0.403 Stake=$402.76 Cover=71.6%
+4. Siena vs Mount St. Mary's — EV/$1=0.348 Kelly=0.383 Stake=$382.60 Cover=70.6%
+5. Northwestern vs Rutgers — EV/$1=0.242 Kelly=0.266 Stake=$266.26 Cover=65.1%
+6. Illinois vs Iowa — EV/$1=0.241 Kelly=0.265 Stake=$265.42 Cover=65.0%
+7. Northern Kentucky vs Green Bay — EV/$1=0.181 Kelly=0.199 Stake=$198.64 Cover=61.8%
+8. Ohio St. vs Washington — EV/$1=0.110 Kelly=0.121 Stake=$120.94 Cover=58.1%
+9. Memphis vs Florida Atlantic — EV/$1=0.066 Kelly=0.073 Stake=$72.64 Cover=55.8%
+10. Purdue Fort Wayne vs Robert Morris — EV/$1=0.010 Kelly=0.011 Stake=$10.90 Cover=52.9%
+11. Charlotte vs Rice — EV/$1=-0.015 Kelly=0.000 Stake=$0.00 Cover=51.6%

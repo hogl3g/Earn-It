@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 210 11% 98%; /* #F5F7FA */
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 207 90% 54%; /* #3B82F6 - earn-blue */
+  --primary-foreground: 211 100% 99%;
+  --secondary: 60 4.8% 95.9%;
+  --secondary-foreground: 24 9.8% 10%;
+  --accent: 60 4.8% 95.9%;
+  --accent-foreground: 24 9.8% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+  
+  /* EarnIt Custom Colors */
+  --earn-blue: 207 90% 54%; /* #3B82F6 */
+  --earn-green: 158 64% 52%; /* #10B981 */
+  --earn-gold: 45 93% 47%; /* #F59E0B */
+  --kid-pink: 330 81% 60%; /* #EC4899 */
+  --kid-purple: 258 90% 66%; /* #8B5CF6 */
+  --kid-cyan: 195 100% 44%; /* #06B6D4 */
+  --parent-gray: 218 11% 33%; /* #374151 */
+  --parent-dark: 217 19% 20%; /* #1F2937 */
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .kid-gradient {
+    background: linear-gradient(135deg, hsl(var(--kid-pink)) 0%, hsl(var(--kid-purple)) 50%, hsl(var(--kid-cyan)) 100%);
+  }
+  
+  .parent-gradient {
+    background: linear-gradient(135deg, hsl(var(--parent-gray)) 0%, hsl(var(--parent-dark)) 100%);
+  }
+  
+  .earn-blue {
+    color: hsl(var(--earn-blue));
+  }
+  
+  .bg-earn-blue {
+    background-color: hsl(var(--earn-blue));
+  }
+  
+  .earn-green {
+    color: hsl(var(--earn-green));
+  }
+  
+  .bg-earn-green {
+    background-color: hsl(var(--earn-green));
+  }
+  
+  .earn-gold {
+    color: hsl(var(--earn-gold));
+  }
+  
+  .bg-earn-gold {
+    background-color: hsl(var(--earn-gold));
+  }
+  
+  .kid-pink {
+    color: hsl(var(--kid-pink));
+  }
+  
+  .bg-kid-pink {
+    background-color: hsl(var(--kid-pink));
+  }
+  
+  .kid-purple {
+    color: hsl(var(--kid-purple));
+  }
+  
+  .bg-kid-purple {
+    background-color: hsl(var(--kid-purple));
+  }
+  
+  .kid-cyan {
+    color: hsl(var(--kid-cyan));
+  }
+  
+  .bg-kid-cyan {
+    background-color: hsl(var(--kid-cyan));
+  }
+  
+  .parent-gray {
+    color: hsl(var(--parent-gray));
+  }
+  
+  .bg-parent-gray {
+    background-color: hsl(var(--parent-gray));
+  }
+  
+  .parent-dark {
+    color: hsl(var(--parent-dark));
+  }
+  
+  .bg-parent-dark {
+    background-color: hsl(var(--parent-dark));
+  }
+
+  .bounce-slow {
+    animation: bounce 2s infinite;
+  }
+  
+  .pulse-ring {
+    animation: pulse-ring 1.5s ease-out infinite;
+  }
+  
+  @keyframes pulse-ring {
+    0% {
+      transform: scale(.33);
+      opacity: 1;
+    }
+    80%, 100% {
+      transform: scale(2.33);
+      opacity: 0;
+    }
+  }
+  
+  .flip-card {
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+}
+
+/* Import Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');

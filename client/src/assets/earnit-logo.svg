@@ -1,0 +1,60 @@
+<svg width="200" height="80" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- App name at the top -->
+  <text x="100" y="20" font-family="Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle" fill="#2563EB">Earn It</text>
+  
+  <!-- Mouse body -->
+  <ellipse cx="100" cy="50" rx="25" ry="20" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="2"/>
+  
+  <!-- Mouse head -->
+  <circle cx="100" cy="35" r="12" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="2"/>
+  
+  <!-- Mouse ears -->
+  <circle cx="92" cy="26" r="5" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="1"/>
+  <circle cx="108" cy="26" r="5" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="1"/>
+  <circle cx="92" cy="26" r="2" fill="#F87171"/>
+  <circle cx="108" cy="26" r="2" fill="#F87171"/>
+  
+  <!-- Mouse eyes -->
+  <circle cx="96" cy="33" r="2" fill="#1F2937"/>
+  <circle cx="104" cy="33" r="2" fill="#1F2937"/>
+  <circle cx="97" cy="32" r="0.5" fill="#FFFFFF"/>
+  <circle cx="105" cy="32" r="0.5" fill="#FFFFFF"/>
+  
+  <!-- Mouse nose -->
+  <circle cx="100" cy="37" r="1" fill="#F87171"/>
+  
+  <!-- Gold chain around neck -->
+  <path d="M 88 42 Q 94 40 100 40 Q 106 40 112 42" stroke="#FFD700" stroke-width="3" fill="none"/>
+  <circle cx="91" cy="41" r="2" fill="#FFD700" stroke="#FFA500" stroke-width="1"/>
+  <circle cx="97" cy="40" r="2" fill="#FFD700" stroke="#FFA500" stroke-width="1"/>
+  <circle cx="103" cy="40" r="2" fill="#FFD700" stroke="#FFA500" stroke-width="1"/>
+  <circle cx="109" cy="41" r="2" fill="#FFD700" stroke="#FFA500" stroke-width="1"/>
+  
+  <!-- Money pendant -->
+  <circle cx="100" cy="46" r="5" fill="#FFD700" stroke="#FFA500" stroke-width="2"/>
+  <text x="100" y="49" font-family="Arial, sans-serif" font-size="6" font-weight="900" text-anchor="middle" fill="#2563EB">$</text>
+  
+  <!-- Mouse arms -->
+  <ellipse cx="80" cy="45" rx="8" ry="4" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="1"/>
+  <ellipse cx="120" cy="45" rx="8" ry="4" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="1"/>
+  
+  <!-- Vacuum cleaner -->
+  <rect x="125" y="40" width="35" height="12" rx="6" fill="#4B5563" stroke="#374151" stroke-width="2"/>
+  <rect x="160" y="43" width="15" height="6" rx="3" fill="#6B7280"/>
+  <circle cx="130" cy="46" r="3" fill="#374151"/>
+  <circle cx="155" cy="46" r="3" fill="#374151"/>
+  
+  <!-- Vacuum hose -->
+  <path d="M 72 45 Q 65 40 60 45 Q 55 50 60 55 Q 65 50 72 50" stroke="#374151" stroke-width="3" fill="none"/>
+  
+  <!-- Vacuum attachment -->
+  <rect x="55" y="43" width="8" height="4" rx="2" fill="#6B7280"/>
+  
+  <!-- Mouse tail -->
+  <path d="M 75 55 Q 65 60 70 65 Q 75 60 65 55" stroke="#9CA3AF" stroke-width="2" fill="none"/>
+  
+  <!-- Small dust particles -->
+  <circle cx="45" cy="50" r="1" fill="#D1D5DB" opacity="0.7"/>
+  <circle cx="48" cy="45" r="1" fill="#D1D5DB" opacity="0.7"/>
+  <circle cx="42" cy="48" r="1" fill="#D1D5DB" opacity="0.7"/>
+</svg>

@@ -1,0 +1,19 @@
+{
+  "game_id": "DUKE_UNC_20260115",
+  "bet_type": "spread",
+  "side": "Duke",
+  "market_line": -4.5,
+  "model_line": -7.1,
+  "edge_points": 2.6,
+  "cover_probability": 0.609,
+  "confidence_score": 83,
+  "stake_units": 1.4,
+  "kelly_fraction": 0.25,
+  "timing": "bet_now",
+  "risk_flags": [],
+  "drivers": [
+    "KenPom efficiency mismatch",
+    "Opponent rebounding weakness",
+    "Guard usage advantage"
+  ]
+}

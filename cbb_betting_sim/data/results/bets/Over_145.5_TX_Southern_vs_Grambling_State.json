@@ -1,0 +1,12 @@
+{
+  "matchup": "Texas Southern vs Grambling State",
+  "market": { "type": "total", "line": "Over 145.5", "value": 145.5 },
+  "selection": "Over 145.5",
+  "model_total": 148.9,
+  "edge": 3.4,
+  "over_probability": 0.63,
+  "confidence_pct": 79,
+  "stake_units": 0.75,
+  "notes": [],
+  "generated_at": "2026-01-08T00:00:00Z"
+}
