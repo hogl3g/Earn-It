@@ -64,6 +64,7 @@ MANUAL_SCORES: Dict[Tuple[str, str], Tuple[int, int]] = {
     ("purdue fort wayne", "robert morris"): (79, 74),
     ("charlotte", "rice"): (74, 73),
     ("siena", "mount st mary's"): (67, 50),
+    ("siena", "mount saint mary's"): (67, 50),
     ("marist", "rider"): (71, 49),
     ("quinnipiac", "sacred heart"): (70, 60),
 }
