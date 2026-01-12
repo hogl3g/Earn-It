@@ -1,0 +1,112 @@
+{
+  "summary": {
+    "date": "2026-01-10",
+    "total_picks": 7,
+    "covers": 4,
+    "wins": 4,
+    "losses": 3,
+    "total_stake": 1768,
+    "total_profit": 607.76,
+    "roi": 34.39
+  },
+  "rows": [
+    {
+      "team_a": "Marist",
+      "team_b": "Rider",
+      "a_score": 62.0,
+      "b_score": 49.0,
+      "margin": 13.0,
+      "market_spread": -14.63,
+      "model_spread": 2.5,
+      "covered": false,
+      "won": true,
+      "stake": 694.66,
+      "profit": 631.52,
+      "note": null
+    },
+    {
+      "team_a": "Quinnipiac",
+      "team_b": "Sacred Heart",
+      "a_score": 65.0,
+      "b_score": 49.0,
+      "margin": 16.0,
+      "market_spread": -6.5,
+      "model_spread": 2.5,
+      "covered": true,
+      "won": true,
+      "stake": 402.76,
+      "profit": 366.15,
+      "note": null
+    },
+    {
+      "team_a": "Saint Peter's",
+      "team_b": "Mount St. Mary's",
+      "a_score": 71.0,
+      "b_score": 68.0,
+      "margin": 3.0,
+      "market_spread": -5.86,
+      "model_spread": 2.5,
+      "covered": true,
+      "won": true,
+      "stake": 337,
+      "profit": 300,
+      "note": null
+    },
+    {
+      "team_a": "USC",
+      "team_b": "Minnesota",
+      "a_score": null,
+      "b_score": null,
+      "margin": null,
+      "market_spread": null,
+      "model_spread": 2.5,
+      "covered": null,
+      "won": false,
+      "stake": 69,
+      "profit": -69,
+      "note": "loss"
+    },
+    {
+      "team_a": "Akron",
+      "team_b": "Bowling Green",
+      "a_score": null,
+      "b_score": null,
+      "margin": null,
+      "market_spread": null,
+      "model_spread": 2.5,
+      "covered": null,
+      "won": false,
+      "stake": 48,
+      "profit": -48,
+      "note": "loss"
+    },
+    {
+      "team_a": "Northern Kentucky",
+      "team_b": "Milwaukee",
+      "a_score": 85.0,
+      "b_score": 67.0,
+      "margin": 18.0,
+      "market_spread": 2.89,
+      "model_spread": 2.5,
+      "covered": true,
+      "won": true,
+      "stake": 0,
+      "profit": 0,
+      "note": null
+    },
+    {
+      "team_a": "Wright St.",
+      "team_b": "Detroit Mercy",
+      "a_score": null,
+      "b_score": null,
+      "margin": null,
+      "market_spread": -8.13,
+      "model_spread": 2.5,
+      "covered": null,
+      "won": false,
+      "stake": 465,
+      "profit": 0,
+      "note": "no result"
+    }
+  ]
+}

@@ -7,9 +7,109 @@
   <style>
     body { font-family: Arial, sans-serif; margin: 24px; }
     h1 { margin-bottom: 8px; }
+    h2 { margin: 16px 0 12px 0; font-size: 18px; }
     .meta { margin-bottom: 16px; }
     .summary { margin: 12px 0; padding: 10px; background: #f7f9fb; border: 1px solid #e3e7ea; }
     .summary strong { margin-right: 6px; }
+    
+    .wins-losses-box {
+      margin: 24px 0;
+      padding: 20px;
+      background: #f0f9ff;
+      border: 2px solid #0284c7;
+      border-radius: 8px;
+    }
+    
+    .record-display {
+      display: flex;
+      gap: 20px;
+      margin-top: 12px;
+    }
+    
+    .record-item {
+      padding: 12px 16px;
+      border-radius: 6px;
+      min-width: 120px;
+    }
+    
+    .record-item.wins {
+      background: #dcfce7;
+      border: 1px solid #86efac;
+    }
+    
+    .record-item.losses {
+      background: #fee2e2;
+      border: 1px solid #fca5a5;
+    }
+    
+    .record-label {
+      display: block;
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 4px;
+    }
+    
+    .record-value {
+      display: block;
+      font-size: 28px;
+      font-weight: bold;
+      color: #222;
+    }
+    
+    .game-scores-box {
+      margin: 24px 0;
+      padding: 20px;
+      background: #fafaf9;
+      border: 1px solid #e7e5e4;
+      border-radius: 8px;
+    }
+    
+    .scores-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      font-size: 13px;
+    }
+    
+    .scores-table th,
+    .scores-table td {
+      padding: 8px;
+      border: 1px solid #e5e7eb;
+      text-align: left;
+    }
+    
+    .scores-table th {
+      background: #f3f4f6;
+      font-weight: 600;
+      color: #374151;
+    }
+    
+    .scores-table tbody tr:nth-child(odd) {
+      background: #ffffff;
+    }
+    
+    .scores-table tbody tr:nth-child(even) {
+      background: #f9fafb;
+    }
+    
+    .result {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 12px;
+    }
+    
+    .result.win {
+      background: #dcfce7;
+      color: #166534;
+    }
+    
+    .result.loss {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+    
     table { border-collapse: collapse; width: 100%; font-size: 14px; }
     th, td { border: 1px solid #ccc; padding: 6px 8px; text-align: left; }
     th { background: #f4f4f4; }
@@ -20,32 +120,136 @@
 </head>
 <body>
   <h1>Projector Picks</h1>
-  <div class="meta">Updated: 2026-01-12T09:16:32.254Z</div>
+  <div class="meta">Updated: 2026-01-12T20:51:52.274Z</div>
   <a class="download" href="./ts_projector_picks.csv" download>Download CSV</a>
-  
-  <div class="summary">
-    <div><strong>Date:</strong> 2026-01-11</div>
-    <div><strong>Picks:</strong> 11 | <strong>Wins:</strong> 5 | <strong>Covers:</strong> 5</div>
-    <div><strong>Total Stake:</strong> $2032.2200000000003 | <strong>Profit:</strong> $590.39 | <strong>ROI:</strong> 29.05%</div>
-  </div>
   
   <div class="scroll">
     <table>
-      <thead><tr><th>date</th><th>team_a</th><th>team_b</th><th>market_spread</th><th>model_spread</th><th>coverProb</th><th>impliedProb</th><th>edge</th><th>ev_per_1</th><th>kelly</th><th>stake_dollars</th><th>a_score</th><th>b_score</th><th>margin</th><th>covered</th><th>won</th><th>profit</th></tr></thead>
+      <thead><tr><th>date</th><th>team_a</th><th>team_b</th><th>market_spread</th><th>model_spread</th><th>coverProb</th><th>impliedProb</th><th>edge</th><th>ev_per_1</th><th>kelly</th><th>stake_dollars</th></tr></thead>
       <tbody>
-        <tr><td>2026-01-11T00:05:20.055Z</td><td>UAB *</td><td>East Carolina</td><td>-15.76</td><td>2.5</td><td>0.8638</td><td>0.5238095238095238</td><td>0.3399904761904762</td><td>0.6490727272727274</td><td>0.7139800000000001</td><td>713.98</td><td></td><td></td><td></td><td></td><td></td><td>0</td></tr>
-<tr><td>2026-01-11T00:05:20.055Z</td><td>Marist *</td><td>Rider</td><td>-14.63</td><td>2.5</td><td>0.8546</td><td>0.5238095238095238</td><td>0.3307904761904762</td><td>0.631509090909091</td><td>0.69466</td><td>694.6600000000001</td><td>71</td><td>49</td><td>22</td><td>Y</td><td>W</td><td>631.52</td></tr>
-<tr><td>2026-01-11T00:05:20.055Z</td><td>Quinnipiac *</td><td>Sacred Heart</td><td>-6.5</td><td>2.5</td><td>0.7156</td><td>0.5238095238095238</td><td>0.19179047619047618</td><td>0.36614545454545466</td><td>0.4027600000000001</td><td>402.7600000000001</td><td>70</td><td>60</td><td>10</td><td>Y</td><td>W</td><td>366.15</td></tr>
-<tr><td>2026-01-11T00:05:20.055Z</td><td>Siena *</td><td>Mount St. Mary's</td><td>-5.86</td><td>2.5</td><td>0.706</td><td>0.5238095238095238</td><td>0.18219047619047612</td><td>0.3478181818181818</td><td>0.38259999999999994</td><td>382.59999999999997</td><td></td><td></td><td></td><td></td><td></td><td>0</td></tr>
-<tr><td>2026-01-11T00:05:20.055Z</td><td>Northwestern *</td><td>Rutgers</td><td>-8.17</td><td>-4.5</td><td>0.6506</td><td>0.5238095238095238</td><td>0.12679047619047612</td><td>0.2420545454545454</td><td>0.26625999999999994</td><td>266.25999999999993</td><td>75</td><td>77</td><td>-2</td><td>N</td><td>L</td><td>-266.26</td></tr>
-<tr><td>2026-01-11T00:05:20.055Z</td><td>Illinois *</td><td>Iowa</td><td>-3.13</td><td>2.5</td><td>0.6502</td><td>0.5238095238095238</td><td>0.12639047619047616</td><td>0.2412909090909091</td><td>0.26542</td><td>265.42</td><td>75</td><td>69</td><td>6</td><td>Y</td><td>W</td><td>241.29</td></tr>
-<tr><td>2026-01-11T00:05:20.055Z</td><td>Northern Kentucky *</td><td>Green Bay</td><td>-1.99</td><td>2.5</td><td>0.6184</td><td>0.5238095238095238</td><td>0.09459047619047611</td><td>0.18058181818181818</td><td>0.19863999999999998</td><td>198.64</td><td>78</td><td>80</td><td>-2</td><td>N</td><td>L</td><td>-198.64</td></tr>
-<tr><td>2026-01-11T00:05:20.055Z</td><td>Ohio St. *</td><td>Washington</td><td>0.4</td><td>2.5</td><td>0.5814</td><td>0.5238095238095238</td><td>0.05759047619047619</td><td>0.10994545454545468</td><td>0.12094000000000013</td><td>120.94000000000013</td><td>74</td><td>81</td><td>-7</td><td>N</td><td>L</td><td>-120.94</td></tr>
-<tr><td>2026-01-11T00:05:20.055Z</td><td>Memphis *</td><td>Florida Atlantic</td><td>0.9</td><td>2.5</td><td>0.5584</td><td>0.5238095238095238</td><td>0.03459047619047617</td><td>0.06603636363636367</td><td>0.07264000000000004</td><td>72.64000000000004</td><td>78</td><td>89</td><td>-11</td><td>N</td><td>L</td><td>-72.64</td></tr>
-<tr><td>2026-01-11T00:05:20.055Z</td><td>Purdue Fort Wayne *</td><td>Robert Morris</td><td>2.82</td><td>2.5</td><td>0.529</td><td>0.5238095238095238</td><td>0.00519047619047619</td><td>0.009909090909090978</td><td>0.010900000000000075</td><td>10.900000000000075</td><td>79</td><td>74</td><td>5</td><td>Y</td><td>W</td><td>9.91</td></tr>
-<tr><td>2026-01-11T00:05:20.055Z</td><td>Charlotte *</td><td>Rice</td><td>2.19</td><td>2.5</td><td>0.5162</td><td>0.5238095238095238</td><td>-0.007609523809523844</td><td>-0.014527272727272722</td><td>0</td><td>0</td><td>74</td><td>73</td><td>1</td><td>Y</td><td>W</td><td>0</td></tr>
+        <tr><td>2026-01-12T20:49:59.533Z</td><td>Grambling St. *</td><td>Florida A&amp;M</td><td>-6.06</td><td>2.5</td><td>0.7222</td><td>0.5238095238095238</td><td>0.19839047619047612</td><td>0.3787454545454545</td><td>0.41661999999999993</td><td>416.61999999999995</td></tr>
+<tr><td>2026-01-12T20:49:59.533Z</td><td>UT Rio Grande Valley *</td><td>Northwestern St.</td><td>-6.19</td><td>2.5</td><td>0.7128</td><td>0.5238095238095238</td><td>0.18899047619047615</td><td>0.3608</td><td>0.39687999999999996</td><td>396.87999999999994</td></tr>
+<tr><td>2026-01-12T20:49:59.533Z</td><td>North Carolina Centr *</td><td>Morgan St.</td><td>-5.07</td><td>2.5</td><td>0.6964</td><td>0.5238095238095238</td><td>0.17259047619047618</td><td>0.32949090909090917</td><td>0.36244000000000004</td><td>362.44000000000005</td></tr>
+<tr><td>2026-01-12T20:49:59.533Z</td><td>Texas A&amp;M Corpus Chr *</td><td>East Texas A&amp;M</td><td>-2.42</td><td>2.5</td><td>0.6392</td><td>0.5238095238095238</td><td>0.11539047619047615</td><td>0.2202909090909091</td><td>0.24231999999999998</td><td>242.32</td></tr>
       </tbody>
     </table>
   </div>
+  
+  
+  <div class="wins-losses-box">
+    <h2>Record (Cumulative)</h2>
+    <div class="record-display">
+      <div class="record-item wins">
+        <span class="record-label">Wins</span>
+        <span class="record-value">9</span>
+      </div>
+      <div class="record-item losses">
+        <span class="record-label">Losses</span>
+        <span class="record-value">7</span>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="game-scores-box">
+    <h2>Previous Day Game Scores</h2>
+    <table class="scores-table">
+      <thead>
+        <tr>
+          <th>Away Team</th>
+          <th>Home Team</th>
+          <th>Away Score</th>
+          <th>Home Score</th>
+          <th>Margin</th>
+          <th>Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+          <tr>
+            <td>Marist</td>
+            <td>Rider</td>
+            <td>71</td>
+            <td>49</td>
+            <td>22</td>
+            <td><span class="result win">W</span></td>
+          </tr>
+        
+          <tr>
+            <td>Quinnipiac</td>
+            <td>Sacred Heart</td>
+            <td>70</td>
+            <td>60</td>
+            <td>10</td>
+            <td><span class="result win">W</span></td>
+          </tr>
+        
+          <tr>
+            <td>Northwestern</td>
+            <td>Rutgers</td>
+            <td>75</td>
+            <td>77</td>
+            <td>-2</td>
+            <td><span class="result loss">L</span></td>
+          </tr>
+        
+          <tr>
+            <td>Illinois</td>
+            <td>Iowa</td>
+            <td>75</td>
+            <td>69</td>
+            <td>6</td>
+            <td><span class="result win">W</span></td>
+          </tr>
+        
+          <tr>
+            <td>Northern Kentucky</td>
+            <td>Green Bay</td>
+            <td>78</td>
+            <td>80</td>
+            <td>-2</td>
+            <td><span class="result loss">L</span></td>
+          </tr>
+        
+          <tr>
+            <td>Ohio St.</td>
+            <td>Washington</td>
+            <td>74</td>
+            <td>81</td>
+            <td>-7</td>
+            <td><span class="result loss">L</span></td>
+          </tr>
+        
+          <tr>
+            <td>Memphis</td>
+            <td>Florida Atlantic</td>
+            <td>78</td>
+            <td>89</td>
+            <td>-11</td>
+            <td><span class="result loss">L</span></td>
+          </tr>
+        
+          <tr>
+            <td>Purdue Fort Wayne</td>
+            <td>Robert Morris</td>
+            <td>79</td>
+            <td>74</td>
+            <td>5</td>
+            <td><span class="result win">W</span></td>
+          </tr>
+        
+          <tr>
+            <td>Charlotte</td>
+            <td>Rice</td>
+            <td>74</td>
+            <td>73</td>
+            <td>1</td>
+            <td><span class="result win">W</span></td>
+          </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  
 </body>
 </html>

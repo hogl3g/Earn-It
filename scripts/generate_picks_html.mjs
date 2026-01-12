@@ -86,6 +86,108 @@ const tableRows = rows.map((line) => {
   }).join('')}</tr>`;
 }).join('\n');
 
+// Build wins/losses summary box
+let winsLossesHtml = '';
+let gameScoresHtml = '';
+
+// Aggregate all grades files for cumulative totals
+let cumulativeWins = 0;
+let cumulativeLosses = 0;
+const allGameScores = [];
+
+try {
+  // Find all grades_*.json files in data/results
+  const resultsDir = path.join(root, 'data', 'results');
+  const gradesFiles = fs.readdirSync(resultsDir).filter(f => f.match(/^grades_\d{8}\.json$/)).sort().reverse();
+  
+  // Get the most recent grades file for game scores
+  const mostRecentFile = gradesFiles[0];
+  
+  gradesFiles.forEach(file => {
+    try {
+      let gj = fs.readFileSync(path.join(resultsDir, file), 'utf-8');
+      gj = gj.replace(/\bNaN\b/g, 'null');
+      const parsed = JSON.parse(gj);
+      const rowsJson = Array.isArray(parsed.rows) ? parsed.rows : [];
+      
+      rowsJson.forEach(row => {
+        if (row.won === true) {
+          cumulativeWins++;
+        } else if (row.won === false) {
+          cumulativeLosses++;
+        }
+        
+        // Only collect game scores from the most recent file
+        if (file === mostRecentFile && row.a_score != null && row.b_score != null) {
+          allGameScores.push({
+            team_a: row.team_a,
+            team_b: row.team_b,
+            a_score: row.a_score,
+            b_score: row.b_score,
+            margin: row.margin,
+            covered: row.covered,
+            won: row.won
+          });
+        }
+      });
+    } catch (err) {
+      console.warn(`Could not parse ${file}:`, err?.message || String(err));
+    }
+  });
+} catch (err) {
+  console.warn('Could not read grades files:', err?.message || String(err));
+}
+
+if (cumulativeWins > 0 || cumulativeLosses > 0) {
+  winsLossesHtml = `
+  <div class="wins-losses-box">
+    <h2>Record (Cumulative)</h2>
+    <div class="record-display">
+      <div class="record-item wins">
+        <span class="record-label">Wins</span>
+        <span class="record-value">${cumulativeWins}</span>
+      </div>
+      <div class="record-item losses">
+        <span class="record-label">Losses</span>
+        <span class="record-value">${cumulativeLosses}</span>
+      </div>
+    </div>
+  </div>
+  `;
+}
+
+if (allGameScores.length > 0) {
+  gameScoresHtml = `
+  <div class="game-scores-box">
+    <h2>Previous Day Game Scores</h2>
+    <table class="scores-table">
+      <thead>
+        <tr>
+          <th>Away Team</th>
+          <th>Home Team</th>
+          <th>Away Score</th>
+          <th>Home Score</th>
+          <th>Margin</th>
+          <th>Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${allGameScores.map(game => `
+          <tr>
+            <td>${escaped(game.team_a)}</td>
+            <td>${escaped(game.team_b)}</td>
+            <td>${game.a_score}</td>
+            <td>${game.b_score}</td>
+            <td>${game.margin}</td>
+            <td><span class="result ${game.won ? 'win' : 'loss'}">${game.won ? 'W' : 'L'}</span></td>
+          </tr>
+        `).join('')}
+      </tbody>
+    </table>
+  </div>
+  `;
+}
+
 const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -95,9 +197,109 @@ const html = `<!DOCTYPE html>
   <style>
     body { font-family: Arial, sans-serif; margin: 24px; }
     h1 { margin-bottom: 8px; }
+    h2 { margin: 16px 0 12px 0; font-size: 18px; }
     .meta { margin-bottom: 16px; }
     .summary { margin: 12px 0; padding: 10px; background: #f7f9fb; border: 1px solid #e3e7ea; }
     .summary strong { margin-right: 6px; }
+    
+    .wins-losses-box {
+      margin: 24px 0;
+      padding: 20px;
+      background: #f0f9ff;
+      border: 2px solid #0284c7;
+      border-radius: 8px;
+    }
+    
+    .record-display {
+      display: flex;
+      gap: 20px;
+      margin-top: 12px;
+    }
+    
+    .record-item {
+      padding: 12px 16px;
+      border-radius: 6px;
+      min-width: 120px;
+    }
+    
+    .record-item.wins {
+      background: #dcfce7;
+      border: 1px solid #86efac;
+    }
+    
+    .record-item.losses {
+      background: #fee2e2;
+      border: 1px solid #fca5a5;
+    }
+    
+    .record-label {
+      display: block;
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 4px;
+    }
+    
+    .record-value {
+      display: block;
+      font-size: 28px;
+      font-weight: bold;
+      color: #222;
+    }
+    
+    .game-scores-box {
+      margin: 24px 0;
+      padding: 20px;
+      background: #fafaf9;
+      border: 1px solid #e7e5e4;
+      border-radius: 8px;
+    }
+    
+    .scores-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      font-size: 13px;
+    }
+    
+    .scores-table th,
+    .scores-table td {
+      padding: 8px;
+      border: 1px solid #e5e7eb;
+      text-align: left;
+    }
+    
+    .scores-table th {
+      background: #f3f4f6;
+      font-weight: 600;
+      color: #374151;
+    }
+    
+    .scores-table tbody tr:nth-child(odd) {
+      background: #ffffff;
+    }
+    
+    .scores-table tbody tr:nth-child(even) {
+      background: #f9fafb;
+    }
+    
+    .result {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 12px;
+    }
+    
+    .result.win {
+      background: #dcfce7;
+      color: #166534;
+    }
+    
+    .result.loss {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+    
     table { border-collapse: collapse; width: 100%; font-size: 14px; }
     th, td { border: 1px solid #ccc; padding: 6px 8px; text-align: left; }
     th { background: #f4f4f4; }
@@ -125,6 +327,9 @@ const html = `<!DOCTYPE html>
       </tbody>
     </table>
   </div>
+  
+  ${winsLossesHtml}
+  ${gameScoresHtml}
 </body>
 </html>`;
 

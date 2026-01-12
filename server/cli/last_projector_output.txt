@@ -1,160 +1,136 @@
 
-Game: Cleveland St. vs Detroit Mercy
+Game: Jackson St. vs Alabama A&M
 Model Spread: 2.5
-Cover Prob (A covers): 38.6%
+Cover Prob (A covers): 38.5%
+Over Prob: 81.0%
+Model Total: 140
+Market Spread: 8.23 Total: 129
+Edge vs implied: -13.88% EV/$1: -0.265 Kelly: 0.000
+
+Game: Alcorn St. vs Alabama St.
+Model Spread: 2.5
+Cover Prob (A covers): 32.1%
+Over Prob: 8.8%
+Model Total: 140
+Market Spread: 11.83 Total: 167
+Edge vs implied: -20.30% EV/$1: -0.388 Kelly: 0.000
+
+Game: Navy vs American
+Model Spread: 2.5
+Cover Prob (A covers): 50.4%
+Over Prob: 49.8%
+Model Total: 140
+Market Spread: 3.27 Total: 144
+Edge vs implied: -2.02% EV/$1: -0.039 Kelly: 0.000
+
+Game: Southern vs Bethune Cookman
+Model Spread: 2.5
+Cover Prob (A covers): 59.4%
+Over Prob: 23.8%
+Model Total: 140
+Market Spread: -0.65 Total: 155
+Edge vs implied: 7.04% EV/$1: 0.134 Kelly: 0.148
+
+Game: South Carolina St. vs Coppin St.
+Model Spread: 2.5
+Cover Prob (A covers): 56.2%
+Over Prob: 18.3%
+Model Total: 140
+Market Spread: 0.2 Total: 159
+Edge vs implied: 3.86% EV/$1: 0.074 Kelly: 0.081
+
+Game: Texas A&M Corpus Chr vs East Texas A&M
+Model Spread: 2.5
+Cover Prob (A covers): 63.9%
+Over Prob: 69.2%
+Model Total: 140
+Market Spread: -2.42 Total: 135
+Edge vs implied: 11.54% EV/$1: 0.220 Kelly: 0.242
+
+Game: Grambling St. vs Florida A&M
+Model Spread: 2.5
+Cover Prob (A covers): 72.2%
+Over Prob: 73.0%
+Model Total: 140
+Market Spread: -6.06 Total: 133
+Edge vs implied: 19.84% EV/$1: 0.379 Kelly: 0.417
+
+Game: Delaware St. vs Howard
+Model Spread: 2.5
+Cover Prob (A covers): 21.2%
+Over Prob: 67.2%
+Model Total: 140
+Market Spread: 16.79 Total: 136
+Edge vs implied: -31.20% EV/$1: -0.596 Kelly: 0.000
+
+Game: Houston Christian vs Lamar
+Model Spread: 2.5
+Cover Prob (A covers): 32.0%
+Over Prob: 83.1%
+Model Total: 140
+Market Spread: 11.97 Total: 127
+Edge vs implied: -20.42% EV/$1: -0.390 Kelly: 0.000
+
+Game: Nicholls vs McNeese
+Model Spread: 2.5
+Cover Prob (A covers): 26.1%
 Over Prob: 19.5%
 Model Total: 140
-Market Spread: 8.51 Total: 158
-Edge vs implied: -13.74% EV/$1: -0.262 Kelly: 0.000
+Market Spread: 14.62 Total: 158
+Edge vs implied: -26.30% EV/$1: -0.502 Kelly: 0.000
 
-Game: UAB vs East Carolina
+Game: North Carolina Centr vs Morgan St.
 Model Spread: 2.5
-Cover Prob (A covers): 86.4%
-Over Prob: 23.6%
+Cover Prob (A covers): 69.6%
+Over Prob: 22.4%
 Model Total: 140
-Market Spread: -15.76 Total: 156
-Edge vs implied: 34.00% EV/$1: 0.649 Kelly: 0.714
+Market Spread: -5.07 Total: 156
+Edge vs implied: 17.26% EV/$1: 0.329 Kelly: 0.362
 
-Game: Memphis vs Florida Atlantic
+Game: Maryland Eastern Sho vs Norfolk St.
 Model Spread: 2.5
-Cover Prob (A covers): 55.8%
-Over Prob: 16.8%
+Cover Prob (A covers): 39.4%
+Over Prob: 35.6%
 Model Total: 140
-Market Spread: 0.9 Total: 160
-Edge vs implied: 3.46% EV/$1: 0.066 Kelly: 0.073
+Market Spread: 7.6 Total: 150
+Edge vs implied: -12.96% EV/$1: -0.247 Kelly: 0.000
 
-Game: Northern Kentucky vs Green Bay
+Game: UT Rio Grande Valley vs Northwestern St.
 Model Spread: 2.5
-Cover Prob (A covers): 61.8%
-Over Prob: 58.4%
+Cover Prob (A covers): 71.3%
+Over Prob: 28.9%
 Model Total: 140
-Market Spread: -1.99 Total: 140
-Edge vs implied: 9.46% EV/$1: 0.181 Kelly: 0.199
+Market Spread: -6.19 Total: 153
+Edge vs implied: 18.90% EV/$1: 0.361 Kelly: 0.397
 
-Game: Canisius vs Iona
+Game: Arkansas Pine Bluff vs Prairie View A&M
 Model Spread: 2.5
-Cover Prob (A covers): 28.5%
-Over Prob: 60.4%
+Cover Prob (A covers): 47.2%
+Over Prob: 26.3%
 Model Total: 140
-Market Spread: 12.79 Total: 139
-Edge vs implied: -23.88% EV/$1: -0.456 Kelly: 0.000
+Market Spread: 3.92 Total: 155
+Edge vs implied: -5.20% EV/$1: -0.099 Kelly: 0.000
 
-Game: Illinois vs Iowa
+Game: New Orleans vs Southeastern Louisia
 Model Spread: 2.5
-Cover Prob (A covers): 65.0%
-Over Prob: 62.5%
+Cover Prob (A covers): 56.6%
+Over Prob: 63.3%
 Model Total: 140
-Market Spread: -3.13 Total: 138
-Edge vs implied: 12.64% EV/$1: 0.241 Kelly: 0.265
+Market Spread: 0.11 Total: 138
+Edge vs implied: 4.26% EV/$1: 0.081 Kelly: 0.089
 
-Game: Niagara vs Manhattan
+Game: Incarnate Word vs Stephen F. Austin
 Model Spread: 2.5
-Cover Prob (A covers): 34.3%
-Over Prob: 41.3%
+Cover Prob (A covers): 39.7%
+Over Prob: 37.4%
 Model Total: 140
-Market Spread: 10.12 Total: 147
-Edge vs implied: -18.06% EV/$1: -0.345 Kelly: 0.000
+Market Spread: 8.1 Total: 149
+Edge vs implied: -12.68% EV/$1: -0.242 Kelly: 0.000
 
-Game: IU Indy vs Milwaukee
-Model Spread: 2.5
-Cover Prob (A covers): 32.5%
-Over Prob: 0.5%
-Model Total: 140
-Market Spread: 10.77 Total: 188
-Edge vs implied: -19.84% EV/$1: -0.379 Kelly: 0.000
-
-Game: Siena vs Mount St. Mary's
-Model Spread: 2.5
-Cover Prob (A covers): 70.6%
-Over Prob: 79.0%
-Model Total: 140
-Market Spread: -5.86 Total: 130
-Edge vs implied: 18.22% EV/$1: 0.348 Kelly: 0.383
-
-Game: Wright St. vs Oakland
-Model Spread: 2.5
-Cover Prob (A covers): 44.6%
-Over Prob: 9.3%
-Model Total: 140
-Market Spread: 5.7 Total: 166
-Edge vs implied: -7.82% EV/$1: -0.149 Kelly: 0.000
-
-Game: Charlotte vs Rice
-Model Spread: 2.5
-Cover Prob (A covers): 51.6%
-Over Prob: 43.3%
-Model Total: 140
-Market Spread: 2.19 Total: 146
-Edge vs implied: -0.76% EV/$1: -0.015 Kelly: 0.000
-
-Game: Saint Joseph's vs Richmond
-Model Spread: 2.5
-Cover Prob (A covers): 27.3%
-Over Prob: 18.0%
-Model Total: 140
-Market Spread: 13.36 Total: 159
-Edge vs implied: -25.04% EV/$1: -0.478 Kelly: 0.000
-
-Game: Marist vs Rider
-Model Spread: 2.5
-Cover Prob (A covers): 85.5%
-Over Prob: 90.6%
-Model Total: 140
-Market Spread: -14.63 Total: 121
-Edge vs implied: 33.08% EV/$1: 0.632 Kelly: 0.695
-
-Game: Purdue Fort Wayne vs Robert Morris
-Model Spread: 2.5
-Cover Prob (A covers): 52.9%
-Over Prob: 59.3%
-Model Total: 140
-Market Spread: 2.82 Total: 139
-Edge vs implied: 0.52% EV/$1: 0.010 Kelly: 0.011
-
-Game: Northwestern vs Rutgers
+Game: Mississippi Valley S vs Texas Southern
 Model Spread: -4.5
-Cover Prob (A covers): 65.1%
-Over Prob: 54.7%
+Cover Prob (A covers): 18.3%
+Over Prob: 50.6%
 Model Total: 142.1
-Market Spread: -8.17 Total: 144
-Edge vs implied: 12.68% EV/$1: 0.242 Kelly: 0.266
-
-Game: Quinnipiac vs Sacred Heart
-Model Spread: 2.5
-Cover Prob (A covers): 71.6%
-Over Prob: 15.6%
-Model Total: 140
-Market Spread: -6.5 Total: 161
-Edge vs implied: 19.18% EV/$1: 0.366 Kelly: 0.403
-
-Game: Merrimack vs Saint Peter's
-Model Spread: 2.5
-Cover Prob (A covers): 46.2%
-Over Prob: 71.6%
-Model Total: 140
-Market Spread: 5.04 Total: 134
-Edge vs implied: -6.18% EV/$1: -0.118 Kelly: 0.000
-
-Game: Cincinnati vs UCF
-Model Spread: 2.5
-Cover Prob (A covers): 40.5%
-Over Prob: 37.8%
-Model Total: 140
-Market Spread: 7.8 Total: 149
-Edge vs implied: -11.88% EV/$1: -0.227 Kelly: 0.000
-
-Game: Ohio St. vs Washington
-Model Spread: 2.5
-Cover Prob (A covers): 58.1%
-Over Prob: 37.7%
-Model Total: 140
-Market Spread: 0.4 Total: 149
-Edge vs implied: 5.76% EV/$1: 0.110 Kelly: 0.121
-
-Game: North Texas vs Wichita St.
-Model Spread: 2.5
-Cover Prob (A covers): 38.2%
-Over Prob: 90.0%
-Model Total: 140
-Market Spread: 8.37 Total: 122
-Edge vs implied: -14.20% EV/$1: -0.271 Kelly: 0.000
+Market Spread: 14.04 Total: 145
+Edge vs implied: -34.12% EV/$1: -0.651 Kelly: 0.000
