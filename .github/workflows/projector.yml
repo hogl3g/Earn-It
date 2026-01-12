@@ -47,6 +47,14 @@ jobs:
         run: node scripts/generate_picks_html.mjs
         working-directory: ${{ github.workspace }}
 
+      - name: Copy data files to public
+        run: |
+          mkdir -p public/data/results
+          cp -f data/results/grades_*.json public/data/results/ 2>/dev/null || true
+          cp -f data/results/grades_*.csv public/data/results/ 2>/dev/null || true
+          cp -f data/results/ts_projector_picks.csv public/data/results/ 2>/dev/null || true
+        working-directory: ${{ github.workspace }}
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

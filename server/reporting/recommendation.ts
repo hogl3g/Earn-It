@@ -40,12 +40,12 @@ export function generateRecommendation(report: MatchupReport) {
   });
 
   const coverProb = report.simulated_cover_prob ?? undefined;
-  const coverQual = typeof coverProb === "number" ? coverProb >= 0.55 : false;
+  const coverQual = typeof coverProb === "number" ? coverProb >= 0.80 : false;
 
   const qualifies = ruleResult.qualifies || coverQual;
 
   const reasons = [...(ruleResult.reasons || [])];
-  if (coverQual) reasons.push(`Cover Probability >= 55% (${Math.round((coverProb ?? 0) * 100)}%)`);
+  if (coverQual) reasons.push(`Cover Probability >= 80% (${Math.round((coverProb ?? 0) * 100)}%)`);
 
   const confidenceScore = computeConfidenceScore(report);
 

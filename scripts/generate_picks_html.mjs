@@ -1,7 +1,10 @@
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
-const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const root = path.resolve(__dirname, '..');
 const csvPath = path.join(root, 'data', 'results', 'ts_projector_picks.csv');
 const publicDir = path.join(root, 'public');
 const outPath = path.join(publicDir, 'index.html');
@@ -27,11 +30,58 @@ fs.writeFileSync(path.join(publicDir, 'ts_projector_picks.csv'), raw, 'utf-8');
 
 const escaped = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
+// Try to locate graded results JSON for the date present in picks
+let gradesSummary = null;
+let gradesMap = null;
+let extendedHeaders = [...headers];
+
+try {
+  // Parse the date from the first row (ISO string in column 0)
+  const firstCols = rows.length ? rows[0].split(',') : null;
+  const iso = firstCols ? firstCols[0] : null;
+  const d = iso ? new Date(iso) : null;
+  const yyyy = d ? String(d.getUTCFullYear()) : null;
+  const mm = d ? String(d.getUTCMonth() + 1).padStart(2, '0') : null;
+  const dd = d ? String(d.getUTCDate()).padStart(2, '0') : null;
+  const gradesJsonPath = (yyyy && mm && dd)
+    ? path.join(root, 'data', 'results', `grades_${yyyy}${mm}${dd}.json`)
+    : null;
+
+  if (gradesJsonPath && fs.existsSync(gradesJsonPath)) {
+    let gj = fs.readFileSync(gradesJsonPath, 'utf-8');
+    // Replace NaN tokens with null to satisfy JSON.parse
+    gj = gj.replace(/\bNaN\b/g, 'null');
+    const parsed = JSON.parse(gj);
+    gradesSummary = parsed.summary || null;
+    const rowsJson = Array.isArray(parsed.rows) ? parsed.rows : [];
+    gradesMap = new Map(rowsJson.map(r => [
+      `${String(r.team_a)}|${String(r.team_b)}`, r
+    ]));
+    // Append graded columns to headers
+    extendedHeaders = [...headers, 'a_score', 'b_score', 'margin', 'covered', 'won', 'profit'];
+  }
+} catch (err) {
+  console.warn('Could not parse graded results JSON:', err?.message || String(err));
+}
+
 const tableRows = rows.map((line) => {
   const cols = line.split(',');
-  // Add asterisk to team_a (index 1) - the projected pick
-  return `<tr>${cols.map((c, idx) => {
+  const key = `${cols[1]}|${cols[2]}`;
+  const grade = gradesMap ? gradesMap.get(key) : null;
+  const extra = grade ? [
+    grade.a_score == null ? '' : String(grade.a_score),
+    grade.b_score == null ? '' : String(grade.b_score),
+    grade.margin == null ? '' : String(grade.margin),
+    grade.covered == null ? '' : (grade.covered ? 'Y' : 'N'),
+    grade.won == null ? '' : (grade.won ? 'W' : 'L'),
+    grade.profit == null ? '' : String(Math.round(grade.profit * 100) / 100)
+  ] : [];
+
+  const displayCols = [...cols, ...extra];
+
+  return `<tr>${displayCols.map((c, idx) => {
     const val = escaped(c);
+    // Add asterisk to team_a (index 1) - the projected pick from original columns
     return `<td>${idx === 1 ? val + ' *' : val}</td>`;
   }).join('')}</tr>`;
 }).join('\n');
@@ -46,6 +96,8 @@ const html = `<!DOCTYPE html>
     body { font-family: Arial, sans-serif; margin: 24px; }
     h1 { margin-bottom: 8px; }
     .meta { margin-bottom: 16px; }
+    .summary { margin: 12px 0; padding: 10px; background: #f7f9fb; border: 1px solid #e3e7ea; }
+    .summary strong { margin-right: 6px; }
     table { border-collapse: collapse; width: 100%; font-size: 14px; }
     th, td { border: 1px solid #ccc; padding: 6px 8px; text-align: left; }
     th { background: #f4f4f4; }
@@ -58,9 +110,16 @@ const html = `<!DOCTYPE html>
   <h1>Projector Picks</h1>
   <div class="meta">Updated: ${new Date().toISOString()}</div>
   <a class="download" href="./ts_projector_picks.csv" download>Download CSV</a>
+  ${gradesSummary ? `
+  <div class="summary">
+    <div><strong>Date:</strong> ${escaped(gradesSummary.date)}</div>
+    <div><strong>Picks:</strong> ${escaped(gradesSummary.total_picks)} | <strong>Wins:</strong> ${escaped(gradesSummary.wins)} | <strong>Covers:</strong> ${escaped(gradesSummary.covers)}</div>
+    <div><strong>Total Stake:</strong> $${escaped(gradesSummary.total_stake)} | <strong>Profit:</strong> $${escaped(Math.round(gradesSummary.total_profit * 100) / 100)} | <strong>ROI:</strong> ${escaped(Math.round(gradesSummary.roi * 100) / 100)}%</div>
+  </div>
+  ` : ''}
   <div class="scroll">
     <table>
-      <thead><tr>${headers.map((h) => `<th>${escaped(h)}</th>`).join('')}</tr></thead>
+      <thead><tr>${extendedHeaders.map((h) => `<th>${escaped(h)}</th>`).join('')}</tr></thead>
       <tbody>
         ${tableRows}
       </tbody>
