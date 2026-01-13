@@ -37,6 +37,17 @@ jobs:
         run: npm ci
         working-directory: ${{ github.workspace }}
 
+      - name: Grade yesterday's picks
+        run: npx tsx server/cli/grade_yesterday.ts
+        working-directory: ${{ github.workspace }}
+        continue-on-error: true
+
+      - name: Run projector (Talisman, today UTC)
+        run: |
+          DATE=$(date -u +%F)
+          npx tsx "server/cli/sports app 1.ts" --source talisman --date "$DATE"
+        working-directory: ${{ github.workspace }}
+
       # Skip projector generation here to keep committed picks/grades in sync for deploy
       - name: Build static page
         run: node scripts/generate_picks_html.mjs
@@ -47,6 +58,7 @@ jobs:
           mkdir -p public/data/results
           cp -f data/results/grades_*.json public/data/results/ 2>/dev/null || true
           cp -f data/results/grades_*.csv public/data/results/ 2>/dev/null || true
+          cp -f data/results/enhanced_projector_picks.csv public/data/results/ 2>/dev/null || true
           cp -f data/results/ts_projector_picks.csv public/data/results/ 2>/dev/null || true
         working-directory: ${{ github.workspace }}
 
