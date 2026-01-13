@@ -5,9 +5,13 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const root = path.resolve(__dirname, '..');
-const csvPath = path.join(root, 'data', 'results', 'ts_projector_picks.csv');
+const enhancedCsvPath = path.join(root, 'data', 'results', 'enhanced_projector_picks.csv');
+const legacyCsvPath = path.join(root, 'data', 'results', 'ts_projector_picks.csv');
 const publicDir = path.join(root, 'public');
 const outPath = path.join(publicDir, 'index.html');
+
+// Prefer enhanced projector output if present
+const csvPath = fs.existsSync(enhancedCsvPath) ? enhancedCsvPath : legacyCsvPath;
 
 if (!fs.existsSync(csvPath)) {
   console.error(`Missing CSV at ${csvPath}`);
@@ -25,7 +29,7 @@ const headers = headerLine.split(',');
 
 fs.mkdirSync(publicDir, { recursive: true });
 
-// Copy CSV for download
+// Copy CSV for download (stable filename, enhanced content if available)
 fs.writeFileSync(path.join(publicDir, 'ts_projector_picks.csv'), raw, 'utf-8');
 
 const escaped = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -192,6 +196,9 @@ const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projector Picks</title>
   <style>
@@ -311,7 +318,7 @@ const html = `<!DOCTYPE html>
 <body>
   <h1>Projector Picks</h1>
   <div class="meta">Updated: ${new Date().toISOString()}</div>
-  <a class="download" href="./ts_projector_picks.csv" download>Download CSV</a>
+  <a class="download" href="./ts_projector_picks.csv?v=${Date.now()}" download>Download CSV</a>
   ${gradesSummary ? `
   <div class="summary">
     <div><strong>Date:</strong> ${escaped(gradesSummary.date)}</div>
