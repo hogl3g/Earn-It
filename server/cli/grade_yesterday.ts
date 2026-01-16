@@ -170,9 +170,18 @@ function gradePicks(picks: PickRow[], scores: GameScore[]): GradedPick[] {
 
 // Main
 async function main() {
-  const yesterday = new Date();
-  yesterday.setDate(yesterday.getDate() - 1);
-  const dateStr = yesterday.toISOString().split('T')[0];
+  // Allow passing a date as CLI arg: npx tsx grade_yesterday.ts 2026-01-14
+  const cliDate = process.argv[2];
+  let dateStr: string;
+  
+  if (cliDate) {
+    dateStr = cliDate;
+  } else {
+    const yesterday = new Date();
+    yesterday.setDate(yesterday.getDate() - 1);
+    dateStr = yesterday.toISOString().split('T')[0];
+  }
+  
   const dateKey = dateStr.replace(/-/g, '');
   
   console.log(`Grading picks for ${dateStr}...`);
