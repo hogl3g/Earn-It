@@ -577,6 +577,8 @@ async function main() {
       const outDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..", "data", "results");
       await fs.mkdir(outDir, { recursive: true } as any);
       await fs.writeFile(path.resolve(outDir, "ts_projector_picks.csv"), csvRows.join("\n"), "utf8");
+      // Also write to enhanced_projector_picks.csv (for consistency with workflow)
+      await fs.writeFile(path.resolve(outDir, "enhanced_projector_picks.csv"), csvRows.join("\n"), "utf8");
       const summary = top.map((t,i) => `${i+1}. ${t.team_a} vs ${t.team_b} — EV/$1=${(t.ev_per_1 ?? 0).toFixed(3)} Kelly=${(t.kelly ?? 0).toFixed(3)} Stake=$${((t.stake_dollars ?? 0)).toFixed(2)} Cover=${t.coverProb ? (t.coverProb*100).toFixed(1)+"%" : "n/a"}`).join("\n");
       await fs.writeFile(path.resolve(path.dirname(fileURLToPath(import.meta.url)), "last_projector_picks.txt"), summary, "utf8");
       // also save verbose output
