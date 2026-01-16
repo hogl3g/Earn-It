@@ -1,6 +1,1 @@
-date,team_a,team_b,location,market_spread,model_spread,predicted_total,team_a_score,team_b_score,coverProb,winProb,impliedProb,edge,ev_per_1,kelly,stake_dollars
-2026-01-12,UT Rio Grande Valley,Northwestern St.,H,-6.19,3.5,140.1,71.3,68.8,0.8108,0.5523,0.5238,0.2870,0.5479,0.6027,602.71
-2026-01-12,Grambling St.,Florida A&M,H,-6.06,3.5,140.1,71.3,68.8,0.8076,0.5523,0.5238,0.2838,0.5418,0.5960,595.96
-2026-01-12,North Carolina Centr,Morgan St.,H,-5.07,3.5,140.1,71.3,68.8,0.7820,0.5523,0.5238,0.2582,0.4930,0.5423,542.28
-2026-01-12,Texas A&M Corpus Chr,East Texas A&M,H,-2.42,3.5,140.1,71.3,68.8,0.7048,0.5523,0.5238,0.1810,0.3455,0.3800,380.03
-2026-01-12,Southern,Bethune Cookman,H,-0.65,3.5,140.1,71.3,68.8,0.6470,0.5523,0.5238,0.1232,0.2352,0.2587,258.73
+date,team_a,team_b,market_spread,model_spread,coverProb,impliedProb,edge,ev_per_1,kelly,stake_dollars

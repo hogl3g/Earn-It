@@ -1,11 +1,11 @@
 
 Game: Ohio vs Ball St.
 Model Spread: 2.5
-Cover Prob (A covers): 65.0%
-Over Prob: 37.6%
+Cover Prob (A covers): 65.9%
+Over Prob: 38.0%
 Model Total: 140
 Market Spread: -3.17 Total: 149
-Edge vs implied: 12.58% EV/$1: 0.240 Kelly: 0.264
+Edge vs implied: 13.50% EV/$1: 0.258 Kelly: 0.283
 
 Game: Colorado St. vs Boise St.
 Model Spread: 2.5
@@ -13,44 +13,44 @@ Cover Prob (A covers): 56.5%
 Over Prob: 72.5%
 Model Total: 140
 Market Spread: 0.93 Total: 133
-Edge vs implied: 4.08% EV/$1: 0.078 Kelly: 0.086
+Edge vs implied: 4.14% EV/$1: 0.079 Kelly: 0.087
 
 Game: Loyola Chicago vs Dayton
 Model Spread: 2.5
-Cover Prob (A covers): 14.4%
-Over Prob: 30.0%
+Cover Prob (A covers): 15.2%
+Over Prob: 30.3%
 Model Total: 140
 Market Spread: 21.19 Total: 152
-Edge vs implied: -37.94% EV/$1: -0.724 Kelly: 0.000
+Edge vs implied: -37.20% EV/$1: -0.710 Kelly: 0.000
 
 Game: Marquette vs DePaul
 Model Spread: 2.5
-Cover Prob (A covers): 47.5%
-Over Prob: 60.0%
+Cover Prob (A covers): 47.6%
+Over Prob: 59.5%
 Model Total: 140
 Market Spread: 4.62 Total: 139
-Edge vs implied: -4.86% EV/$1: -0.093 Kelly: 0.000
+Edge vs implied: -4.82% EV/$1: -0.092 Kelly: 0.000
 
 Game: Baylor vs Kansas
 Model Spread: 2.5
-Cover Prob (A covers): 40.8%
-Over Prob: 35.2%
+Cover Prob (A covers): 39.9%
+Over Prob: 35.3%
 Model Total: 140
 Market Spread: 7.82 Total: 150
-Edge vs implied: -11.54% EV/$1: -0.220 Kelly: 0.000
+Edge vs implied: -12.44% EV/$1: -0.238 Kelly: 0.000
 
 Game: Toledo vs Kent St.
 Model Spread: 2.5
-Cover Prob (A covers): 45.2%
-Over Prob: 2.5%
+Cover Prob (A covers): 46.1%
+Over Prob: 2.6%
 Model Total: 140
 Market Spread: 5.22 Total: 176
-Edge vs implied: -7.14% EV/$1: -0.136 Kelly: 0.000
+Edge vs implied: -6.24% EV/$1: -0.119 Kelly: 0.000
 
 Game: Creighton vs Providence
 Model Spread: 2.5
-Cover Prob (A covers): 57.4%
-Over Prob: 13.5%
+Cover Prob (A covers): 57.5%
+Over Prob: 14.0%
 Model Total: 140
 Market Spread: 0.31 Total: 162
-Edge vs implied: 5.04% EV/$1: 0.096 Kelly: 0.106
+Edge vs implied: 5.16% EV/$1: 0.098 Kelly: 0.108
