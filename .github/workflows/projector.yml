@@ -48,7 +48,11 @@ jobs:
           npx tsx "server/cli/sports app 1.ts" --source talisman --date "$DATE"
         working-directory: ${{ github.workspace }}
 
-      # Skip projector generation here to keep committed picks/grades in sync for deploy
+      - name: Copy enhanced picks to public
+        run: |
+          cp -f data/results/enhanced_projector_picks.csv public/ts_projector_picks.csv 2>/dev/null || true
+        working-directory: ${{ github.workspace }}
+
       - name: Build static page
         run: node scripts/generate_picks_html.mjs
         working-directory: ${{ github.workspace }}
