@@ -1,0 +1,50 @@
+{
+  "date": "2026-01-16",
+  "rows": [
+    {
+      "team_a": "Ohio",
+      "team_b": "Ball St.",
+      "market_spread": -3.17,
+      "a_score": 71,
+      "b_score": 76,
+      "margin": -5,
+      "covered": false,
+      "won": false,
+      "stake": 269.20,
+      "profit": -269.20
+    },
+    {
+      "team_a": "Creighton",
+      "team_b": "Providence",
+      "market_spread": 0.31,
+      "a_score": 88,
+      "b_score": 93,
+      "margin": -5,
+      "covered": false,
+      "won": false,
+      "stake": 94.48,
+      "profit": -94.48
+    },
+    {
+      "team_a": "Colorado St.",
+      "team_b": "Boise St.",
+      "market_spread": 0.93,
+      "a_score": 73,
+      "b_score": 79,
+      "margin": -6,
+      "covered": false,
+      "won": false,
+      "stake": 66.34,
+      "profit": -66.34
+    }
+  ],
+  "summary": {
+    "total_picks": 3,
+    "wins": 0,
+    "losses": 3,
+    "covers": 0,
+    "total_stake": 430.02,
+    "total_profit": -430.02,
+    "roi": -1
+  }
+}
