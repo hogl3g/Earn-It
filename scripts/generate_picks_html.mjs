@@ -98,6 +98,7 @@ let gameScoresHtml = '';
 let cumulativeWins = 0;
 let cumulativeLosses = 0;
 const allGameScores = [];
+let mostRecentGameDate = '';
 
 try {
   // Find all grades_*.json files in data/results
@@ -106,6 +107,17 @@ try {
   
   // Get the most recent grades file for game scores
   const mostRecentFile = gradesFiles[0];
+  
+  // Extract date from filename (grades_YYYYMMDD.json)
+  if (mostRecentFile) {
+    const dateMatch = mostRecentFile.match(/grades_(\d{4})(\d{2})(\d{2})\.json/);
+    if (dateMatch) {
+      const yyyy = dateMatch[1];
+      const mm = dateMatch[2];
+      const dd = dateMatch[3];
+      mostRecentGameDate = `${yyyy}-${mm}-${dd}`;
+    }
+  }
   
   gradesFiles.forEach(file => {
     try {
@@ -163,7 +175,7 @@ if (cumulativeWins > 0 || cumulativeLosses > 0) {
 if (allGameScores.length > 0) {
   gameScoresHtml = `
   <div class="game-scores-box">
-    <h2>Previous Day Game Scores</h2>
+    <h2>Previous Day Game Scores${mostRecentGameDate ? ` (${mostRecentGameDate})` : ''}</h2>
     <table class="scores-table">
       <thead>
         <tr>
