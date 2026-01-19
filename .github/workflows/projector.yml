@@ -24,32 +24,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Debug workspace
-        run: |
-          pwd
-          ls -la
-          ls -la ..
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-
-      - name: Install deps
-        run: npm ci
-        working-directory: ${{ github.workspace }}
-
-      - name: Copy enhanced picks to public
-        run: |
-          cp -f data/results/enhanced_projector_picks.csv public/ts_projector_picks.csv 2>/dev/null || true
-        working-directory: ${{ github.workspace }}
-
-      - name: Build static page
-        run: node scripts/generate_picks_html.mjs
-        working-directory: ${{ github.workspace }}
-
-      - name: Copy data files to public
+      - name: Prepare public artifacts
         run: |
           mkdir -p public/data/results
           cp -f data/results/grades_*.json public/data/results/ 2>/dev/null || true
