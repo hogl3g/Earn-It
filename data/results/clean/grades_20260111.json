@@ -1,0 +1,89 @@
+{
+  "summary": {
+    "date": "20260111",
+    "total_picks": 9
+  },
+  "rows": [
+    {
+      "team_a": "Marist",
+      "team_b": "Rider",
+      "a_score": 71,
+      "b_score": 49,
+      "market_spread": -14.63,
+      "model_spread": 2.5,
+      "covered": true
+    },
+    {
+      "team_a": "Quinnipiac",
+      "team_b": "Sacred Heart",
+      "a_score": 70,
+      "b_score": 60,
+      "market_spread": -6.5,
+      "model_spread": 2.5,
+      "covered": true
+    },
+    {
+      "team_a": "Northwestern",
+      "team_b": "Rutgers",
+      "a_score": 75,
+      "b_score": 77,
+      "market_spread": -8.17,
+      "model_spread": -4.5,
+      "covered": false
+    },
+    {
+      "team_a": "Illinois",
+      "team_b": "Iowa",
+      "a_score": 75,
+      "b_score": 69,
+      "market_spread": -3.13,
+      "model_spread": 2.5,
+      "covered": true
+    },
+    {
+      "team_a": "Northern Kentucky",
+      "team_b": "Green Bay",
+      "a_score": 78,
+      "b_score": 80,
+      "market_spread": -1.99,
+      "model_spread": 2.5,
+      "covered": false
+    },
+    {
+      "team_a": "Ohio St.",
+      "team_b": "Washington",
+      "a_score": 74,
+      "b_score": 81,
+      "market_spread": 0.4,
+      "model_spread": 2.5,
+      "covered": false
+    },
+    {
+      "team_a": "Memphis",
+      "team_b": "Florida Atlantic",
+      "a_score": 78,
+      "b_score": 89,
+      "market_spread": 0.9,
+      "model_spread": 2.5,
+      "covered": false
+    },
+    {
+      "team_a": "Purdue Fort Wayne",
+      "team_b": "Robert Morris",
+      "a_score": 79,
+      "b_score": 74,
+      "market_spread": 2.82,
+      "model_spread": 2.5,
+      "covered": true
+    },
+    {
+      "team_a": "Charlotte",
+      "team_b": "Rice",
+      "a_score": 74,
+      "b_score": 73,
+      "market_spread": 2.19,
+      "model_spread": 2.5,
+      "covered": true
+    }
+  ]
+}

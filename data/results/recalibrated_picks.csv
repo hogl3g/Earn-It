@@ -1,0 +1,87 @@
+date,team,opponent,coverProb,marketSpread,coverProbCalibrated
+2026-01-17T18:17:19.207Z,Gonzaga,Seattle,0.9256,-21.29,0.99
+2026-01-17T18:17:19.207Z,Michigan,Oregon,0.9234,-25.09,0.99
+2026-01-17T18:17:19.207Z,Nevada,Air Force,0.889,-17.37,0.99
+2026-01-17T18:17:19.207Z,Connecticut,Georgetown,0.8836,-16.86,0.99
+2026-01-17T18:17:19.207Z,Duke,Stanford,0.8482,-14.09,0.99
+2026-01-17T18:17:19.207Z,Bethune Cookman,Mississippi Valley S,0.8472,-14.16,0.99
+2026-01-17T18:17:19.207Z,Central Connecticut,Saint Francis,0.8386,-13.25,0.99
+2026-01-17T18:17:19.207Z,Purdue,Southern California,0.8198,-12.28,0.99
+2026-01-17T18:17:19.207Z,Norfolk St.,South Carolina St.,0.8108,-10.95,0.99
+2026-01-17T18:17:19.207Z,Iowa State,Cincinnati,0.8036,-11.53,0.99
+2026-01-17T18:17:19.207Z,Nebraska,Northwestern,0.8034,-6.61,0.99
+2026-01-17T18:17:19.207Z,Mercer,UNC Greensboro,0.7858,-9.61,0.99
+2026-01-17T18:17:19.207Z,UC San Diego,Cal St. Bakersfield,0.7832,-9.84,0.99
+2026-01-17T18:17:19.207Z,Louisville,Pittsburgh,0.7822,-9.49,0.99
+2026-01-17T18:17:19.207Z,Youngstown St.,Cleveland St.,0.7804,-9.76,0.99
+2026-01-17T18:17:19.207Z,Presbyterian,Gardner Webb,0.7728,-9.65,0.99
+2026-01-17T18:17:19.207Z,McNeese,UT Rio Grande Valley,0.7728,-9,0.99
+2026-01-17T18:17:19.207Z,Arizona,Central Florida,0.7698,-8.82,0.99
+2026-01-17T18:17:19.207Z,Queens,Stetson,0.7696,-8.34,0.99
+2026-01-17T18:17:19.207Z,Alabama,Oklahoma,0.7582,-8.18,0.99
+2026-01-17T18:17:19.207Z,Prairie View A&M,Jackson St.,0.7434,-7.96,0.99
+2026-01-17T18:17:19.207Z,Syracuse,Boston College,0.7322,-6.75,0.99
+2026-01-17T18:17:19.207Z,Siena,Manhattan,0.7316,-7.26,0.99
+2026-01-17T18:17:19.207Z,Utah State,Grand Canyon,0.7304,-7.18,0.99
+2026-01-17T18:17:19.207Z,Massachusetts,Northern Illinois,0.7296,-6.82,0.99
+2026-01-17T18:17:19.207Z,Winthrop,UNC Asheville,0.7284,-7.18,0.99
+2026-01-17T18:17:19.207Z,Texas Christian,Utah,0.728,-7.41,0.99
+2026-01-17T18:17:19.207Z,Northern Colorado,Sacramento St.,0.7268,-6.37,0.99
+2026-01-17T18:17:19.207Z,North Carolina,California,0.7256,-6.68,0.99
+2026-01-17T18:17:19.207Z,LIU,Fairleigh Dickinson,0.7226,-6.12,0.99
+2026-01-17T18:17:19.207Z,Texas Southern,Alcorn St.,0.7218,-2.18,0.99
+2026-01-17T18:17:19.207Z,New Mexico State,Delaware,0.7212,-6.94,0.99
+2026-01-17T18:17:19.207Z,Stephen F. Austin,New Orleans,0.7132,-6.32,0.99
+2026-01-17T18:17:19.207Z,Hawaii,UC Santa Barbara,0.7104,-5.82,0.99
+2026-01-17T18:17:19.207Z,East Tennessee St.,Samford,0.6936,-5.03,0.99
+2026-01-17T18:17:19.207Z,Jacksonville,North Alabama,0.693,-4.94,0.99
+2026-01-17T18:17:19.207Z,Michigan State,Washington,0.6916,-4.89,0.99
+2026-01-17T18:17:19.207Z,Georgia St.,Louisiana Monroe,0.6802,-4.37,0.99
+2026-01-17T18:17:19.207Z,Cal St. Fullerton,UC Riverside,0.6796,-4.21,0.99
+2026-01-17T18:17:19.207Z,Quinnipiac,Merrimack,0.6736,-4.13,0.99
+2026-01-17T18:17:19.207Z,Boston University,Loyola MD,0.6724,-3.78,0.99
+2026-01-17T18:17:19.207Z,Navy,Lehigh,0.6694,-3.78,0.99
+2026-01-17T18:17:19.207Z,Wake Forest,Florida State,0.6692,-4.56,0.99
+2026-01-17T18:17:19.207Z,UC Irvine,UC Davis,0.6632,-4.25,0.99
+2026-01-17T18:17:19.207Z,Le Moyne,Chicago St.,0.6612,-3.56,0.99
+2026-01-17T18:17:19.207Z,Northern Iowa,Valparaiso,0.6584,-4.13,0.99
+2026-01-17T18:17:19.207Z,Belmont,Southern Illinois,0.6564,-3.57,0.99
+2026-01-17T18:17:19.207Z,Wyoming,Fresno State,0.6544,-3.45,0.99
+2026-01-17T18:17:19.207Z,East Texas A&M,Houston Christian,0.6488,-2.6,0.99
+2026-01-17T18:17:19.207Z,Columbia,Brown,0.6372,-3.06,0.99
+2026-01-17T18:17:19.207Z,Saint Bonaventure,La Salle,0.6358,-2.47,0.99
+2026-01-17T18:17:19.207Z,Sam Houston St.,FIU,0.6188,-1.69,0.99
+2026-01-17T18:17:19.207Z,Saint Johns,Villanova,0.617,-1.21,0.99
+2026-01-17T18:17:19.207Z,Abilene Christian,Southern Utah,0.6146,-1.28,0.99
+2026-01-17T18:17:19.207Z,Pacific,Oregon St.,0.6136,-1.46,0.99
+2026-01-17T18:17:19.207Z,Mount St. Mary's,Canisius,0.5996,-0.67,0.99
+2026-01-17T18:17:19.207Z,Charleston,Stony Brook,0.5968,-0.53,0.99
+2026-01-17T18:17:19.207Z,Howard,North Carolina Centr,0.5896,-0.45,0.99
+2026-01-17T18:17:19.207Z,Virginia,Southern Methodist,0.584,0.32,0.99
+2026-01-17T18:17:19.207Z,BYU,Texas Tech,0.5838,-0.67,0.99
+2026-01-17T18:17:19.207Z,Morehead St.,Tennessee Tech,0.5832,-0.04,0.99
+2026-01-17T18:17:19.207Z,Nevada Las Vegas,San Jose State,0.5766,0.33,0.99
+2026-01-17T18:17:19.207Z,Southern,Grambling St.,0.5748,0.29,0.99
+2026-01-17T18:17:19.207Z,Morgan State,Delaware St.,0.5736,0.53,0.99
+2026-01-17T18:17:19.207Z,Duquesne,Fordham,0.5732,0.71,0.99
+2026-01-17T18:17:19.207Z,Detroit Mercy,IU Indy,0.5608,0.71,0.99
+2026-01-17T18:17:19.207Z,Coastal Carolina,Georgia Southern,0.5598,1.04,0.99
+2026-01-17T18:17:19.207Z,Holy Cross,Lafayette,0.5572,1.38,0.99
+2026-01-17T18:17:19.207Z,New Mexico,San Diego State,0.557,1.55,0.99
+2026-01-17T18:17:19.207Z,Southern Miss,Texas St.,0.5536,1.11,0.99
+2026-01-17T18:17:19.207Z,Austin Peay,Lipscomb,0.5494,1.41,0.99
+2026-01-17T18:17:19.207Z,Kennesaw St.,Western Kentucky,0.5396,1.85,0.99
+2026-01-17T18:17:19.207Z,Saint Marys,Santa Clara,0.5368,1.24,0.99
+2026-01-17T18:17:19.207Z,Lindenwood,Tennessee Martin,0.5322,2.06,0.99
+2026-01-17T18:17:19.207Z,Texas A&M,Texas,0.5306,1.92,0.99
+2026-01-17T18:17:19.207Z,Miami Florida,Clemson,0.5262,2.44,0.99
+2026-01-17T18:17:19.207Z,Mississippi,Mississippi State,0.5244,1.81,0.99
+2026-01-17T18:17:19.207Z,Campbell,UNC Wilmington,0.5196,3.29,0.99
+2026-01-17T18:17:19.207Z,Iowa,Indiana,0.5186,2.12,0.99
+2026-01-17T18:17:19.207Z,South Dakota,North Dakota,0.5128,3.02,0.99
+2026-01-17T18:17:19.207Z,Tarleton St.,Utah Tech,0.5124,2.78,0.99
+2026-01-17T18:17:19.207Z,Longwood,Radford,0.511,2.99,0.99
+2026-01-17T18:17:19.207Z,SIUE,Southeast Missouri,0.5106,2.95,0.99
+2026-01-17T18:17:19.207Z,Kentucky,Tennessee,0.5062,3.61,0.99
+2026-01-17T18:17:19.207Z,Drake,Illinois Chicago,0.5024,3.31,0.99
+2026-01-17T18:17:19.207Z,Saint Thomas,North Dakota St.,0.501,3.17,0.99

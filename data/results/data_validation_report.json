@@ -1,0 +1,2335 @@
+{
+  "timestamp": "2026-01-18T02:13:12.183Z",
+  "counts": {
+    "grades": 35,
+    "picks": 86,
+    "critical": 111,
+    "warning": 10,
+    "info": 0
+  },
+  "gradeIssues": [
+    {
+      "type": "grades/read_error",
+      "severity": "CRITICAL",
+      "message": "Failed to read grade file",
+      "context": {
+        "file": "grades_20260110.json",
+        "error": "arr is not iterable"
+      }
+    },
+    {
+      "type": "grades/missing_teams",
+      "severity": "CRITICAL",
+      "message": "Missing team names (CSV)",
+      "context": {
+        "file": "grades_20260111.csv",
+        "record": {
+          "team_a": "UAB",
+          "team_b": "East Carolina",
+          "a_score": "",
+          "b_score": "",
+          "margin": "",
+          "market_spread": "-15.76",
+          "model_spread": "2.5",
+          "covered": "",
+          "won": "",
+          "stake": "0.0",
+          "profit": "0.0",
+          "note": "score not found"
+        }
+      }
+    },
+    {
+      "type": "grades/missing_scores",
+      "severity": "CRITICAL",
+      "message": "Missing or non-numeric scores (CSV)",
+      "context": {
+        "file": "grades_20260111.csv",
+        "record": {
+          "team_a": "UAB",
+          "team_b": "East Carolina",
+          "a_score": "",
+          "b_score": "",
+          "margin": "",
+          "market_spread": "-15.76",
+          "model_spread": "2.5",
+          "covered": "",
+          "won": "",
+          "stake": "0.0",
+          "profit": "0.0",
+          "note": "score not found"
+        }
+      }
+    },
+    {
+      "type": "grades/missing_teams",
+      "severity": "CRITICAL",
+      "message": "Missing team names (CSV)",
+      "context": {
+        "file": "grades_20260111.csv",
+        "record": {
+          "team_a": "Marist",
+          "team_b": "Rider",
+          "a_score": "71.0",
+          "b_score": "49.0",
+          "margin": "22.0",
+          "market_spread": "-14.63",
+          "model_spread": "2.5",
+          "covered": "True",
+          "won": "True",
+          "stake": "694.6600000000001",
+          "profit": "631.5154060000001",
+          "note": ""
+        }
+      }
+    },
+    {
+      "type": "grades/missing_scores",
+      "severity": "CRITICAL",
+      "message": "Missing or non-numeric scores (CSV)",
+      "context": {
+        "file": "grades_20260111.csv",
+        "record": {
+          "team_a": "Marist",
+          "team_b": "Rider",
+          "a_score": "71.0",
+          "b_score": "49.0",
+          "margin": "22.0",
+          "market_spread": "-14.63",
+          "model_spread": "2.5",
+          "covered": "True",
+          "won": "True",
+          "stake": "694.6600000000001",
+          "profit": "631.5154060000001",
+          "note": ""
+        }
+      }
+    },
+    {
+      "type": "grades/duplicate_record",
+      "severity": "WARNING",
+      "message": "Duplicate grade record found (CSV)",
+      "context": {
+        "file": "grades_20260111.csv",
+        "key": "20260111::"
+      }
+    },
+    {
+      "type": "grades/missing_teams",
+      "severity": "CRITICAL",
+      "message": "Missing team names (CSV)",
+      "context": {
+        "file": "grades_20260111.csv",
+        "record": {
+          "team_a": "Quinnipiac",
+          "team_b": "Sacred Heart",
+          "a_score": "70.0",
+          "b_score": "60.0",
+          "margin": "10.0",
+          "market_spread": "-6.5",
+          "model_spread": "2.5",
+          "covered": "True",
+          "won": "True",
+          "stake": "402.7600000000001",
+          "profit": "366.1491160000001",
+          "note": ""
+        }
+      }
+    },
+    {
+      "type": "grades/missing_scores",
+      "severity": "CRITICAL",
+      "message": "Missing or non-numeric scores (CSV)",
+      "context": {
+        "file": "grades_20260111.csv",
+        "record": {
+          "team_a": "Quinnipiac",
+          "team_b": "Sacred Heart",
+          "a_score": "70.0",
+          "b_score": "60.0",
+          "margin": "10.0",
+          "market_spread": "-6.5",
+          "model_spread": "2.5",
+          "covered": "True",
+          "won": "True",
+          "stake": "402.7600000000001",
+          "profit": "366.1491160000001",
+          "note": ""
+        }
+      }
+    },
+    {
+      "type": "grades/duplicate_record",
+      "severity": "WARNING",
+      "message": "Duplicate grade record found (CSV)",
+      "context": {
+        "file": "grades_20260111.csv",
+        "key": "20260111::"
+      }
+    },
+    {
+      "type": "grades/missing_teams",
+      "severity": "CRITICAL",
+      "message": "Missing team names (CSV)",
+      "context": {
+        "file": "grades_20260111.csv",
+        "record": {
+          "team_a": "Siena",
+          "team_b": "Mount St. Mary's",
+          "a_score": "",
+          "b_score": "",
+          "margin": "",
+          "market_spread": "-5.86",
+          "model_spread": "2.5",
+          "covered": "",
+          "won": "",
+          "stake": "0.0",
+          "profit": "0.0",
+          "note": "score not found"
+        }
+      }
+    },
+    {
+      "type": "grades/missing_scores",
+      "severity": "CRITICAL",
+      "message": "Missing or non-numeric scores (CSV)",
+      "context": {
+        "file": "grades_20260111.csv",
+        "record": {
+          "team_a": "Siena",
+          "team_b": "Mount St. Mary's",
+          "a_score": "",
+          "b_score": "",
+          "margin": "",
+          "market_spread": "-5.86",
+          "model_spread": "2.5",
+          "covered": "",
+          "won": "",
+          "stake": "0.0",
+          "profit": "0.0",
+          "note": "score not found"
+        }
+      }
+    },
+    {
+      "type": "grades/duplicate_record",
+      "severity": "WARNING",
+      "message": "Duplicate grade record found (CSV)",
+      "context": {
+        "file": "grades_20260111.csv",
+        "key": "20260111::"
+      }
+    },
+    {
+      "type": "grades/missing_teams",
+      "severity": "CRITICAL",
+      "message": "Missing team names (CSV)",
+      "context": {
+        "file": "grades_20260111.csv",
+        "record": {
+          "team_a": "Northwestern",
+          "team_b": "Rutgers",
+          "a_score": "75.0",
+          "b_score": "77.0",
+          "margin": "-2.0",
+          "market_spread": "-8.17",
+          "model_spread": "-4.5",
+          "covered": "False",
+          "won": "False",
+          "stake": "266.25999999999993",
+          "profit": "-266.25999999999993",
+          "note": ""
+        }
+      }
+    },
+    {
+      "type": "grades/missing_scores",
+      "severity": "CRITICAL",
+      "message": "Missing or non-numeric scores (CSV)",
+      "context": {
+        "file": "grades_20260111.csv",
+        "record": {
+          "team_a": "Northwestern",
+          "team_b": "Rutgers",
+          "a_score": "75.0",
+          "b_score": "77.0",
+          "margin": "-2.0",
+          "market_spread": "-8.17",
+          "model_spread": "-4.5",
+          "covered": "False",
+          "won": "False",
+          "stake": "266.25999999999993",
+          "profit": "-266.25999999999993",
+          "note": ""
+        }
+      }
+    },
+    {
+      "type": "grades/duplicate_record",
+      "severity": "WARNING",
+      "message": "Duplicate grade record found (CSV)",
+      "context": {
+        "file": "grades_20260111.csv",
+        "key": "20260111::"
+      }
+    },
+    {
+      "type": "grades/missing_teams",
+      "severity": "CRITICAL",
+      "message": "Missing team names (CSV)",
+      "context": {
+        "file": "grades_20260111.csv",
+        "record": {
+          "team_a": "Illinois",
+          "team_b": "Iowa",
+          "a_score": "75.0",
+          "b_score": "69.0",
+          "margin": "6.0",
+          "market_spread": "-3.13",
+          "model_spread": "2.5",
+          "covered": "True",
+          "won": "True",
+          "stake": "265.42",
+          "profit": "241.29332200000002",
+          "note": ""
+        }
+      }
+    },
+    {
+      "type": "grades/missing_scores",
+      "severity": "CRITICAL",
+      "message": "Missing or non-numeric scores (CSV)",
+      "context": {
+        "file": "grades_20260111.csv",
+        "record": {
+          "team_a": "Illinois",
+          "team_b": "Iowa",
+          "a_score": "75.0",
+          "b_score": "69.0",
+          "margin": "6.0",
+          "market_spread": "-3.13",
+          "model_spread": "2.5",
+          "covered": "True",
+          "won": "True",
+          "stake": "265.42",
+          "profit": "241.29332200000002",
+          "note": ""
+        }
+      }
+    },
+    {
+      "type": "grades/duplicate_record",
+      "severity": "WARNING",
+      "message": "Duplicate grade record found (CSV)",
+      "context": {
+        "file": "grades_20260111.csv",
+        "key": "20260111::"
+      }
+    },
+    {
+      "type": "grades/missing_teams",
+      "severity": "CRITICAL",
+      "message": "Missing team names (CSV)",
+      "context": {
+        "file": "grades_20260111.csv",
+        "record": {
+          "team_a": "Northern Kentucky",
+          "team_b": "Green Bay",
+          "a_score": "78.0",
+          "b_score": "80.0",
+          "margin": "-2.0",
+          "market_spread": "-1.99",
+          "model_spread": "2.5",
+          "covered": "False",
+          "won": "False",
+          "stake": "198.64",
+          "profit": "-198.64",
+          "note": ""
+        }
+      }
+    },
+    {
+      "type": "grades/missing_scores",
+      "severity": "CRITICAL",
+      "message": "Missing or non-numeric scores (CSV)",
+      "context": {
+        "file": "grades_20260111.csv",
+        "record": {
+          "team_a": "Northern Kentucky",
+          "team_b": "Green Bay",
+          "a_score": "78.0",
+          "b_score": "80.0",
+          "margin": "-2.0",
+          "market_spread": "-1.99",
+          "model_spread": "2.5",
+          "covered": "False",
+          "won": "False",
+          "stake": "198.64",
+          "profit": "-198.64",
+          "note": ""
+        }
+      }
+    },
+    {
+      "type": "grades/duplicate_record",
+      "severity": "WARNING",
+      "message": "Duplicate grade record found (CSV)",
+      "context": {
+        "file": "grades_20260111.csv",
+        "key": "20260111::"
+      }
+    },
+    {
+      "type": "grades/missing_teams",
+      "severity": "CRITICAL",
+      "message": "Missing team names (CSV)",
+      "context": {
+        "file": "grades_20260111.csv",
+        "record": {
+          "team_a": "Ohio St.",
+          "team_b": "Washington",
+          "a_score": "74.0",
+          "b_score": "81.0",
+          "margin": "-7.0",
+          "market_spread": "0.4",
+          "model_spread": "2.5",
+          "covered": "False",
+          "won": "False",
+          "stake": "120.94000000000013",
+          "profit": "-120.94000000000013",
+          "note": ""
+        }
+      }
+    },
+    {
+      "type": "grades/missing_scores",
+      "severity": "CRITICAL",
+      "message": "Missing or non-numeric scores (CSV)",
+      "context": {
+        "file": "grades_20260111.csv",
+        "record": {
+          "team_a": "Ohio St.",
+          "team_b": "Washington",
+          "a_score": "74.0",
+          "b_score": "81.0",
+          "margin": "-7.0",
+          "market_spread": "0.4",
+          "model_spread": "2.5",
+          "covered": "False",
+          "won": "False",
+          "stake": "120.94000000000013",
+          "profit": "-120.94000000000013",
+          "note": ""
+        }
+      }
+    },
+    {
+      "type": "grades/duplicate_record",
+      "severity": "WARNING",
+      "message": "Duplicate grade record found (CSV)",
+      "context": {
+        "file": "grades_20260111.csv",
+        "key": "20260111::"
+      }
+    },
+    {
+      "type": "grades/missing_teams",
+      "severity": "CRITICAL",
+      "message": "Missing team names (CSV)",
+      "context": {
+        "file": "grades_20260111.csv",
+        "record": {
+          "team_a": "Memphis",
+          "team_b": "Florida Atlantic",
+          "a_score": "78.0",
+          "b_score": "89.0",
+          "margin": "-11.0",
+          "market_spread": "0.9",
+          "model_spread": "2.5",
+          "covered": "False",
+          "won": "False",
+          "stake": "72.64000000000004",
+          "profit": "-72.64000000000004",
+          "note": ""
+        }
+      }
+    },
+    {
+      "type": "grades/missing_scores",
+      "severity": "CRITICAL",
+      "message": "Missing or non-numeric scores (CSV)",
+      "context": {
+        "file": "grades_20260111.csv",
+        "record": {
+          "team_a": "Memphis",
+          "team_b": "Florida Atlantic",
+          "a_score": "78.0",
+          "b_score": "89.0",
+          "margin": "-11.0",
+          "market_spread": "0.9",
+          "model_spread": "2.5",
+          "covered": "False",
+          "won": "False",
+          "stake": "72.64000000000004",
+          "profit": "-72.64000000000004",
+          "note": ""
+        }
+      }
+    },
+    {
+      "type": "grades/duplicate_record",
+      "severity": "WARNING",
+      "message": "Duplicate grade record found (CSV)",
+      "context": {
+        "file": "grades_20260111.csv",
+        "key": "20260111::"
+      }
+    },
+    {
+      "type": "grades/missing_teams",
+      "severity": "CRITICAL",
+      "message": "Missing team names (CSV)",
+      "context": {
+        "file": "grades_20260111.csv",
+        "record": {
+          "team_a": "Purdue Fort Wayne",
+          "team_b": "Robert Morris",
+          "a_score": "79.0",
+          "b_score": "74.0",
+          "margin": "5.0",
+          "market_spread": "2.82",
+          "model_spread": "2.5",
+          "covered": "True",
+          "won": "True",
+          "stake": "10.900000000000077",
+          "profit": "9.90919000000007",
+          "note": ""
+        }
+      }
+    },
+    {
+      "type": "grades/missing_scores",
+      "severity": "CRITICAL",
+      "message": "Missing or non-numeric scores (CSV)",
+      "context": {
+        "file": "grades_20260111.csv",
+        "record": {
+          "team_a": "Purdue Fort Wayne",
+          "team_b": "Robert Morris",
+          "a_score": "79.0",
+          "b_score": "74.0",
+          "margin": "5.0",
+          "market_spread": "2.82",
+          "model_spread": "2.5",
+          "covered": "True",
+          "won": "True",
+          "stake": "10.900000000000077",
+          "profit": "9.90919000000007",
+          "note": ""
+        }
+      }
+    },
+    {
+      "type": "grades/duplicate_record",
+      "severity": "WARNING",
+      "message": "Duplicate grade record found (CSV)",
+      "context": {
+        "file": "grades_20260111.csv",
+        "key": "20260111::"
+      }
+    },
+    {
+      "type": "grades/missing_teams",
+      "severity": "CRITICAL",
+      "message": "Missing team names (CSV)",
+      "context": {
+        "file": "grades_20260111.csv",
+        "record": {
+          "team_a": "Charlotte",
+          "team_b": "Rice",
+          "a_score": "74.0",
+          "b_score": "73.0",
+          "margin": "1.0",
+          "market_spread": "2.19",
+          "model_spread": "2.5",
+          "covered": "True",
+          "won": "True",
+          "stake": "0.0",
+          "profit": "0.0",
+          "note": ""
+        }
+      }
+    },
+    {
+      "type": "grades/missing_scores",
+      "severity": "CRITICAL",
+      "message": "Missing or non-numeric scores (CSV)",
+      "context": {
+        "file": "grades_20260111.csv",
+        "record": {
+          "team_a": "Charlotte",
+          "team_b": "Rice",
+          "a_score": "74.0",
+          "b_score": "73.0",
+          "margin": "1.0",
+          "market_spread": "2.19",
+          "model_spread": "2.5",
+          "covered": "True",
+          "won": "True",
+          "stake": "0.0",
+          "profit": "0.0",
+          "note": ""
+        }
+      }
+    },
+    {
+      "type": "grades/duplicate_record",
+      "severity": "WARNING",
+      "message": "Duplicate grade record found (CSV)",
+      "context": {
+        "file": "grades_20260111.csv",
+        "key": "20260111::"
+      }
+    },
+    {
+      "type": "grades/read_error",
+      "severity": "CRITICAL",
+      "message": "Failed to read grade file",
+      "context": {
+        "file": "grades_20260111.json",
+        "error": "arr is not iterable"
+      }
+    },
+    {
+      "type": "grades/read_error",
+      "severity": "CRITICAL",
+      "message": "Failed to read grade file",
+      "context": {
+        "file": "grades_20260116.json",
+        "error": "arr is not iterable"
+      }
+    }
+  ],
+  "pickIssues": [
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Gonzaga",
+          "team_b": "Seattle",
+          "market_spread": "-21.29",
+          "model_spread": "2.5",
+          "coverProb": "0.9256",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.40179047619047614",
+          "ev_per_1": "0.7670545454545454",
+          "kelly": "0.84376",
+          "stake_dollars": "843.76"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Michigan",
+          "team_b": "Oregon",
+          "market_spread": "-25.09",
+          "model_spread": "-4.5",
+          "coverProb": "0.9234",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.39959047619047616",
+          "ev_per_1": "0.7628545454545456",
+          "kelly": "0.83914",
+          "stake_dollars": "839.14"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Nevada",
+          "team_b": "Air Force",
+          "market_spread": "-17.37",
+          "model_spread": "2.5",
+          "coverProb": "0.889",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.3651904761904762",
+          "ev_per_1": "0.6971818181818182",
+          "kelly": "0.7669",
+          "stake_dollars": "766.9"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Connecticut",
+          "team_b": "Georgetown",
+          "market_spread": "-16.86",
+          "model_spread": "2.5",
+          "coverProb": "0.8836",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.3597904761904762",
+          "ev_per_1": "0.6868727272727274",
+          "kelly": "0.7555600000000001",
+          "stake_dollars": "755.5600000000002"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Duke",
+          "team_b": "Stanford",
+          "market_spread": "-14.09",
+          "model_spread": "2.5",
+          "coverProb": "0.8482",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.3243904761904761",
+          "ev_per_1": "0.6192909090909091",
+          "kelly": "0.6812199999999999",
+          "stake_dollars": "681.2199999999999"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Bethune Cookman",
+          "team_b": "Mississippi Valley S",
+          "market_spread": "-14.16",
+          "model_spread": "2.5",
+          "coverProb": "0.8472",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.3233904761904761",
+          "ev_per_1": "0.6173818181818181",
+          "kelly": "0.67912",
+          "stake_dollars": "679.1199999999999"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Central Connecticut",
+          "team_b": "Saint Francis",
+          "market_spread": "-13.25",
+          "model_spread": "2.5",
+          "coverProb": "0.8386",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.3147904761904762",
+          "ev_per_1": "0.6009636363636365",
+          "kelly": "0.6610600000000001",
+          "stake_dollars": "661.0600000000001"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Purdue",
+          "team_b": "USC",
+          "market_spread": "-12.28",
+          "model_spread": "2.5",
+          "coverProb": "0.8198",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.29599047619047614",
+          "ev_per_1": "0.5650727272727273",
+          "kelly": "0.6215799999999999",
+          "stake_dollars": "621.5799999999999"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Norfolk St.",
+          "team_b": "South Carolina St.",
+          "market_spread": "-10.95",
+          "model_spread": "2.5",
+          "coverProb": "0.8108",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.28699047619047613",
+          "ev_per_1": "0.5478909090909091",
+          "kelly": "0.60268",
+          "stake_dollars": "602.68"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Iowa St.",
+          "team_b": "Cincinnati",
+          "market_spread": "-11.53",
+          "model_spread": "2.5",
+          "coverProb": "0.8036",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.27979047619047615",
+          "ev_per_1": "0.5341454545454546",
+          "kelly": "0.58756",
+          "stake_dollars": "587.56"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Nebraska",
+          "team_b": "Northwestern",
+          "market_spread": "-6.61",
+          "model_spread": "9.5",
+          "coverProb": "0.8034",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.27959047619047617",
+          "ev_per_1": "0.5337636363636364",
+          "kelly": "0.58714",
+          "stake_dollars": "587.14"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Mercer",
+          "team_b": "UNC Greensboro",
+          "market_spread": "-9.61",
+          "model_spread": "2.5",
+          "coverProb": "0.7858",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.2619904761904762",
+          "ev_per_1": "0.5001636363636365",
+          "kelly": "0.5501800000000001",
+          "stake_dollars": "550.1800000000001"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "UC San Diego",
+          "team_b": "Cal St. Bakersfield",
+          "market_spread": "-9.84",
+          "model_spread": "2.5",
+          "coverProb": "0.7832",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.25939047619047617",
+          "ev_per_1": "0.4952000000000001",
+          "kelly": "0.5447200000000001",
+          "stake_dollars": "544.7200000000001"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Louisville",
+          "team_b": "Pittsburgh",
+          "market_spread": "-9.49",
+          "model_spread": "2.5",
+          "coverProb": "0.7822",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.25839047619047617",
+          "ev_per_1": "0.4932909090909091",
+          "kelly": "0.54262",
+          "stake_dollars": "542.62"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Youngstown St.",
+          "team_b": "Cleveland St.",
+          "market_spread": "-9.76",
+          "model_spread": "2.5",
+          "coverProb": "0.7804",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.25659047619047615",
+          "ev_per_1": "0.48985454545454543",
+          "kelly": "0.5388399999999999",
+          "stake_dollars": "538.8399999999999"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Presbyterian",
+          "team_b": "Gardner Webb",
+          "market_spread": "-9.65",
+          "model_spread": "2.5",
+          "coverProb": "0.7728",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.2489904761904762",
+          "ev_per_1": "0.47534545454545474",
+          "kelly": "0.5228800000000001",
+          "stake_dollars": "522.8800000000001"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "McNeese",
+          "team_b": "UT Rio Grande Valley",
+          "market_spread": "-9",
+          "model_spread": "2.5",
+          "coverProb": "0.7728",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.2489904761904762",
+          "ev_per_1": "0.47534545454545474",
+          "kelly": "0.5228800000000001",
+          "stake_dollars": "522.8800000000001"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Arizona",
+          "team_b": "UCF",
+          "market_spread": "-8.82",
+          "model_spread": "2.5",
+          "coverProb": "0.7698",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.2459904761904762",
+          "ev_per_1": "0.46961818181818193",
+          "kelly": "0.51658",
+          "stake_dollars": "516.58"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Queens",
+          "team_b": "Stetson",
+          "market_spread": "-8.34",
+          "model_spread": "2.5",
+          "coverProb": "0.7696",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.24579047619047611",
+          "ev_per_1": "0.46923636363636356",
+          "kelly": "0.5161599999999998",
+          "stake_dollars": "516.1599999999999"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Alabama",
+          "team_b": "Oklahoma",
+          "market_spread": "-8.18",
+          "model_spread": "2.5",
+          "coverProb": "0.7582",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.23439047619047615",
+          "ev_per_1": "0.44747272727272736",
+          "kelly": "0.49222000000000005",
+          "stake_dollars": "492.22"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Prairie View A&M",
+          "team_b": "Jackson St.",
+          "market_spread": "-7.96",
+          "model_spread": "2.5",
+          "coverProb": "0.7434",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.2195904761904761",
+          "ev_per_1": "0.4192181818181818",
+          "kelly": "0.46113999999999994",
+          "stake_dollars": "461.13999999999993"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Syracuse",
+          "team_b": "Boston College",
+          "market_spread": "-6.75",
+          "model_spread": "2.5",
+          "coverProb": "0.7322",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.20839047619047613",
+          "ev_per_1": "0.39783636363636365",
+          "kelly": "0.43761999999999995",
+          "stake_dollars": "437.61999999999995"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Siena",
+          "team_b": "Manhattan",
+          "market_spread": "-7.26",
+          "model_spread": "2.5",
+          "coverProb": "0.7316",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.2077904761904762",
+          "ev_per_1": "0.3966909090909092",
+          "kelly": "0.4363600000000001",
+          "stake_dollars": "436.36000000000007"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Utah St.",
+          "team_b": "Grand Canyon",
+          "market_spread": "-7.18",
+          "model_spread": "2.5",
+          "coverProb": "0.7304",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.2065904761904762",
+          "ev_per_1": "0.3944000000000002",
+          "kelly": "0.43384000000000017",
+          "stake_dollars": "433.84000000000015"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Massachusetts",
+          "team_b": "Northern Illinois",
+          "market_spread": "-6.82",
+          "model_spread": "2.5",
+          "coverProb": "0.7296",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.2057904761904762",
+          "ev_per_1": "0.3928727272727274",
+          "kelly": "0.4321600000000001",
+          "stake_dollars": "432.1600000000001"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Winthrop",
+          "team_b": "UNC Asheville",
+          "market_spread": "-7.18",
+          "model_spread": "2.5",
+          "coverProb": "0.7284",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.2045904761904762",
+          "ev_per_1": "0.39058181818181836",
+          "kelly": "0.4296400000000002",
+          "stake_dollars": "429.6400000000002"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "TCU",
+          "team_b": "Utah",
+          "market_spread": "-7.41",
+          "model_spread": "2.5",
+          "coverProb": "0.728",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.20419047619047614",
+          "ev_per_1": "0.38981818181818184",
+          "kelly": "0.4288",
+          "stake_dollars": "428.8"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Northern Colorado",
+          "team_b": "Sacramento St.",
+          "market_spread": "-6.37",
+          "model_spread": "2.5",
+          "coverProb": "0.7268",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.20299047619047617",
+          "ev_per_1": "0.38752727272727283",
+          "kelly": "0.4262800000000001",
+          "stake_dollars": "426.2800000000001"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "North Carolina",
+          "team_b": "California",
+          "market_spread": "-6.68",
+          "model_spread": "2.5",
+          "coverProb": "0.7256",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.2017904761904762",
+          "ev_per_1": "0.3852363636363637",
+          "kelly": "0.42376",
+          "stake_dollars": "423.76000000000005"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "LIU",
+          "team_b": "Fairleigh Dickinson",
+          "market_spread": "-6.12",
+          "model_spread": "2.5",
+          "coverProb": "0.7226",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.19879047619047618",
+          "ev_per_1": "0.379509090909091",
+          "kelly": "0.4174600000000001",
+          "stake_dollars": "417.4600000000001"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Texas Southern",
+          "team_b": "Alcorn St.",
+          "market_spread": "-2.18",
+          "model_spread": "9.5",
+          "coverProb": "0.7218",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.19799047619047616",
+          "ev_per_1": "0.3779818181818182",
+          "kelly": "0.41578",
+          "stake_dollars": "415.78"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "New Mexico St.",
+          "team_b": "Delaware",
+          "market_spread": "-6.94",
+          "model_spread": "2.5",
+          "coverProb": "0.7212",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.19739047619047612",
+          "ev_per_1": "0.37683636363636364",
+          "kelly": "0.41451999999999994",
+          "stake_dollars": "414.5199999999999"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Stephen F. Austin",
+          "team_b": "New Orleans",
+          "market_spread": "-6.32",
+          "model_spread": "2.5",
+          "coverProb": "0.7132",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.1893904761904761",
+          "ev_per_1": "0.3615636363636363",
+          "kelly": "0.3977199999999999",
+          "stake_dollars": "397.7199999999999"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Hawaii",
+          "team_b": "UC Santa Barbara",
+          "market_spread": "-5.82",
+          "model_spread": "2.5",
+          "coverProb": "0.7104",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.1865904761904762",
+          "ev_per_1": "0.356218181818182",
+          "kelly": "0.39184000000000013",
+          "stake_dollars": "391.84000000000015"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "East Tennessee St.",
+          "team_b": "Samford",
+          "market_spread": "-5.03",
+          "model_spread": "2.5",
+          "coverProb": "0.6936",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.16979047619047616",
+          "ev_per_1": "0.3241454545454546",
+          "kelly": "0.35656000000000004",
+          "stake_dollars": "356.56000000000006"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Jacksonville",
+          "team_b": "North Alabama",
+          "market_spread": "-4.94",
+          "model_spread": "2.5",
+          "coverProb": "0.693",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.1691904761904761",
+          "ev_per_1": "0.32299999999999995",
+          "kelly": "0.3552999999999999",
+          "stake_dollars": "355.2999999999999"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Michigan St.",
+          "team_b": "Washington",
+          "market_spread": "-4.89",
+          "model_spread": "2.5",
+          "coverProb": "0.6916",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.16779047619047616",
+          "ev_per_1": "0.3203272727272728",
+          "kelly": "0.35236000000000006",
+          "stake_dollars": "352.36000000000007"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Georgia St.",
+          "team_b": "Louisiana Monroe",
+          "market_spread": "-4.37",
+          "model_spread": "2.5",
+          "coverProb": "0.6802",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.1563904761904762",
+          "ev_per_1": "0.2985636363636365",
+          "kelly": "0.3284200000000001",
+          "stake_dollars": "328.4200000000001"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Cal St. Fullerton",
+          "team_b": "UC Riverside",
+          "market_spread": "-4.21",
+          "model_spread": "2.5",
+          "coverProb": "0.6796",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.15579047619047615",
+          "ev_per_1": "0.2974181818181818",
+          "kelly": "0.32715999999999995",
+          "stake_dollars": "327.15999999999997"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Quinnipiac",
+          "team_b": "Merrimack",
+          "market_spread": "-4.13",
+          "model_spread": "2.5",
+          "coverProb": "0.6736",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.14979047619047614",
+          "ev_per_1": "0.2859636363636364",
+          "kelly": "0.31456",
+          "stake_dollars": "314.56"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Boston University",
+          "team_b": "Loyola MD",
+          "market_spread": "-3.78",
+          "model_spread": "2.5",
+          "coverProb": "0.6724",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.14859047619047616",
+          "ev_per_1": "0.2836727272727273",
+          "kelly": "0.31204",
+          "stake_dollars": "312.03999999999996"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Navy",
+          "team_b": "Lehigh",
+          "market_spread": "-3.78",
+          "model_spread": "2.5",
+          "coverProb": "0.6694",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.14559047619047616",
+          "ev_per_1": "0.2779454545454546",
+          "kelly": "0.30574000000000007",
+          "stake_dollars": "305.74000000000007"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Wake Forest",
+          "team_b": "Florida St.",
+          "market_spread": "-4.56",
+          "model_spread": "2.5",
+          "coverProb": "0.6692",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.14539047619047618",
+          "ev_per_1": "0.27756363636363646",
+          "kelly": "0.3053200000000001",
+          "stake_dollars": "305.3200000000001"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "UC Irvine",
+          "team_b": "UC Davis",
+          "market_spread": "-4.25",
+          "model_spread": "2.5",
+          "coverProb": "0.6632",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.13939047619047618",
+          "ev_per_1": "0.26610909090909096",
+          "kelly": "0.29272000000000004",
+          "stake_dollars": "292.72"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Le Moyne",
+          "team_b": "Chicago St.",
+          "market_spread": "-3.56",
+          "model_spread": "2.5",
+          "coverProb": "0.6612",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.13739047619047617",
+          "ev_per_1": "0.26229090909090913",
+          "kelly": "0.28852",
+          "stake_dollars": "288.52"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Northern Iowa",
+          "team_b": "Valparaiso",
+          "market_spread": "-4.13",
+          "model_spread": "2.5",
+          "coverProb": "0.6584",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.13459047619047615",
+          "ev_per_1": "0.2569454545454546",
+          "kelly": "0.28264",
+          "stake_dollars": "282.64"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Belmont",
+          "team_b": "Southern Illinois",
+          "market_spread": "-3.57",
+          "model_spread": "2.5",
+          "coverProb": "0.6564",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.13259047619047615",
+          "ev_per_1": "0.25312727272727276",
+          "kelly": "0.27844",
+          "stake_dollars": "278.44"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Wyoming",
+          "team_b": "Fresno St.",
+          "market_spread": "-3.45",
+          "model_spread": "2.5",
+          "coverProb": "0.6544",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.13059047619047615",
+          "ev_per_1": "0.24930909090909092",
+          "kelly": "0.27424",
+          "stake_dollars": "274.24"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "East Texas A&M",
+          "team_b": "Houston Christian",
+          "market_spread": "-2.6",
+          "model_spread": "2.5",
+          "coverProb": "0.6488",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.12499047619047621",
+          "ev_per_1": "0.23861818181818195",
+          "kelly": "0.2624800000000001",
+          "stake_dollars": "262.4800000000001"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Columbia",
+          "team_b": "Brown",
+          "market_spread": "-3.06",
+          "model_spread": "2.5",
+          "coverProb": "0.6372",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.11339047619047615",
+          "ev_per_1": "0.21647272727272726",
+          "kelly": "0.23811999999999997",
+          "stake_dollars": "238.11999999999998"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "St. Bonaventure",
+          "team_b": "La Salle",
+          "market_spread": "-2.47",
+          "model_spread": "2.5",
+          "coverProb": "0.6358",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.1119904761904762",
+          "ev_per_1": "0.2138000000000001",
+          "kelly": "0.23518000000000008",
+          "stake_dollars": "235.1800000000001"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Sam Houston St.",
+          "team_b": "FIU",
+          "market_spread": "-1.69",
+          "model_spread": "2.5",
+          "coverProb": "0.6188",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.09499047619047618",
+          "ev_per_1": "0.1813454545454546",
+          "kelly": "0.19948000000000002",
+          "stake_dollars": "199.48000000000002"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "St. John's",
+          "team_b": "Villanova",
+          "market_spread": "-1.21",
+          "model_spread": "2.5",
+          "coverProb": "0.617",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.09319047619047616",
+          "ev_per_1": "0.1779090909090909",
+          "kelly": "0.19569999999999999",
+          "stake_dollars": "195.7"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Abilene Christian",
+          "team_b": "Southern Utah",
+          "market_spread": "-1.28",
+          "model_spread": "2.5",
+          "coverProb": "0.6146",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.0907904761904762",
+          "ev_per_1": "0.17332727272727289",
+          "kelly": "0.19066000000000016",
+          "stake_dollars": "190.66000000000017"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Pacific",
+          "team_b": "Oregon St.",
+          "market_spread": "-1.46",
+          "model_spread": "2.5",
+          "coverProb": "0.6136",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.0897904761904762",
+          "ev_per_1": "0.17141818181818191",
+          "kelly": "0.1885600000000001",
+          "stake_dollars": "188.5600000000001"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Mount St. Mary's",
+          "team_b": "Canisius",
+          "market_spread": "-0.67",
+          "model_spread": "2.5",
+          "coverProb": "0.5996",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.07579047619047619",
+          "ev_per_1": "0.1446909090909092",
+          "kelly": "0.1591600000000001",
+          "stake_dollars": "159.1600000000001"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Charleston",
+          "team_b": "Stony Brook",
+          "market_spread": "-0.53",
+          "model_spread": "2.5",
+          "coverProb": "0.5968",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.07299047619047616",
+          "ev_per_1": "0.13934545454545455",
+          "kelly": "0.15328",
+          "stake_dollars": "153.28"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Howard",
+          "team_b": "North Carolina Centr",
+          "market_spread": "-0.45",
+          "model_spread": "2.5",
+          "coverProb": "0.5896",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.06579047619047618",
+          "ev_per_1": "0.12560000000000004",
+          "kelly": "0.13816000000000003",
+          "stake_dollars": "138.16000000000003"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Virginia",
+          "team_b": "SMU",
+          "market_spread": "0.32",
+          "model_spread": "2.5",
+          "coverProb": "0.584",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.06019047619047613",
+          "ev_per_1": "0.11490909090909085",
+          "kelly": "0.12639999999999993",
+          "stake_dollars": "126.39999999999993"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "BYU",
+          "team_b": "Texas Tech",
+          "market_spread": "-0.67",
+          "model_spread": "2.5",
+          "coverProb": "0.5838",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.05999047619047615",
+          "ev_per_1": "0.1145272727272727",
+          "kelly": "0.12597999999999995",
+          "stake_dollars": "125.97999999999995"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Morehead St.",
+          "team_b": "Tennessee Tech",
+          "market_spread": "-0.04",
+          "model_spread": "2.5",
+          "coverProb": "0.5832",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.059390476190476216",
+          "ev_per_1": "0.11338181818181836",
+          "kelly": "0.12472000000000019",
+          "stake_dollars": "124.7200000000002"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "UNLV",
+          "team_b": "San Jose St.",
+          "market_spread": "0.33",
+          "model_spread": "2.5",
+          "coverProb": "0.5766",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.052790476190476165",
+          "ev_per_1": "0.1007818181818182",
+          "kelly": "0.11086",
+          "stake_dollars": "110.86"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Southern",
+          "team_b": "Grambling St.",
+          "market_spread": "0.29",
+          "model_spread": "2.5",
+          "coverProb": "0.5748",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.05099047619047614",
+          "ev_per_1": "0.09734545454545451",
+          "kelly": "0.10707999999999995",
+          "stake_dollars": "107.07999999999996"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Morgan St.",
+          "team_b": "Delaware St.",
+          "market_spread": "0.53",
+          "model_spread": "2.5",
+          "coverProb": "0.5736",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.04979047619047616",
+          "ev_per_1": "0.0950545454545455",
+          "kelly": "0.10456000000000004",
+          "stake_dollars": "104.56000000000004"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Duquesne",
+          "team_b": "Fordham",
+          "market_spread": "0.71",
+          "model_spread": "2.5",
+          "coverProb": "0.5732",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.04939047619047621",
+          "ev_per_1": "0.0942909090909092",
+          "kelly": "0.10372000000000012",
+          "stake_dollars": "103.72000000000011"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Detroit Mercy",
+          "team_b": "IU Indy",
+          "market_spread": "0.71",
+          "model_spread": "2.5",
+          "coverProb": "0.5608",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.03699047619047613",
+          "ev_per_1": "0.0706181818181818",
+          "kelly": "0.07767999999999997",
+          "stake_dollars": "77.67999999999998"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Coastal Carolina",
+          "team_b": "Georgia Southern",
+          "market_spread": "1.04",
+          "model_spread": "2.5",
+          "coverProb": "0.5598",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.03599047619047613",
+          "ev_per_1": "0.06870909090909083",
+          "kelly": "0.07557999999999991",
+          "stake_dollars": "75.57999999999991"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Holy Cross",
+          "team_b": "Lafayette",
+          "market_spread": "1.38",
+          "model_spread": "2.5",
+          "coverProb": "0.5572",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.03339047619047619",
+          "ev_per_1": "0.06374545454545466",
+          "kelly": "0.07012000000000013",
+          "stake_dollars": "70.12000000000013"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "New Mexico",
+          "team_b": "San Diego St.",
+          "market_spread": "1.55",
+          "model_spread": "2.5",
+          "coverProb": "0.557",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.033190476190476215",
+          "ev_per_1": "0.06336363636363651",
+          "kelly": "0.06970000000000015",
+          "stake_dollars": "69.70000000000014"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Southern Miss",
+          "team_b": "Texas St.",
+          "market_spread": "1.11",
+          "model_spread": "2.5",
+          "coverProb": "0.5536",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.029790476190476145",
+          "ev_per_1": "0.0568727272727273",
+          "kelly": "0.06256000000000002",
+          "stake_dollars": "62.56000000000002"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Austin Peay",
+          "team_b": "Lipscomb",
+          "market_spread": "1.41",
+          "model_spread": "2.5",
+          "coverProb": "0.5494",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.025590476190476164",
+          "ev_per_1": "0.048854545454545484",
+          "kelly": "0.05374000000000003",
+          "stake_dollars": "53.74000000000003"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Kennesaw St.",
+          "team_b": "Western Kentucky",
+          "market_spread": "1.85",
+          "model_spread": "2.5",
+          "coverProb": "0.5396",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.015790476190476133",
+          "ev_per_1": "0.03014545454545453",
+          "kelly": "0.03315999999999998",
+          "stake_dollars": "33.15999999999998"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Saint Mary's",
+          "team_b": "Santa Clara",
+          "market_spread": "1.24",
+          "model_spread": "2.5",
+          "coverProb": "0.5368",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.012990476190476219",
+          "ev_per_1": "0.024800000000000155",
+          "kelly": "0.02728000000000017",
+          "stake_dollars": "27.280000000000168"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Lindenwood",
+          "team_b": "Tennessee Martin",
+          "market_spread": "2.06",
+          "model_spread": "2.5",
+          "coverProb": "0.5322",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.00839047619047617",
+          "ev_per_1": "0.016018181818181876",
+          "kelly": "0.017620000000000063",
+          "stake_dollars": "17.62000000000006"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Texas A&M",
+          "team_b": "Texas",
+          "market_spread": "1.92",
+          "model_spread": "2.5",
+          "coverProb": "0.5306",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.006790476190476125",
+          "ev_per_1": "0.012963636363636344",
+          "kelly": "0.014259999999999978",
+          "stake_dollars": "14.259999999999977"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Miami FL",
+          "team_b": "Clemson",
+          "market_spread": "2.44",
+          "model_spread": "2.5",
+          "coverProb": "0.5262",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.002390476190476165",
+          "ev_per_1": "0.004563636363636381",
+          "kelly": "0.005020000000000018",
+          "stake_dollars": "5.020000000000018"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Mississippi",
+          "team_b": "Mississippi St.",
+          "market_spread": "1.81",
+          "model_spread": "2.5",
+          "coverProb": "0.5244",
+          "impliedProb": "0.5238095238095238",
+          "edge": "0.0005904761904761413",
+          "ev_per_1": "0.001127272727272699",
+          "kelly": "0.0012399999999999688",
+          "stake_dollars": "1.2399999999999687"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Campbell",
+          "team_b": "UNC Wilmington",
+          "market_spread": "3.29",
+          "model_spread": "2.5",
+          "coverProb": "0.5196",
+          "impliedProb": "0.5238095238095238",
+          "edge": "-0.004209523809523885",
+          "ev_per_1": "-0.008036363636363675",
+          "kelly": "0",
+          "stake_dollars": "0"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Iowa",
+          "team_b": "Indiana",
+          "market_spread": "2.12",
+          "model_spread": "2.5",
+          "coverProb": "0.5186",
+          "impliedProb": "0.5238095238095238",
+          "edge": "-0.005209523809523886",
+          "ev_per_1": "-0.00994545454545459",
+          "kelly": "0",
+          "stake_dollars": "0"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "South Dakota",
+          "team_b": "North Dakota",
+          "market_spread": "3.02",
+          "model_spread": "2.5",
+          "coverProb": "0.5128",
+          "impliedProb": "0.5238095238095238",
+          "edge": "-0.011009523809523802",
+          "ev_per_1": "-0.021018181818181714",
+          "kelly": "0",
+          "stake_dollars": "0"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Tarleton St.",
+          "team_b": "Utah Tech",
+          "market_spread": "2.78",
+          "model_spread": "2.5",
+          "coverProb": "0.5124",
+          "impliedProb": "0.5238095238095238",
+          "edge": "-0.01140952380952387",
+          "ev_per_1": "-0.02178181818181818",
+          "kelly": "0",
+          "stake_dollars": "0"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Longwood",
+          "team_b": "Radford",
+          "market_spread": "2.99",
+          "model_spread": "2.5",
+          "coverProb": "0.511",
+          "impliedProb": "0.5238095238095238",
+          "edge": "-0.012809523809523826",
+          "ev_per_1": "-0.024454545454545396",
+          "kelly": "0",
+          "stake_dollars": "0"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "SIUE",
+          "team_b": "Southeast Missouri",
+          "market_spread": "2.95",
+          "model_spread": "2.5",
+          "coverProb": "0.5106",
+          "impliedProb": "0.5238095238095238",
+          "edge": "-0.013209523809523782",
+          "ev_per_1": "-0.025218181818181695",
+          "kelly": "0",
+          "stake_dollars": "0"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Kentucky",
+          "team_b": "Tennessee",
+          "market_spread": "3.61",
+          "model_spread": "2.5",
+          "coverProb": "0.5062",
+          "impliedProb": "0.5238095238095238",
+          "edge": "-0.017609523809523853",
+          "ev_per_1": "-0.033618181818181825",
+          "kelly": "0",
+          "stake_dollars": "0"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "Drake",
+          "team_b": "Illinois Chicago",
+          "market_spread": "3.31",
+          "model_spread": "2.5",
+          "coverProb": "0.5024",
+          "impliedProb": "0.5238095238095238",
+          "edge": "-0.021409523809523878",
+          "ev_per_1": "-0.04087272727272734",
+          "kelly": "0",
+          "stake_dollars": "0"
+        }
+      }
+    },
+    {
+      "type": "picks/missing_fields",
+      "severity": "CRITICAL",
+      "message": "Missing date/team/opponent",
+      "context": {
+        "row": {
+          "date": "2026-01-17T18:17:19.207Z",
+          "team_a": "St. Thomas",
+          "team_b": "North Dakota St.",
+          "market_spread": "3.17",
+          "model_spread": "2.5",
+          "coverProb": "0.501",
+          "impliedProb": "0.5238095238095238",
+          "edge": "-0.022809523809523835",
+          "ev_per_1": "-0.0435454545454545",
+          "kelly": "0",
+          "stake_dollars": "0"
+        }
+      }
+    }
+  ]
+}
