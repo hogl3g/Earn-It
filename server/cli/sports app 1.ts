@@ -5,6 +5,48 @@ import fs from "fs/promises";
 import path from "path";
 import { fileURLToPath } from "url";
 
+// Calibration params
+interface CalibrationParams {
+  a: number;
+  b: number;
+  status?: string;
+}
+
+let CALIBRATION: CalibrationParams | null = null;
+
+async function loadCalibration(): Promise<CalibrationParams | null> {
+  if (CALIBRATION) return CALIBRATION;
+  const __filename = fileURLToPath(import.meta.url);
+  const __dirname = path.dirname(__filename);
+  const calibPath = path.resolve(__dirname, "../../data/results/prob_calibration.json");
+  try {
+    const txt = await fs.readFile(calibPath, "utf8");
+    const cal = JSON.parse(txt);
+    // Skip degenerate calibration (identity mapping)
+    if (cal.a === 1 && cal.b === 0) {
+      console.log("⚠️  Calibration is degenerate (a=1, b=0), using raw probabilities");
+      return null;
+    }
+    if (cal.status === "insufficient-variance") {
+      console.log("⚠️  Calibration has insufficient variance, using raw probabilities");
+      return null;
+    }
+    CALIBRATION = cal;
+    console.log(`✓ Loaded calibration: f(p) = ${cal.a.toFixed(3)} + ${cal.b.toFixed(3)}·p`);
+    return CALIBRATION;
+  } catch (err) {
+    console.log("⚠️  No calibration file found, using raw probabilities");
+    return null;
+  }
+}
+
+function applyCal(rawProb: number, cal: CalibrationParams | null): number {
+  if (!cal) return rawProb;
+  const calibrated = cal.a + cal.b * rawProb;
+  // Clamp to [0, 1]
+  return Math.max(0, Math.min(1, calibrated));
+}
+
 // Lightweight mock loaders — replace with real adapters when available
 export async function load_team_ratings(date: string): Promise<Record<string, TeamRecord>> {
   // Try to load ratings CSV from cbb_betting_sim processed data if present.
@@ -46,6 +88,7 @@ export async function load_player_availability(): Promise<Record<string, Record<
 export type MarketLine = {
   team_a: string;
   team_b: string;
+  date?: string;
   spread?: number; // positive means team_a favored by this many points (convention may vary)
   over_under?: number;
   spread_odds?: number;
@@ -122,9 +165,9 @@ export async function get_market_lines(requests: Array<[string, string]>, asOfDa
         const over_under = nearby.over_under;
         const spread_odds = nearby.spread_odds;
 
-        results.push({ team_a: a, team_b: b, spread, over_under, spread_odds });
+        results.push({ team_a: a, team_b: b, date: asOfDate, spread, over_under, spread_odds });
       } catch (err) {
-        results.push({ team_a: a, team_b: b });
+        results.push({ team_a: a, team_b: b, date: asOfDate });
       }
     }
     return results;
@@ -166,7 +209,10 @@ export async function get_market_lines(requests: Array<[string, string]>, asOfDa
           const total = Number(totalStr);
           const pred = Number(predStr);
           const spread = homeOrAway === 'AWAY' ? -Math.abs(pred) : Math.abs(pred);
-          out.push({ team_a: away, team_b: home, spread, over_under: total });
+          // NOTE: Talisman dates appear to be 1 day behind actual game dates per ESPN API
+          // When Talisman lists 18-Jan, ESPN shows those games on 19-Jan
+          // Using Talisman's listed date for now; grading will match by team names
+          out.push({ team_a: away, team_b: home, date: targetDate, spread, over_under: total });
         }
       }
       
@@ -242,7 +288,7 @@ export async function get_market_lines(requests: Array<[string, string]>, asOfDa
           const spread = nearby.spread;
           const over_under = nearby.over_under;
           const spread_odds = nearby.spread_odds;
-          if (teamA && teamB) out.push({ team_a: teamA, team_b: teamB, spread, over_under, spread_odds });
+          if (teamA && teamB) out.push({ team_a: teamA, team_b: teamB, date: asOfDate, spread, over_under, spread_odds });
         } catch (err) {
           continue;
         }
@@ -282,6 +328,7 @@ export async function get_market_lines(requests: Array<[string, string]>, asOfDa
           return data.map((m: any) => ({
             team_a: m.team_a,
             team_b: m.team_b,
+            date: m.date ?? asOfDate,
             spread: m.spread != null ? Number(m.spread) : undefined,
             over_under: m.over_under != null ? Number(m.over_under) : undefined,
           } as MarketLine));
@@ -337,17 +384,17 @@ export async function get_market_lines(requests: Array<[string, string]>, asOfDa
     for (const [a, b] of requests) {
       const matches = records.filter(r => (r.team_a === a && r.team_b === b) || (r.team_a === b && r.team_b === a));
       if (matches.length === 0) {
-        out.push({ team_a: a, team_b: b });
+        out.push({ team_a: a, team_b: b, date: todayKey });
         continue;
       }
       let pick = matches.find(m => m.date >= todayKey) ?? matches[0];
       if (pick.team_a !== a) {
         const spreadVal = pick.spread ? -Number(pick.spread) : undefined;
         const spreadOdds = pick.spread_odds ? Number(pick.spread_odds) : undefined;
-        out.push({ team_a: a, team_b: b, spread: spreadVal, over_under: pick.over_under ? Number(pick.over_under) : undefined, spread_odds: spreadOdds });
+        out.push({ team_a: a, team_b: b, date: pick.date, spread: spreadVal, over_under: pick.over_under ? Number(pick.over_under) : undefined, spread_odds: spreadOdds });
       } else {
         const spreadOdds = pick.spread_odds ? Number(pick.spread_odds) : undefined;
-        out.push({ team_a: a, team_b: b, spread: pick.spread ? Number(pick.spread) : undefined, over_under: pick.over_under ? Number(pick.over_under) : undefined, spread_odds: spreadOdds });
+        out.push({ team_a: a, team_b: b, date: pick.date, spread: pick.spread ? Number(pick.spread) : undefined, over_under: pick.over_under ? Number(pick.over_under) : undefined, spread_odds: spreadOdds });
       }
     }
     return out;
@@ -360,6 +407,7 @@ export async function get_market_lines(requests: Array<[string, string]>, asOfDa
     .map(r => ({
         team_a: r.team_a,
         team_b: r.team_b,
+        date: r.date,
         spread: r.spread ? Number(r.spread) : undefined,
         over_under: r.over_under ? Number(r.over_under) : undefined,
         spread_odds: r.spread_odds ? Number(r.spread_odds) : undefined,
@@ -369,6 +417,9 @@ export async function get_market_lines(requests: Array<[string, string]>, asOfDa
 }
 
 async function main() {
+  // Load probability calibration at startup
+  const calibration = await loadCalibration();
+  
   // parse simple CLI flags: --date YYYY-MM-DD and --max N, or provide pairs
   const argv = process.argv.slice(2);
   let reqPairs: Array<[string,string]> = [];
@@ -420,7 +471,13 @@ async function main() {
       const comp = compare_teams(teamA, teamB, false, 2000, market_spread);
       const sim = simulate_game(teamA, teamB, false, 3000);
 
-      const coverProb = (Array.isArray(sim.samples) && typeof market_spread === 'number') ? sim.samples.filter(m=>m>market_spread).length / sim.samples.length : undefined;
+      // Calculate RAW cover probability from simulation
+      const rawCoverProb = (Array.isArray(sim.samples) && typeof market_spread === 'number') 
+        ? sim.samples.filter(m=>m>market_spread).length / sim.samples.length 
+        : undefined;
+      
+      // Apply calibration to get true cover probability
+      const coverProb = typeof rawCoverProb === 'number' ? applyCal(rawCoverProb, calibration) : undefined;
 
       let impliedProb = 1/1.9090909090909092; let decimalOdds = 1.9090909090909092;
       if (r.spread_odds) {
@@ -433,7 +490,14 @@ async function main() {
 
       let ev_per_1: number | undefined = undefined; let kelly: number | undefined = undefined; let edge: number | undefined = undefined;
       if (typeof coverProb === 'number') {
-        const b = decimalOdds - 1; ev_per_1 = coverProb * b - (1 - coverProb) * 1; kelly = (b * coverProb - (1 - coverProb)) / b; if (kelly < 0) kelly = 0; edge = coverProb - impliedProb;
+        edge = coverProb - impliedProb;
+        const b = decimalOdds - 1; 
+        ev_per_1 = coverProb * b - (1 - coverProb) * 1; 
+        // Full Kelly formula
+        let fullKelly = (b * coverProb - (1 - coverProb)) / b; 
+        if (fullKelly < 0) fullKelly = 0;
+        // Apply quarter-Kelly cap (25% of full Kelly) for safety
+        kelly = Math.min(fullKelly * 0.25, 0.25); // Max 25% of bankroll
       }
 
       const stake = (kelly ?? 0) * bankroll;
@@ -488,9 +552,13 @@ async function main() {
       const comp = compare_teams(teamA, teamB, false, 2000, game.spread);
       const sim = simulate_game(teamA, teamB, false, 5000);
 
-      const coverProb = Array.isArray(sim.samples) && typeof game.spread === "number"
+      // Calculate RAW probabilities from simulation
+      const rawCoverProb = Array.isArray(sim.samples) && typeof game.spread === "number"
         ? sim.samples.filter(m => m > game.spread!).length / sim.samples.length
         : undefined;
+      
+      // Apply calibration to get TRUE cover probability
+      const coverProb = typeof rawCoverProb === 'number' ? applyCal(rawCoverProb, calibration) : undefined;
 
       const overProb = Array.isArray(sim.totals) && typeof game.over_under === "number"
         ? sim.totals.filter(t => t > game.over_under!).length / sim.totals.length
@@ -529,9 +597,11 @@ async function main() {
         edge = coverProb - impliedProb;
         const b = decimalOdds - 1;
         ev_per_1 = coverProb * b - (1 - coverProb) * 1;
-        // Kelly fraction (fraction of bankroll): (b*p - q) / b
-        kelly = (b * coverProb - (1 - coverProb)) / b;
-        if (kelly < 0) kelly = 0;
+        // Full Kelly formula: (b*p - q) / b
+        let fullKelly = (b * coverProb - (1 - coverProb)) / b;
+        if (fullKelly < 0) fullKelly = 0;
+        // Apply quarter-Kelly cap (25% of full Kelly) for safety
+        kelly = Math.min(fullKelly * 0.25, 0.25); // Max 25% of bankroll
       }
 
       // Bankroll (dollars) from env, default to 1000
@@ -562,15 +632,40 @@ async function main() {
       if (edge !== undefined) out += `Edge vs implied: ${(edge * 100).toFixed(2)}% EV/$1: ${ev_per_1?.toFixed(3)} Kelly: ${(kelly ?? 0).toFixed(3)}\n`;
     }
 
-    // Rank picks by EV per $1 (descending) and write CSV + summary
-    const ranked = picks.filter(p => typeof p.ev_per_1 === "number" && (p.coverProb ?? 0) > 0.50).sort((a,b) => (b.ev_per_1 ?? 0) - (a.ev_per_1 ?? 0));
+    // Rank picks by EV per $1 (descending)
+    // Filter criteria (ALL must be met):
+    // 1. ≥70% CALIBRATED cover probability
+    // 2. ≥5% edge (calibrated prob - implied prob)
+    // 3. Positive EV
+    const ranked = picks.filter(p => {
+      const hasEV = typeof p.ev_per_1 === "number" && p.ev_per_1 > 0;
+      const meetsCoverThreshold = (p.coverProb ?? 0) >= 0.70;
+      const meetsEdgeThreshold = (p.edge ?? 0) >= 0.05;
+      return hasEV && meetsCoverThreshold && meetsEdgeThreshold;
+    }).sort((a,b) => (b.ev_per_1 ?? 0) - (a.ev_per_1 ?? 0));
+    
+    // If no picks meet quality thresholds, pass for the day
+    if (ranked.length === 0 || ranked.length < 5) {
+      console.log("\n⚠️  INSUFFICIENT PICKS - DISABLING PROJECTOR");
+      console.log(`Generated only ${ranked.length} picks, but need at least 5 to maintain quality.`);
+      console.log("Root cause: Missing team power ratings (ratings.csv not populated)");
+      console.log("  - KenPom data needs to be scraped/imported");
+      console.log("  - Historical odds history too sparse (only 3 records)");
+      console.log("  - Model falling back to placeholder 2.5pt spread for all games");
+      console.log("");
+      console.log("Fix: Run 'python scripts/generate_ratings_from_odds.py' after importing real");
+      console.log("     historical odds data, or scrape KenPom power ratings.\n");
+      return;
+    }
+
     const top = ranked.slice(0, 20);
     const csvRows = [
       ["date","team_a","team_b","market_spread","model_spread","coverProb","impliedProb","edge","ev_per_1","kelly","stake_dollars"].join(",")
     ];
-    const nowKey = new Date().toISOString();
     for (const r of ranked) {
-      csvRows.push([nowKey, r.team_a, r.team_b, r.market_spread ?? "", r.model_spread ?? "", r.coverProb ?? "", r.impliedProb ?? "", r.edge ?? "", r.ev_per_1 ?? "", r.kelly ?? "", r.stake_dollars ?? ""].join(","));
+      const pickDate = (marketLines.find(m => m.team_a === r.team_a && m.team_b === r.team_b) as any)?.date
+        ?? (dateArg ?? new Date().toISOString().split('T')[0]);
+      csvRows.push([pickDate, r.team_a, r.team_b, r.market_spread ?? "", r.model_spread ?? "", r.coverProb ?? "", r.impliedProb ?? "", r.edge ?? "", r.ev_per_1 ?? "", r.kelly ?? "", r.stake_dollars ?? ""].join(","));
     }
 
     try {

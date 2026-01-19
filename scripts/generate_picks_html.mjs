@@ -105,12 +105,37 @@ try {
   const resultsDir = path.join(root, 'data', 'results');
   const gradesFiles = fs.readdirSync(resultsDir).filter(f => f.match(/^grades_\d{8}\.json$/)).sort().reverse();
   
-  // Get the most recent grades file for game scores
-  const mostRecentFile = gradesFiles[0];
+  // Get the most recent grades file WITH completed games (non-zero scores)
+  let mostRecentFile = null;
+  let mostRecentCompletedFile = null;
+  
+  for (const file of gradesFiles) {
+    if (!mostRecentFile) mostRecentFile = file;
+    
+    try {
+      let gj = fs.readFileSync(path.join(resultsDir, file), 'utf-8');
+      gj = gj.replace(/\bNaN\b/g, 'null');
+      const parsed = JSON.parse(gj);
+      const rowsJson = Array.isArray(parsed.rows) ? parsed.rows : [];
+      
+      // Check if this file has any completed games (non-zero scores)
+      const hasCompletedGames = rowsJson.some(row => 
+        row.a_score != null && row.b_score != null && 
+        (row.a_score > 0 || row.b_score > 0) &&
+        !row.note
+      );
+      
+      if (hasCompletedGames && !mostRecentCompletedFile) {
+        mostRecentCompletedFile = file;
+      }
+    } catch (err) {
+      continue;
+    }
+  }
   
   // Extract date from filename (grades_YYYYMMDD.json)
-  if (mostRecentFile) {
-    const dateMatch = mostRecentFile.match(/grades_(\d{4})(\d{2})(\d{2})\.json/);
+  if (mostRecentCompletedFile) {
+    const dateMatch = mostRecentCompletedFile.match(/grades_(\d{4})(\d{2})(\d{2})\.json/);
     if (dateMatch) {
       const yyyy = dateMatch[1];
       const mm = dateMatch[2];
@@ -127,14 +152,17 @@ try {
       const rowsJson = Array.isArray(parsed.rows) ? parsed.rows : [];
       
       rowsJson.forEach(row => {
-        if (row.won === true) {
-          cumulativeWins++;
-        } else if (row.won === false) {
-          cumulativeLosses++;
+        // Only count games that have actual scores (not "score not found")
+        if (row.a_score != null && row.b_score != null && (row.a_score > 0 || row.b_score > 0) && !row.note) {
+          if (row.won === true) {
+            cumulativeWins++;
+          } else if (row.won === false) {
+            cumulativeLosses++;
+          }
         }
         
-        // Only collect game scores from the most recent file
-        if (file === mostRecentFile && row.a_score != null && row.b_score != null) {
+        // Only collect game scores from the most recent COMPLETED file
+        if (file === mostRecentCompletedFile && row.a_score != null && row.b_score != null && (row.a_score > 0 || row.b_score > 0) && !row.note) {
           allGameScores.push({
             team_a: row.team_a,
             team_b: row.team_b,

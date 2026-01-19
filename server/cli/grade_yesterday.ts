@@ -11,6 +11,67 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const root = path.resolve(__dirname, '..', '..');
 
+/**
+ * Team name mapping to handle ESPN naming variations
+ * Prevents silent grading failures from team name mismatches
+ */
+const TEAM_NAME_MAPPING: Record<string, string> = {
+  // A&M variations
+  'texas a&m': 'Texas A&M',
+  'tamu': 'Texas A&M',
+  'a&m': 'Texas A&M',
+  // UNC variations
+  'north carolina': 'North Carolina',
+  'unc': 'North Carolina',
+  // UNC Greensboro
+  'uncg': 'UNC Greensboro',
+  'unc greensboro': 'UNC Greensboro',
+  'north carolina greensboro': 'UNC Greensboro',
+  // Other common variations
+  'vcu': 'Virginia Commonwealth',
+  'virginia commonwealth': 'Virginia Commonwealth',
+  'smu': 'Southern Methodist',
+  'southern methodist': 'Southern Methodist',
+  'tcu': 'Texas Christian',
+  'texas christian': 'Texas Christian',
+  'utep': 'Texas El Paso',
+  'texas el paso': 'Texas El Paso',
+  'ole miss': 'Mississippi',
+  'mississippi': 'Mississippi',
+  'ole miss rebels': 'Mississippi',
+  'usc': 'Southern California',
+  'southern california': 'Southern California',
+  'uconn': 'Connecticut',
+  'connecticut': 'Connecticut',
+  'vtech': 'Virginia Tech',
+  'virginia tech': 'Virginia Tech',
+  'psu': 'Penn State',
+  'penn state': 'Penn State',
+  'wvu': 'West Virginia',
+  'west virginia': 'West Virginia',
+};
+
+function normalizeTeamName(rawName: string): string {
+  if (!rawName) return '';
+  const clean = rawName.toLowerCase().trim()
+    .replace(/[^\w\s&]/g, '')  // Remove special chars except &
+    .replace(/\s+/g, ' ');      // Normalize spaces
+  
+  // Check mapping first
+  if (TEAM_NAME_MAPPING[clean]) {
+    return TEAM_NAME_MAPPING[clean];
+  }
+  
+  // Check if clean version is in mapping
+  for (const [key, value] of Object.entries(TEAM_NAME_MAPPING)) {
+    if (clean === key) return value;
+    if (clean.includes(key) || key.includes(clean)) return value;
+  }
+  
+  // Return original if no mapping found
+  return rawName;
+}
+
 interface PickRow {
   date: string;
   team_a: string;
@@ -40,16 +101,24 @@ interface GradedPick extends PickRow {
 }
 
 // Fetch yesterday's scores from ESPN CBB API
-async function fetchYesterdayScores(): Promise<GameScore[]> {
+async function fetchYesterdayScores(dateOverride?: string): Promise<GameScore[]> {
   const yesterday = new Date();
-  yesterday.setDate(yesterday.getDate() - 1);
-  const dateStr = yesterday.toISOString().split('T')[0].replace(/-/g, '');
+  if (!dateOverride) {
+    yesterday.setDate(yesterday.getDate() - 1);
+  }
+  const dateStr = (dateOverride || yesterday.toISOString().split('T')[0]).replace(/-/g, '');
   
   try {
     const url = `https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard?dates=${dateStr}`;
     console.log(`Fetching scores from: ${url}`);
     
-    const resp = await fetch(url);
+    // Add 10-second timeout to prevent hanging
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 10000);
+    
+    const resp = await fetch(url, { signal: controller.signal });
+    clearTimeout(timeoutId);
+    
     if (!resp.ok) {
       console.warn(`ESPN API returned ${resp.status}`);
       return [];
@@ -69,8 +138,8 @@ async function fetchYesterdayScores(): Promise<GameScore[]> {
         
         if (away && home) {
           games.push({
-            awayTeam: away.team?.displayName || away.team?.name || '',
-            homeTeam: home.team?.displayName || home.team?.name || '',
+            awayTeam: normalizeTeamName(away.team?.displayName || away.team?.name || ''),
+            homeTeam: normalizeTeamName(home.team?.displayName || home.team?.name || ''),
             awayScore: parseInt(away.score || '0'),
             homeScore: parseInt(home.score || '0'),
             completed: true
@@ -79,42 +148,43 @@ async function fetchYesterdayScores(): Promise<GameScore[]> {
       }
     }
     
-    console.log(`Found ${games.length} completed games`);
     return games;
-  } catch (err) {
-    console.error('Error fetching ESPN scores:', err);
+  } catch (err: any) {
+    if (err.name === 'AbortError') {
+      console.error('ESPN API fetch timeout (10 seconds)');
+    } else {
+      console.error('Error fetching ESPN scores:', err.message);
+    }
     return [];
   }
 }
 
-// Normalize team name for matching
-function normalizeTeam(name: string): string {
-  return name
-    .toLowerCase()
-    .replace(/\bst\.\b/g, 'st')
-    .replace(/\bstate\b/g, 'st')
-    .replace(/[^a-z0-9]/g, '')
-    .trim();
-}
-
-// Find score for a matchup
-function findScore(teamA: string, teamB: string, scores: GameScore[]): { aScore: number; bScore: number } | null {
-  const normA = normalizeTeam(teamA);
-  const normB = normalizeTeam(teamB);
+// Find score for a pick, accounting for team name variations
+function findScore(pick: PickRow, games: GameScore[]): { a_score: number | null; b_score: number | null; } {
+  const normalizedPickA = normalizeTeamName(pick.team_a);
+  const normalizedPickB = normalizeTeamName(pick.team_b);
   
-  for (const game of scores) {
-    const normAway = normalizeTeam(game.awayTeam);
-    const normHome = normalizeTeam(game.homeTeam);
+  for (const game of games) {
+    const normalizedAway = normalizeTeamName(game.awayTeam);
+    const normalizedHome = normalizeTeamName(game.homeTeam);
     
-    // Match either direction
-    if ((normA === normAway && normB === normHome) || (normA === normHome && normB === normAway)) {
-      return normA === normAway 
-        ? { aScore: game.awayScore, bScore: game.homeScore }
-        : { aScore: game.homeScore, bScore: game.awayScore };
+    // Match by normalized names
+    const matchA = normalizedPickA === normalizedAway || normalizedPickA === normalizedHome;
+    const matchB = normalizedPickB === normalizedAway || normalizedPickB === normalizedHome;
+    
+    if (matchA && matchB) {
+      // Found the game - determine which is away and which is home
+      if (normalizedPickA === normalizedAway) {
+        return { a_score: game.awayScore, b_score: game.homeScore };
+      } else {
+        return { a_score: game.homeScore, b_score: game.awayScore };
+      }
     }
   }
   
-  return null;
+  // No match found - log warning
+  console.warn(`⚠️ Could not find game result for ${pick.team_a} vs ${pick.team_b}`);
+  return { a_score: null, b_score: null };
 }
 
 // Parse CSV into pick rows
@@ -145,21 +215,21 @@ function parsePicksCsv(csvPath: string): PickRow[] {
 // Grade picks
 function gradePicks(picks: PickRow[], scores: GameScore[]): GradedPick[] {
   return picks.map(pick => {
-    const score = findScore(pick.team_a, pick.team_b, scores);
+    const score = findScore(pick, scores);
     
-    if (!score) {
+    if (!score.a_score || !score.b_score) {
       return { ...pick, a_score: null, b_score: null, margin: null, covered: null, won: null, profit: null };
     }
     
-    const margin = score.aScore - score.bScore;
+    const margin = score.a_score - score.b_score;
     const covered = margin > pick.market_spread;
     const won = margin > 0;
     const profit = covered ? pick.stake_dollars * 0.91 : -pick.stake_dollars; // -110 odds
     
     return {
       ...pick,
-      a_score: score.aScore,
-      b_score: score.bScore,
+      a_score: score.a_score,
+      b_score: score.b_score,
       margin,
       covered,
       won,
@@ -199,7 +269,7 @@ async function main() {
   console.log(`Found ${yesterdayPicks.length} picks for ${dateStr}`);
   
   // Fetch scores
-  const scores = await fetchYesterdayScores();
+  const scores = await fetchYesterdayScores(dateStr);
   
   if (scores.length === 0) {
     console.warn('No scores fetched from ESPN. Skipping grading.');

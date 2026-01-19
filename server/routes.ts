@@ -9,6 +9,10 @@ import { Strategy as LocalStrategy } from "passport-local";
 import { storage } from "./storage";
 import { insertUserSchema, insertChoreSchema, insertMessageSchema, insertNegotiationSchema, insertPaymentSchema } from "@shared/schema";
 import { z } from "zod";
+import { exec } from "child_process";
+import { promisify } from "util";
+
+const execAsync = promisify(exec);
 
 // Initialize Stripe
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "sk_test_placeholder", {
@@ -513,6 +517,47 @@ export async function registerRoutes(app: Express): Promise<Server> {
       });
     });
   }
+
+  // Sports betting pipeline refresh endpoint
+  app.post("/api/sports/refresh", async (req, res) => {
+    try {
+      const start = Date.now();
+      const { stdout, stderr } = await execAsync('npx tsx server/cli/daily_refresh.ts');
+      const duration = Date.now() - start;
+      
+      res.json({
+        success: true,
+        duration_ms: duration,
+        message: 'Pipeline refresh completed',
+        output: stdout,
+        errors: stderr || null
+      });
+    } catch (error: any) {
+      res.status(500).json({
+        success: false,
+        message: 'Pipeline refresh failed',
+        error: error.message,
+        output: error.stdout || null,
+        errors: error.stderr || null
+      });
+    }
+  });
+
+  app.get("/api/sports/calibration", async (req, res) => {
+    try {
+      const { stdout } = await execAsync('npx tsx server/cli/calibration_status.ts');
+      res.json({
+        success: true,
+        output: stdout
+      });
+    } catch (error: any) {
+      res.status(500).json({
+        success: false,
+        message: 'Failed to get calibration status',
+        error: error.message
+      });
+    }
+  });
 
   return httpServer;
 }
