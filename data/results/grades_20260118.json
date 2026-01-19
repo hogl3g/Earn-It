@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "date": "20260118",
+    "total_picks": 3
+  },
+  "rows": [
+    {
+      "team_a": "Oakland",
+      "team_b": "Green Bay",
+      "a_score": 88,
+      "b_score": 63,
+      "margin": 25,
+      "market_spread": -6.82,
+      "model_spread": 2.5,
+      "covered": true,
+      "won": true,
+      "stake": 213.6363636363636,
+      "profit": 194.21487603305783
+    },
+    {
+      "team_a": "American",
+      "team_b": "Army",
+      "a_score": 78,
+      "b_score": 67,
+      "margin": 11,
+      "market_spread": -6.08,
+      "model_spread": 2.5,
+      "covered": true,
+      "won": true,
+      "stake": 213.6363636363636,
+      "profit": 194.21487603305783
+    },
+    {
+      "team_a": "Charlotte",
+      "team_b": "East Carolina",
+      "a_score": 73,
+      "b_score": 70,
+      "margin": 3,
+      "market_spread": -5.2,
+      "model_spread": 2.5,
+      "covered": true,
+      "won": true,
+      "stake": 213.6363636363636,
+      "profit": 194.21487603305783
+    }
+  ]
+}
