@@ -2,6 +2,9 @@ name: Projector Pages
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - master
   schedule:
     - cron: '0 7 * * *' # 2:00 AM EST daily (7:00 AM UTC) - after West Coast games finish
 
