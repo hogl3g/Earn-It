@@ -37,17 +37,6 @@ jobs:
         run: npm ci
         working-directory: ${{ github.workspace }}
 
-      - name: Grade yesterday's picks
-        run: npx tsx server/cli/grade_yesterday.ts
-        working-directory: ${{ github.workspace }}
-        continue-on-error: true
-
-      - name: Run projector (Talisman, today UTC)
-        run: |
-          DATE=$(date -u +%F)
-          npx tsx "server/cli/sports app 1.ts" --source talisman --date "$DATE"
-        working-directory: ${{ github.workspace }}
-
       - name: Copy enhanced picks to public
         run: |
           cp -f data/results/enhanced_projector_picks.csv public/ts_projector_picks.csv 2>/dev/null || true
