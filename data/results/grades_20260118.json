@@ -14,8 +14,9 @@
       "model_spread": 2.5,
       "covered": true,
       "won": true,
-      "stake": 213.6363636363636,
-      "profit": 194.21487603305783
+      "stake": 243.60909090909092,
+      "profit": 221.46280991735537,
+      "coverProb": 0.7314
     },
     {
       "team_a": "American",
@@ -27,8 +28,9 @@
       "model_spread": 2.5,
       "covered": true,
       "won": true,
-      "stake": 213.6363636363636,
-      "profit": 194.21487603305783
+      "stake": 232.72727272727272,
+      "profit": 211.5702479338843,
+      "coverProb": 0.72
     },
     {
       "team_a": "Charlotte",
@@ -41,7 +43,8 @@
       "covered": true,
       "won": true,
       "stake": 213.6363636363636,
-      "profit": 194.21487603305783
+      "profit": 194.21487603305783,
+      "coverProb": 0.7
     }
   ]
 }

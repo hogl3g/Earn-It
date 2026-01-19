@@ -10,8 +10,9 @@
       "margin": -5,
       "covered": false,
       "won": false,
-      "stake": 269.20,
-      "profit": -269.20
+      "stake": 232.72727272727272,
+      "profit": -232.72727272727272,
+      "coverProb": 0.72
     },
     {
       "team_a": "Creighton",
@@ -22,8 +23,9 @@
       "margin": -5,
       "covered": false,
       "won": false,
-      "stake": 94.48,
-      "profit": -94.48
+      "stake": 232.72727272727272,
+      "profit": -232.72727272727272,
+      "coverProb": 0.72
     },
     {
       "team_a": "Colorado St.",
@@ -34,8 +36,9 @@
       "margin": -6,
       "covered": false,
       "won": false,
-      "stake": 66.34,
-      "profit": -66.34
+      "stake": 232.72727272727272,
+      "profit": -232.72727272727272,
+      "coverProb": 0.72
     }
   ],
   "summary": {

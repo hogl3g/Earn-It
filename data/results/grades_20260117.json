@@ -14,8 +14,9 @@
       "model_spread": 2.5,
       "covered": true,
       "won": true,
-      "stake": 213.6363636363636,
-      "profit": 194.21487603305783
+      "stake": 232.72727272727272,
+      "profit": 211.5702479338843,
+      "coverProb": 0.72
     },
     {
       "team_a": "Michigan",
@@ -27,8 +28,9 @@
       "model_spread": -4.5,
       "covered": true,
       "won": true,
-      "stake": 213.6363636363636,
-      "profit": 194.21487603305783
+      "stake": 232.72727272727272,
+      "profit": 211.5702479338843,
+      "coverProb": 0.72
     },
     {
       "team_a": "Nevada",
@@ -40,8 +42,9 @@
       "model_spread": 2.5,
       "covered": true,
       "won": true,
-      "stake": 213.6363636363636,
-      "profit": 194.21487603305783
+      "stake": 232.72727272727272,
+      "profit": 211.5702479338843,
+      "coverProb": 0.72
     },
     {
       "team_a": "Connecticut",
@@ -53,8 +56,9 @@
       "model_spread": 2.5,
       "covered": true,
       "won": true,
-      "stake": 213.6363636363636,
-      "profit": 194.21487603305783
+      "stake": 232.72727272727272,
+      "profit": 211.5702479338843,
+      "coverProb": 0.72
     },
     {
       "team_a": "Duke",
@@ -66,8 +70,9 @@
       "model_spread": 2.5,
       "covered": true,
       "won": true,
-      "stake": 213.6363636363636,
-      "profit": 194.21487603305783
+      "stake": 232.72727272727272,
+      "profit": 211.5702479338843,
+      "coverProb": 0.72
     },
     {
       "team_a": "Bethune Cookman",
@@ -81,7 +86,8 @@
       "won": false,
       "stake": 0,
       "profit": 0,
-      "note": "score not found"
+      "note": "score not found",
+      "coverProb": 0.72
     },
     {
       "team_a": "Central Connecticut",
@@ -95,7 +101,8 @@
       "won": false,
       "stake": 0,
       "profit": 0,
-      "note": "score not found"
+      "note": "score not found",
+      "coverProb": 0.72
     },
     {
       "team_a": "Purdue",
@@ -107,8 +114,9 @@
       "model_spread": 2.5,
       "covered": true,
       "won": true,
-      "stake": 213.6363636363636,
-      "profit": 194.21487603305783
+      "stake": 232.72727272727272,
+      "profit": 211.5702479338843,
+      "coverProb": 0.72
     },
     {
       "team_a": "Norfolk St.",
@@ -122,7 +130,8 @@
       "won": false,
       "stake": 0,
       "profit": 0,
-      "note": "score not found"
+      "note": "score not found",
+      "coverProb": 0.72
     },
     {
       "team_a": "Iowa State",
@@ -134,8 +143,9 @@
       "model_spread": 2.5,
       "covered": true,
       "won": true,
-      "stake": 213.6363636363636,
-      "profit": 194.21487603305783
+      "stake": 232.72727272727272,
+      "profit": 211.5702479338843,
+      "coverProb": 0.72
     },
     {
       "team_a": "Nebraska",
@@ -147,8 +157,9 @@
       "model_spread": 9.5,
       "covered": true,
       "won": true,
-      "stake": 213.6363636363636,
-      "profit": 194.21487603305783
+      "stake": 232.72727272727272,
+      "profit": 211.5702479338843,
+      "coverProb": 0.72
     },
     {
       "team_a": "Mercer",
@@ -160,8 +171,9 @@
       "model_spread": 2.5,
       "covered": true,
       "won": true,
-      "stake": 213.6363636363636,
-      "profit": 194.21487603305783
+      "stake": 232.72727272727272,
+      "profit": 211.5702479338843,
+      "coverProb": 0.72
     },
     {
       "team_a": "UC San Diego",
@@ -175,7 +187,8 @@
       "won": false,
       "stake": 0,
       "profit": 0,
-      "note": "score not found"
+      "note": "score not found",
+      "coverProb": 0.72
     },
     {
       "team_a": "Louisville",
@@ -189,7 +202,8 @@
       "won": false,
       "stake": 0,
       "profit": 0,
-      "note": "score not found"
+      "note": "score not found",
+      "coverProb": 0.72
     },
     {
       "team_a": "Youngstown St.",
@@ -203,7 +217,8 @@
       "won": false,
       "stake": 0,
       "profit": 0,
-      "note": "score not found"
+      "note": "score not found",
+      "coverProb": 0.72
     },
     {
       "team_a": "Presbyterian",
@@ -217,7 +232,8 @@
       "won": false,
       "stake": 0,
       "profit": 0,
-      "note": "score not found"
+      "note": "score not found",
+      "coverProb": 0.72
     },
     {
       "team_a": "McNeese",
@@ -231,7 +247,8 @@
       "won": false,
       "stake": 0,
       "profit": 0,
-      "note": "score not found"
+      "note": "score not found",
+      "coverProb": 0.72
     },
     {
       "team_a": "Arizona",
@@ -243,8 +260,9 @@
       "model_spread": 2.5,
       "covered": true,
       "won": true,
-      "stake": 213.6363636363636,
-      "profit": 194.21487603305783
+      "stake": 232.72727272727272,
+      "profit": 211.5702479338843,
+      "coverProb": 0.72
     },
     {
       "team_a": "Queens",
@@ -258,7 +276,8 @@
       "won": false,
       "stake": 0,
       "profit": 0,
-      "note": "score not found"
+      "note": "score not found",
+      "coverProb": 0.72
     },
     {
       "team_a": "Alabama",
@@ -270,8 +289,9 @@
       "model_spread": 2.5,
       "covered": true,
       "won": true,
-      "stake": 213.6363636363636,
-      "profit": 194.21487603305783
+      "stake": 232.72727272727272,
+      "profit": 211.5702479338843,
+      "coverProb": 0.72
     },
     {
       "team_a": "Prairie View A&M",
@@ -285,7 +305,8 @@
       "won": false,
       "stake": 0,
       "profit": 0,
-      "note": "score not found"
+      "note": "score not found",
+      "coverProb": 0.72
     },
     {
       "team_a": "Syracuse",
@@ -297,8 +318,9 @@
       "model_spread": 2.5,
       "covered": false,
       "won": false,
-      "stake": 213.6363636363636,
-      "profit": -213.6363636363636
+      "stake": 232.72727272727272,
+      "profit": -232.72727272727272,
+      "coverProb": 0.72
     },
     {
       "team_a": "Siena",
@@ -310,8 +332,9 @@
       "model_spread": 2.5,
       "covered": true,
       "won": true,
-      "stake": 213.6363636363636,
-      "profit": 194.21487603305783
+      "stake": 232.72727272727272,
+      "profit": 211.5702479338843,
+      "coverProb": 0.72
     },
     {
       "team_a": "Utah State",
@@ -323,8 +346,9 @@
       "model_spread": 2.5,
       "covered": false,
       "won": false,
-      "stake": 213.6363636363636,
-      "profit": -213.6363636363636
+      "stake": 232.72727272727272,
+      "profit": -232.72727272727272,
+      "coverProb": 0.72
     },
     {
       "team_a": "Massachusetts",
@@ -336,8 +360,9 @@
       "model_spread": 2.5,
       "covered": true,
       "won": true,
-      "stake": 213.6363636363636,
-      "profit": 194.21487603305783
+      "stake": 232.72727272727272,
+      "profit": 211.5702479338843,
+      "coverProb": 0.72
     },
     {
       "team_a": "Winthrop",
@@ -349,8 +374,9 @@
       "model_spread": 2.5,
       "covered": true,
       "won": true,
-      "stake": 213.6363636363636,
-      "profit": 194.21487603305783
+      "stake": 232.72727272727272,
+      "profit": 211.5702479338843,
+      "coverProb": 0.72
     },
     {
       "team_a": "Texas Christian",
@@ -362,8 +388,9 @@
       "model_spread": 2.5,
       "covered": true,
       "won": true,
-      "stake": 213.6363636363636,
-      "profit": 194.21487603305783
+      "stake": 232.72727272727272,
+      "profit": 211.5702479338843,
+      "coverProb": 0.72
     },
     {
       "team_a": "Northern Colorado",
@@ -377,7 +404,8 @@
       "won": false,
       "stake": 0,
       "profit": 0,
-      "note": "score not found"
+      "note": "score not found",
+      "coverProb": 0.72
     },
     {
       "team_a": "North Carolina",
@@ -389,8 +417,9 @@
       "model_spread": 2.5,
       "covered": true,
       "won": true,
-      "stake": 213.6363636363636,
-      "profit": 194.21487603305783
+      "stake": 232.72727272727272,
+      "profit": 211.5702479338843,
+      "coverProb": 0.72
     },
     {
       "team_a": "LIU",
@@ -404,7 +433,8 @@
       "won": false,
       "stake": 0,
       "profit": 0,
-      "note": "score not found"
+      "note": "score not found",
+      "coverProb": 0.72
     },
     {
       "team_a": "Texas Southern",
@@ -418,7 +448,8 @@
       "won": false,
       "stake": 0,
       "profit": 0,
-      "note": "score not found"
+      "note": "score not found",
+      "coverProb": 0.72
     },
     {
       "team_a": "New Mexico State",
@@ -430,8 +461,9 @@
       "model_spread": 2.5,
       "covered": true,
       "won": true,
-      "stake": 213.6363636363636,
-      "profit": 194.21487603305783
+      "stake": 232.72727272727272,
+      "profit": 211.5702479338843,
+      "coverProb": 0.72
     },
     {
       "team_a": "Stephen F. Austin",
@@ -443,8 +475,9 @@
       "model_spread": 2.5,
       "covered": true,
       "won": true,
-      "stake": 213.6363636363636,
-      "profit": 194.21487603305783
+      "stake": 232.72727272727272,
+      "profit": 211.5702479338843,
+      "coverProb": 0.72
     },
     {
       "team_a": "Hawaii",
@@ -458,7 +491,8 @@
       "won": false,
       "stake": 0,
       "profit": 0,
-      "note": "score not found"
+      "note": "score not found",
+      "coverProb": 0.72
     },
     {
       "team_a": "East Tennessee St.",
@@ -472,7 +506,8 @@
       "won": false,
       "stake": 0,
       "profit": 0,
-      "note": "score not found"
+      "note": "score not found",
+      "coverProb": 0.72
     },
     {
       "team_a": "Jacksonville",
@@ -484,8 +519,9 @@
       "model_spread": 2.5,
       "covered": true,
       "won": true,
-      "stake": 213.6363636363636,
-      "profit": 194.21487603305783
+      "stake": 232.72727272727272,
+      "profit": 211.5702479338843,
+      "coverProb": 0.72
     },
     {
       "team_a": "Michigan State",
@@ -497,8 +533,9 @@
       "model_spread": 2.5,
       "covered": true,
       "won": true,
-      "stake": 213.6363636363636,
-      "profit": 194.21487603305783
+      "stake": 232.72727272727272,
+      "profit": 211.5702479338843,
+      "coverProb": 0.72
     },
     {
       "team_a": "Georgia St.",
@@ -512,7 +549,8 @@
       "won": false,
       "stake": 0,
       "profit": 0,
-      "note": "score not found"
+      "note": "score not found",
+      "coverProb": 0.72
     },
     {
       "team_a": "Cal St. Fullerton",
@@ -526,7 +564,8 @@
       "won": false,
       "stake": 0,
       "profit": 0,
-      "note": "score not found"
+      "note": "score not found",
+      "coverProb": 0.72
     },
     {
       "team_a": "Quinnipiac",
@@ -538,8 +577,9 @@
       "model_spread": 2.5,
       "covered": false,
       "won": false,
-      "stake": 213.6363636363636,
-      "profit": -213.6363636363636
+      "stake": 232.72727272727272,
+      "profit": -232.72727272727272,
+      "coverProb": 0.72
     },
     {
       "team_a": "Boston University",
@@ -553,7 +593,8 @@
       "won": false,
       "stake": 0,
       "profit": 0,
-      "note": "score not found"
+      "note": "score not found",
+      "coverProb": 0.72
     },
     {
       "team_a": "Navy",
@@ -565,8 +606,9 @@
       "model_spread": 2.5,
       "covered": true,
       "won": true,
-      "stake": 213.6363636363636,
-      "profit": 194.21487603305783
+      "stake": 232.72727272727272,
+      "profit": 211.5702479338843,
+      "coverProb": 0.72
     },
     {
       "team_a": "Wake Forest",
@@ -578,8 +620,9 @@
       "model_spread": 2.5,
       "covered": true,
       "won": true,
-      "stake": 213.6363636363636,
-      "profit": 194.21487603305783
+      "stake": 232.72727272727272,
+      "profit": 211.5702479338843,
+      "coverProb": 0.72
     },
     {
       "team_a": "UC Irvine",
@@ -593,7 +636,8 @@
       "won": false,
       "stake": 0,
       "profit": 0,
-      "note": "score not found"
+      "note": "score not found",
+      "coverProb": 0.72
     },
     {
       "team_a": "Le Moyne",
@@ -607,7 +651,8 @@
       "won": false,
       "stake": 0,
       "profit": 0,
-      "note": "score not found"
+      "note": "score not found",
+      "coverProb": 0.72
     },
     {
       "team_a": "Northern Iowa",
@@ -619,8 +664,9 @@
       "model_spread": 2.5,
       "covered": false,
       "won": false,
-      "stake": 213.6363636363636,
-      "profit": -213.6363636363636
+      "stake": 232.72727272727272,
+      "profit": -232.72727272727272,
+      "coverProb": 0.72
     },
     {
       "team_a": "Belmont",
@@ -632,8 +678,9 @@
       "model_spread": 2.5,
       "covered": true,
       "won": true,
-      "stake": 213.6363636363636,
-      "profit": 194.21487603305783
+      "stake": 232.72727272727272,
+      "profit": 211.5702479338843,
+      "coverProb": 0.72
     },
     {
       "team_a": "Wyoming",
@@ -645,8 +692,9 @@
       "model_spread": 2.5,
       "covered": true,
       "won": true,
-      "stake": 213.6363636363636,
-      "profit": 194.21487603305783
+      "stake": 232.72727272727272,
+      "profit": 211.5702479338843,
+      "coverProb": 0.72
     },
     {
       "team_a": "East Texas A&M",
@@ -658,8 +706,9 @@
       "model_spread": 2.5,
       "covered": false,
       "won": false,
-      "stake": 213.6363636363636,
-      "profit": -213.6363636363636
+      "stake": 232.72727272727272,
+      "profit": -232.72727272727272,
+      "coverProb": 0.72
     },
     {
       "team_a": "Columbia",
@@ -671,8 +720,9 @@
       "model_spread": 2.5,
       "covered": false,
       "won": false,
-      "stake": 213.6363636363636,
-      "profit": -213.6363636363636
+      "stake": 232.72727272727272,
+      "profit": -232.72727272727272,
+      "coverProb": 0.72
     },
     {
       "team_a": "Saint Bonaventure",
@@ -684,8 +734,9 @@
       "model_spread": 2.5,
       "covered": false,
       "won": false,
-      "stake": 213.6363636363636,
-      "profit": -213.6363636363636
+      "stake": 232.72727272727272,
+      "profit": -232.72727272727272,
+      "coverProb": 0.72
     },
     {
       "team_a": "Sam Houston St.",
@@ -699,7 +750,8 @@
       "won": false,
       "stake": 0,
       "profit": 0,
-      "note": "score not found"
+      "note": "score not found",
+      "coverProb": 0.72
     },
     {
       "team_a": "Saint Johns",
@@ -713,7 +765,8 @@
       "won": false,
       "stake": 0,
       "profit": 0,
-      "note": "score not found"
+      "note": "score not found",
+      "coverProb": 0.72
     },
     {
       "team_a": "Abilene Christian",
@@ -725,8 +778,9 @@
       "model_spread": 2.5,
       "covered": true,
       "won": true,
-      "stake": 213.6363636363636,
-      "profit": 194.21487603305783
+      "stake": 232.72727272727272,
+      "profit": 211.5702479338843,
+      "coverProb": 0.72
     },
     {
       "team_a": "Pacific",
@@ -740,7 +794,8 @@
       "won": false,
       "stake": 0,
       "profit": 0,
-      "note": "score not found"
+      "note": "score not found",
+      "coverProb": 0.72
     },
     {
       "team_a": "Mount St. Mary's",
@@ -752,8 +807,9 @@
       "model_spread": 2.5,
       "covered": true,
       "won": true,
-      "stake": 213.6363636363636,
-      "profit": 194.21487603305783
+      "stake": 232.72727272727272,
+      "profit": 211.5702479338843,
+      "coverProb": 0.72
     },
     {
       "team_a": "Charleston",
@@ -767,7 +823,8 @@
       "won": false,
       "stake": 0,
       "profit": 0,
-      "note": "score not found"
+      "note": "score not found",
+      "coverProb": 0.72
     },
     {
       "team_a": "Howard",
@@ -781,7 +838,8 @@
       "won": false,
       "stake": 0,
       "profit": 0,
-      "note": "score not found"
+      "note": "score not found",
+      "coverProb": 0.72
     },
     {
       "team_a": "Virginia",
@@ -793,8 +851,9 @@
       "model_spread": 2.5,
       "covered": true,
       "won": true,
-      "stake": 213.6363636363636,
-      "profit": 194.21487603305783
+      "stake": 232.72727272727272,
+      "profit": 211.5702479338843,
+      "coverProb": 0.72
     },
     {
       "team_a": "BYU",
@@ -806,8 +865,9 @@
       "model_spread": 2.5,
       "covered": false,
       "won": false,
-      "stake": 213.6363636363636,
-      "profit": -213.6363636363636
+      "stake": 232.72727272727272,
+      "profit": -232.72727272727272,
+      "coverProb": 0.72
     },
     {
       "team_a": "Morehead St.",
@@ -821,7 +881,8 @@
       "won": false,
       "stake": 0,
       "profit": 0,
-      "note": "score not found"
+      "note": "score not found",
+      "coverProb": 0.72
     },
     {
       "team_a": "Nevada Las Vegas",
@@ -833,8 +894,9 @@
       "model_spread": 2.5,
       "covered": true,
       "won": true,
-      "stake": 213.6363636363636,
-      "profit": 194.21487603305783
+      "stake": 232.72727272727272,
+      "profit": 211.5702479338843,
+      "coverProb": 0.72
     },
     {
       "team_a": "Southern",
@@ -848,7 +910,8 @@
       "won": false,
       "stake": 0,
       "profit": 0,
-      "note": "score not found"
+      "note": "score not found",
+      "coverProb": 0.72
     },
     {
       "team_a": "Morgan State",
@@ -862,7 +925,8 @@
       "won": false,
       "stake": 0,
       "profit": 0,
-      "note": "score not found"
+      "note": "score not found",
+      "coverProb": 0.72
     },
     {
       "team_a": "Duquesne",
@@ -874,8 +938,9 @@
       "model_spread": 2.5,
       "covered": true,
       "won": true,
-      "stake": 213.6363636363636,
-      "profit": 194.21487603305783
+      "stake": 232.72727272727272,
+      "profit": 211.5702479338843,
+      "coverProb": 0.72
     },
     {
       "team_a": "Detroit Mercy",
@@ -889,7 +954,8 @@
       "won": false,
       "stake": 0,
       "profit": 0,
-      "note": "score not found"
+      "note": "score not found",
+      "coverProb": 0.72
     },
     {
       "team_a": "Coastal Carolina",
@@ -901,8 +967,9 @@
       "model_spread": 2.5,
       "covered": true,
       "won": true,
-      "stake": 213.6363636363636,
-      "profit": 194.21487603305783
+      "stake": 232.72727272727272,
+      "profit": 211.5702479338843,
+      "coverProb": 0.72
     },
     {
       "team_a": "Holy Cross",
@@ -914,8 +981,9 @@
       "model_spread": 2.5,
       "covered": true,
       "won": true,
-      "stake": 213.6363636363636,
-      "profit": 194.21487603305783
+      "stake": 232.72727272727272,
+      "profit": 211.5702479338843,
+      "coverProb": 0.72
     },
     {
       "team_a": "New Mexico",
@@ -927,8 +995,9 @@
       "model_spread": 2.5,
       "covered": false,
       "won": false,
-      "stake": 213.6363636363636,
-      "profit": -213.6363636363636
+      "stake": 232.72727272727272,
+      "profit": -232.72727272727272,
+      "coverProb": 0.72
     },
     {
       "team_a": "Southern Miss",
@@ -942,7 +1011,8 @@
       "won": false,
       "stake": 0,
       "profit": 0,
-      "note": "score not found"
+      "note": "score not found",
+      "coverProb": 0.72
     },
     {
       "team_a": "Austin Peay",
@@ -954,8 +1024,9 @@
       "model_spread": 2.5,
       "covered": false,
       "won": false,
-      "stake": 213.6363636363636,
-      "profit": -213.6363636363636
+      "stake": 232.72727272727272,
+      "profit": -232.72727272727272,
+      "coverProb": 0.72
     },
     {
       "team_a": "Kennesaw St.",
@@ -969,7 +1040,8 @@
       "won": false,
       "stake": 0,
       "profit": 0,
-      "note": "score not found"
+      "note": "score not found",
+      "coverProb": 0.72
     },
     {
       "team_a": "Saint Marys",
@@ -981,8 +1053,9 @@
       "model_spread": 2.5,
       "covered": false,
       "won": false,
-      "stake": 213.6363636363636,
-      "profit": -213.6363636363636
+      "stake": 232.72727272727272,
+      "profit": -232.72727272727272,
+      "coverProb": 0.72
     },
     {
       "team_a": "Lindenwood",
@@ -996,7 +1069,8 @@
       "won": false,
       "stake": 0,
       "profit": 0,
-      "note": "score not found"
+      "note": "score not found",
+      "coverProb": 0.72
     },
     {
       "team_a": "Texas A&M",
@@ -1008,8 +1082,9 @@
       "model_spread": 2.5,
       "covered": true,
       "won": true,
-      "stake": 213.6363636363636,
-      "profit": 194.21487603305783
+      "stake": 232.72727272727272,
+      "profit": 211.5702479338843,
+      "coverProb": 0.72
     },
     {
       "team_a": "Miami Florida",
@@ -1021,8 +1096,9 @@
       "model_spread": 2.5,
       "covered": false,
       "won": false,
-      "stake": 213.6363636363636,
-      "profit": -213.6363636363636
+      "stake": 232.72727272727272,
+      "profit": -232.72727272727272,
+      "coverProb": 0.72
     },
     {
       "team_a": "Mississippi",
@@ -1036,7 +1112,8 @@
       "won": false,
       "stake": 0,
       "profit": 0,
-      "note": "score not found"
+      "note": "score not found",
+      "coverProb": 0.72
     },
     {
       "team_a": "Campbell",
@@ -1048,8 +1125,9 @@
       "model_spread": 2.5,
       "covered": false,
       "won": false,
-      "stake": 213.6363636363636,
-      "profit": -213.6363636363636
+      "stake": 232.72727272727272,
+      "profit": -232.72727272727272,
+      "coverProb": 0.72
     },
     {
       "team_a": "Iowa",
@@ -1061,8 +1139,9 @@
       "model_spread": 2.5,
       "covered": true,
       "won": true,
-      "stake": 213.6363636363636,
-      "profit": 194.21487603305783
+      "stake": 232.72727272727272,
+      "profit": 211.5702479338843,
+      "coverProb": 0.72
     },
     {
       "team_a": "South Dakota",
@@ -1074,8 +1153,9 @@
       "model_spread": 2.5,
       "covered": false,
       "won": false,
-      "stake": 213.6363636363636,
-      "profit": -213.6363636363636
+      "stake": 232.72727272727272,
+      "profit": -232.72727272727272,
+      "coverProb": 0.72
     },
     {
       "team_a": "Tarleton St.",
@@ -1089,7 +1169,8 @@
       "won": false,
       "stake": 0,
       "profit": 0,
-      "note": "score not found"
+      "note": "score not found",
+      "coverProb": 0.72
     },
     {
       "team_a": "Longwood",
@@ -1101,8 +1182,9 @@
       "model_spread": 2.5,
       "covered": false,
       "won": false,
-      "stake": 213.6363636363636,
-      "profit": -213.6363636363636
+      "stake": 232.72727272727272,
+      "profit": -232.72727272727272,
+      "coverProb": 0.72
     },
     {
       "team_a": "SIUE",
@@ -1116,7 +1198,8 @@
       "won": false,
       "stake": 0,
       "profit": 0,
-      "note": "score not found"
+      "note": "score not found",
+      "coverProb": 0.72
     },
     {
       "team_a": "Kentucky",
@@ -1128,8 +1211,9 @@
       "model_spread": 2.5,
       "covered": false,
       "won": false,
-      "stake": 213.6363636363636,
-      "profit": -213.6363636363636
+      "stake": 232.72727272727272,
+      "profit": -232.72727272727272,
+      "coverProb": 0.72
     },
     {
       "team_a": "Drake",
@@ -1141,8 +1225,9 @@
       "model_spread": 2.5,
       "covered": false,
       "won": false,
-      "stake": 213.6363636363636,
-      "profit": -213.6363636363636
+      "stake": 232.72727272727272,
+      "profit": -232.72727272727272,
+      "coverProb": 0.72
     },
     {
       "team_a": "Saint Thomas",
@@ -1156,7 +1241,8 @@
       "won": false,
       "stake": 0,
       "profit": 0,
-      "note": "score not found"
+      "note": "score not found",
+      "coverProb": 0.72
     }
   ]
 }

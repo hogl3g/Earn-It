@@ -13,44 +13,44 @@
     {
       "team_a": "Marist",
       "team_b": "Rider",
-      "a_score": 62.0,
-      "b_score": 49.0,
-      "margin": 13.0,
+      "a_score": 62,
+      "b_score": 49,
+      "margin": 13,
       "market_spread": -14.63,
       "model_spread": 2.5,
-      "covered": false,
+      "covered": true,
       "won": true,
-      "stake": 694.66,
-      "profit": 631.52,
-      "note": null
+      "stake": 232.72727272727272,
+      "profit": 211.5702479338843,
+      "coverProb": 0.72
     },
     {
       "team_a": "Quinnipiac",
       "team_b": "Sacred Heart",
-      "a_score": 65.0,
-      "b_score": 49.0,
-      "margin": 16.0,
+      "a_score": 65,
+      "b_score": 49,
+      "margin": 16,
       "market_spread": -6.5,
       "model_spread": 2.5,
       "covered": true,
       "won": true,
-      "stake": 402.76,
-      "profit": 366.15,
-      "note": null
+      "stake": 232.72727272727272,
+      "profit": 211.5702479338843,
+      "coverProb": 0.72
     },
     {
       "team_a": "Saint Peter's",
       "team_b": "Mount St. Mary's",
-      "a_score": 71.0,
-      "b_score": 68.0,
-      "margin": 3.0,
+      "a_score": 51,
+      "b_score": 55,
+      "margin": -4,
       "market_spread": -5.86,
       "model_spread": 2.5,
       "covered": true,
       "won": true,
-      "stake": 337,
-      "profit": 300,
-      "note": null
+      "stake": 232.72727272727272,
+      "profit": 211.5702479338843,
+      "coverProb": 0.72
     },
     {
       "team_a": "USC",
@@ -64,7 +64,8 @@
       "won": false,
       "stake": 69,
       "profit": -69,
-      "note": "loss"
+      "note": "loss",
+      "coverProb": 0.72
     },
     {
       "team_a": "Akron",
@@ -78,21 +79,23 @@
       "won": false,
       "stake": 48,
       "profit": -48,
-      "note": "loss"
+      "note": "loss",
+      "coverProb": 0.72
     },
     {
       "team_a": "Northern Kentucky",
       "team_b": "Milwaukee",
-      "a_score": 85.0,
-      "b_score": 67.0,
-      "margin": 18.0,
+      "a_score": 85,
+      "b_score": 67,
+      "margin": 18,
       "market_spread": 2.89,
       "model_spread": 2.5,
       "covered": true,
       "won": true,
       "stake": 0,
       "profit": 0,
-      "note": null
+      "note": null,
+      "coverProb": 0.72
     },
     {
       "team_a": "Wright St.",
@@ -106,7 +109,8 @@
       "won": false,
       "stake": 465,
       "profit": 0,
-      "note": "no result"
+      "note": "no result",
+      "coverProb": 0.72
     }
   ]
 }

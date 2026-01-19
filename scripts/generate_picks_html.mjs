@@ -62,7 +62,7 @@ try {
       `${String(r.team_a)}|${String(r.team_b)}`, r
     ]));
     // Append graded columns to headers
-    extendedHeaders = [...headers, 'a_score', 'b_score', 'margin', 'covered', 'won', 'profit'];
+    extendedHeaders = [...headers, 'coverProb', 'a_score', 'b_score', 'margin', 'covered', 'won', 'profit'];
   }
 } catch (err) {
   console.warn('Could not parse graded results JSON:', err?.message || String(err));
@@ -73,6 +73,7 @@ const tableRows = rows.map((line) => {
   const key = `${cols[1]}|${cols[2]}`;
   const grade = gradesMap ? gradesMap.get(key) : null;
   const extra = grade ? [
+    grade.coverProb == null ? '' : String(Math.round(grade.coverProb * 100)) + '%',
     grade.a_score == null ? '' : String(grade.a_score),
     grade.b_score == null ? '' : String(grade.b_score),
     grade.margin == null ? '' : String(grade.margin),

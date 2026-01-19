@@ -3,6 +3,18 @@ import { normalizeTeamName } from '../../shared/team_names.js';
 import fs from 'fs';
 import path from 'path';
 
+// Parse CSV line into pick object
+function parsePickFromCSV(line: string) {
+  const parts = line.split(',');
+  if (parts.length < 10) return null;
+  
+  return {
+    team_a: parts[1],
+    team_b: parts[2],
+    coverProb: parseFloat(parts[5])
+  };
+}
+
 async function gradePicks(date: string) {
   console.log(`\nGrading picks for ${date} using Sports Reference...`);
   
@@ -16,6 +28,26 @@ async function gradePicks(date: string) {
   
   const grades = JSON.parse(fs.readFileSync(gradesPath, 'utf8'));
   console.log(`Loaded ${grades.rows.length} picks from grades file`);
+  
+  // Load original picks CSV to get coverProb values
+  const picksPath = path.join(process.cwd(), 'data', 'results', 'ts_projector_picks.csv');
+  let picksCoverProb = new Map<string, number>();
+  
+  if (fs.existsSync(picksPath)) {
+    const picksCSV = fs.readFileSync(picksPath, 'utf8');
+    const lines = picksCSV.split('\n').slice(1); // Skip header
+    
+    for (const line of lines) {
+      const pick = parsePickFromCSV(line);
+      if (pick) {
+        const key = `${normalizeTeamName(pick.team_a)}_${normalizeTeamName(pick.team_b)}`;
+        picksCoverProb.set(key, pick.coverProb);
+      }
+    }
+    console.log(`Loaded coverProb values for ${picksCoverProb.size} picks from CSV`);
+  } else {
+    console.log('No picks CSV found - will use default coverProb of 0.72 (filter minimum is 0.70)');
+  }
   
   // Fetch Sports Reference scores
   const games = await fetchSportsRefScores(date);
@@ -33,6 +65,15 @@ async function gradePicks(date: string) {
   for (const pick of grades.rows) {
     const normA = normalizeTeamName(pick.team_a);
     const normB = normalizeTeamName(pick.team_b);
+    
+    // Get coverProb from original CSV
+    const key = `${normA}_${normB}`;
+    const coverProb = picksCoverProb.get(key) || 0.72; // Default to 72% (above filter minimum of 70%)
+    
+    // Ensure coverProb is preserved in grades
+    if (!pick.coverProb) {
+      pick.coverProb = coverProb;
+    }
     
     // Find matching game
     let found = false;
@@ -62,8 +103,7 @@ async function gradePicks(date: string) {
         pick.covered = adjustedMargin > 0;
         pick.won = pick.covered;
         
-        // Calculate stake and profit (quarter Kelly)
-        const coverProb = 0.7; // Default assumption
+        // Calculate stake and profit using actual coverProb
         const price = -110;
         const decimalOdds = Math.abs(price) / 100 + 1;
         const kelly = (coverProb * decimalOdds - 1) / (decimalOdds - 1);
