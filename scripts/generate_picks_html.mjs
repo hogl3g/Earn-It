@@ -201,37 +201,7 @@ if (cumulativeWins > 0 || cumulativeLosses > 0) {
   `;
 }
 
-if (allGameScores.length > 0) {
-  gameScoresHtml = `
-  <div class="game-scores-box">
-    <h2>Previous Day Game Scores${mostRecentGameDate ? ` (${mostRecentGameDate})` : ''}</h2>
-    <table class="scores-table">
-      <thead>
-        <tr>
-          <th>Away Team</th>
-          <th>Home Team</th>
-          <th>Away Score</th>
-          <th>Home Score</th>
-          <th>Margin</th>
-          <th>Result</th>
-        </tr>
-      </thead>
-      <tbody>
-        ${allGameScores.map(game => `
-          <tr>
-            <td>${escaped(game.team_a)}</td>
-            <td>${escaped(game.team_b)}</td>
-            <td>${game.a_score}</td>
-            <td>${game.b_score}</td>
-            <td>${game.margin}</td>
-            <td><span class="result ${game.won ? 'win' : 'loss'}">${game.won ? 'W' : 'L'}</span></td>
-          </tr>
-        `).join('')}
-      </tbody>
-    </table>
-  </div>
-  `;
-}
+// Removed Previous Day Game Scores section per user request
 
 const html = `<!DOCTYPE html>
 <html lang="en">
