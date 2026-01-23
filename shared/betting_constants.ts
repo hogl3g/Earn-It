@@ -115,13 +115,19 @@ export function meetsMinimumQuality(coverProb: number): boolean {
 /**
  * EDGE DETECTION THRESHOLDS
  * 
- * Minimum edge required for picks (at selected confidence level).
- * Edge = Model spread - Market spread (positive = advantage to us)
+ * ⚠️  CHANGED (2026-01-22): Edge requirement is now OPTIONAL
  * 
- * ⛔ THESE ARE ALSO NON-NEGOTIABLE ⛔
+ * The model now projects predictions based purely on team stats, metrics, and standings.
+ * Market spread (with built-in 2.5 HCA) is used for reference only, not for edge filtering.
+ * 
+ * Set `requireEdge = false` in qualifiesByRules() to disable edge threshold.
+ * Picks now qualify based on CONFIDENCE ALONE (100% strict, 80% relaxed).
+ * 
+ * ⚠️  THESE THRESHOLDS ARE LOCKED BUT EDGE IS NOW OPTIONAL ⚠️
  */
-export const MINIMUM_EDGE_THRESHOLD = 0.05; // 5% minimum edge
-export const EDGE_DESCRIPTION = '≥ 5% edge (spread or total)';
+export const MINIMUM_EDGE_THRESHOLD = 0.05; // Legacy: 5% minimum edge (now optional)
+export const EDGE_DESCRIPTION = 'Edge requirement disabled - using confidence thresholds only';
+export const USE_EDGE_REQUIREMENT = false; // ⚠️  CHANGED: Disable edge filtering
 
 /**
  * CALIBRATION TARGETS

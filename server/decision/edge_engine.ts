@@ -25,18 +25,25 @@ export function qualifiesByRules(params: {
   marketSpread?: number;
   simulatedMeanTotal?: number;
   marketTotal?: number;
+  requireEdge?: boolean;  // NEW: Set to false to skip edge requirement
 }, thresholds = { spread: 2.0, total: 3.5 }) {
-  const { projectedSpread, marketSpread, simulatedMeanTotal, marketTotal } = params;
+  const { projectedSpread, marketSpread, simulatedMeanTotal, marketTotal, requireEdge = true } = params;
   const spreadEdge = typeof projectedSpread === 'number' && typeof marketSpread === 'number' ? projectedSpread - marketSpread : undefined;
   const totalEdge = typeof simulatedMeanTotal === 'number' && typeof marketTotal === 'number' ? simulatedMeanTotal - marketTotal : undefined;
 
-  const spreadQual = typeof spreadEdge === 'number' ? spreadEdge >= thresholds.spread : false;
-  const totalQual = typeof totalEdge === 'number' ? totalEdge >= thresholds.total : false;
+  // ⚠️  CHANGED: Edge requirement is now optional
+  // If requireEdge = false, ignores edge thresholds and relies purely on confidence
+  const spreadQual = !requireEdge || (typeof spreadEdge === 'number' ? spreadEdge >= thresholds.spread : false);
+  const totalQual = !requireEdge || (typeof totalEdge === 'number' ? totalEdge >= thresholds.total : false);
 
-  const qualifies = spreadQual || totalQual;
+  const qualifies = !requireEdge || spreadQual || totalQual;
   const reasons: string[] = [];
-  if (spreadQual) reasons.push(`Spread Edge >= ${thresholds.spread}`);
-  if (totalQual) reasons.push(`Total Edge >= ${thresholds.total}`);
+  if (requireEdge) {
+    if (spreadQual) reasons.push(`Spread Edge >= ${thresholds.spread}`);
+    if (totalQual) reasons.push(`Total Edge >= ${thresholds.total}`);
+  } else {
+    reasons.push('Edge requirement disabled - relying on confidence thresholds only');
+  }
 
   return { qualifies, reasons, spreadEdge, totalEdge };
 }
