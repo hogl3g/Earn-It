@@ -1,0 +1,59 @@
+team,defensive_rating,ppg_allowed,fg_efficiency_allowed,three_point_allowed,rebounding_defense,turnover_generation
+Southern Utah Thunderbirds,0.825,79.7,42.5,33.7,0.302,0.513
+Army Black Knights,0.768,79.3,43.7,34.8,0.166,0.573
+Prairie View A&M Panthers,0.767,79.3,44,34.9,0.318,0.487
+Alabama Crimson Tide,0.766,82.6,41.8,31.9,0.174,0.433
+Northeastern Huskies,0.766,80.2,44.6,32.4,0.284,0.507
+Central Michigan Chippewas,0.765,79.3,44.5,33.6,0.218,0.42
+Arkansas State Red Wolves,0.763,80,44.3,32.6,0.18,0.407
+Eastern Kentucky Colonels,0.761,79.6,42.7,36.2,0.228,0.447
+Portland Pilots,0.761,79.4,44.5,33.9,0.286,0.407
+Kansas State Wildcats,0.75,80.2,43.9,34.1,0.284,0.447
+Detroit Mercy Titans,0.749,79.4,44.3,35,0.314,0.427
+South Florida Bulls,0.742,79.6,45,34,0.306,0.493
+Cal State Northridge Matadors,0.733,79.8,44.9,33.9,0.256,0.447
+Southern Jaguars,0.73,79.8,46.4,32.4,0.328,0.587
+Stetson Hatters,0.722,81.4,43.4,34.3,0.278,0.513
+Morgan State Bears,0.709,79.1,46.3,34.4,0.3,0.473
+Milwaukee Panthers,0.693,80.4,45.7,33.7,0.226,0.547
+UTSA Roadrunners,0.69,79.3,46.6,34.5,0.262,0.547
+Western Michigan Broncos,0.675,79.7,45.3,36.6,0.25,0.587
+Florida Gulf Coast Eagles,0.67,79.5,47.2,34.2,0.282,0.5
+Chicago State Cougars,0.634,80.6,45.7,36.2,0.286,0.42
+Sacramento State Hornets,0.633,82.4,45.6,33.1,0.192,0.507
+Florida State Seminoles,0.63,80.4,46.3,36,0.3,0.467
+Utah Utes,0.622,81.2,46.2,35.2,0.274,0.527
+Alabama State Hornets,0.603,81.2,46.9,34.7,0.248,0.447
+Texas Southern Tigers,0.602,81.9,46.8,34.2,0.272,0.6
+Arizona State Sun Devils,0.601,80.5,47.5,35,0.244,0.42
+Western Carolina Catamounts,0.599,81,47.3,34.6,0.272,0.393
+UNC Greensboro Spartans,0.595,81,46,37.2,0.306,0.473
+Kent State Golden Flashes,0.59,83.3,44.7,35.7,0.338,0.493
+Oklahoma State Cowboys,0.586,80.3,47.5,36.2,0.308,0.353
+Cleveland State Vikings,0.584,84.5,45.6,32.2,0.266,0.487
+Bellarmine Knights,0.561,81.4,48.5,34.4,0.278,0.573
+Bethune-Cookman Wildcats,0.559,82.4,46.8,35.3,0.252,0.58
+Oakland Golden Grizzlies,0.558,82.4,48.1,32.8,0.26,0.353
+Georgia Southern Eagles,0.556,80.2,49.4,35.1,0.296,0.46
+South Carolina State Bulldogs,0.549,82.8,47.7,33.6,0.262,0.513
+UL Monroe Warhawks,0.546,82.3,47.9,34.1,0.204,0.56
+Cal Poly Mustangs,0.532,85.3,45.5,33.4,0.242,0.48
+West Georgia Wolves,0.528,81.3,47.4,37.7,0.314,0.427
+South Dakota Coyotes,0.517,82.3,50.5,32,0.332,0.513
+Queens University Royals,0.512,83.6,46.5,35.9,0.294,0.453
+Manhattan Jaspers,0.488,81.8,47.5,38.1,0.216,0.4
+New Orleans Privateers,0.48,81.6,48.6,37.3,0.248,0.42
+Kansas City Roos,0.475,83.5,48.8,34.3,0.238,0.567
+Providence Friars,0.47,86.3,43.8,37.4,0.248,0.493
+Cal State Fullerton Titans,0.457,84.8,46.6,35.8,0.216,0.38
+Arkansas-Pine Bluff Golden Lions,0.428,86.1,46.7,35.4,0.25,0.547
+Eastern Washington Eagles,0.384,83.3,49.9,37.6,0.314,0.52
+Coppin State Eagles,0.371,84.2,48.3,39.2,0.264,0.613
+Mississippi Valley State Delta Devils,0.328,86.1,48.2,38.2,0.252,0.647
+Denver Pioneers,0.306,85.1,49.6,38.6,0.31,0.44
+Jackson State Tigers,0.29,88.8,48.2,34.7,0.154,0.54
+Alcorn State Braves,0.256,86.7,51.2,35.7,0.236,0.547
+Cornell Big Red,0.253,87.5,48.7,38.5,0.31,0.453
+North Florida Ospreys,0.199,90.5,49.5,34.3,0.172,0.54
+Gardner-Webb Runnin' Bulldogs,0.178,88.9,50.7,36.4,0.204,0.567
+IU Indianapolis Jaguars,0.096,89.7,50.6,39,0.21,0.48
