@@ -95,7 +95,7 @@ const tableRows = rows.map((line) => {
 let winsLossesHtml = '';
 let gameScoresHtml = '';
 
-// Aggregate all grades files for cumulative totals
+// Aggregate all grades files for cumulative totals - use summary stats
 let cumulativeWins = 0;
 let cumulativeLosses = 0;
 const allGameScores = [];
@@ -106,7 +106,7 @@ try {
   const resultsDir = path.join(root, 'data', 'results');
   const gradesFiles = fs.readdirSync(resultsDir).filter(f => f.match(/^grades_\d{8}\.json$/)).sort().reverse();
   
-  // Get the most recent grades file WITH completed games (non-zero scores)
+  // Get the most recent grades file WITH completed games
   let mostRecentFile = null;
   let mostRecentCompletedFile = null;
   
@@ -117,6 +117,7 @@ try {
       let gj = fs.readFileSync(path.join(resultsDir, file), 'utf-8');
       gj = gj.replace(/\bNaN\b/g, 'null');
       const parsed = JSON.parse(gj);
+      const summary = parsed.summary || {};
       const rowsJson = Array.isArray(parsed.rows) ? parsed.rows : [];
       
       // Check if this file has any completed games (non-zero scores)
@@ -145,36 +146,50 @@ try {
     }
   }
   
+  // Use summary stats from each grades file for accurate totals
   gradesFiles.forEach(file => {
     try {
       let gj = fs.readFileSync(path.join(resultsDir, file), 'utf-8');
       gj = gj.replace(/\bNaN\b/g, 'null');
       const parsed = JSON.parse(gj);
+      const summary = parsed.summary || {};
       const rowsJson = Array.isArray(parsed.rows) ? parsed.rows : [];
       
-      rowsJson.forEach(row => {
-        // Only count games that have actual scores (not "score not found")
-        if (row.a_score != null && row.b_score != null && (row.a_score > 0 || row.b_score > 0) && !row.note) {
-          if (row.won === true) {
+      // Use summary wins/losses if available (more reliable than row-by-row counting)
+      if (summary.wins !== undefined && summary.losses !== undefined) {
+        cumulativeWins += (summary.wins || 0);
+        cumulativeLosses += (summary.losses || 0);
+      } else {
+        // Fallback: count from rows using won field or profit
+        rowsJson.forEach(row => {
+          // Count if row has won field OR if profit > 0
+          const rowWon = row.won === true || (row.profit ?? 0) > 0;
+          const rowLost = row.won === false || (row.profit ?? 0) < 0;
+          
+          if (rowWon) {
             cumulativeWins++;
-          } else if (row.won === false) {
+          } else if (rowLost) {
             cumulativeLosses++;
           }
-        }
-        
-        // Only collect game scores from the most recent COMPLETED file
-        if (file === mostRecentCompletedFile && row.a_score != null && row.b_score != null && (row.a_score > 0 || row.b_score > 0) && !row.note) {
-          allGameScores.push({
-            team_a: row.team_a,
-            team_b: row.team_b,
-            a_score: row.a_score,
-            b_score: row.b_score,
-            margin: row.margin,
-            covered: row.covered,
-            won: row.won
-          });
-        }
-      });
+        });
+      }
+      
+      // Only collect game scores from the most recent COMPLETED file
+      if (file === mostRecentCompletedFile) {
+        rowsJson.forEach(row => {
+          if (row.a_score != null && row.b_score != null && (row.a_score > 0 || row.b_score > 0) && !row.note) {
+            allGameScores.push({
+              team_a: row.team_a,
+              team_b: row.team_b,
+              a_score: row.a_score,
+              b_score: row.b_score,
+              margin: row.margin,
+              covered: row.covered,
+              won: row.won
+            });
+          }
+        });
+      }
     } catch (err) {
       console.warn(`Could not parse ${file}:`, err?.message || String(err));
     }
