@@ -24,16 +24,16 @@ npx tsx server/cli/dashboard.ts
 ╚════════════════════════════════════════════════════════════════╝
 
 OVERALL PERFORMANCE
-Total Picks        : 21
-Record             : 7-14 (33.3%)
-Total Profit       : +$1341.04
-ROI                : 29.9%
-Avg Profit/Pick    : +$63.86
+Total Picks        : 110
+Record             : 46-64 (41.8%)
+Total Profit       : +$4134.10
+ROI                : 24.7%
+Avg Profit/Pick    : +$37.58
 
 RISK METRICS
-Daily Avg ROI      : +$447.01
-Daily Std Dev      : +$814.86
-Sharpe Ratio       : 8.71
+Daily Avg ROI      : +$826.82
+Daily Std Dev      : +$1352.98
+Sharpe Ratio       : 9.70
 Status             : ❌ LOSING
 ```
 
