@@ -160,16 +160,19 @@ try {
         cumulativeWins += (summary.wins || 0);
         cumulativeLosses += (summary.losses || 0);
       } else {
-        // Fallback: count from rows using won field or profit
+        // Fallback: count from rows - ONLY COUNT GAMES WITH ACTUAL SCORES
         rowsJson.forEach(row => {
-          // Count if row has won field OR if profit > 0
-          const rowWon = row.won === true || (row.profit ?? 0) > 0;
-          const rowLost = row.won === false || (row.profit ?? 0) < 0;
-          
-          if (rowWon) {
-            cumulativeWins++;
-          } else if (rowLost) {
-            cumulativeLosses++;
+          // CRITICAL: Only count if both teams have scores and scores are non-zero
+          if (row.a_score != null && row.b_score != null && row.a_score > 0 && row.b_score > 0) {
+            // Count if row has won field OR if profit > 0
+            const rowWon = row.won === true || (row.profit ?? 0) > 0;
+            const rowLost = row.won === false || (row.profit ?? 0) < 0;
+            
+            if (rowWon) {
+              cumulativeWins++;
+            } else if (rowLost) {
+              cumulativeLosses++;
+            }
           }
         });
       }
