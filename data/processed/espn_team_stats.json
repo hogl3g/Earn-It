@@ -1,0 +1,15 @@
+[
+  {
+    "team_name": "Arizona",
+    "conference": "Pac-12",
+    "wins": 18,
+    "losses": 2,
+    "pts_for": 85.5,
+    "pts_against": 68.3,
+    "fg_pct": 0.475,
+    "reb": 38.2,
+    "ast": 17.1,
+    "turnover_margin": 2.1,
+    "last_game_date": "2026-01-23"
+  }
+]
