@@ -116,9 +116,20 @@ let cumulativeLosses = 0;
 const allGameScores = [];
 let mostRecentGameDate = '';
 
+// Check if there's a reset marker (indicates starting fresh count)
+const resultsDir = path.join(root, 'data', 'results');
+const resetMarkerPath = path.join(resultsDir, '.html_count_reset');
+let resetTimestamp = null;
+if (fs.existsSync(resetMarkerPath)) {
+  try {
+    resetTimestamp = new Date(fs.readFileSync(resetMarkerPath, 'utf-8').trim());
+  } catch (e) {
+    // Ignore if we can't read the marker
+  }
+}
+
 try {
   // Find all grades_*.json files in data/results
-  const resultsDir = path.join(root, 'data', 'results');
   const gradesFiles = fs.readdirSync(resultsDir).filter(f => f.match(/^grades_\d{8}\.json$/)).sort().reverse();
   
   // Get the most recent grades file WITH completed games
@@ -162,8 +173,21 @@ try {
   }
   
   // Use summary stats from each grades file for accurate totals
+  // If reset marker exists, only count files created AFTER the reset
   gradesFiles.forEach(file => {
     try {
+      // Check file timestamp against reset marker
+      if (resetTimestamp) {
+        const fileStatPath = path.join(resultsDir, file);
+        const fileStat = fs.statSync(fileStatPath);
+        const fileModTime = new Date(fileStat.mtime);
+        
+        // Skip files modified BEFORE the reset timestamp
+        if (fileModTime < resetTimestamp) {
+          return; // Skip this file
+        }
+      }
+      
       let gj = fs.readFileSync(path.join(resultsDir, file), 'utf-8');
       gj = gj.replace(/\bNaN\b/g, 'null');
       const parsed = JSON.parse(gj);
