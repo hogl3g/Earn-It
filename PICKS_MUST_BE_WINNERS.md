@@ -242,13 +242,16 @@ confidence is below minimum)
 
 ## Success Metrics
 
-| Threshold | Your Forecast | Market | Expected Win Rate |
-|-----------|---------------|--------|-------------------|
-| **100%+ (STRICT)** | Team A +5 | Team A -3.5 | 100% (should win every pick) |
-| **80-99% (RELAXED)** | Team B +1.5 | Team B -1 | 80% (80 picks out of 100 should win) |
-| **Below 80%** | Team C +0.5 | Team C -2 | DON'T PICK |
+| Threshold | Your Forecast | Market | Expected Win Rate | Losses |
+|-----------|---------------|--------|-------------------|--------|
+| **100%+ (STRICT)** | Team A +5 | Team A -3.5 | 100% | 0 LOSSES |
+| **80-99% (RELAXED)** | Team B +1.5 | Team B -1 | 80% | Up to 20% |
+| **Below 80%** | Team C +0.5 | Team C -2 | DON'T PICK | N/A |
 
-**Key:** Actual win rate should match predicted confidence percentage.
+**Key:** 
+- **100% picks:** Every pick must win. Zero losses acceptable.
+- **80% picks:** Actual win rate should be 75-85% (±5% tolerance)
+- **Below 80%:** Never pick - not confident enough
 
 ---
 
@@ -307,8 +310,10 @@ If any of these occur, STOP and review:
 If any of these occur, STOP and review:
 
 ❌ **100% confidence pick loses (should be 100% win rate)**
-- Problem: Model is wrong - pick shouldn't have been generated
-- Fix: Review team metrics, recalibrate calculation
+- Problem: CRITICAL - Model is miscalibrated or broken
+- Action: STOP immediately - investigate metrics
+- Fix: Determine why 100% pick lost, adjust calibration
+- Result: Re-run calibration before generating more 100% picks
 
 ❌ **80% confidence picks winning only 60% (should be 80%)**
 - Problem: Confidence calculation is underconfident or market is smarter
@@ -354,11 +359,11 @@ IF YOU PICK IT, IT WINS
 5. Adjust if they diverge
 
 ### The Thresholds
-- **100%+ (STRICT):** Near-certain winners (58%+ actual hit rate)
-- **80%-99% (RELAXED):** Likely winners (52-55% actual hit rate)
+- **100%+ (STRICT):** Must win every pick (0% loss rate, zero tolerance)
+- **80%-99% (RELAXED):** Should win 80% (acceptable: 75-85%)
 - **Below 80%:** Don't pick - not confident enough
 
-**This is locked. Non-negotiable. Every pick must win.**
+**This is locked. Non-negotiable. 100% picks = 100% win rate with NO LOSSES.**
 
 ---
 

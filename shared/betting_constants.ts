@@ -138,8 +138,8 @@ export const USE_EDGE_REQUIREMENT = false; // ⚠️  CHANGED: Disable edge filt
  */
 export const CALIBRATION_TARGETS = {
   strict: {
-    expected_win_rate: 1.00,      // 100% - should win every pick
-    max_error: 0.00               // No tolerance - must be 100%
+    expected_win_rate: 1.00,      // 100% - must win every single pick
+    max_error: 0.00               // ZERO TOLERANCE - 0 losses acceptable
   },
   relaxed: {
     expected_win_rate: 0.80,      // 80% - 80 out of 100 should win
