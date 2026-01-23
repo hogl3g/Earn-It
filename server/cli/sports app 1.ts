@@ -54,7 +54,7 @@ export async function load_team_ratings(date: string): Promise<Record<string, Te
   const out: Record<string, TeamRecord> = {};
   
   // Step 1: Load comprehensive D1 ratings (all 362 teams with fallback estimates)
-  const comprehensiveRatingsPath = path.resolve(__dirname, "../../data/raw/all_d1_teams_ratings.csv");
+  const comprehensiveRatingsPath = path.resolve(__dirname, "../../data/raw/d1_teams_complete.csv");
   try {
     const txt = await fs.readFile(comprehensiveRatingsPath, "utf8");
     const rows = txt.split(/\r?\n/).filter(r => r.trim());

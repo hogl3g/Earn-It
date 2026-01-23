@@ -1,0 +1,579 @@
+Team,OffRating,DefRating,Source
+Abilene Christian,100,100,Sports-Reference
+Air Force,100,100,Sports-Reference
+Air Force Academy,100,100,NCAA Hardcoded
+Akron,100,100,Sports-Reference
+Alabama,100,100,Sports-Reference
+Alabama A&amp;M,100,100,Sports-Reference
+Alabama State,100,100,Sports-Reference
+Albany (NY),100,100,Sports-Reference
+Alcorn State,100,100,Sports-Reference
+Allegheny Gators,100,100,Sports-Reference
+American,100,100,Sports-Reference
+American University,100,100,NCAA Hardcoded
+Amherst Lord Jeffs,100,100,Sports-Reference
+Appalachian State,100,100,Sports-Reference
+Arizona,100,100,Sports-Reference
+Arizona State,100,100,Sports-Reference
+Arkansas,100,100,Sports-Reference
+Arkansas State,100,100,Sports-Reference
+Arkansas-Little Rock,100,100,NCAA Hardcoded
+Arkansas-Pine Bluff,100,100,Sports-Reference
+Armstrong Pirates,100,100,Sports-Reference
+Army,100,100,Sports-Reference
+Auburn,100,100,Sports-Reference
+Augusta,100,100,Sports-Reference
+Augusta Jaguars,100,100,Sports-Reference
+Augustana (IL) Vikings,100,100,Sports-Reference
+Austin Peay,100,100,Sports-Reference
+Baker,100,100,Sports-Reference
+Baldwin-Wallace Yellow Jackets,100,100,Sports-Reference
+Ball State,100,100,Sports-Reference
+Baltimore Super Bees,100,100,Sports-Reference
+Baylor,100,100,Sports-Reference
+Bellarmine,100,100,Sports-Reference
+Belmont,100,100,Sports-Reference
+Beloit Buccaneers,100,100,Sports-Reference
+Bethune-Cookman,100,100,Sports-Reference
+Binghamton,100,100,Sports-Reference
+Birmingham-Southern,100,100,Sports-Reference
+Birmingham-Southern Panthers,100,100,Sports-Reference
+Bloomsburg Huskies,100,100,Sports-Reference
+Boise State,100,100,Sports-Reference
+Boston College,100,100,Sports-Reference
+Boston University,100,100,Sports-Reference
+Bowling Green,100,100,Sports-Reference
+Bradley,100,100,Sports-Reference
+Brigham Young,100,100,Sports-Reference
+Brigham Young College,100,100,Sports-Reference
+Brooklyn,100,100,Sports-Reference
+Brooklyn Bulldogs,100,100,Sports-Reference
+Brown,100,100,Sports-Reference
+Bryant,100,100,Sports-Reference
+Bucknell,100,100,Sports-Reference
+Buffalo,100,100,Sports-Reference
+Butler,100,100,Sports-Reference
+BYU,100,100,NCAA Hardcoded
+Cal Poly,100,100,Sports-Reference
+Cal State Bakersfield,100,100,Sports-Reference
+Cal State Fullerton,100,100,Sports-Reference
+Cal State Los Angeles Golden Eagles,100,100,Sports-Reference
+Cal State Northridge,100,100,Sports-Reference
+California,100,100,Sports-Reference
+California Baptist,100,100,Sports-Reference
+Campbell,100,100,Sports-Reference
+Canisius,100,100,Sports-Reference
+Canterbury College,100,100,Sports-Reference
+Carleton Knights,100,100,Sports-Reference
+Carnegie Mellon Tartans,100,100,Sports-Reference
+Case Western Reserve Spartans,100,100,Sports-Reference
+Catholic Cardinals,100,100,Sports-Reference
+Centenary (LA),100,100,Sports-Reference
+Centenary (LA) Gents,100,100,Sports-Reference
+Central Arkansas,100,100,Sports-Reference
+Central Connecticut,100,100,NCAA Hardcoded
+Central Connecticut State,100,100,Sports-Reference
+Central Michigan,100,100,Sports-Reference
+Central Missouri Mules,100,100,Sports-Reference
+Central Pennsylvania College Knights,100,100,Sports-Reference
+Centre (KY) Colonels,100,100,Sports-Reference
+Charleston,100,100,NCAA Hardcoded
+Charleston Southern,100,100,Sports-Reference
+Charlotte,100,100,Sports-Reference
+Chatham,100,100,NCAA Hardcoded
+Chattanooga,100,100,Sports-Reference
+Cheyenne Business College,100,100,Sports-Reference
+Cheyney,100,100,Sports-Reference
+Chicago Maroons,100,100,Sports-Reference
+Chicago State,100,100,Sports-Reference
+Cincinnati,100,100,Sports-Reference
+Citadel,100,100,NCAA Hardcoded
+City College of New York Beavers,100,100,Sports-Reference
+Clemson,100,100,Sports-Reference
+Cleveland State,100,100,Sports-Reference
+Coastal Carolina,100,100,Sports-Reference
+Colgate,100,100,Sports-Reference
+College of Charleston,100,100,Sports-Reference
+College of New Jersey Lions,100,100,Sports-Reference
+Colorado,100,100,Sports-Reference
+Colorado College Tigers,100,100,Sports-Reference
+Colorado School of Mines Orediggers,100,100,Sports-Reference
+Colorado State,100,100,Sports-Reference
+Columbia,100,100,Sports-Reference
+Concordia Seminary Preachers,100,100,Sports-Reference
+Connecticut,100,100,Sports-Reference
+Coppin State,100,100,Sports-Reference
+Cornell,100,100,Sports-Reference
+Cotner College,100,100,Sports-Reference
+Creighton,100,100,Sports-Reference
+Cumberland (TN),100,100,Sports-Reference
+Dakota Wesleyan Tigers,100,100,Sports-Reference
+Dartmouth,100,100,Sports-Reference
+Davidson,100,100,Sports-Reference
+Dayton,100,100,Sports-Reference
+Delaware,100,100,Sports-Reference
+Delaware State,100,100,Sports-Reference
+Delta State,100,100,Sports-Reference
+Denison Big Red,100,100,Sports-Reference
+Denver,100,100,Sports-Reference
+DePaul,100,100,Sports-Reference
+DePauw Tigers,100,100,Sports-Reference
+Detroit Mercy,100,100,Sports-Reference
+Dickinson College Red Devils,100,100,Sports-Reference
+Drake,100,100,Sports-Reference
+Drexel,100,100,Sports-Reference
+Duke,100,100,Sports-Reference
+Duquesne,100,100,Sports-Reference
+East Carolina,100,100,Sports-Reference
+East Central Tigers,100,100,Sports-Reference
+East Tennessee State,100,100,Sports-Reference
+East Texas A&amp;M,100,100,Sports-Reference
+Eastern Illinois,100,100,Sports-Reference
+Eastern Kentucky,100,100,Sports-Reference
+Eastern Michigan,100,100,Sports-Reference
+Eastern Washington,100,100,Sports-Reference
+Elon,100,100,Sports-Reference
+Emporia State Hornets,100,100,Sports-Reference
+Ensign College,100,100,Sports-Reference
+ETSU,100,100,NCAA Hardcoded
+Evansville,100,100,Sports-Reference
+Fairfield,100,100,Sports-Reference
+Fairleigh Dickinson,100,100,NCAA Hardcoded
+FDU,100,100,Sports-Reference
+Florida,100,100,Sports-Reference
+Florida A&amp;M,100,100,Sports-Reference
+Florida A&M,100,100,NCAA Hardcoded
+Florida Atlantic,100,100,Sports-Reference
+Florida Gulf Coast,100,100,Sports-Reference
+Florida International,100,100,Sports-Reference
+Florida State,100,100,Sports-Reference
+Fordham,100,100,Sports-Reference
+Franklin Grizzlies,100,100,Sports-Reference
+Fresno State,100,100,Sports-Reference
+Furman,100,100,Sports-Reference
+Gardner-Webb,100,100,Sports-Reference
+Geneva Golden Tornadoes,100,100,Sports-Reference
+George Mason,100,100,Sports-Reference
+George Washington,100,100,Sports-Reference
+Georgetown,100,100,Sports-Reference
+Georgia,100,100,Sports-Reference
+Georgia Southern,100,100,Sports-Reference
+Georgia State,100,100,Sports-Reference
+Georgia Tech,100,100,Sports-Reference
+Gettysburg Bullets,100,100,Sports-Reference
+Gonzaga,100,100,Sports-Reference
+Grambling,100,100,Sports-Reference
+Grambling State,100,100,NCAA Hardcoded
+Grand Canyon,100,100,Sports-Reference
+Green Bay,100,100,Sports-Reference
+Grinnell Pioneers,100,100,Sports-Reference
+Grove City Wolverines,100,100,Sports-Reference
+Hamline Pipers,100,100,Sports-Reference
+Hampton,100,100,Sports-Reference
+Hardin-Simmons,100,100,Sports-Reference
+Hardin-Simmons Cowboys,100,100,Sports-Reference
+Hartford,100,100,NCAA Hardcoded
+Hartford Hawks,100,100,Sports-Reference
+Harvard,100,100,Sports-Reference
+Haskell (KS) Fighting Indians,100,100,Sports-Reference
+Hawaii,100,100,Sports-Reference
+High Point,100,100,Sports-Reference
+Hiram Terriers,100,100,Sports-Reference
+Hofstra,100,100,Sports-Reference
+Holy Cross,100,100,Sports-Reference
+Hope Flying Dutchmen,100,100,Sports-Reference
+Houston,100,100,Sports-Reference
+Houston Baptist,100,100,NCAA Hardcoded
+Houston Christian,100,100,Sports-Reference
+Howard,100,100,Sports-Reference
+Idaho,100,100,Sports-Reference
+Idaho State,100,100,Sports-Reference
+Illinois,100,100,Sports-Reference
+Illinois State,100,100,Sports-Reference
+Illinois Wesleyan Titans,100,100,Sports-Reference
+Illinois-Chicago,100,100,Sports-Reference
+Incarnate Word,100,100,Sports-Reference
+Indiana,100,100,Sports-Reference
+Indiana State,100,100,Sports-Reference
+Indianapolis,100,100,NCAA Hardcoded
+Iona,100,100,Sports-Reference
+Iowa,100,100,Sports-Reference
+Iowa State,100,100,Sports-Reference
+IU Indy,100,100,Sports-Reference
+Jackson State,100,100,Sports-Reference
+Jacksonville,100,100,Sports-Reference
+Jacksonville State,100,100,Sports-Reference
+James Madison,100,100,Sports-Reference
+John Carroll Blue Streaks,100,100,Sports-Reference
+Kalamazoo Hornets,100,100,Sports-Reference
+Kansas,100,100,Sports-Reference
+Kansas City,100,100,Sports-Reference
+Kansas State,100,100,Sports-Reference
+Kennesaw State,100,100,Sports-Reference
+Kent State,100,100,Sports-Reference
+Kentucky,100,100,Sports-Reference
+Kentucky Wesleyan Panthers,100,100,Sports-Reference
+Kenyon,100,100,NCAA Hardcoded
+La Salle,100,100,Sports-Reference
+Lafayette,100,100,Sports-Reference
+Lake Forest Foresters,100,100,Sports-Reference
+Lamar,100,100,Sports-Reference
+Lawrence Tech,100,100,Sports-Reference
+Le Moyne,100,100,Sports-Reference
+Lehigh,100,100,Sports-Reference
+Lewis Flyers,100,100,Sports-Reference
+Liberty,100,100,Sports-Reference
+Lindenwood,100,100,Sports-Reference
+Lipscomb,100,100,Sports-Reference
+Little Rock,100,100,Sports-Reference
+LIU Brooklyn,100,100,NCAA Hardcoded
+Long Beach State,100,100,Sports-Reference
+Long Island University,100,100,Sports-Reference
+Longwood,100,100,Sports-Reference
+Louisiana,100,100,Sports-Reference
+Louisiana State,100,100,Sports-Reference
+Louisiana Tech,100,100,Sports-Reference
+Louisiana-Monroe,100,100,Sports-Reference
+Louisville,100,100,Sports-Reference
+Loyola (IL),100,100,Sports-Reference
+Loyola (LA) Wolfpack,100,100,Sports-Reference
+Loyola (MD),100,100,Sports-Reference
+Loyola Chicago,100,100,NCAA Hardcoded
+Loyola Marymount,100,100,Sports-Reference
+LSU,100,100,NCAA Hardcoded
+Macalester Scots,100,100,Sports-Reference
+Maine,100,100,Sports-Reference
+Manchester Spartans,100,100,Sports-Reference
+Manhattan,100,100,Sports-Reference
+Marietta Pioneers,100,100,Sports-Reference
+Marist,100,100,Sports-Reference
+Marquette,100,100,Sports-Reference
+Marshall,100,100,Sports-Reference
+Maryland,100,100,Sports-Reference
+Maryland-Baltimore,100,100,NCAA Hardcoded
+Maryland-Baltimore County,100,100,Sports-Reference
+Maryland-Eastern Shore,100,100,Sports-Reference
+Massachusetts,100,100,Sports-Reference
+Massachusetts Institute of Technology Engineers,100,100,Sports-Reference
+Massachusetts-Lowell,100,100,Sports-Reference
+McNeese State,100,100,Sports-Reference
+Memphis,100,100,Sports-Reference
+Mercer,100,100,Sports-Reference
+Merchant Marine Mariners,100,100,Sports-Reference
+Mercyhurst,100,100,Sports-Reference
+Merrimack,100,100,Sports-Reference
+Miami (FL),100,100,Sports-Reference
+Miami (OH),100,100,Sports-Reference
+Michigan,100,100,Sports-Reference
+Michigan State,100,100,Sports-Reference
+Middle Tennessee,100,100,Sports-Reference
+Middle Tennessee State,100,100,NCAA Hardcoded
+Millikin Big Blue,100,100,Sports-Reference
+Millsaps Majors,100,100,Sports-Reference
+Milwaukee,100,100,Sports-Reference
+Minnesota,100,100,Sports-Reference
+Minnesota A&amp;M Aggies,100,100,Sports-Reference
+Mississippi,100,100,Sports-Reference
+Mississippi College,100,100,Sports-Reference
+Mississippi State,100,100,Sports-Reference
+Mississippi Valley State,100,100,Sports-Reference
+Missouri,100,100,Sports-Reference
+Missouri State,100,100,Sports-Reference
+Missouri-Kansas City,100,100,NCAA Hardcoded
+Monmouth,100,100,Sports-Reference
+Montana,100,100,Sports-Reference
+Montana State,100,100,Sports-Reference
+Montclair State,100,100,Sports-Reference
+Morehead State,100,100,Sports-Reference
+Morgan State,100,100,Sports-Reference
+Morris Brown Wolverines,100,100,Sports-Reference
+Mount St. Mary's,100,100,Sports-Reference
+Mount Union Purple Raiders,100,100,Sports-Reference
+Muhlenberg Mules,100,100,Sports-Reference
+Murray State,100,100,Sports-Reference
+Muskingum Fighting Muskies,100,100,Sports-Reference
+Navy,100,100,Sports-Reference
+NC State,100,100,Sports-Reference
+Nebraska,100,100,Sports-Reference
+Nebraska Wesleyan Prairie Wolves,100,100,Sports-Reference
+Nevada,100,100,Sports-Reference
+Nevada-Las Vegas,100,100,Sports-Reference
+New Hampshire,100,100,Sports-Reference
+New Haven,100,100,Sports-Reference
+New Mexico,100,100,Sports-Reference
+New Mexico State,100,100,Sports-Reference
+New Orleans,100,100,Sports-Reference
+New York University Violets,100,100,Sports-Reference
+Newberry Wolves,100,100,Sports-Reference
+Niagara,100,100,Sports-Reference
+Nicholls State,100,100,Sports-Reference
+NJIT,100,100,Sports-Reference
+Norfolk State,100,100,Sports-Reference
+North Alabama,100,100,Sports-Reference
+North Carolina,100,100,Sports-Reference
+North Carolina A&amp;T,100,100,Sports-Reference
+North Carolina A&T,100,100,NCAA Hardcoded
+North Carolina Central,100,100,Sports-Reference
+North Carolina State,100,100,NCAA Hardcoded
+North Central (IL) Cardinals,100,100,Sports-Reference
+North Dakota,100,100,Sports-Reference
+North Dakota State,100,100,Sports-Reference
+North Florida,100,100,Sports-Reference
+North Texas,100,100,Sports-Reference
+Northeastern,100,100,Sports-Reference
+Northeastern Illinois,100,100,Sports-Reference
+Northeastern Illinois Golden Eagles,100,100,Sports-Reference
+Northern Arizona,100,100,Sports-Reference
+Northern Colorado,100,100,Sports-Reference
+Northern Illinois,100,100,Sports-Reference
+Northern Iowa,100,100,Sports-Reference
+Northern Kentucky,100,100,Sports-Reference
+Northern State,100,100,NCAA Hardcoded
+Northwest Missouri State Bearcats,100,100,Sports-Reference
+Northwestern,100,100,Sports-Reference
+Northwestern State,100,100,Sports-Reference
+Notre Dame,100,100,Sports-Reference
+Oakland,100,100,Sports-Reference
+Oberlin Yeomen,100,100,Sports-Reference
+Ohio,100,100,Sports-Reference
+Ohio State,100,100,Sports-Reference
+Ohio University,100,100,NCAA Hardcoded
+Ohio Wesleyan Battling Bishops,100,100,Sports-Reference
+Oklahoma,100,100,Sports-Reference
+Oklahoma City,100,100,Sports-Reference
+Oklahoma City Chiefs,100,100,Sports-Reference
+Oklahoma State,100,100,Sports-Reference
+Old Dominion,100,100,Sports-Reference
+Omaha,100,100,Sports-Reference
+Oral Roberts,100,100,Sports-Reference
+Oregon,100,100,Sports-Reference
+Oregon State,100,100,Sports-Reference
+Pacific,100,100,Sports-Reference
+Penn State,100,100,Sports-Reference
+Pennsylvania,100,100,Sports-Reference
+Pepperdine,100,100,Sports-Reference
+Phillips Haymakers,100,100,Sports-Reference
+Pittsburg State Gorillas,100,100,Sports-Reference
+Pittsburgh,100,100,Sports-Reference
+Portland,100,100,Sports-Reference
+Portland State,100,100,Sports-Reference
+Prairie View,100,100,Sports-Reference
+Prairie View A&M,100,100,NCAA Hardcoded
+Pratt Institute Cannoneers,100,100,Sports-Reference
+Presbyterian,100,100,Sports-Reference
+Princeton,100,100,Sports-Reference
+Providence,100,100,Sports-Reference
+Purdue,100,100,Sports-Reference
+Purdue Fort Wayne,100,100,Sports-Reference
+Queens,100,100,NCAA Hardcoded
+Queens (NC),100,100,Sports-Reference
+Queens (NY),100,100,Sports-Reference
+Quinnipiac,100,100,Sports-Reference
+Radford,100,100,Sports-Reference
+Regis (CO) Rangers,100,100,Sports-Reference
+Rensselaer Engineers,100,100,Sports-Reference
+Rhode Island,100,100,Sports-Reference
+Rice,100,100,Sports-Reference
+Richmond,100,100,Sports-Reference
+Rider,100,100,Sports-Reference
+Ripon Red Hawks,100,100,Sports-Reference
+Roanoke Maroons,100,100,Sports-Reference
+Robert Morris,100,100,Sports-Reference
+Rochester (NY) Yellowjackets,100,100,Sports-Reference
+Rose-Hulman Fightin' Engineers,100,100,Sports-Reference
+Rutgers,100,100,Sports-Reference
+Sacramento State,100,100,Sports-Reference
+Sacred Heart,100,100,Sports-Reference
+Saint Francis,100,100,NCAA Hardcoded
+Saint Francis (PA),100,100,Sports-Reference
+Saint Joseph's,100,100,Sports-Reference
+Saint Louis,100,100,Sports-Reference
+Saint Mary's,100,100,NCAA Hardcoded
+Saint Mary's (CA),100,100,Sports-Reference
+Saint Peter's,100,100,Sports-Reference
+Sam Houston,100,100,Sports-Reference
+Sam Houston State,100,100,NCAA Hardcoded
+Samford,100,100,Sports-Reference
+San Diego,100,100,Sports-Reference
+San Diego State,100,100,Sports-Reference
+San Francisco,100,100,Sports-Reference
+San Jose State,100,100,Sports-Reference
+Santa Clara,100,100,Sports-Reference
+Savage School of Physical Education,100,100,Sports-Reference
+Savannah State,100,100,Sports-Reference
+Savannah State Tigers,100,100,Sports-Reference
+Scranton Royals,100,100,Sports-Reference
+Seattle,100,100,Sports-Reference
+Seattle University,100,100,NCAA Hardcoded
+Seton Hall,100,100,Sports-Reference
+Sewanee Tigers,100,100,Sports-Reference
+Shiloh,100,100,NCAA Hardcoded
+Siena,100,100,Sports-Reference
+SIU Edwardsville,100,100,NCAA Hardcoded
+SMU,100,100,NCAA Hardcoded
+South Alabama,100,100,Sports-Reference
+South Carolina,100,100,Sports-Reference
+South Carolina State,100,100,Sports-Reference
+South Carolina Upstate,100,100,Sports-Reference
+South Dakota,100,100,Sports-Reference
+South Dakota State,100,100,Sports-Reference
+South Florida,100,100,Sports-Reference
+Southeast Missouri,100,100,NCAA Hardcoded
+Southeast Missouri State,100,100,Sports-Reference
+Southeastern Louisiana,100,100,Sports-Reference
+Southern,100,100,Sports-Reference
+Southern California,100,100,Sports-Reference
+Southern Illinois,100,100,Sports-Reference
+Southern Illinois-Edwardsville,100,100,Sports-Reference
+Southern Indiana,100,100,Sports-Reference
+Southern Methodist,100,100,Sports-Reference
+Southern Methodist University,100,100,NCAA Hardcoded
+Southern Miss,100,100,NCAA Hardcoded
+Southern Mississippi,100,100,Sports-Reference
+Southern University,100,100,NCAA Hardcoded
+Southern Utah,100,100,Sports-Reference
+Southwestern (KS) Moundbuilders,100,100,Sports-Reference
+Southwestern (TX) Pirates,100,100,Sports-Reference
+Southwestern Louisiana,100,100,NCAA Hardcoded
+Springfield Pride,100,100,Sports-Reference
+St. Bonaventure,100,100,Sports-Reference
+St. Francis (NY) Terriers,100,100,Sports-Reference
+St. John's,100,100,NCAA Hardcoded
+St. John's (NY),100,100,Sports-Reference
+St. John's College (OH),100,100,Sports-Reference
+St. Joseph's,100,100,NCAA Hardcoded
+St. Lawrence Saints,100,100,Sports-Reference
+St. Thomas,100,100,Sports-Reference
+Stanford,100,100,Sports-Reference
+Stephen F. Austin,100,100,Sports-Reference
+Stetson,100,100,Sports-Reference
+Stevens Institute Ducks,100,100,Sports-Reference
+Stonehill,100,100,Sports-Reference
+Stony Brook,100,100,Sports-Reference
+SUNY Potsdam Bears,100,100,Sports-Reference
+Swarthmore Garnet,100,100,Sports-Reference
+Syracuse,100,100,Sports-Reference
+Tampa,100,100,NCAA Hardcoded
+Tarleton State,100,100,Sports-Reference
+TCU,100,100,Sports-Reference
+Temple,100,100,Sports-Reference
+Tennessee,100,100,Sports-Reference
+Tennessee State,100,100,Sports-Reference
+Tennessee Tech,100,100,Sports-Reference
+Tennessee-Martin,100,100,Sports-Reference
+Texas,100,100,Sports-Reference
+Texas A&amp;M,100,100,Sports-Reference
+Texas A&amp;M-Corpus Christi,100,100,Sports-Reference
+Texas A&M,100,100,NCAA Hardcoded
+Texas A&M-Corpus Christi,100,100,NCAA Hardcoded
+Texas Christian,100,100,NCAA Hardcoded
+Texas Southern,100,100,Sports-Reference
+Texas State,100,100,Sports-Reference
+Texas Tech,100,100,Sports-Reference
+Texas Wesleyan Rams,100,100,Sports-Reference
+Texas-Arlington,100,100,NCAA Hardcoded
+Texas-Rio Grande Valley,100,100,Sports-Reference
+Texas-San Antonio,100,100,NCAA Hardcoded
+The Citadel,100,100,Sports-Reference
+The Citadel Military College,100,100,NCAA Hardcoded
+Toledo,100,100,Sports-Reference
+Towson,100,100,Sports-Reference
+Trinity (CT) Bantams,100,100,Sports-Reference
+Trinity (TX) Tigers,100,100,Sports-Reference
+Troy,100,100,Sports-Reference
+Tulane,100,100,Sports-Reference
+Tulsa,100,100,Sports-Reference
+U.S. International,100,100,Sports-Reference
+U.S. International Gulls,100,100,Sports-Reference
+UAB,100,100,Sports-Reference
+UAlbany,100,100,NCAA Hardcoded
+UC Davis,100,100,Sports-Reference
+UC Irvine,100,100,Sports-Reference
+UC Riverside,100,100,Sports-Reference
+UC San Diego,100,100,Sports-Reference
+UC Santa Barbara,100,100,Sports-Reference
+UCF,100,100,Sports-Reference
+UCLA,100,100,Sports-Reference
+UConn,100,100,NCAA Hardcoded
+ULM,100,100,NCAA Hardcoded
+UMBC,100,100,NCAA Hardcoded
+UNC Asheville,100,100,Sports-Reference
+UNC Greensboro,100,100,Sports-Reference
+UNC Wilmington,100,100,Sports-Reference
+UNC-Asheville,100,100,NCAA Hardcoded
+UNC-Wilmington,100,100,NCAA Hardcoded
+UNCG,100,100,NCAA Hardcoded
+UNI,100,100,NCAA Hardcoded
+Union (NY) Dutchmen,100,100,Sports-Reference
+UNLV,100,100,NCAA Hardcoded
+USC,100,100,NCAA Hardcoded
+UT Arlington,100,100,Sports-Reference
+UT Martin,100,100,NCAA Hardcoded
+UTA,100,100,NCAA Hardcoded
+Utah,100,100,Sports-Reference
+Utah State,100,100,Sports-Reference
+Utah Tech,100,100,Sports-Reference
+Utah Valley,100,100,Sports-Reference
+Ute,100,100,NCAA Hardcoded
+UTEP,100,100,Sports-Reference
+Utica Pioneers,100,100,Sports-Reference
+UTRGV,100,100,NCAA Hardcoded
+UTSA,100,100,Sports-Reference
+Valparaiso,100,100,Sports-Reference
+Vanderbilt,100,100,Sports-Reference
+VCU,100,100,NCAA Hardcoded
+Vermont,100,100,Sports-Reference
+Villanova,100,100,Sports-Reference
+Virginia,100,100,Sports-Reference
+Virginia Commonwealth,100,100,Sports-Reference
+Virginia Military Institute,100,100,Sports-Reference
+Virginia Tech,100,100,Sports-Reference
+Wabash Little Giants,100,100,Sports-Reference
+Wagner,100,100,Sports-Reference
+Wake Forest,100,100,Sports-Reference
+Washburn Ichabods,100,100,Sports-Reference
+Washington,100,100,Sports-Reference
+Washington (MO) Bears,100,100,Sports-Reference
+Washington &amp; Jefferson Presidents,100,100,Sports-Reference
+Washington &amp; Lee Generals,100,100,Sports-Reference
+Washington College Shoremen,100,100,Sports-Reference
+Washington State,100,100,Sports-Reference
+Wayne State (MI) Warriors,100,100,Sports-Reference
+Weber State,100,100,Sports-Reference
+Wesleyan (CT) Cardinals,100,100,Sports-Reference
+West Carolina,100,100,NCAA Hardcoded
+West Chester,100,100,Sports-Reference
+West Chester Golden Rams,100,100,Sports-Reference
+West Georgia,100,100,Sports-Reference
+West Texas A&amp;M Buffaloes,100,100,Sports-Reference
+West Virginia,100,100,Sports-Reference
+Western Carolina,100,100,Sports-Reference
+Western Colorado Mountaineers,100,100,Sports-Reference
+Western Illinois,100,100,Sports-Reference
+Western Kentucky,100,100,Sports-Reference
+Western Michigan,100,100,Sports-Reference
+Westminster (MO) Blue Jays,100,100,Sports-Reference
+Westminster (PA) Titans,100,100,Sports-Reference
+Wheaton (IL) Thunder,100,100,Sports-Reference
+Whittier Poets,100,100,Sports-Reference
+Wichita State,100,100,Sports-Reference
+Widener Pride,100,100,Sports-Reference
+William & Mary,100,100,NCAA Hardcoded
+William &amp; Mary,100,100,Sports-Reference
+Williams Ephs,100,100,Sports-Reference
+Winston-Salem Rams,100,100,Sports-Reference
+Winthrop,100,100,Sports-Reference
+Wisconsin,100,100,Sports-Reference
+Wisconsin-Green Bay,100,100,NCAA Hardcoded
+Wisconsin-Milwaukee,100,100,NCAA Hardcoded
+Wisconsin-Stevens Point Pointers,100,100,Sports-Reference
+Wisconsin-Superior Yellowjackets,100,100,Sports-Reference
+Wittenberg Tigers,100,100,Sports-Reference
+Wofford,100,100,Sports-Reference
+Wooster Fighting Scots,100,100,Sports-Reference
+WPI Engineers,100,100,Sports-Reference
+Wright State,100,100,Sports-Reference
+Wyoming,100,100,Sports-Reference
+Xavier,100,100,Sports-Reference
+Yale,100,100,Sports-Reference
+Youngstown State,100,100,Sports-Reference
