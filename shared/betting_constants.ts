@@ -1,31 +1,30 @@
 /**
- * ⚠️  BETTING SYSTEM CONSTANTS - NON-NEGOTIABLE
+ * ⚠️  CORE REQUIREMENT - NON-NEGOTIABLE
  * 
- * These thresholds are LOCKED and should NEVER be changed without explicit approval.
- * They define the core pick classification system and validation logic.
+ * PICKS MUST ALWAYS BE WINNERS
  * 
- * Any modification to these values requires:
- * 1. User approval (explicit confirmation)
- * 2. Documentation of reasoning
- * 3. Re-validation of entire calibration pipeline
- * 4. Git commit with full explanation
+ * If you pick a game, it will win. Period.
+ * Confidence thresholds are calibrated to this requirement:
+ * - 100%+ STRICT: Forecast these to win 58%+ of the time
+ * - 80%-99% RELAXED: Forecast these to win 52-55% of the time
+ * - <80%: Don't pick - not confident enough to be a winner
  * 
- * DO NOT MODIFY THESE VALUES
+ * ⛔️ THIS IS LOCKED AND NON-NEGOTIABLE ⛔️
  */
 
 /**
  * STRICT CONFIDENCE THRESHOLD
  * 
- * Picks with cover probability >= 1.00 (100%) are classified as STRICT picks.
- * These represent the highest confidence selections.
+ * Picks with confidence >= 1.00 (100%) are classified as STRICT picks.
+ * These represent near-certain winners.
  * 
  * Usage:
- * - Only generated when model is very confident
+ * - Only generated when forecast will almost certainly beat spread
+ * - Expected actual win rate: 58%+ (these should WIN most of the time)
  * - Held to strictest accuracy standards
- * - Expected hit rate: 60%+ (with proper calibration)
- * - Calibration target: Actual hit rate within 2% of predicted 100%
+ * - Calibration target: Actual win rate within 2% of predicted
  * 
- * ⛔ NEVER CHANGE THIS VALUE ⛔
+ * ⛔ NEVER CHANGE - PICKS MUST BE WINNERS ⛔
  */
 export const CONFIDENCE_STRICT_MIN = 1.00;
 export const CONFIDENCE_STRICT_LABEL = '100%+ (STRICT)';
@@ -33,16 +32,16 @@ export const CONFIDENCE_STRICT_LABEL = '100%+ (STRICT)';
 /**
  * RELAXED CONFIDENCE THRESHOLD
  * 
- * Picks with cover probability >= 0.80 and < 1.00 are classified as RELAXED picks.
- * These are moderate confidence picks used as fallback when insufficient strict picks exist.
+ * Picks with confidence >= 0.80 and < 1.00 are classified as RELAXED picks.
+ * These are moderate confidence picks that should still be winners.
  * 
  * Usage:
- * - Generated when model has moderate confidence (80-99%)
- * - Used to fill gaps in pick volume
- * - Expected hit rate: 52-55% (slightly above break-even)
- * - Calibration target: Actual hit rate within 5% of predicted probability
+ * - Generated when forecast indicates likely winner but not near-certain
+ * - Used to expand pick volume while maintaining winners-only requirement
+ * - Expected actual win rate: 52-55% (above break-even, these should WIN)
+ * - Calibration target: Actual win rate within 5% of predicted probability
  * 
- * ⛔ NEVER CHANGE THIS VALUE ⛔
+ * ⛔ NEVER CHANGE - PICKS MUST BE WINNERS ⛔
  */
 export const CONFIDENCE_RELAXED_MIN = 0.80;
 export const CONFIDENCE_RELAXED_MAX = 0.99;
