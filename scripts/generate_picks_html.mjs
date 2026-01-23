@@ -128,6 +128,28 @@ if (fs.existsSync(resetMarkerPath)) {
   }
 }
 
+// Load all picks from CSV to validate graded games were projected
+// CRITICAL RULE (NON-NEGOTIABLE):
+// - Only count wins/losses for games the projector actually picked
+// - Never count games that weren't in the original picks CSV
+// - Never count games without final scores
+// This ensures record only reflects performance on picked games
+const pickedGames = new Set();
+try {
+  const raw = fs.readFileSync(csvPath, 'utf-8').trim();
+  const [, ...pickRows] = raw.split(/\r?\n/);
+  pickRows.forEach(line => {
+    const cols = line.split(',');
+    if (cols.length >= 3) {
+      const team_a = cols[1];
+      const team_b = cols[2];
+      pickedGames.add(`${team_a}|${team_b}`);
+    }
+  });
+} catch (err) {
+  console.warn('Could not load picks CSV for validation:', err?.message);
+}
+
 try {
   // Find all grades_*.json files in data/results
   const gradesFiles = fs.readdirSync(resultsDir).filter(f => f.match(/^grades_\d{8}\.json$/)).sort().reverse();
@@ -199,13 +221,27 @@ try {
         cumulativeWins += (summary.wins || 0);
         cumulativeLosses += (summary.losses || 0);
       } else {
-        // Fallback: count from rows - ONLY COUNT GAMES WITH ACTUAL SCORES
+        // Fallback: count from rows
+        // CRITICAL RULE: Only count if:
+        // 1. Game was in projector's picks
+        // 2. Both teams have actual scores (non-zero)
+        // 3. Game is not marked as skipped
         rowsJson.forEach(row => {
-          // CRITICAL: Only count if both teams have scores and scores are non-zero
-          if (row.a_score != null && row.b_score != null && row.a_score > 0 && row.b_score > 0) {
-            // Count if row has won field OR if profit > 0
-            const rowWon = row.won === true || (row.profit ?? 0) > 0;
-            const rowLost = row.won === false || (row.profit ?? 0) < 0;
+          // Check if this game was in the original picks
+          const gameKey = `${row.team_a}|${row.team_b}`;
+          const wasProjected = pickedGames.has(gameKey);
+          
+          // CRITICAL: Only count PROJECTED games with ACTUAL SCORES
+          if (
+            wasProjected &&
+            row.a_score != null && 
+            row.b_score != null && 
+            row.a_score > 0 && 
+            row.b_score > 0 &&
+            !row.note // Exclude skipped/incomplete games
+          ) {
+            const rowWon = row.won === true;
+            const rowLost = row.won === false;
             
             if (rowWon) {
               cumulativeWins++;
