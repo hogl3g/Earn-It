@@ -1,0 +1,97 @@
+{
+  "summary": {
+    "date": "2026-01-21",
+    "total_picks": 6,
+    "covers": 2,
+    "wins": 2,
+    "total_stake": 1200,
+    "total_profit": 0,
+    "roi": 0
+  },
+  "rows": [
+    {
+      "team_a": "Utah Valley",
+      "team_b": "Appalachian St.",
+      "a_score": 70,
+      "b_score": 84,
+      "margin": -14,
+      "market_spread": -2.5,
+      "model_spread": 2.5,
+      "covered": false,
+      "won": false,
+      "stake": 200,
+      "profit": -200,
+      "coverProb": 0.848
+    },
+    {
+      "team_a": "Furman",
+      "team_b": "UNC Greensboro",
+      "a_score": 75,
+      "b_score": 77,
+      "margin": -2,
+      "market_spread": -1.5,
+      "model_spread": 2.5,
+      "covered": false,
+      "won": false,
+      "stake": 200,
+      "profit": -200,
+      "coverProb": 0.833
+    },
+    {
+      "team_a": "Dayton",
+      "team_b": "La Salle",
+      "a_score": 64,
+      "b_score": 67,
+      "margin": -3,
+      "market_spread": -0.5,
+      "model_spread": 2.5,
+      "covered": false,
+      "won": false,
+      "stake": 200,
+      "profit": -200,
+      "coverProb": 0.784
+    },
+    {
+      "team_a": "Murray St.",
+      "team_b": "Austin Peay",
+      "a_score": 90,
+      "b_score": 101,
+      "margin": -11,
+      "market_spread": 3.5,
+      "model_spread": 2.5,
+      "covered": false,
+      "won": false,
+      "stake": 200,
+      "profit": -200,
+      "coverProb": 0.717
+    },
+    {
+      "team_a": "Troy",
+      "team_b": "Georgia Southern",
+      "a_score": 83,
+      "b_score": 77,
+      "margin": 6,
+      "market_spread": 1.5,
+      "model_spread": 2.5,
+      "covered": true,
+      "won": true,
+      "stake": 200,
+      "profit": 200,
+      "coverProb": 0.708
+    },
+    {
+      "team_a": "ETSU",
+      "team_b": "The Citadel",
+      "a_score": 67,
+      "b_score": 66,
+      "margin": 1,
+      "market_spread": 1.5,
+      "model_spread": 2.5,
+      "covered": true,
+      "won": true,
+      "stake": 200,
+      "profit": 200,
+      "coverProb": 0.708
+    }
+  ]
+}
