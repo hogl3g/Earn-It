@@ -1,13 +1,11 @@
 {
   "summary": {
-    "date": "2026-01-10",
-    "total_picks": 7,
-    "covers": 4,
-    "wins": 4,
-    "losses": 3,
-    "total_stake": 1768,
-    "total_profit": 607.76,
-    "roi": 34.39
+    "wins": 0,
+    "losses": 0,
+    "total_picks": 0,
+    "total_profit": 0,
+    "hit_rate": 0,
+    "avg_confidence": 0
   },
   "rows": [
     {

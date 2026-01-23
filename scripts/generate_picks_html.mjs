@@ -37,7 +37,7 @@ const escaped = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt
 // Try to locate graded results JSON for the date present in picks
 let gradesSummary = null;
 let gradesMap = null;
-let extendedHeaders = [...headers];
+let extendedHeaders = ['date', 'team_a', 'team_b', 'picked_team', 'confidence', 'tier'];
 
 try {
   // Parse the date from the first row (ISO string in column 0)
@@ -62,7 +62,7 @@ try {
       `${String(r.team_a)}|${String(r.team_b)}`, r
     ]));
     // Append graded columns to headers
-    extendedHeaders = [...headers, 'coverProb', 'a_score', 'b_score', 'margin', 'covered', 'won', 'profit'];
+    extendedHeaders = [...extendedHeaders, 'a_score', 'b_score', 'margin', 'result'];
   }
 } catch (err) {
   console.warn('Could not parse graded results JSON:', err?.message || String(err));
@@ -70,24 +70,39 @@ try {
 
 const tableRows = rows.map((line) => {
   const cols = line.split(',');
-  const key = `${cols[1]}|${cols[2]}`;
+  const dateCol = cols[0];
+  const teamACol = cols[1];
+  const teamBCol = cols[2];
+  const pickedTeamCol = cols[3];
+  const confidenceCol = cols[4];
+  const tierCol = cols[5];
+  
+  const key = `${teamACol}|${teamBCol}`;
   const grade = gradesMap ? gradesMap.get(key) : null;
-  const extra = grade ? [
-    grade.coverProb == null ? '' : String(Math.round(grade.coverProb * 100)) + '%',
-    grade.a_score == null ? '' : String(grade.a_score),
-    grade.b_score == null ? '' : String(grade.b_score),
-    grade.margin == null ? '' : String(grade.margin),
-    grade.covered == null ? '' : (grade.covered ? 'Y' : 'N'),
-    grade.won == null ? '' : (grade.won ? 'W' : 'L'),
-    grade.profit == null ? '' : String(Math.round(grade.profit * 100) / 100)
-  ] : [];
+  
+  // Build display columns
+  const displayCols = [
+    dateCol,
+    teamACol,           // Home team (column 1)
+    teamBCol,           // Away team (column 2)
+    pickedTeamCol,      // Picked team
+    confidenceCol,      // Confidence %
+    tierCol,            // Tier (STRICT/RELAXED)
+  ];
+  
+  // Add grade info if available
+  if (grade) {
+    displayCols.push(
+      grade.a_score == null ? '' : String(grade.a_score),
+      grade.b_score == null ? '' : String(grade.b_score),
+      grade.margin == null ? '' : String(grade.margin),
+      grade.won == null ? '' : (grade.won ? '✓' : '✗')
+    );
+  }
 
-  const displayCols = [...cols, ...extra];
-
-  return `<tr>${displayCols.map((c, idx) => {
+  return `<tr>${displayCols.map((c) => {
     const val = escaped(c);
-    // Add asterisk to team_a (index 1) - the projected pick from original columns
-    return `<td>${idx === 1 ? val + ' *' : val}</td>`;
+    return `<td>${val}</td>`;
   }).join('')}</tr>`;
 }).join('\n');
 
