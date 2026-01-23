@@ -133,16 +133,8 @@ const TEAM_NAME_MAP: Record<string, string> = {
   'Rider': 'Rider',
   'Marist': 'Marist',
   'Ohio': 'Ohio University',
-  'Ohio University': 'Ohio University',
-  'Ball St.': 'Ball State',
-  'Ball State': 'Ball State',
   'Creighton': 'Creighton',
   'Providence': 'Providence',
-  'Colorado St.': 'Colorado State',
-  'Colorado State': 'Colorado State',
-  'Boise St.': 'Boise State',
-  'Boise State': 'Boise State',
-  'UAB': 'Alabama Birmingham',
   'East Carolina': 'East Carolina',
   'ECU': 'East Carolina'
 };

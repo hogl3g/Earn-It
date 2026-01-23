@@ -1,2 +1,4 @@
-1. Oakland vs Green Bay — EV/$1=0.396 Kelly=0.109 Stake=$108.99 Cover=73.1%
-2. American vs Army — EV/$1=0.375 Kelly=0.103 Stake=$103.00 Cover=72.0%
+1. USC Upstate vs Gardner Webb — EV/$1=0.688 Kelly=0.189 Stake=$189.10 Cover=88.4%
+2. Saint Louis vs St. Bonaventure — EV/$1=0.680 Kelly=0.187 Stake=$187.00 Cover=88.0%
+3. Indiana vs Rutgers — EV/$1=0.640 Kelly=0.176 Stake=$175.87 Cover=85.9%
+4. Akron vs Ohio — EV/$1=0.550 Kelly=0.151 Stake=$151.30 Cover=81.2%

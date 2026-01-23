@@ -20,14 +20,14 @@ export async function fetchBarttorvik(): Promise<any[]> {
     const teams: any[] = [];
     
     // Parse table rows
-    const rowRegex = /<tr[^>]*>(.*?)<\/tr>/gs;
+    const rowRegex = /<tr[^>]*>(.*?)<\/tr>/g;
     const rows = html.match(rowRegex) || [];
     
     for (const row of rows) {
       if (row.includes('<th')) continue;
       
-      const cellRegex = /<td[^>]*>(.*?)<\/td>/gs;
-      const cells = [...row.matchAll(cellRegex)].map(m => m[1].replace(/<[^>]*>/g, '').trim());
+      const cellRegex = /<td[^>]*>(.*?)<\/td>/g;
+      const cells = Array.from(row.matchAll(cellRegex)).map(m => m[1].replace(/<[^>]*>/g, '').trim());
       
       if (cells.length < 10) continue;
       

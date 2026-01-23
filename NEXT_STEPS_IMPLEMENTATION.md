@@ -63,8 +63,8 @@ Extends picks with confidence intervals and Kelly criterion sizing.
 - Confidence levels (HIGH/MEDIUM/LOW)
 
 **Current Distribution:**
-- 48 HIGH confidence picks (>65%) - Avg stake $473
-- 22 MEDIUM confidence picks (55-65%) - Avg stake $142
+- 🟢 **100% strict picks** - Highest confidence only
+- 🟡 **80% relaxed picks** - Moderate confidence as fallback
 - 16 LOW confidence picks (<55%) - Avg stake $10
 
 **Run:**

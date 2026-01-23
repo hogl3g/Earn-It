@@ -24,6 +24,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate projector picks
+        run: npx tsx "server/cli/sports app 1.ts" --source talisman
+        continue-on-error: true
+
       - name: Prepare public artifacts
         run: |
           mkdir -p public/data/results

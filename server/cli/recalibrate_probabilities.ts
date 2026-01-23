@@ -53,13 +53,13 @@ function readPicksCSV(picksPath: string): PickRow[] {
   const content = fs.readFileSync(picksPath, 'utf8');
   const rows = parse(content, { columns: true, skip_empty_lines: true });
   const out: PickRow[] = [];
-  for (const r of rows) {
-    const team = normalizeTeamName(String(r.team || r.Team || r.team_a || '').trim());
-    const opponent = normalizeTeamName(String(r.opponent || r.Opponent || r.oppo || r.team_b || '').trim());
-    const date = String(r.date || r.Date || '').trim();
-    const probRaw = r.coverProb ?? r.CoverProb ?? r.cp ?? r.prob ?? r.cover_prob;
+  for (const r of rows as any[]) {
+    const team = normalizeTeamName(String((r as any).team || (r as any).Team || (r as any).team_a || '').trim());
+    const opponent = normalizeTeamName(String((r as any).opponent || (r as any).Opponent || (r as any).oppo || (r as any).team_b || '').trim());
+    const date = String((r as any).date || (r as any).Date || '').trim();
+    const probRaw = (r as any).coverProb ?? (r as any).CoverProb ?? (r as any).cp ?? (r as any).prob ?? (r as any).cover_prob;
     const coverProb = typeof probRaw === 'string' ? parseFloat(probRaw) : Number(probRaw);
-    const marketSpreadRaw = r.marketSpread ?? r.MarketSpread ?? r.spread ?? r.market_spread;
+    const marketSpreadRaw = (r as any).marketSpread ?? (r as any).MarketSpread ?? (r as any).spread ?? (r as any).market_spread;
     const marketSpread = marketSpreadRaw != null ? Number(marketSpreadRaw) : undefined;
     if (!team || !opponent || !date || !isFinite(coverProb)) continue;
     out.push({ date, team, opponent, coverProb, marketSpread });
@@ -102,15 +102,15 @@ function readGradeFiles(resultsDir: string): GradeRecord[] {
         continue;
       }
       if (!byDate.has(dd)) byDate.set(dd, []);
-      for (const r of rows) {
+      for (const r of rows as any[]) {
         const rec: GradeRecord = {
           date: dd,
-          homeTeam: normalizeTeamName(String(r.homeTeam ?? r.HomeTeam ?? '').trim()),
-          awayTeam: normalizeTeamName(String(r.awayTeam ?? r.AwayTeam ?? '').trim()),
-          homeScore: Number(r.homeScore ?? r.HomeScore ?? 0),
-          awayScore: Number(r.awayScore ?? r.AwayScore ?? 0),
-          covered: (r.covered ?? r.Covered ?? '') === 'true' ? true : ((r.covered ?? r.Covered ?? '') === 'false' ? false : undefined),
-          closingSpread: r.closingSpread != null ? Number(r.closingSpread) : undefined,
+          homeTeam: normalizeTeamName(String((r as any).homeTeam ?? (r as any).HomeTeam ?? '').trim()),
+          awayTeam: normalizeTeamName(String((r as any).awayTeam ?? (r as any).AwayTeam ?? '').trim()),
+          homeScore: Number((r as any).homeScore ?? (r as any).HomeScore ?? 0),
+          awayScore: Number((r as any).awayScore ?? (r as any).AwayScore ?? 0),
+          covered: ((r as any).covered ?? (r as any).Covered ?? '') === 'true' ? true : (((r as any).covered ?? (r as any).Covered ?? '') === 'false' ? false : undefined),
+          closingSpread: (r as any).closingSpread != null ? Number((r as any).closingSpread) : undefined,
         };
         byDate.get(dd)!.push(rec);
       }
@@ -230,10 +230,10 @@ function main() {
     console.log(`Insufficient matched samples (${samples.length}). Falling back to backtest_report.csv.`);
     const content = fs.readFileSync(backtestPath, 'utf8');
     const rows = parse(content, { columns: true, skip_empty_lines: true });
-    for (const r of rows) {
-      const pRaw = r.coverProb ?? r.CoverProb ?? r.cp ?? r.prob;
+    for (const r of rows as any[]) {
+      const pRaw = (r as any).coverProb ?? (r as any).CoverProb ?? (r as any).cp ?? (r as any).prob;
       const p = typeof pRaw === 'string' ? parseFloat(pRaw) : Number(pRaw);
-      const yRaw = r.win ?? r.Win ?? r.covered ?? r.Covered;
+      const yRaw = (r as any).win ?? (r as any).Win ?? (r as any).covered ?? (r as any).Covered;
       const y = String(yRaw).toLowerCase() === 'true' || Number(yRaw) === 1 ? 1 : 0;
       if (isFinite(p)) {
         samples.push({ p, y, bucket: bucketize(p) });

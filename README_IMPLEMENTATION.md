@@ -163,7 +163,8 @@ npx tsx server/cli/export_enhanced_picks.ts       # Confidence intervals
 
 **Calibration**
 - Do your probability estimates match reality?
-- 70% picks should hit ~70% of the time
+- 100% strict picks should be generated when very high confidence
+- 80% relaxed picks as fallback when insufficient strict picks
 - Your model: Overconfident (67% vs 33% actual)
 
 **Kelly Criterion**

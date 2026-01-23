@@ -107,12 +107,14 @@ export async function fetchUSATodayScores(date: string): Promise<USATodayGame[]>
 
 // CLI usage
 if (import.meta.url === `file://${process.argv[1].replace(/\\/g, '/')}`) {
-  const date = process.argv[2] || new Date().toISOString().split('T')[0];
-  const games = await fetchUSATodayScores(date);
-  
-  console.log(`\n=== Games for ${date} ===`);
-  for (const game of games) {
-    const status = game.completed ? 'FINAL' : game.scheduled ? 'SCHEDULED' : 'IN PROGRESS';
+  (async () => {
+    const date = process.argv[2] || new Date().toISOString().split('T')[0];
+    const games = await fetchUSATodayScores(date);
+    
+    console.log(`\n=== Games for ${date} ===`);
+    for (const game of games) {
+      const status = game.completed ? 'FINAL' : game.scheduled ? 'SCHEDULED' : 'IN PROGRESS';
     console.log(`${game.awayTeam.padEnd(25)} @ ${game.homeTeam.padEnd(25)} ${game.awayScore}-${game.homeScore} [${status}]`);
-  }
+    }
+  })();
 }

@@ -53,8 +53,8 @@ function validateGrades(resultsDir: string): ValidationIssue[] {
         }
       } else if (f.endsWith('.csv')) {
         const content = fs.readFileSync(full, 'utf8');
-        const rows = parse(content, { columns: true, skip_empty_lines: true });
-        for (const r of rows) {
+        const rows = parse(content, { columns: true, skip_empty_lines: true }) as any[];
+        for (const r of rows as any[]) {
           const date = f.replace(/[^0-9]/g, '').slice(0, 8);
           const home = normalizeTeamName(String(r.homeTeam ?? r.HomeTeam ?? ''));
           const away = normalizeTeamName(String(r.awayTeam ?? r.AwayTeam ?? ''));
@@ -89,10 +89,10 @@ function validatePicks(picksPath: string): ValidationIssue[] {
     return issues;
   }
   const content = fs.readFileSync(picksPath, 'utf8');
-  const rows = parse(content, { columns: true, skip_empty_lines: true });
+  const rows = parse(content, { columns: true, skip_empty_lines: true }) as any[];
   const seenPerDayTeam = new Set<string>();
 
-  for (const r of rows) {
+  for (const r of rows as any[]) {
     const date = String(r.date ?? r.Date ?? '').trim();
     const team = normalizeTeamName(String(r.team ?? r.Team ?? '').trim());
     const opp = normalizeTeamName(String(r.opponent ?? r.Opponent ?? r.oppo ?? '').trim());

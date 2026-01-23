@@ -131,16 +131,16 @@ function readPicksForDate(picksPath: string, targetDate: string): PickToGrade[] 
   const rows = parse(content, { columns: true, skip_empty_lines: true });
   const out: PickToGrade[] = [];
   
-  for (const r of rows) {
-    const dateRaw = String(r.date || r.Date || '').trim();
+  for (const r of rows as any[]) {
+    const dateRaw = String((r as any).date || (r as any).Date || '').trim();
     const date = dateRaw.replace(/[^0-9]/g, '').slice(0, 8);
     if (date !== targetDate) continue;
     
-    const team_a = normalizeTeamName(String(r.team_a ?? r.team ?? '').trim());
-    const team_b = normalizeTeamName(String(r.team_b ?? r.opponent ?? '').trim());
-    const cover_prob = Number(r.cover_prob ?? r.coverProb ?? r.CoverProb ?? 0.5);
-    const market_spread = Number(r.market_spread ?? r.marketSpread ?? r.spread ?? 0);
-    const model_spread = Number(r.model_spread ?? r.modelSpread ?? 0);
+    const team_a = normalizeTeamName(String((r as any).team_a ?? (r as any).team ?? '').trim());
+    const team_b = normalizeTeamName(String((r as any).team_b ?? (r as any).opponent ?? '').trim());
+    const cover_prob = Number((r as any).cover_prob ?? (r as any).coverProb ?? (r as any).CoverProb ?? 0.5);
+    const market_spread = Number((r as any).market_spread ?? (r as any).marketSpread ?? (r as any).spread ?? 0);
+    const model_spread = Number((r as any).model_spread ?? (r as any).modelSpread ?? 0);
     
     if (!team_a || !team_b) continue;
     out.push({ date, team_a, team_b, market_spread, model_spread, cover_prob });
@@ -183,8 +183,8 @@ async function main() {
   const allRows = parse(content, { columns: true, skip_empty_lines: true });
   const dateSet = new Set<string>();
   
-  for (const r of allRows) {
-    const dateRaw = String(r.date || r.Date || '').trim();
+  for (const r of allRows as any[]) {
+    const dateRaw = String((r as any).date || (r as any).Date || '').trim();
     const date = dateRaw.replace(/[^0-9]/g, '').slice(0, 8);
     if (date && date.length === 8) dateSet.add(date);
   }

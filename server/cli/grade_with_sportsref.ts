@@ -46,7 +46,7 @@ async function gradePicks(date: string) {
     }
     console.log(`Loaded coverProb values for ${picksCoverProb.size} picks from CSV`);
   } else {
-    console.log('No picks CSV found - will use default coverProb of 0.72 (filter minimum is 0.70)');
+    console.log('No picks CSV found - will use default coverProb of 0.80 (filter minimum is 0.80)');
   }
   
   // Fetch Sports Reference scores
@@ -68,7 +68,7 @@ async function gradePicks(date: string) {
     
     // Get coverProb from original CSV
     const key = `${normA}_${normB}`;
-    const coverProb = picksCoverProb.get(key) || 0.72; // Default to 72% (above filter minimum of 70%)
+    const coverProb = picksCoverProb.get(key) || 0.80; // Default to 80% (above filter minimum of 80%)
     
     // Ensure coverProb is preserved in grades
     if (!pick.coverProb) {
@@ -131,9 +131,9 @@ async function gradePicks(date: string) {
   console.log(`  Total picks: ${grades.rows.length}`);
   
   // Calculate summary stats
-  const wins = grades.rows.filter(r => r.won && r.a_score > 0).length;
-  const losses = grades.rows.filter(r => !r.won && r.a_score > 0).length;
-  const totalProfit = grades.rows.reduce((sum, r) => sum + (r.profit || 0), 0);
+  const wins = grades.rows.filter((r: any) => r.won && r.a_score > 0).length;
+  const losses = grades.rows.filter((r: any) => !r.won && r.a_score > 0).length;
+  const totalProfit = grades.rows.reduce((sum: number, r: any) => sum + (r.profit || 0), 0);
   
   console.log(`\n  Wins: ${wins}`);
   console.log(`  Losses: ${losses}`);
@@ -146,8 +146,15 @@ async function gradePicks(date: string) {
   console.log(`\nSaved updated grades to: ${outputPath}`);
 }
 
-// Run for Jan 17
-const date = process.argv[2] || '2026-01-17';
+// Get yesterday's date as default if not provided
+function getYesterdayDate(): string {
+  const pad = (n: number) => String(n).padStart(2, "0");
+  const yesterday = new Date();
+  yesterday.setDate(yesterday.getDate() - 1);
+  return `${yesterday.getFullYear()}-${pad(yesterday.getMonth() + 1)}-${pad(yesterday.getDate())}`;
+}
+
+const date = process.argv[2] || getYesterdayDate();
 gradePicks(date).catch(err => {
   console.error('Error:', err);
   process.exit(1);

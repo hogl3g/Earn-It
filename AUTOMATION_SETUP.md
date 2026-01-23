@@ -9,7 +9,7 @@ Your betting system is now **100% fully automatic**. Here's what happens:
 2. **Auto-Validate** — Data quality checks and anomaly detection
 3. **Auto-Calibrate** — Probability model recalibration based on graded games
 4. **Auto-Export** — Enhanced picks with confidence intervals and Kelly sizing
-5. **Auto-Pick** — Projector generates picks with 70%+ confidence, ≥5% edge, quarter-Kelly sizing
+5. **Auto-Pick** — Projector generates picks with 100% strict confidence, 80% relaxed confidence, ≥5% edge
 
 ### 🚀 Starting Automation
 
@@ -54,7 +54,7 @@ All picks are saved to:
 ### 📋 Quality Filters (All Must Pass)
 
 Every pick in the output meets:
-- ✅ ≥70% calibrated confidence
+- ✅ 100% strict / 80% relaxed confidence thresholds
 - ✅ ≥5% edge vs market
 - ✅ Positive expected value
 - ✅ 1/4 Kelly sizing (max 25% of bankroll)

@@ -27,10 +27,10 @@ try {
     Log "ERROR grading: $_"
 }
 
-# Step 2: Generate today's picks
+# Step 2: Generate today's picks (using Talisman Red as preferred source)
 Log "Step 2: Generating today's picks..."
 try {
-    $Output = npx tsx "server/cli/sports app 1.ts" 2>&1
+    $Output = npx tsx "server/cli/sports app 1.ts" --source talisman 2>&1
     Log "Picks generation output: $Output"
 } catch {
     Log "ERROR generating picks: $_"

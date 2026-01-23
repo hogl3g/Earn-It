@@ -36,7 +36,7 @@ This will:
 4. **Picks Export** → Generates picks for today
 
 ### Picks Include:
-- ✅ **≥70% confidence** (calibrated probability)
+- ✅ **100% strict / 80% relaxed** confidence thresholds
 - ✅ **≥5% edge** vs market
 - ✅ **Positive EV** (expected value)
 - ✅ **1/4 Kelly sizing** (max 25% of bankroll per bet)
@@ -161,7 +161,7 @@ Get-Content "data/results/clean/logs/pipeline_$(Get-Date -Format 'yyyy-MM-dd').j
 | **ESPN Integration** | ✅ | Auto-fetches completed game scores |
 | **Auto-Grading** | ✅ | Matches picks to scores automatically |
 | **Self-Calibrating** | ✅ | Model improves as games are graded |
-| **Quality Filters** | ✅ | 70% confidence + 5% edge minimum |
+| **Quality Filters** | ✅ | 100% strict / 80% relaxed + 5% edge minimum |
 | **Risk Management** | ✅ | 1/4 Kelly (25% max per bet) |
 | **Manual API** | ✅ | HTTP endpoints for manual triggers |
 | **Logging** | ✅ | Full pipeline logs + results |
@@ -180,7 +180,7 @@ $env:NODE_ENV = "production" # Default: development
 
 ### Quality Thresholds (Hardcoded, Tested)
 ```
-coverProb >= 0.70      # 70% confidence minimum
+coverProb >= 1.00 (strict) or >= 0.80 (relaxed)  # Two-tier confidence
 edge >= 0.05           # 5% edge minimum
 ev_per_1 > 0           # Positive EV only
 kelly_fraction <= 0.25 # Quarter Kelly max
@@ -198,7 +198,7 @@ kelly_fraction <= 0.25 # Quarter Kelly max
 | Express Server | ⏳ Awaiting Start | Run `run_automation.bat` |
 | ESPN API | ✅ Ready | Tested |
 | Calibration | ✅ Ready | Integrated |
-| Filters (70%/5%) | ✅ Ready | Implemented |
+| Filters (100%/80%/5%) | ✅ Ready | Implemented |
 | Quarter-Kelly | ✅ Ready | Implemented |
 
 ---

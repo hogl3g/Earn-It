@@ -46,7 +46,7 @@ npx tsx server/cli/analyze_calibration.ts
 ```
 
 **Purpose:**
-- Measures if 70% cover-probability picks actually hit 70% of the time
+- Measures if 100% strict and 80% relaxed picks actually hit at their predicted rates
 - Identifies systematic biases in probability estimates
 - Provides calibration curve analysis
 

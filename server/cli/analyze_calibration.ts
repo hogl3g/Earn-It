@@ -183,13 +183,8 @@ function formatDateForGrades(inputDate: string): string {
 function analyzeCalibration(picks: PickRecord[], allGrades: Map<string, GradeRecord[]>): CalibrationBucket[] {
   const buckets = new Map<string, CalibrationBucket>();
   const bucketRanges = [
-    { min: 0.50, max: 0.55, label: '50-55%' },
-    { min: 0.55, max: 0.60, label: '55-60%' },
-    { min: 0.60, max: 0.65, label: '60-65%' },
-    { min: 0.65, max: 0.70, label: '65-70%' },
-    { min: 0.70, max: 0.75, label: '70-75%' },
-    { min: 0.75, max: 0.80, label: '75-80%' },
-    { min: 0.80, max: 1.00, label: '80%+' }
+    { min: 0.80, max: 1.00, label: '80-100% (RELAXED)' },
+    { min: 1.00, max: 1.10, label: '100%+ (STRICT)' }
   ];
   
   for (const range of bucketRanges) {
@@ -278,10 +273,9 @@ function calculateDailyMetrics(picks: PickRecord[], allGrades: Map<string, Grade
     let totalHits = 0;
     let totalProfit = 0;
     const confidenceDist: Record<string, number> = {
-      '50-60%': 0,
-      '60-70%': 0,
-      '70-80%': 0,
-      '80%+': 0
+      '<80%': 0,
+      '80-100% (RELAXED)': 0,
+      '100%+ (STRICT)': 0
     };
     
     for (const pick of datePicks) {
@@ -302,10 +296,9 @@ function calculateDailyMetrics(picks: PickRecord[], allGrades: Map<string, Grade
       
       // Confidence bucket
       const cp = pick.coverProb;
-      if (cp < 0.60) confidenceDist['50-60%']++;
-      else if (cp < 0.70) confidenceDist['60-70%']++;
-      else if (cp < 0.80) confidenceDist['70-80%']++;
-      else confidenceDist['80%+']++;
+      if (cp < 0.80) confidenceDist['<80%']++;
+      else if (cp < 1.00) confidenceDist['80-100% (RELAXED)']++;
+      else confidenceDist['100%+ (STRICT)']++;
     }
     
     const gradeCount = datePicks.filter(p => matchPickToGrade(p, grades)).length;

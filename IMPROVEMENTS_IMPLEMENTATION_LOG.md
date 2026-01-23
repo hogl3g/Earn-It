@@ -60,7 +60,7 @@ const resp = await fetch(url, { signal: controller.signal });
 **Impact:** Validates whether probability estimates match reality
 
 **What It Does:**
-- Measures if 70% cover probability picks actually hit 70% of the time
+- Measures if 100% strict and 80% relaxed picks actually hit at their predicted rates
 - Generates calibration curves by confidence band (50-55%, 55-60%, etc.)
 - Calculates daily metrics and ROI by date
 - Identifies systematic overconfidence/underconfidence
@@ -136,8 +136,8 @@ weight = 1 / (1 + (0.5^(5 * recency_ratio)) * exp(-recency_ratio))
 **Effort:** 15 minutes
 
 Separate picks into tiers:
-- **🟢 High Confidence:** 70%+ cover probability
-- **🟡 Medium Confidence:** 60-70% cover probability  
+- **🟢 High Confidence (100% strict):** Only near-certain picks
+- **🟡 Medium Confidence (80% relaxed):** Moderate confidence fallback  
 - **🔴 Speculative:** 55-60% cover probability
 
 ---

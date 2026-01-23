@@ -16,7 +16,7 @@ npx tsx server/cli/dashboard.ts
 npx tsx server/cli/create_calibration_dataset.ts
 npx tsx server/cli/analyze_calibration.ts
 ```
-**Shows:** Are 70% picks actually hitting 70%?  
+**Shows:** Are 100% strict and 80% relaxed picks hitting at predicted rates?  
 **Best for:** Weekly analysis
 
 ### Closing Line Value

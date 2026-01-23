@@ -95,10 +95,10 @@ function enhancePicks(picks: any[], calib?: { a: number; b: number } | null): En
     const kelly = calculateKelly(prob, odds);
     const expectedRoi = calculateExpectedRoi(prob, pick.ev_per_1 || 0.27, -0.90);
     
-    // Confidence level
-    let confidence = 'LOW';
-    if (prob > 0.65) confidence = 'HIGH';
-    else if (prob > 0.55) confidence = 'MEDIUM';
+    // Confidence level based on two-tier system
+    let confidence = 'RELAXED';
+    if (prob >= 1.00) confidence = 'STRICT';
+    else if (prob >= 0.80) confidence = 'RELAXED';
     
     return {
       date: pick.date,
@@ -199,13 +199,11 @@ async function main() {
   console.log(`\nTotal Picks: ${enhanced.length}`);
   
   // Summary by confidence
-  const high = enhanced.filter(p => p.confidence === 'HIGH');
-  const medium = enhanced.filter(p => p.confidence === 'MEDIUM');
-  const low = enhanced.filter(p => p.confidence === 'LOW');
+  const strict = enhanced.filter(p => p.confidence === 'STRICT');
+  const relaxed = enhanced.filter(p => p.confidence === 'RELAXED');
   
-  console.log(`  HIGH Confidence (>65%):   ${high.length} picks | Avg Stake: $${(high.reduce((s, p) => s + p.stake_dollars, 0) / high.length).toFixed(0)}`);
-  console.log(`  MEDIUM Confidence (55-65%): ${medium.length} picks | Avg Stake: $${(medium.reduce((s, p) => s + p.stake_dollars, 0) / medium.length || 0).toFixed(0)}`);
-  console.log(`  LOW Confidence (<55%):    ${low.length} picks | Avg Stake: $${(low.reduce((s, p) => s + p.stake_dollars, 0) / low.length || 0).toFixed(0)}`);
+  console.log(`  STRICT (100%):   ${strict.length} picks | Avg Stake: $${(strict.reduce((s, p) => s + p.stake_dollars, 0) / strict.length || 0).toFixed(0)}`);
+  console.log(`  RELAXED (80%):   ${relaxed.length} picks | Avg Stake: $${(relaxed.reduce((s, p) => s + p.stake_dollars, 0) / relaxed.length || 0).toFixed(0)}`);
   
   // Show samples
   console.log('\n═══════════════════════════════════════════════════════════════════');
