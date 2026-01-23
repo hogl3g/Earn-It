@@ -240,23 +240,22 @@ try {
   console.warn('Could not read grades files:', err?.message || String(err));
 }
 
-if (cumulativeWins > 0 || cumulativeLosses > 0) {
-  winsLossesHtml = `
-  <div class="wins-losses-box">
-    <h2>Record (Cumulative)</h2>
-    <div class="record-display">
-      <div class="record-item wins">
-        <span class="record-label">Wins</span>
-        <span class="record-value">${cumulativeWins}</span>
-      </div>
-      <div class="record-item losses">
-        <span class="record-label">Losses</span>
-        <span class="record-value">${cumulativeLosses}</span>
-      </div>
+// Always show wins/losses box (even if 0-0 on fresh start)
+winsLossesHtml = `
+<div class="wins-losses-box">
+  <h2>Record (Cumulative)</h2>
+  <div class="record-display">
+    <div class="record-item wins">
+      <span class="record-label">Wins</span>
+      <span class="record-value">${cumulativeWins}</span>
+    </div>
+    <div class="record-item losses">
+      <span class="record-label">Losses</span>
+      <span class="record-value">${cumulativeLosses}</span>
     </div>
   </div>
-  `;
-}
+</div>
+`;
 
 // Removed Previous Day Game Scores section per user request
 
