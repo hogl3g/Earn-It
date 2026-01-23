@@ -24,18 +24,18 @@ async function loadCalibration(): Promise<CalibrationParams | null> {
     const cal = JSON.parse(txt);
     // Skip degenerate calibration (identity mapping)
     if (cal.a === 1 && cal.b === 0) {
-      console.log("⚠️  Calibration is degenerate (a=1, b=0), using raw probabilities");
+      console.log("ℹ️  Calibration is degenerate (a=1, b=0), using raw probabilities (thresholds locked: 100% strict / 80% relaxed)");
       return null;
     }
     if (cal.status === "insufficient-variance") {
-      console.log("⚠️  Calibration has insufficient variance, using raw probabilities");
+      console.log("ℹ️  Calibration has insufficient variance, using raw probabilities (thresholds locked: 100% strict / 80% relaxed)");
       return null;
     }
     CALIBRATION = cal;
     console.log(`✓ Loaded calibration: f(p) = ${cal.a.toFixed(3)} + ${cal.b.toFixed(3)}·p`);
     return CALIBRATION;
   } catch (err) {
-    console.log("⚠️  No calibration file found, using raw probabilities");
+    console.log("ℹ️  No calibration file found, using raw probabilities (thresholds locked: 100% strict / 80% relaxed)");
     return null;
   }
 }
@@ -713,23 +713,27 @@ async function main() {
 
     // Rank picks by EV per $1 (descending)
     // IMPORTANT: Check data quality and filter accordingly
-    // With 272/362 teams rated (75% coverage), we now have sufficient data
-    // Use two-pass approach: strict first, then relax if needed
+    // With 311/362 teams rated (85% coverage), we have excellent data coverage
+    
+    // ❌ HARDCODED - DO NOT CHANGE ❌
+    // Threshold system is locked at 100% STRICT / 80% RELAXED
+    // This applies to ALL picks, ALWAYS, with NO EXCEPTIONS
+    // Reason: This prevents false positives and ensures high confidence
     
     // Pass 1: Very strict - only near-certain picks with high-confidence data
     let ranked = picks.filter(p => {
       const hasEV = typeof p.ev_per_1 === "number" && p.ev_per_1 > 0;
-      const meetsStrictCover = (p.coverProb ?? 0) >= 1.00;  // 100% confidence
+      const meetsStrictCover = (p.coverProb ?? 0) >= 1.00;  // STRICT: 100% minimum (locked)
       const meetsStrictEdge = (p.edge ?? 0) >= 0.07;  // 7%+ edge required
       const hasData = (p as any).hasCompleteData === true;
       return hasEV && meetsStrictCover && meetsStrictEdge && hasData;
     }).sort((a,b) => (b.ev_per_1 ?? 0) - (a.ev_per_1 ?? 0));
 
-    // Pass 2: If insufficient picks, relax to moderate thresholds
+    // Pass 2: If insufficient picks, relax to moderate thresholds (LOCKED at 80%)
     if (ranked.length < 5) {
       ranked = picks.filter(p => {
         const hasEV = typeof p.ev_per_1 === "number" && p.ev_per_1 > 0;
-        const meetsCoverThreshold = (p.coverProb ?? 0) >= 0.80;  // 80%+ relaxed
+        const meetsCoverThreshold = (p.coverProb ?? 0) >= 0.80;  // RELAXED: 80% minimum (locked)
         const meetsEdgeThreshold = (p.edge ?? 0) >= 0.05;  // 5%+ relaxed edge
         return hasEV && meetsCoverThreshold && meetsEdgeThreshold;
       }).sort((a,b) => (b.ev_per_1 ?? 0) - (a.ev_per_1 ?? 0));
