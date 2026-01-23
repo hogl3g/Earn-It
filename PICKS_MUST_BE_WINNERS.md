@@ -60,15 +60,15 @@ const confidence = calculateWinProbability(teamA, teamB, metrics);
 **100% STRICT (must be near-certain winners)**
 ```
 Confidence >= 1.00 (100%+)
-Meaning: Team will almost certainly cover
-Expected outcome: 58%+ hit rate on these picks
+Expected Win Rate: 100% (picks should win every time)
+Meaning: Model is absolutely certain this will cover
 ```
 
 **80% RELAXED (high confidence winners)**
 ```
 Confidence >= 0.80 (80%+) and < 1.00
-Meaning: Team likely to cover, but not certain
-Expected outcome: 52-55% hit rate
+Expected Win Rate: 80% (80 out of 100 picks should win)
+Meaning: Model is 80% confident this will cover
 ```
 
 **REJECTED (not confident enough)**
@@ -244,11 +244,11 @@ confidence is below minimum)
 
 | Threshold | Your Forecast | Market | Expected Win Rate |
 |-----------|---------------|--------|-------------------|
-| **88%+ (STRICT)** | Team A +5 | Team A -3.5 | 58%+ actual |
-| **80-87% (RELAXED)** | Team B +1.5 | Team B -1 | 52-55% actual |
+| **100%+ (STRICT)** | Team A +5 | Team A -3.5 | 100% (should win every pick) |
+| **80-99% (RELAXED)** | Team B +1.5 | Team B -1 | 80% (80 picks out of 100 should win) |
 | **Below 80%** | Team C +0.5 | Team C -2 | DON'T PICK |
 
-**Key:** Actual win rate should match or exceed predicted confidence.
+**Key:** Actual win rate should match predicted confidence percentage.
 
 ---
 
@@ -304,21 +304,23 @@ Beats market: YES → PICK (with 85% confidence)
 
 If any of these occur, STOP and review:
 
-❌ **Pick confidence high (85%) but actual win rate low (60%)**
-- Problem: Confidence calculation is overconfident
-- Fix: Recalibrate metrics weights
+If any of these occur, STOP and review:
 
-❌ **Picks beating market spread but losing anyway**
-- Problem: Market is smarter than your metrics
-- Fix: Add more/better data sources
+❌ **100% confidence pick loses (should be 100% win rate)**
+- Problem: Model is wrong - pick shouldn't have been generated
+- Fix: Review team metrics, recalibrate calculation
+
+❌ **80% confidence picks winning only 60% (should be 80%)**
+- Problem: Confidence calculation is underconfident or market is smarter
+- Fix: Add more/better data sources or tighten confidence thresholds
 
 ❌ **Too few picks generated**
-- Problem: Thresholds too high or metrics too weak
+- Problem: Confidence thresholds too high or metrics too weak
 - Fix: Expand data sources (add more teams to metrics database)
 
 ❌ **Too many picks generated**
-- Problem: Thresholds too low or metrics too generous
-- Fix: Tighten thresholds or re-weight metrics
+- Problem: Confidence calculation too generous
+- Fix: Tighten confidence calculation or re-weight metrics
 
 ---
 

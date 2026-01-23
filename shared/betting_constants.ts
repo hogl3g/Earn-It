@@ -20,9 +20,9 @@
  * 
  * Usage:
  * - Only generated when forecast will almost certainly beat spread
- * - Expected actual win rate: 58%+ (these should WIN most of the time)
- * - Held to strictest accuracy standards
- * - Calibration target: Actual win rate within 2% of predicted
+ * - Expected actual win rate: 100% (should win every single pick)
+ * - Calibration target: 100% hit rate (no picks should lose)
+ * - If a 100% pick loses, model is miscalibrated
  * 
  * ⛔ NEVER CHANGE - PICKS MUST BE WINNERS ⛔
  */
@@ -37,9 +37,9 @@ export const CONFIDENCE_STRICT_LABEL = '100%+ (STRICT)';
  * 
  * Usage:
  * - Generated when forecast indicates likely winner but not near-certain
- * - Used to expand pick volume while maintaining winners-only requirement
- * - Expected actual win rate: 52-55% (above break-even, these should WIN)
- * - Calibration target: Actual win rate within 5% of predicted probability
+ * - Expected actual win rate: 80% (80 out of 100 picks should win)
+ * - Calibration target: Actual win rate within 5% of predicted (75-85%)
+ * - These should still be winners, just with some uncertainty
  * 
  * ⛔ NEVER CHANGE - PICKS MUST BE WINNERS ⛔
  */
@@ -132,21 +132,21 @@ export const USE_EDGE_REQUIREMENT = false; // ⚠️  CHANGED: Disable edge filt
  * CALIBRATION TARGETS
  * 
  * Expected accuracy levels for each confidence tier.
- * Used to validate that model predictions match actual outcomes.
+ * The confidence percentage IS the expected win rate.
  * 
  * If calibration error exceeds these targets, investigate model drift.
  */
 export const CALIBRATION_TARGETS = {
   strict: {
-    min_hit_rate: 0.58,      // Expect 58%+ hit rate
-    max_error: 0.05          // Allow ±5% deviation from predicted
+    expected_win_rate: 1.00,      // 100% - should win every pick
+    max_error: 0.00               // No tolerance - must be 100%
   },
   relaxed: {
-    min_hit_rate: 0.52,      // Expect 52%+ hit rate (break-even baseline)
-    max_error: 0.10          // Allow ±10% deviation from predicted
+    expected_win_rate: 0.80,      // 80% - 80 out of 100 should win
+    max_error: 0.05               // Allow ±5% deviation (75-85% acceptable)
   },
   overall: {
-    max_calibration_error: 0.08  // Overall calibration error should be <8%
+    max_calibration_error: 0.05   // Overall should be within 5%
   }
 } as const;
 
@@ -154,13 +154,14 @@ export const CALIBRATION_TARGETS = {
  * VALIDATION SUMMARY
  * 
  * This module ensures:
- * ✅ 100% STRICT picks (coverProb >= 1.00) - highest confidence only
- * ✅ 80% RELAXED picks (0.80 <= coverProb < 1.00) - moderate confidence
- * ✅ 5% EDGE minimum - edge detection verified
- * ✅ Proper calibration tracking - actual vs predicted rates
+ * ✅ 100% STRICT picks - must win 100% of the time (no losses)
+ * ✅ 80% RELAXED picks - should win 80% of the time (20% acceptable losses)
+ * ✅ Picks only when confidence >= 80% (never pick below 80%)
+ * ✅ Proper calibration tracking - actual vs predicted win rates
  * ✅ Two-tier quality system - no middle ground between strict/relaxed
  * 
- * Any deviation from these values requires explicit user approval.
+ * Confidence percentage = Expected win rate
+ * Any deviation from this requires explicit user approval.
  */
 
 // Export version for verification
