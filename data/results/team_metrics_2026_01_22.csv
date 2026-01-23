@@ -1,0 +1,315 @@
+team_name,abbreviation,conference,overall_record,win_rate,conf_win_rate,home_win_rate,away_win_rate,ap_rank,usa_rank,strength_rating,schedule_strength,momentum_score
+Miami (OH) RedHawks,M-OH,Mid-American Conference,20-0,1,1,1,1,,,0.8,0.6,1
+UConn Huskies,CONN,Big East,18-1,0.947,1,0.9,1,5,,0.954,0.792,1
+Arizona Wildcats,ARIZ,Big 12,19-0,1,1,1,1,1,,0.996,0.8,1
+Nebraska Cornhuskers,NEB,Big Ten,19-0,1,1,1,1,7,,0.972,0.8,1
+Duke Blue Devils,DUKE,ACC,17-1,0.944,1,1,1,5,,0.952,0.792,0.9
+Houston Cougars,HOU,Big 12,17-1,0.944,1,1,1,6,,0.948,0.792,1
+Saint Louis Billikens,SLU,Atlantic 10,18-1,0.947,1,1,1,24,,0.877,0.592,1
+Gonzaga Bulldogs,GONZ,West Coast,20-1,0.952,1,1,1,8,,0.944,0.793,1
+Tulsa Golden Hurricane,TLSA,American,16-3,0.842,0.667,0.889,0.667,,,0.621,0.576,0.45
+Michigan Wolverines,MICH,Big Ten,17-1,0.944,0.875,0.889,1,3,,0.922,0.792,0.45
+Clemson Tigers,CLEM,ACC,16-4,0.8,0.857,0.909,0.6,18,,0.785,0.77,-0.1
+Michigan State Spartans,MSU,Big Ten,17-2,0.895,0.875,0.909,0.75,10,,0.87,0.784,0.75
+Purdue Boilermakers,PUR,Big Ten,17-2,0.895,0.875,0.909,0.8,4,,0.894,0.784,-0.1
+Iowa State Cyclones,ISU,Big 12,17-2,0.895,0.667,1,0.5,9,,0.811,0.784,0.15
+Texas Tech Red Raiders,TTU,Big 12,15-4,0.789,0.833,1,0.5,12,,0.797,0.768,0.6
+BYU Cougars,BYU,Big 12,16-2,0.889,0.8,1,0.667,13,,0.833,0.783,-0.1
+Virginia Cavaliers,UVA,ACC,16-2,0.889,0.833,1,0.8,14,,0.839,0.783,0.75
+North Carolina Tar Heels,UNC,ACC,15-4,0.789,0.5,1,0.25,22,,0.656,0.768,0.15
+Louisville Cardinals,LOU,ACC,13-5,0.722,0.5,0.818,0.4,23,,0.619,0.758,0.15
+Kansas Jayhawks,KU,Big 12,14-5,0.737,0.667,0.889,0.4,19,,0.693,0.761,0.45
+Illinois Fighting Illini,ILL,Big Ten,16-3,0.842,0.875,0.909,1,11,,0.84,0.776,1
+Georgia Bulldogs,UGA,SEC,16-3,0.842,0.667,0.917,0.75,21,,0.737,0.776,0.3
+Florida Gators,FLA,SEC,14-5,0.737,0.833,1,0.5,16,,0.755,0.761,0.75
+Texas A&M Aggies,TA&M,SEC,15-4,0.789,0.833,0.917,0.6,,,0.645,0.768,0.3
+Arkansas Razorbacks,ARK,SEC,14-5,0.737,0.667,1,0.25,20,,0.689,0.761,0.15
+Dayton Flyers,DAY,Atlantic 10,14-5,0.737,0.833,0.909,0.6,,,0.619,0.561,-0.1
+St. Bonaventure Bonnies,SBU,Atlantic 10,12-7,0.632,0.167,0.8,0.4,,,0.366,0.545,0.15
+VCU Rams,VCU,ACC,13-6,0.684,0.667,0.818,0.5,,,0.542,0.753,0.3
+Memphis Tigers,MEM,American,9-9,0.5,0.667,0.8,0.167,,,0.45,0.525,-0.1
+Wichita State Shockers,WICH,American,12-8,0.6,0.571,0.818,0.5,,,0.471,0.54,0.3
+Liberty Flames,LIB,Conference USA,16-3,0.842,1,1,0.833,,,0.721,0.576,1
+NDSU Bison,NDSU,Summit League,17-5,0.773,1,1,0.6,,,0.686,0.566,1
+North Dakota Fighting Hawks,UND,Summit League,11-12,0.478,0.714,0.583,0.4,,,0.453,0.522,0.3
+Dayton Flyers,DAY,Atlantic 10,14-5,0.737,0.833,0.909,0.6,,,0.619,0.561,-0.1
+Santa Clara Broncos,SCU,West Coast,16-5,0.762,0.875,1,0.6,,,0.643,0.764,0.45
+Saint Mary's Gaels,SMC,West Coast,18-3,0.857,0.875,1,0.8,,,0.691,0.779,0.15
+FAU Owls,FAU,American,14-6,0.7,0.857,0.9,0.429,,,0.607,0.555,0.75
+Georgia Mason Patriots,GMU,Atlantic 10,18-1,0.947,1,1,0.75,,,0.773,0.592,1
+San Diego State Aztecs,SDSU,Mountain West,13-5,0.722,0.875,0.9,0.75,,,0.623,0.558,-0.1
+Villanova Wildcats,VILL,Big East,15-4,0.789,0.75,0.818,0.833,,,0.619,0.768,0.15
+Creighton Bluejays,CREI,Big East,12-8,0.6,0.667,0.818,0.333,,,0.5,0.74,0.15
+Seton Hall Pirates,HALL,Big East,14-5,0.737,0.5,0.727,0.8,1,,0.714,0.761,-0.3
+Oregon Ducks,ORE,Big Ten,8-11,0.421,0.125,0.7,0,,,0.248,0.713,0.15
+Davidson Wildcats,DAV,Atlantic 10,12-6,0.667,0.667,0.636,0.8,,,0.533,0.55,0.3
+Queens University Royals,QUC,ASUN,12-8,0.6,1,1,0.364,,,0.6,0.54,1
+Stephen F. Austin Lumberjacks,SFA,Southland,16-3,0.842,0.9,1,0.7,,,0.691,0.576,0.6
+High Point Panthers,HPU,Big South,17-4,0.81,0.833,0.923,0.5,,,0.655,0.572,0.15
+Troy Trojans,TROY,Sun Belt,14-6,0.7,0.875,0.875,0.6,,,0.613,0.555,0.6
+Utah State Aggies,USU,Mountain West,15-3,0.833,0.75,0.875,0.667,,,0.641,0.575,-0.2
+Portland State Vikings,PRST,Big Sky,12-5,0.706,1,0.875,0.556,,,0.653,0.556,0.9
+Winthrop Eagles,WIN,Big South,14-8,0.636,0.857,0.9,0.364,,,0.575,0.545,0.9
+East Tennessee State Buccaneers,ETSU,Southern,14-6,0.7,0.857,0.909,0.444,,,0.607,0.555,0.3
+UNC Wilmington Seahawks,UNCW,Coastal,17-3,0.85,0.857,0.917,0.75,,,0.682,0.578,-0.1
+Mercer Bears,MER,Southern,13-7,0.65,0.714,1,0.364,,,0.539,0.547,0.75
+Wofford Terriers,WOF,Southern,13-7,0.65,0.714,0.778,0.545,,,0.539,0.547,0.3
+New Mexico Lobos,UNM,Mountain West,15-4,0.789,0.75,1,0.5,,,0.619,0.568,0.15
+Lipscomb Bisons,LIP,ASUN,13-7,0.65,0.857,1,0.3,,,0.582,0.547,0.6
+Austin Peay Governors,APSU,ASUN,12-6,0.667,0.857,1,0.4,,,0.591,0.55,0.15
+McNeese Cowboys,MCN,Southland,15-4,0.789,0.8,1,0.429,,,0.635,0.568,0.15
+South Alabama Jaguars,USA,Sun Belt,14-6,0.7,0.625,0.714,0.6,,,0.537,0.555,0.15
+Arkansas State Red Wolves,ARST,Sun Belt,13-7,0.65,0.625,0.875,0.5,,,0.512,0.547,0.15
+Kentucky Wildcats,UK,SEC,13-6,0.684,0.667,0.833,0.5,2,,0.734,0.753,0.6
+Alabama Crimson Tide,ALA,SEC,13-5,0.722,0.6,0.75,0.75,17,,0.673,0.758,0.3
+St. John's Red Storm,SJU,Big East,14-5,0.737,0.875,0.818,1,,,0.631,0.761,0.75
+George Washington Revolutionaries,GW,Atlantic 10,12-7,0.632,0.5,0.8,0.5,,,0.466,0.545,-0.2
+Saint Joseph's Hawks,JOES,Atlantic 10,11-8,0.579,0.5,0.8,0.143,,,0.44,0.537,-0.1
+Richmond Spiders,RICH,Atlantic 10,13-7,0.65,0.429,0.692,0.6,,,0.454,0.547,-0.2
+La Salle Explorers,LAS,Atlantic 10,11-8,0.579,0.333,0.6,0.6,,,0.389,0.537,0.15
+Rhode Island Rams,URI,Atlantic 10,10-9,0.526,0.333,0.667,0.333,,,0.363,0.529,-0.1
+Duquesne Dukes,DUQ,Atlantic 10,10-9,0.526,0.333,0.667,0.333,,,0.363,0.529,-0.1
+Fordham Rams,FOR,Atlantic 10,10-10,0.5,0.143,0.583,0.2,,,0.293,0.525,-0.3
+Loyola Chicago Ramblers,LUC,Atlantic 10,5-15,0.25,0.143,0.3,0.167,,,0.168,0.487,-0.5
+Nevada Wolf Pack,NEV,Mountain West,14-5,0.737,0.75,0.818,0.667,,,0.593,0.561,0.3
+Wyoming Cowboys,WYO,Mountain West,11-8,0.579,0.25,0.75,0.167,,,0.364,0.537,-0.4
+Colorado State Rams,CSU,Mountain West,12-7,0.632,0.375,0.727,0.4,,,0.428,0.545,0.15
+Fresno State Bulldogs,FRES,Mountain West,9-10,0.474,0.375,0.583,0.167,,,0.349,0.521,-0.1
+Boise State Broncos,BOIS,Mountain West,11-8,0.579,0.375,0.7,0.4,,,0.402,0.537,0.3
+Grand Canyon Lopes,GCU,Mountain West,12-6,0.667,0.714,0.818,0.5,,,0.548,0.55,0.3
+UNLV Rebels,UNLV,Mountain West,10-8,0.556,0.714,0.667,0.667,,,0.492,0.533,0.45
+Utah Utes,UTAH,Big 12,9-10,0.474,0.167,0.727,0,,,0.287,0.721,-0.1
+Miami Hurricanes,MIA,ACC,15-4,0.789,0.667,0.917,0.75,,,0.595,0.768,-0.2
+NC State Wolfpack,NCSU,ACC,13-6,0.684,0.667,0.727,0.75,,,0.542,0.753,0.15
+Virginia Tech Hokies,VT,ACC,15-5,0.75,0.571,0.917,0.5,,,0.546,0.762,0.3
+Stanford Cardinal,STAN,ACC,14-5,0.737,0.5,0.692,0.667,,,0.518,0.761,-0.1
+SMU Mustangs,SMU,ACC,14-5,0.737,0.5,0.917,0.4,,,0.518,0.761,0.15
+Syracuse Orange,SYR,ACC,12-7,0.632,0.5,0.75,0.667,,,0.466,0.745,-0.2
+Georgia Tech Yellow Jackets,GT,ACC,11-8,0.579,0.333,0.769,0.25,,,0.389,0.737,0.15
+California Golden Bears,CAL,ACC,14-5,0.737,0.333,0.867,0,,,0.468,0.761,0.15
+Wake Forest Demon Deacons,WAKE,ACC,11-8,0.579,0.333,0.667,0.333,,,0.389,0.737,-0.1
+Boston College Eagles,BC,ACC,9-10,0.474,0.333,0.727,0.2,,,0.337,0.721,0.3
+Notre Dame Fighting Irish,ND,ACC,10-9,0.526,0.167,0.7,0.333,,,0.313,0.729,-0.5
+Florida State Seminoles,FSU,ACC,8-11,0.421,0.167,0.636,0.2,,,0.261,0.713,0.15
+Pittsburgh Panthers,PITT,ACC,8-11,0.421,0.167,0.5,0.2,,,0.261,0.713,-0.2
+Vanderbilt Commodores,VAN,SEC,16-3,0.842,0.5,0.9,0.667,15,,0.711,0.776,-0.3
+Tennessee Volunteers,TENN,SEC,11-8,0.579,0.5,0.7,0.5,,,0.44,0.737,-0.1
+Mississippi Rebels,MISS,SEC,16-3,0.842,0.5,0.9,0.667,,,0.571,0.776,-0.3
+Oklahoma Sooners,OU,SEC,11-8,0.579,0.167,0.8,0.2,,,0.339,0.737,-0.5
+Texas Longhorns,TEX,SEC,11-8,0.579,0.333,0.769,0.25,,,0.389,0.737,0.15
+LSU Tigers,LSU,SEC,13-6,0.684,0.167,0.818,0.25,,,0.392,0.753,-0.1
+Missouri Tigers,MIZ,SEC,13-6,0.684,0.5,0.917,0.4,,,0.492,0.753,-0.2
+Ole Miss Rebels,MISS,SEC,16-3,0.842,0.5,0.9,0.667,,,0.571,0.776,-0.3
+Auburn Tigers,AUB,SEC,12-7,0.632,0.5,0.889,0.25,,,0.466,0.745,0.3
+South Carolina Gamecocks,SC,SEC,10-9,0.526,0.4,0.7,0.5,,,0.383,0.729,-0.4
+Mississippi State Bulldogs,MSST,SEC,12-6,0.667,0.333,0.909,0,,,0.433,0.75,-0.1
+Cincinnati Bearcats,CIN,American,12-7,0.632,0.333,0.692,0.25,,,0.416,0.545,0.15
+UCF Knights,UCF,American,13-6,0.684,0.667,1,0.333,,,0.542,0.553,0.3
+TCU Horned Frogs,TCU,Big 12,14-4,0.778,0.5,0.846,0.5,,,0.539,0.767,-0.2
+West Virginia Mountaineers,WVU,Big 12,13-6,0.684,0.667,1,0.333,,,0.542,0.753,0.3
+Kansas City Roos,KC,Summit League,4-16,0.2,0.167,0.375,0.083,,,0.15,0.48,-0.4
+South Dakota Coyotes,SDAK,Summit League,11-10,0.524,0.5,0.818,0.111,,,0.412,0.529,0.15
+South Dakota State Jackrabbits,SDST,Summit League,10-11,0.476,0.5,0.875,0.222,,,0.388,0.521,-0.1
+Denver Pioneers,DEN,Summit League,9-12,0.429,0.333,0.667,0.25,,,0.315,0.514,-0.1
+Omaha Mavericks,OMA,Summit League,9-12,0.429,0.333,0.6,0.333,,,0.315,0.514,-0.1
+Oral Roberts Golden Eagles,ORU,Summit League,5-16,0.238,0,0.4,0,,,0.119,0.486,-0.5
+St. Thomas-Minnesota Tommies,STMN,Summit League,16-5,0.762,0.833,1,0.556,,,0.631,0.564,0.15
+Utah Valley Wolverines,UVU,Western Athletic,15-5,0.75,0.714,1,0.286,,,0.589,0.563,-0.1
+UT Arlington Mavericks,UTA,Western Athletic,13-6,0.684,0.714,0.875,0.6,,,0.556,0.553,0.15
+California Baptist Lancers,CBU,Western Athletic,14-6,0.7,0.571,1,0.4,,,0.521,0.555,0.6
+Utah Tech Trailblazers,UTU,Western Athletic,10-11,0.476,0.429,0.75,0.273,,,0.367,0.521,-0.1
+Southern Utah Thunderbirds,SUU,Western Athletic,7-13,0.35,0.429,0.75,0,,,0.304,0.503,0.45
+Abilene Christian Wildcats,ACU,Western Athletic,10-9,0.526,0.333,0.75,0.333,,,0.363,0.529,-0.3
+Tarleton State Texans,TAR,Western Athletic,11-9,0.55,0.286,0.8,0.3,,,0.361,0.532,-0.4
+New Mexico State Aggies,NMSU,Conference USA,10-8,0.556,0.375,0.778,0.2,,,0.391,0.533,-0.1
+UTEP Miners,UTEP,Conference USA,7-12,0.368,0.375,0.667,0.125,,,0.296,0.505,0.15
+Florida International Panthers,FIU,Conference USA,7-12,0.368,0.375,0.667,0.125,,,0.296,0.505,0.15
+Delaware Blue Hens,DEL,Conference USA,5-13,0.278,0.143,0.3,0.167,,,0.182,0.492,-0.4
+Jacksonville State Gamecocks,JXST,Conference USA,9-9,0.5,0.571,0.636,0.333,,,0.421,0.525,0.15
+Sam Houston Bearkats,SHSU,Conference USA,12-7,0.632,0.5,0.857,0.4,,,0.466,0.545,0.45
+Kennesaw State Owls,KENN,Conference USA,12-7,0.632,0.5,0.889,0.429,,,0.466,0.545,-0.1
+Western Kentucky Hilltoppers,WKU,Conference USA,11-8,0.579,0.5,0.727,0.4,,,0.44,0.537,-0.2
+Louisiana Tech Bulldogs,LT,Conference USA,10-8,0.556,0.429,0.909,0,,,0.407,0.533,-0.1
+Missouri State Bears,MOST,Conference USA,11-8,0.579,0.625,0.818,0.25,,,0.477,0.537,0.15
+Middle Tennessee Blue Raiders,MTSU,Conference USA,11-7,0.611,0.714,0.889,0.333,,,0.52,0.542,0.15
+Hawaii Rainbow Warriors,HAW,Big West,13-4,0.765,0.714,0.917,0.4,,,0.597,0.565,-0.1
+UC Irvine Anteaters,UCI,Big West,12-7,0.632,0.714,0.667,0.5,,,0.53,0.545,-0.2
+UC San Diego Tritons,UCSD,Big West,15-5,0.75,0.625,0.625,0.75,,,0.563,0.563,0.3
+UC Santa Barbara Gauchos,UCSB,Big West,12-7,0.632,0.625,0.8,0.333,,,0.504,0.545,0.45
+Long Beach State Beach,LBSU,Big West,8-11,0.421,0.571,0.7,0.111,,,0.382,0.513,0.45
+UC Davis Aggies,UCD,Big West,11-8,0.579,0.5,0.727,0.375,,,0.44,0.537,-0.1
+Cal State Northridge Matadors,CSUN,Big West,11-9,0.55,0.5,0.889,0.333,,,0.425,0.532,-0.1
+Cal Poly Mustangs,CP,Big West,7-13,0.35,0.375,0.5,0.273,,,0.287,0.503,-0.2
+Cal State Fullerton Titans,CSUF,Big West,8-12,0.4,0.375,0.625,0.2,,,0.313,0.51,-0.2
+UC Riverside Highlanders,UCR,Big West,7-12,0.368,0.286,0.571,0.25,,,0.27,0.505,0.15
+Cal State Bakersfield Roadrunners,CSUB,Big West,8-12,0.4,0.25,0.545,0.222,,,0.275,0.51,-0.3
+Wright State Raiders,WRST,Horizon League,12-8,0.6,0.778,0.7,0.5,,,0.533,0.54,-0.1
+Oakland Golden Grizzlies,OAK,Horizon League,11-10,0.524,0.7,0.714,0.417,,,0.472,0.529,-0.1
+Purdue Fort Wayne Mastodons,PFW,Horizon League,13-8,0.619,0.7,0.9,0.364,,,0.519,0.543,0.75
+Green Bay Phoenix,GB,Horizon League,11-10,0.524,0.6,0.75,0.3,,,0.442,0.529,-0.2
+Northern Kentucky Norse,NKU,Horizon League,14-7,0.667,0.6,0.769,0.5,,,0.514,0.55,-0.1
+Robert Morris Colonials,RMU,Horizon League,13-8,0.619,0.5,0.8,0.455,,,0.46,0.543,0.3
+Detroit Mercy Titans,DETM,Horizon League,8-11,0.421,0.5,0.5,0.364,,,0.36,0.513,-0.1
+Milwaukee Panthers,MILW,Horizon League,8-13,0.381,0.4,0.7,0.091,,,0.31,0.507,-0.3
+Cleveland State Vikings,CLE,Horizon League,7-14,0.333,0.3,0.556,0.1,,,0.257,0.5,0.3
+Youngstown State Penguins,YSU,Horizon League,10-11,0.476,0.3,0.7,0.222,,,0.328,0.521,0.15
+IU Indianapolis Jaguars,IUIN,Horizon League,6-16,0.273,0.182,0.444,0.167,,,0.191,0.491,0.15
+Dartmouth Big Green,DART,Ivy League,9-8,0.529,0.75,0.625,0.444,,,0.489,0.529,0.15
+Yale Bulldogs,YALE,Ivy League,14-3,0.824,0.75,0.857,0.667,,,0.637,0.574,0.3
+Harvard Crimson,HARV,Ivy League,10-8,0.556,0.75,0.75,0.444,,,0.503,0.533,0.45
+Princeton Tigers,PRIN,Ivy League,6-13,0.316,0.5,0.857,0,,,0.308,0.497,-0.2
+Pennsylvania Quakers,PENN,Ivy League,9-8,0.529,0.5,0.875,0.222,,,0.414,0.529,-0.1
+Columbia Lions,COLU,Ivy League,12-6,0.667,0.25,0.875,0.5,,,0.409,0.55,-0.3
+Cornell Big Red,COR,Ivy League,8-9,0.471,0.25,0.667,0.364,,,0.31,0.521,0.15
+Brown Bears,BRWN,Ivy League,7-10,0.412,0.25,0.5,0.286,,,0.281,0.512,-0.1
+Saint Peter's Peacocks,SPU,MAAC,11-6,0.647,0.889,0.9,0.286,,,0.59,0.547,0.6
+Merrimack Warriors,MRMK,MAAC,12-9,0.571,0.8,1,0.417,,,0.525,0.536,-0.1
+Quinnipiac Bobcats,QUIN,MAAC,14-7,0.667,0.7,0.8,0.545,,,0.543,0.55,0.3
+Siena Saints,SIE,MAAC,14-7,0.667,0.7,0.667,0.6,,,0.543,0.55,0.45
+Marist Red Foxes,MRST,MAAC,12-7,0.632,0.6,0.8,0.444,,,0.496,0.545,-0.2
+Iona Gaels,IONA,MAAC,13-8,0.619,0.5,0.889,0.444,,,0.46,0.543,0.15
+Sacred Heart Pioneers,SHU,MAAC,8-13,0.381,0.4,0.5,0.308,,,0.31,0.507,0.45
+Fairfield Stags,FAIR,MAAC,12-9,0.571,0.4,0.8,0.364,,,0.405,0.536,0.15
+Manhattan Jaspers,MAN,MAAC,8-13,0.381,0.4,0.556,0.1,,,0.31,0.507,-0.3
+Mount St. Mary's Mountaineers,MSM,MAAC,8-13,0.381,0.4,0.5,0.308,,,0.31,0.507,-0.1
+Canisius Golden Griffins,CAN,MAAC,8-12,0.4,0.333,0.667,0.182,,,0.3,0.51,-0.4
+Niagara Purple Eagles,NIA,MAAC,5-14,0.263,0.222,0.5,0.167,,,0.198,0.489,-0.2
+Rider Broncs,RID,MAAC,2-16,0.111,0.111,0.25,0,,,0.089,0.467,-0.2
+Long Island University Sharks,LIU,Northeast,11-8,0.579,0.833,0.833,0.462,,,0.539,0.537,-0.1
+Central Connecticut Blue Devils,CCSU,Northeast,10-7,0.588,0.667,0.833,0.455,,,0.494,0.538,-0.1
+Le Moyne Dolphins,LEM,Northeast,9-10,0.474,0.667,0.667,0.364,,,0.437,0.521,0.3
+New Haven Chargers,NHVN,Northeast,9-10,0.474,0.667,0.75,0.273,,,0.437,0.521,0.45
+Saint Francis Red Flash,SFPA,Northeast,5-14,0.263,0.5,0.5,0.111,,,0.281,0.489,0.15
+Fairleigh Dickinson Knights,FDU,Northeast,6-13,0.316,0.5,0.625,0.091,,,0.308,0.497,0.15
+Stonehill Skyhawks,STO,Northeast,6-13,0.316,0.5,0.667,0.167,,,0.308,0.497,-0.1
+Mercyhurst Lakers,MERC,Northeast,8-11,0.421,0.5,0.75,0.182,,,0.36,0.513,0.15
+Wagner Seahawks,WAG,Northeast,6-11,0.353,0.167,0.571,0.2,,,0.226,0.503,-0.5
+Chicago State Cougars,CHST,Northeast,2-17,0.105,0,0.167,0.077,,,0.052,0.466,-0.5
+Maryland Eastern Shore Hawks,UMES,MEAC,8-13,0.381,1,0.833,0.143,,,0.49,0.507,0.6
+North Carolina Central Eagles,NCCU,MEAC,7-12,0.368,0.75,0.625,0.182,,,0.409,0.505,-0.1
+Norfolk State Spartans,NORF,MEAC,9-12,0.429,0.5,0.714,0.273,,,0.364,0.514,0.3
+Morgan State Bears,MORG,MEAC,6-13,0.316,0.5,0.5,0.111,,,0.308,0.497,0.3
+South Carolina State Bulldogs,SCST,MEAC,4-16,0.2,0.5,0.5,0.071,,,0.25,0.48,0.15
+Howard Bison,HOW,MEAC,12-8,0.6,0.5,0.75,0.333,,,0.45,0.54,0.45
+Coppin State Eagles,COPP,MEAC,3-18,0.143,0.25,0.25,0.143,,,0.146,0.471,-0.3
+Delaware State Hornets,DSU,MEAC,5-14,0.263,0,0.5,0.1,,,0.132,0.489,-0.5
+Murray State Racers,MUR,MVC,16-4,0.8,0.889,1,0.6,,,0.667,0.57,-0.1
+Belmont Bruins,BEL,MVC,17-3,0.85,0.778,0.778,0.889,,,0.658,0.578,0.6
+Bradley Braves,BRAD,MVC,14-7,0.667,0.7,0.909,0.333,,,0.543,0.55,0.15
+Illinois State Redbirds,ILST,MVC,14-6,0.7,0.667,0.9,0.5,,,0.55,0.555,0.3
+UIC Flames,UIC,MVC,10-10,0.5,0.556,0.667,0.333,,,0.417,0.525,0.75
+Northern Iowa Panthers,UNI,MVC,12-8,0.6,0.444,0.727,0.429,,,0.433,0.54,-0.5
+Drake Bulldogs,DRKE,MVC,10-10,0.5,0.444,0.455,0.5,,,0.383,0.525,0.15
+Valparaiso Beacons,VAL,MVC,10-10,0.5,0.444,0.75,0.125,,,0.383,0.525,0.3
+Indiana State Sycamores,INST,MVC,9-11,0.45,0.222,0.778,0.2,,,0.292,0.518,-0.2
+Southern Illinois Salukis,SIU,MVC,8-12,0.4,0.222,0.625,0.2,,,0.267,0.51,-0.4
+Evansville Purple Aces,EVAN,MVC,5-15,0.25,0.111,0.3,0.143,,,0.158,0.487,-0.2
+Montana State Bobcats,MTST,Big Sky,12-8,0.6,0.857,0.875,0.364,,,0.557,0.54,0.45
+Montana Grizzlies,MONT,Big Sky,11-9,0.55,0.714,0.636,0.444,,,0.489,0.532,0.3
+Idaho Vandals,IDHO,Big Sky,12-7,0.632,0.667,0.875,0.444,,,0.516,0.545,0.3
+Weber State Wildcats,WEB,Big Sky,10-10,0.5,0.571,0.636,0.333,,,0.421,0.525,-0.2
+Idaho State Bengals,IDST,Big Sky,10-10,0.5,0.429,0.667,0.333,,,0.379,0.525,-0.2
+Sacramento State Hornets,SAC,Big Sky,6-12,0.333,0.333,0.857,0,,,0.267,0.5,-0.1
+Eastern Washington Eagles,EWU,Big Sky,4-15,0.211,0.333,0.5,0.083,,,0.205,0.482,-0.1
+Northern Colorado Bears,UNCO,Big Sky,11-9,0.55,0.143,0.625,0.5,,,0.318,0.532,-0.4
+Northern Arizona Lumberjacks,NAU,Big Sky,6-14,0.3,0,0.6,0,,,0.15,0.495,-0.5
+Radford Highlanders,RAD,Big South,11-10,0.524,0.667,0.75,0.286,,,0.462,0.529,-0.1
+Presbyterian Blue Hose,PRES,Big South,11-10,0.524,0.667,0.889,0.182,,,0.462,0.529,0.45
+Longwood Lancers,LONG,Big South,11-10,0.524,0.5,0.8,0.222,,,0.412,0.529,0.15
+UNC Asheville Bulldogs,UNCA,Big South,9-12,0.429,0.429,0.5,0.222,,,0.343,0.514,0.15
+Charleston Southern Buccaneers,CHSO,Big South,11-10,0.524,0.333,0.778,0.364,,,0.362,0.529,-0.4
+South Carolina Upstate Spartans,UPST,Big South,9-12,0.429,0.167,0.6,0.273,,,0.265,0.514,-0.2
+Gardner-Webb Runnin' Bulldogs,GWEB,Big South,2-19,0.095,0,0.25,0,,,0.048,0.464,-0.5
+Furman Paladins,FUR,Southern,13-7,0.65,0.571,0.727,0.667,,,0.496,0.547,-0.2
+UNC Greensboro Spartans,UNCG,Southern,8-12,0.4,0.571,0.556,0.286,,,0.371,0.51,0.15
+Chattanooga Mocs,UTC,Southern,9-11,0.45,0.429,0.556,0.4,,,0.354,0.518,-0.1
+Citadel Bulldogs,CIT,Southern,6-14,0.3,0.429,0.5,0.111,,,0.279,0.495,0.3
+Samford Bulldogs,SAM,Southern,9-11,0.45,0.286,0.625,0.3,,,0.311,0.518,-0.4
+Western Carolina Catamounts,WCU,Southern,6-12,0.333,0.286,0.714,0.091,,,0.252,0.5,-0.2
+VMI Keydets,VMI,Southern,6-14,0.3,0.143,0.5,0.125,,,0.193,0.495,-0.5
+Nicholls Colonels,NICH,Southland,8-11,0.421,0.7,0.714,0.25,,,0.42,0.513,-0.3
+Texas A&M-Corpus Christi Islanders,AMCC,Southland,10-9,0.526,0.6,0.75,0.364,,,0.443,0.529,-0.1
+New Orleans Privateers,UNO,Southland,7-12,0.368,0.5,0.5,0.308,,,0.334,0.505,0.15
+Lamar Cardinals,LAM,Southland,10-9,0.526,0.5,0.625,0.5,,,0.413,0.529,-0.1
+Incarnate Word Cardinals,UIW,Southland,9-10,0.474,0.4,0.889,0,,,0.357,0.521,-0.1
+UT Rio Grande Valley Vaqueros,RGV,Southland,8-11,0.421,0.4,0.6,0.222,,,0.331,0.513,0.3
+Northwestern State Demons,NWST,Southland,6-13,0.316,0.4,0.625,0.091,,,0.278,0.497,-0.2
+Houston Christian Huskies,HCU,Southland,7-12,0.368,0.3,0.625,0.182,,,0.274,0.505,0.3
+East Texas A&M Lions,ETAM,Southland,8-12,0.4,0.3,0.571,0.25,,,0.29,0.51,0.15
+SE Louisiana Lions,SELA,Southland,5-14,0.263,0.2,0.333,0.091,,,0.192,0.489,-0.4
+Bethune-Cookman Wildcats,BCU,SWAC,7-11,0.389,0.8,0.8,0.273,,,0.434,0.508,0.3
+Florida A&M Rattlers,FAMU,SWAC,7-9,0.438,0.8,0.8,0.2,,,0.459,0.516,0.6
+Jackson State Tigers,JKST,SWAC,5-13,0.278,0.8,0.75,0.167,,,0.379,0.492,0.3
+Alabama A&M Bulldogs,AAMU,SWAC,10-8,0.556,0.6,0.8,0.167,,,0.458,0.533,0.3
+Southern Jaguars,SOU,SWAC,7-11,0.389,0.6,0.8,0.231,,,0.374,0.508,0.3
+Prairie View A&M Panthers,PV,SWAC,8-11,0.421,0.5,1,0.091,,,0.36,0.513,-0.2
+Arkansas-Pine Bluff Golden Lions,UAPB,SWAC,6-13,0.316,0.5,0.667,0.154,,,0.308,0.497,-0.3
+Alabama State Hornets,ALST,SWAC,5-13,0.278,0.4,0.667,0.167,,,0.259,0.492,-0.1
+Grambling Tigers,GRAM,SWAC,8-10,0.444,0.4,0.833,0.1,,,0.342,0.517,-0.3
+Alcorn State Braves,ALCN,SWAC,3-14,0.176,0.4,0.5,0.071,,,0.208,0.476,0.15
+Texas Southern Tigers,TXSO,SWAC,4-13,0.235,0.333,0.429,0.1,,,0.217,0.485,-0.1
+Mississippi Valley State Delta Devils,MVSU,SWAC,1-19,0.05,0,0.167,0,,,0.025,0.458,-0.5
+Elon Phoenix,ELON,Coastal,12-8,0.6,0.571,0.636,0.556,,,0.471,0.54,-0.1
+William & Mary Tribe,W&M,Coastal,13-6,0.684,0.571,1,0.333,,,0.513,0.553,0.3
+Hofstra Pride,HOF,Coastal,13-7,0.65,0.571,0.833,0.5,,,0.496,0.547,-0.3
+Hampton Pirates,HAMP,Coastal,10-10,0.5,0.571,1,0.222,,,0.421,0.525,0.3
+Stony Brook Seawolves,STBK,Coastal,12-9,0.571,0.5,0.818,0.25,,,0.435,0.536,0.45
+Towson Tigers,TOW,Coastal,12-9,0.571,0.5,0.778,0.25,,,0.435,0.536,0.6
+Campbell Fighting Camels,CAM,Coastal,9-11,0.45,0.429,1,0.083,,,0.354,0.518,-0.3
+Drexel Dragons,DREX,Coastal,9-11,0.45,0.429,1,0.083,,,0.354,0.518,-0.3
+Monmouth Hawks,MONM,Coastal,9-11,0.45,0.429,0.7,0.222,,,0.354,0.518,-0.1
+Northeastern Huskies,NE,Coastal,6-13,0.316,0.25,0.286,0.273,,,0.233,0.497,-0.2
+North Carolina A&T Aggies,NCAT,Coastal,8-10,0.444,0.143,0.625,0.333,,,0.265,0.517,0.15
+American University Eagles,AMER,Patriot,12-8,0.6,0.714,0.833,0.25,,,0.514,0.54,0.45
+Colgate Raiders,COLG,Patriot,11-9,0.55,0.714,0.571,0.4,,,0.489,0.532,-0.1
+Lehigh Mountain Hawks,LEH,Patriot,8-12,0.4,0.571,0.556,0.222,,,0.371,0.51,0.15
+Holy Cross Crusaders,HC,Patriot,8-12,0.4,0.429,0.625,0.182,,,0.329,0.51,-0.2
+Boston University Terriers,BU,Patriot,8-12,0.4,0.429,0.556,0.2,,,0.329,0.51,0.15
+Bucknell Bison,BUCK,Patriot,6-14,0.3,0.429,0.5,0.2,,,0.279,0.495,-0.2
+Lafayette Leopards,LAF,Patriot,5-15,0.25,0.286,0.444,0.091,,,0.211,0.487,-0.1
+Loyola Maryland Greyhounds,L-MD,Patriot,6-14,0.3,0.286,0.5,0.1,,,0.236,0.495,-0.1
+Army Black Knights,ARMY,Patriot,8-12,0.4,0.286,0.4,0.444,,,0.286,0.51,0.15
+Pacific Tigers,PAC,West Coast,13-8,0.619,0.5,1,0.273,,,0.46,0.743,0.15
+Seattle U Redhawks,SEA,West Coast,14-7,0.667,0.375,0.769,0.5,,,0.446,0.75,0.15
+San Diego Toreros,USD,West Coast,9-12,0.429,0.375,0.667,0.125,,,0.327,0.714,0.3
+Washington State Cougars,WSU,West Coast,8-13,0.381,0.375,0.556,0.222,,,0.303,0.707,-0.4
+Portland Pilots,PORT,West Coast,10-11,0.476,0.375,0.692,0.125,,,0.35,0.721,0.15
+Oregon State Beavers,ORST,West Coast,10-12,0.455,0.333,0.692,0.167,,,0.328,0.718,-0.2
+Loyola Marymount Lions,LMU,West Coast,11-11,0.5,0.222,0.615,0.286,,,0.317,0.725,-0.4
+Pepperdine Waves,PEPP,West Coast,6-15,0.286,0.125,0.417,0.125,,,0.18,0.693,-0.1
+Colorado Buffaloes,COLO,Big 12,14-5,0.737,0.333,0.923,0.25,,,0.468,0.761,-0.1
+Arizona State Sun Devils,ASU,Big 12,12-7,0.632,0.333,0.75,0.25,,,0.416,0.745,-0.4
+Kansas State Wildcats,KSU,Big 12,10-9,0.526,0.167,0.556,0.2,,,0.313,0.729,-0.3
+Baylor Bears,BAY,Big 12,10-9,0.526,0.167,0.727,0,,,0.313,0.729,-0.1
+Georgia Southern Eagles,GASO,Sun Belt,13-8,0.619,0.625,0.8,0.556,,,0.497,0.543,-0.2
+Marshall Thundering Herd,MRSH,Sun Belt,13-7,0.65,0.625,0.833,0.375,,,0.512,0.547,0.3
+Georgia State Panthers,GAST,Sun Belt,8-12,0.4,0.625,0.714,0.273,,,0.388,0.51,0.45
+App State Mountaineers,APP,Sun Belt,12-9,0.571,0.556,0.7,0.444,,,0.452,0.536,0.15
+Coastal Carolina Chanticleers,CCU,Sun Belt,12-9,0.571,0.556,0.625,0.5,,,0.452,0.536,0.6
+Southern Miss Golden Eagles,USM,Sun Belt,12-9,0.571,0.556,0.625,0.5,,,0.452,0.536,0.6
+Texas State Bobcats,TXST,Sun Belt,11-10,0.524,0.556,0.857,0.273,,,0.429,0.529,-0.3
+Louisiana Ragin' Cajuns,UL,Sun Belt,11-10,0.524,0.444,0.909,0.125,,,0.395,0.529,-0.1
+Old Dominion Monarchs,ODU,Sun Belt,6-15,0.286,0.333,0.5,0.154,,,0.243,0.493,-0.1
+UL Monroe Warhawks,ULM,Sun Belt,9-11,0.45,0.25,0.75,0.182,,,0.3,0.518,-0.3
+James Madison Dukes,JMU,Sun Belt,5-16,0.238,0.333,0.333,0.167,,,0.219,0.486,-0.1
+UMBC Retrievers,UMBC,America East,11-7,0.611,0.8,0.778,0.444,,,0.545,0.542,0.3
+UVM Catamounts,UVM,America East,12-8,0.6,0.8,0.75,0.556,,,0.54,0.54,0.15
+NJIT Highlanders,NJIT,America East,9-12,0.429,0.667,0.625,0.308,,,0.414,0.514,-0.1
+UMass Lowell River Hawks,UML,America East,8-12,0.4,0.6,0.625,0.25,,,0.38,0.51,-0.2
+UAlbany Great Danes,UALB,America East,7-13,0.35,0.6,0.833,0.1,,,0.355,0.503,-0.1
+New Hampshire Wildcats,UNH,America East,6-12,0.333,0.4,0.714,0.091,,,0.286,0.5,0.3
+Bryant Bulldogs,BRY,America East,6-13,0.316,0.4,0.714,0.083,,,0.278,0.497,-0.1
+Maine Black Bears,ME,America East,4-17,0.19,0.333,0.286,0.167,,,0.195,0.479,0.15
+Binghamton Bearcats,BING,America East,4-17,0.19,0,0.4,0,,,0.095,0.479,-0.5
+Central Arkansas Bears,CARK,ASUN,10-10,0.5,0.714,0.9,0.1,,,0.464,0.525,0.45
+Stetson Hatters,STET,ASUN,7-13,0.35,0.429,0.667,0.1,,,0.304,0.503,-0.2
+West Georgia Wolves,WGA,ASUN,9-10,0.474,0.429,0.667,0.3,,,0.366,0.521,-0.4
+Eastern Kentucky Colonels,EKU,ASUN,7-13,0.35,0.429,0.556,0.182,,,0.304,0.503,-0.1
+Bellarmine Knights,BELL,ASUN,7-12,0.368,0.286,0.625,0.182,,,0.27,0.505,0.15
+Florida Gulf Coast Eagles,FGCU,ASUN,8-12,0.4,0.286,0.5,0.25,,,0.286,0.51,-0.1
+Jacksonville Dolphins,JAX,ASUN,7-13,0.35,0.286,0.667,0.167,,,0.261,0.503,-0.1
+North Florida Ospreys,UNF,ASUN,7-13,0.35,0.286,0.667,0.167,,,0.261,0.503,-0.1
+North Alabama Lions,UNA,ASUN,6-12,0.333,0.143,0.375,0.3,,,0.209,0.5,-0.3
+Stephen F Austin Lumberjacks,SFA,Southland,16-3,0.842,0.9,1,0.7,,,0.691,0.576,0.6
+McNeese Cowboys,MCN,Southland,15-4,0.789,0.8,1,0.429,,,0.635,0.568,0.15
+Central Connecticut Blue Devils,CCSU,Northeast,10-7,0.588,0.667,0.833,0.455,,,0.494,0.538,-0.1

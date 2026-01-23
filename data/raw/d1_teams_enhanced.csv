@@ -1,0 +1,312 @@
+team_name,adjO,adjD,Source,conference,win_rate,strength_rating,schedule_strength,momentum_score
+Abilene Christian,100,100,Sports-Reference,Western Athletic,0.526,0.363,0.529,-0.3
+Air Force,100,100,Sports-Reference,,,,,
+Akron,100,100,Sports-Reference,,,,,
+Alabama,100,100,Sports-Reference,SEC,0.722,0.673,0.758,0.3
+American University,100,100,NCAA Hardcoded,Patriot,0.6,0.514,0.54,0.45
+Appalachian State,100,100,Sports-Reference,,,,,
+Arizona,100,100,Sports-Reference,Big 12,1,0.996,0.8,1
+Arizona State,100,100,Sports-Reference,Big 12,1,0.996,0.8,1
+Arkansas,100,100,Sports-Reference,SEC,0.737,0.689,0.761,0.15
+Arkansas State,100,100,Sports-Reference,SEC,0.737,0.689,0.761,0.15
+Army,100,100,Sports-Reference,Patriot,0.4,0.286,0.51,0.15
+Auburn,100,100,Sports-Reference,SEC,0.632,0.466,0.745,0.3
+Austin Peay,100,100,Sports-Reference,ASUN,0.667,0.591,0.55,0.15
+Baylor,100,100,Sports-Reference,Big 12,0.526,0.313,0.729,-0.1
+Belmont,100,100,Sports-Reference,MVC,0.85,0.658,0.578,0.6
+Boise State,100,100,Sports-Reference,Mountain West,0.579,0.402,0.537,0.3
+Boston College,100,100,Sports-Reference,ACC,0.474,0.337,0.721,0.3
+Boston University,100,100,Sports-Reference,ACC,0.474,0.337,0.721,0.3
+Bowling Green,100,100,Sports-Reference,,,,,
+Bradley,100,100,Sports-Reference,MVC,0.667,0.543,0.55,0.15
+Brown,100,100,Sports-Reference,Ivy League,0.412,0.281,0.512,-0.1
+Bucknell,100,100,Sports-Reference,Patriot,0.3,0.279,0.495,-0.2
+Buffalo,100,100,Sports-Reference,,,,,
+Butler,100,100,Sports-Reference,,,,,
+BYU,100,100,NCAA Hardcoded,Big 12,0.889,0.833,0.783,-0.1
+Campbell,100,100,Sports-Reference,Coastal,0.45,0.354,0.518,-0.3
+Canisius,100,100,Sports-Reference,MAAC,0.4,0.3,0.51,-0.4
+Central Connecticut,100,100,NCAA Hardcoded,Northeast,0.588,0.494,0.538,-0.1
+Central Michigan,100,100,Sports-Reference,Northeast,0.588,0.494,0.538,-0.1
+Charleston,100,100,NCAA Hardcoded,Big South,0.524,0.362,0.529,-0.4
+Chattanooga,100,100,Sports-Reference,Southern,0.45,0.354,0.518,-0.1
+Cheyney,100,100,Sports-Reference,,,,,
+Cincinnati,100,100,Sports-Reference,American,0.632,0.416,0.545,0.15
+Citadel,100,100,NCAA Hardcoded,Southern,0.3,0.279,0.495,0.3
+Clemson,100,100,Sports-Reference,ACC,0.8,0.785,0.77,-0.1
+Cleveland State,100,100,Sports-Reference,Horizon League,0.333,0.257,0.5,0.3
+Coastal Carolina,100,100,Sports-Reference,Sun Belt,0.571,0.452,0.536,0.6
+Colgate,100,100,Sports-Reference,Patriot,0.55,0.489,0.532,-0.1
+College of Charleston,100,100,Sports-Reference,,,,,
+Colorado,100,100,Sports-Reference,Mountain West,0.632,0.428,0.545,0.15
+Colorado State,100,100,Sports-Reference,Mountain West,0.632,0.428,0.545,0.15
+Columbia,100,100,Sports-Reference,Ivy League,0.667,0.409,0.55,-0.3
+Connecticut,100,100,Sports-Reference,,,,,
+Coppin State,100,100,Sports-Reference,MEAC,0.143,0.146,0.471,-0.3
+Cornell,100,100,Sports-Reference,Ivy League,0.471,0.31,0.521,0.15
+Creighton,100,100,Sports-Reference,Big East,0.6,0.5,0.74,0.15
+Dartmouth,100,100,Sports-Reference,Ivy League,0.529,0.489,0.529,0.15
+Davidson,100,100,Sports-Reference,Atlantic 10,0.667,0.533,0.55,0.3
+Delaware,100,100,Sports-Reference,Conference USA,0.278,0.182,0.492,-0.4
+Delaware State,100,100,Sports-Reference,Conference USA,0.278,0.182,0.492,-0.4
+Denver,100,100,Sports-Reference,Summit League,0.429,0.315,0.514,-0.1
+DePaul,100,100,Sports-Reference,,,,,
+Detroit Mercy,100,100,Sports-Reference,Horizon League,0.421,0.36,0.513,-0.1
+Drexel,100,100,Sports-Reference,Coastal,0.45,0.354,0.518,-0.3
+Duke,100,100,Sports-Reference,ACC,0.944,0.952,0.792,0.9
+Duquesne,100,100,Sports-Reference,Atlantic 10,0.526,0.363,0.529,-0.1
+East Carolina,100,100,Sports-Reference,Southern,0.7,0.607,0.555,0.3
+Eastern Illinois,100,100,Sports-Reference,Big Sky,0.211,0.205,0.482,-0.1
+Eastern Kentucky,100,100,Sports-Reference,Big Sky,0.211,0.205,0.482,-0.1
+Eastern Michigan,100,100,Sports-Reference,Big Sky,0.211,0.205,0.482,-0.1
+ETSU,100,100,NCAA Hardcoded,,,,,
+Evansville,100,100,Sports-Reference,MVC,0.25,0.158,0.487,-0.2
+Fairfield,100,100,Sports-Reference,MAAC,0.571,0.405,0.536,0.15
+Fairleigh Dickinson,100,100,NCAA Hardcoded,Northeast,0.316,0.308,0.497,0.15
+Florida,100,100,Sports-Reference,SEC,0.737,0.755,0.761,0.75
+Florida A&M,100,100,NCAA Hardcoded,SEC,0.737,0.755,0.761,0.75
+Florida Atlantic,100,100,Sports-Reference,SEC,0.737,0.755,0.761,0.75
+Florida International,100,100,Sports-Reference,SEC,0.737,0.755,0.761,0.75
+Florida State,100,100,Sports-Reference,SEC,0.737,0.755,0.761,0.75
+Fordham,100,100,Sports-Reference,Atlantic 10,0.5,0.293,0.525,-0.3
+Fresno State,100,100,Sports-Reference,Mountain West,0.474,0.349,0.521,-0.1
+Furman,100,100,Sports-Reference,Southern,0.65,0.496,0.547,-0.2
+George Mason,100,100,Sports-Reference,Atlantic 10,0.632,0.466,0.545,-0.2
+George Washington,100,100,Sports-Reference,Atlantic 10,0.632,0.466,0.545,-0.2
+Georgetown,100,100,Sports-Reference,,,,,
+Georgia,100,100,Sports-Reference,SEC,0.842,0.737,0.776,0.3
+Georgia Southern,100,100,Sports-Reference,SEC,0.842,0.737,0.776,0.3
+Georgia State,100,100,Sports-Reference,SEC,0.842,0.737,0.776,0.3
+Georgia Tech,100,100,Sports-Reference,SEC,0.842,0.737,0.776,0.3
+Gonzaga,100,100,Sports-Reference,West Coast,0.952,0.944,0.793,1
+Grambling State,100,100,NCAA Hardcoded,SWAC,0.444,0.342,0.517,-0.3
+Grand Canyon,100,100,Sports-Reference,Mountain West,0.667,0.548,0.55,0.3
+Green Bay,100,100,Sports-Reference,Horizon League,0.524,0.442,0.529,-0.2
+Hampton,100,100,Sports-Reference,Coastal,0.5,0.421,0.525,0.3
+Hartford,100,100,NCAA Hardcoded,,,,,
+Harvard,100,100,Sports-Reference,Ivy League,0.556,0.503,0.533,0.45
+Hofstra,100,100,Sports-Reference,Coastal,0.65,0.496,0.547,-0.3
+Holy Cross,100,100,Sports-Reference,Patriot,0.4,0.329,0.51,-0.2
+Houston,100,100,Sports-Reference,Big 12,0.944,0.948,0.792,1
+Houston Baptist,100,100,NCAA Hardcoded,Big 12,0.944,0.948,0.792,1
+Howard,100,100,Sports-Reference,MEAC,0.6,0.45,0.54,0.45
+Idaho,100,100,Sports-Reference,Big Sky,0.632,0.516,0.545,0.3
+Idaho State,100,100,Sports-Reference,Big Sky,0.632,0.516,0.545,0.3
+Illinois,100,100,Sports-Reference,Big Ten,0.842,0.84,0.776,1
+Illinois State,100,100,Sports-Reference,Big Ten,0.842,0.84,0.776,1
+Illinois-Chicago,100,100,Sports-Reference,,,,,
+Incarnate Word,100,100,Sports-Reference,Southland,0.474,0.357,0.521,-0.1
+Indiana,100,100,Sports-Reference,MVC,0.45,0.292,0.518,-0.2
+Indiana State,100,100,Sports-Reference,MVC,0.45,0.292,0.518,-0.2
+Iona,100,100,Sports-Reference,MAAC,0.619,0.46,0.543,0.15
+Iowa,100,100,Sports-Reference,Big 12,0.895,0.811,0.784,0.15
+Iowa State,100,100,Sports-Reference,Big 12,0.895,0.811,0.784,0.15
+Jackson State,100,100,Sports-Reference,SWAC,0.278,0.379,0.492,0.3
+Jacksonville,100,100,Sports-Reference,Conference USA,0.5,0.421,0.525,0.15
+Jacksonville State,100,100,Sports-Reference,Conference USA,0.5,0.421,0.525,0.15
+James Madison,100,100,Sports-Reference,Sun Belt,0.238,0.219,0.486,-0.1
+Kansas,100,100,Sports-Reference,Big 12,0.737,0.693,0.761,0.45
+Kansas State,100,100,Sports-Reference,Big 12,0.737,0.693,0.761,0.45
+Kennesaw State,100,100,Sports-Reference,Conference USA,0.632,0.466,0.545,-0.1
+Kent State,100,100,Sports-Reference,,,,,
+Kentucky,100,100,Sports-Reference,SEC,0.684,0.734,0.753,0.6
+La Salle,100,100,Sports-Reference,Atlantic 10,0.579,0.389,0.537,0.15
+Lafayette,100,100,Sports-Reference,Patriot,0.25,0.211,0.487,-0.1
+Lamar,100,100,Sports-Reference,Southland,0.526,0.413,0.529,-0.1
+Lehigh,100,100,Sports-Reference,Patriot,0.4,0.371,0.51,0.15
+Lipscomb,100,100,Sports-Reference,ASUN,0.65,0.582,0.547,0.6
+Long Beach State,100,100,Sports-Reference,Big West,0.421,0.382,0.513,0.45
+Longwood,100,100,Sports-Reference,Big South,0.524,0.412,0.529,0.15
+Louisiana,100,100,Sports-Reference,Conference USA,0.556,0.407,0.533,-0.1
+Louisiana Tech,100,100,Sports-Reference,Conference USA,0.556,0.407,0.533,-0.1
+Louisville,100,100,Sports-Reference,ACC,0.722,0.619,0.758,0.15
+Loyola Chicago,100,100,NCAA Hardcoded,Atlantic 10,0.25,0.168,0.487,-0.5
+Loyola Marymount,100,100,Sports-Reference,Atlantic 10,0.25,0.168,0.487,-0.5
+LSU,100,100,NCAA Hardcoded,SEC,0.684,0.392,0.753,-0.1
+Manhattan,100,100,Sports-Reference,MAAC,0.381,0.31,0.507,-0.3
+Marquette,100,100,Sports-Reference,,,,,
+Marshall,100,100,Sports-Reference,Sun Belt,0.65,0.512,0.547,0.3
+Maryland,100,100,Sports-Reference,MEAC,0.381,0.49,0.507,0.6
+Massachusetts,100,100,Sports-Reference,,,,,
+McNeese State,100,100,Sports-Reference,Southland,0.789,0.635,0.568,0.15
+Memphis,100,100,Sports-Reference,American,0.5,0.45,0.525,-0.1
+Merrimack,100,100,Sports-Reference,MAAC,0.571,0.525,0.536,-0.1
+Miami (FL),100,100,Sports-Reference,Mid-American Conference,1,0.8,0.6,1
+Miami (OH),100,100,Sports-Reference,Mid-American Conference,1,0.8,0.6,1
+Michigan,100,100,Sports-Reference,Big Ten,0.944,0.922,0.792,0.45
+Michigan State,100,100,Sports-Reference,Big Ten,0.944,0.922,0.792,0.45
+Middle Tennessee,100,100,Sports-Reference,Conference USA,0.611,0.52,0.542,0.15
+Middle Tennessee State,100,100,NCAA Hardcoded,Conference USA,0.611,0.52,0.542,0.15
+Milwaukee,100,100,Sports-Reference,Horizon League,0.381,0.31,0.507,-0.3
+Minnesota,100,100,Sports-Reference,,,,,
+Mississippi,100,100,Sports-Reference,SEC,0.842,0.571,0.776,-0.3
+Mississippi State,100,100,Sports-Reference,SEC,0.842,0.571,0.776,-0.3
+Missouri,100,100,Sports-Reference,SEC,0.684,0.492,0.753,-0.2
+Monmouth,100,100,Sports-Reference,Coastal,0.45,0.354,0.518,-0.1
+Montana,100,100,Sports-Reference,Big Sky,0.6,0.557,0.54,0.45
+Montana State,100,100,Sports-Reference,Big Sky,0.6,0.557,0.54,0.45
+Morehead State,100,100,Sports-Reference,,,,,
+Morgan State,100,100,Sports-Reference,MEAC,0.316,0.308,0.497,0.3
+Mount St. Mary's,100,100,Sports-Reference,MAAC,0.381,0.31,0.507,-0.1
+Murray State,100,100,Sports-Reference,MVC,0.8,0.667,0.57,-0.1
+Navy,100,100,Sports-Reference,,,,,
+NC State,100,100,Sports-Reference,ACC,0.684,0.542,0.753,0.15
+Nebraska,100,100,Sports-Reference,Big Ten,1,0.972,0.8,1
+Nevada,100,100,Sports-Reference,Mountain West,0.737,0.593,0.561,0.3
+New Hampshire,100,100,Sports-Reference,Mountain West,0.789,0.619,0.568,0.15
+New Mexico,100,100,Sports-Reference,Mountain West,0.789,0.619,0.568,0.15
+New Mexico State,100,100,Sports-Reference,Mountain West,0.789,0.619,0.568,0.15
+Niagara,100,100,Sports-Reference,MAAC,0.263,0.198,0.489,-0.2
+Nicholls State,100,100,Sports-Reference,Southland,0.421,0.42,0.513,-0.3
+Norfolk State,100,100,Sports-Reference,MEAC,0.429,0.364,0.514,0.3
+North Carolina,100,100,Sports-Reference,ACC,0.789,0.656,0.768,0.15
+North Carolina A&T,100,100,NCAA Hardcoded,ACC,0.789,0.656,0.768,0.15
+North Carolina Central,100,100,Sports-Reference,ACC,0.789,0.656,0.768,0.15
+North Dakota,100,100,Sports-Reference,ACC,0.789,0.656,0.768,0.15
+North Dakota State,100,100,Sports-Reference,ACC,0.789,0.656,0.768,0.15
+North Texas,100,100,Sports-Reference,ACC,0.789,0.656,0.768,0.15
+Northeastern,100,100,Sports-Reference,Coastal,0.316,0.233,0.497,-0.2
+Northern Arizona,100,100,Sports-Reference,Horizon League,0.667,0.514,0.55,-0.1
+Northern Colorado,100,100,Sports-Reference,Horizon League,0.667,0.514,0.55,-0.1
+Northern Illinois,100,100,Sports-Reference,Horizon League,0.667,0.514,0.55,-0.1
+Northern Kentucky,100,100,Sports-Reference,Horizon League,0.667,0.514,0.55,-0.1
+Northwestern,100,100,Sports-Reference,Southland,0.316,0.278,0.497,-0.2
+Northwestern State,100,100,Sports-Reference,Southland,0.316,0.278,0.497,-0.2
+Notre Dame,100,100,Sports-Reference,ACC,0.526,0.313,0.729,-0.5
+Oakland,100,100,Sports-Reference,Horizon League,0.524,0.472,0.529,-0.1
+Ohio State,100,100,Sports-Reference,,,,,
+Ohio University,100,100,NCAA Hardcoded,,,,,
+Oklahoma,100,100,Sports-Reference,SEC,0.579,0.339,0.737,-0.5
+Oklahoma State,100,100,Sports-Reference,SEC,0.579,0.339,0.737,-0.5
+Old Dominion,100,100,Sports-Reference,Sun Belt,0.286,0.243,0.493,-0.1
+Oral Roberts,100,100,Sports-Reference,Summit League,0.238,0.119,0.486,-0.5
+Oregon,100,100,Sports-Reference,Big Ten,0.421,0.248,0.713,0.15
+Oregon State,100,100,Sports-Reference,Big Ten,0.421,0.248,0.713,0.15
+Pacific,100,100,Sports-Reference,West Coast,0.619,0.46,0.743,0.15
+Penn State,100,100,Sports-Reference,,,,,
+Pennsylvania,100,100,Sports-Reference,Ivy League,0.529,0.414,0.529,-0.1
+Pittsburgh,100,100,Sports-Reference,ACC,0.421,0.261,0.713,-0.2
+Prairie View,100,100,Sports-Reference,SWAC,0.421,0.36,0.513,-0.2
+Prairie View A&M,100,100,NCAA Hardcoded,SWAC,0.421,0.36,0.513,-0.2
+Princeton,100,100,Sports-Reference,Ivy League,0.316,0.308,0.497,-0.2
+Providence,100,100,Sports-Reference,,,,,
+Purdue,100,100,Sports-Reference,Big Ten,0.895,0.894,0.784,-0.1
+Purdue Fort Wayne,100,100,Sports-Reference,Big Ten,0.895,0.894,0.784,-0.1
+Quinnipiac,100,100,Sports-Reference,MAAC,0.667,0.543,0.55,0.3
+Radford,100,100,Sports-Reference,Big South,0.524,0.462,0.529,-0.1
+Rhode Island,100,100,Sports-Reference,Atlantic 10,0.526,0.363,0.529,-0.1
+Rice,100,100,Sports-Reference,,,,,
+Richmond,100,100,Sports-Reference,Atlantic 10,0.65,0.454,0.547,-0.2
+Rider,100,100,Sports-Reference,MAAC,0.111,0.089,0.467,-0.2
+Robert Morris,100,100,Sports-Reference,Horizon League,0.619,0.46,0.543,0.3
+Rutgers,100,100,Sports-Reference,,,,,
+Sacramento State,100,100,Sports-Reference,Big Sky,0.333,0.267,0.5,-0.1
+Sacred Heart,100,100,Sports-Reference,MAAC,0.381,0.31,0.507,0.45
+Saint Francis,100,100,NCAA Hardcoded,Atlantic 10,0.947,0.877,0.592,1
+Saint Joseph's,100,100,Sports-Reference,Atlantic 10,0.947,0.877,0.592,1
+Saint Louis,100,100,Sports-Reference,Atlantic 10,0.947,0.877,0.592,1
+Saint Mary's,100,100,NCAA Hardcoded,Atlantic 10,0.947,0.877,0.592,1
+Sam Houston State,100,100,NCAA Hardcoded,Conference USA,0.632,0.466,0.545,0.45
+Samford,100,100,Sports-Reference,Southern,0.45,0.311,0.518,-0.4
+San Diego,100,100,Sports-Reference,Mountain West,0.722,0.623,0.558,-0.1
+San Diego State,100,100,Sports-Reference,Mountain West,0.722,0.623,0.558,-0.1
+San Jose State,100,100,Sports-Reference,Mountain West,0.722,0.623,0.558,-0.1
+Santa Clara,100,100,Sports-Reference,West Coast,0.762,0.643,0.764,0.45
+Savannah State,100,100,Sports-Reference,,,,,
+Seton Hall,100,100,Sports-Reference,Big East,0.737,0.714,0.761,-0.3
+Siena,100,100,Sports-Reference,MAAC,0.667,0.543,0.55,0.45
+SIU Edwardsville,100,100,NCAA Hardcoded,,,,,
+SMU,100,100,NCAA Hardcoded,ACC,0.737,0.518,0.761,0.15
+South Alabama,100,100,Sports-Reference,Sun Belt,0.7,0.537,0.555,0.15
+South Carolina,100,100,Sports-Reference,Sun Belt,0.7,0.537,0.555,0.15
+South Dakota,100,100,Sports-Reference,Sun Belt,0.7,0.537,0.555,0.15
+South Dakota State,100,100,Sports-Reference,Sun Belt,0.7,0.537,0.555,0.15
+South Florida,100,100,Sports-Reference,Sun Belt,0.7,0.537,0.555,0.15
+Southeast Missouri,100,100,NCAA Hardcoded,,,,,
+Southeastern Louisiana,100,100,Sports-Reference,,,,,
+Southern Illinois,100,100,Sports-Reference,Western Athletic,0.35,0.304,0.503,0.45
+Southern Methodist,100,100,Sports-Reference,Western Athletic,0.35,0.304,0.503,0.45
+Southern Miss,100,100,NCAA Hardcoded,Western Athletic,0.35,0.304,0.503,0.45
+Southern Mississippi,100,100,Sports-Reference,Western Athletic,0.35,0.304,0.503,0.45
+Southern University,100,100,NCAA Hardcoded,Western Athletic,0.35,0.304,0.503,0.45
+Southwestern Louisiana,100,100,NCAA Hardcoded,,,,,
+St. Bonaventure,100,100,Sports-Reference,Atlantic 10,0.632,0.366,0.545,0.15
+St. John's,100,100,NCAA Hardcoded,Atlantic 10,0.632,0.366,0.545,0.15
+Stanford,100,100,Sports-Reference,ACC,0.737,0.518,0.761,-0.1
+Stephen F. Austin,100,100,Sports-Reference,Southland,0.842,0.691,0.576,0.6
+Stetson,100,100,Sports-Reference,ASUN,0.35,0.304,0.503,-0.2
+Stony Brook,100,100,Sports-Reference,Coastal,0.571,0.435,0.536,0.45
+Syracuse,100,100,Sports-Reference,ACC,0.632,0.466,0.745,-0.2
+TCU,100,100,Sports-Reference,Big 12,0.778,0.539,0.767,-0.2
+Temple,100,100,Sports-Reference,,,,,
+Tennessee,100,100,Sports-Reference,SEC,0.579,0.44,0.737,-0.1
+Tennessee State,100,100,Sports-Reference,SEC,0.579,0.44,0.737,-0.1
+Tennessee Tech,100,100,Sports-Reference,SEC,0.579,0.44,0.737,-0.1
+Tennessee-Martin,100,100,Sports-Reference,,,,,
+Texas,100,100,Sports-Reference,Big 12,0.789,0.797,0.768,0.6
+Texas A&M,100,100,NCAA Hardcoded,Big 12,0.789,0.797,0.768,0.6
+Texas A&M-Corpus Christi,100,100,NCAA Hardcoded,Big 12,0.789,0.797,0.768,0.6
+Texas Christian,100,100,NCAA Hardcoded,Big 12,0.789,0.797,0.768,0.6
+Texas Southern,100,100,Sports-Reference,Big 12,0.789,0.797,0.768,0.6
+Texas State,100,100,Sports-Reference,Big 12,0.789,0.797,0.768,0.6
+Texas Tech,100,100,Sports-Reference,Big 12,0.789,0.797,0.768,0.6
+Texas-Arlington,100,100,NCAA Hardcoded,,,,,
+Texas-San Antonio,100,100,NCAA Hardcoded,,,,,
+The Citadel,100,100,Sports-Reference,,,,,
+Toledo,100,100,Sports-Reference,,,,,
+Towson,100,100,Sports-Reference,Coastal,0.571,0.435,0.536,0.6
+Troy,100,100,Sports-Reference,Sun Belt,0.7,0.613,0.555,0.6
+Tulane,100,100,Sports-Reference,,,,,
+Tulsa,100,100,Sports-Reference,American,0.842,0.621,0.576,0.45
+UAB,100,100,Sports-Reference,,,,,
+UAlbany,100,100,NCAA Hardcoded,America East,0.35,0.355,0.503,-0.1
+UCLA,100,100,Sports-Reference,,,,,
+UConn,100,100,NCAA Hardcoded,Big East,0.947,0.954,0.792,1
+ULM,100,100,NCAA Hardcoded,,,,,
+UMBC,100,100,NCAA Hardcoded,America East,0.611,0.545,0.542,0.3
+UNC-Asheville,100,100,NCAA Hardcoded,,,,,
+UNC-Wilmington,100,100,NCAA Hardcoded,,,,,
+UNCG,100,100,NCAA Hardcoded,,,,,
+UNI,100,100,NCAA Hardcoded,,,,,
+UNLV,100,100,NCAA Hardcoded,Mountain West,0.556,0.492,0.533,0.45
+USC,100,100,NCAA Hardcoded,,,,,
+UT Martin,100,100,NCAA Hardcoded,Western Athletic,0.684,0.556,0.553,0.15
+UTA,100,100,NCAA Hardcoded,,,,,
+Utah,100,100,Sports-Reference,Mountain West,0.833,0.641,0.575,-0.2
+Utah State,100,100,Sports-Reference,Mountain West,0.833,0.641,0.575,-0.2
+UTEP,100,100,Sports-Reference,Conference USA,0.368,0.296,0.505,0.15
+UTRGV,100,100,NCAA Hardcoded,,,,,
+Vanderbilt,100,100,Sports-Reference,SEC,0.842,0.711,0.776,-0.3
+VCU,100,100,NCAA Hardcoded,ACC,0.684,0.542,0.753,0.3
+Vermont,100,100,Sports-Reference,,,,,
+Villanova,100,100,Sports-Reference,Big East,0.789,0.619,0.768,0.15
+Virginia,100,100,Sports-Reference,ACC,0.889,0.839,0.783,0.75
+Virginia Tech,100,100,Sports-Reference,ACC,0.889,0.839,0.783,0.75
+Wake Forest,100,100,Sports-Reference,ACC,0.579,0.389,0.737,-0.1
+Washington,100,100,Sports-Reference,West Coast,0.381,0.303,0.707,-0.4
+Washington State,100,100,Sports-Reference,West Coast,0.381,0.303,0.707,-0.4
+Weber State,100,100,Sports-Reference,Big Sky,0.5,0.421,0.525,-0.2
+West Carolina,100,100,NCAA Hardcoded,Big 12,0.684,0.542,0.753,0.3
+West Virginia,100,100,Sports-Reference,Big 12,0.684,0.542,0.753,0.3
+Western Carolina,100,100,Sports-Reference,Conference USA,0.579,0.44,0.537,-0.2
+Western Illinois,100,100,Sports-Reference,Conference USA,0.579,0.44,0.537,-0.2
+Western Kentucky,100,100,Sports-Reference,Conference USA,0.579,0.44,0.537,-0.2
+Western Michigan,100,100,Sports-Reference,Conference USA,0.579,0.44,0.537,-0.2
+Wichita State,100,100,Sports-Reference,American,0.6,0.471,0.54,0.3
+William & Mary,100,100,NCAA Hardcoded,Coastal,0.684,0.513,0.553,0.3
+Winthrop,100,100,Sports-Reference,Big South,0.636,0.575,0.545,0.9
+Wisconsin,100,100,Sports-Reference,,,,,
+Wisconsin-Green Bay,100,100,NCAA Hardcoded,,,,,
+Wisconsin-Milwaukee,100,100,NCAA Hardcoded,,,,,
+Wofford,100,100,Sports-Reference,Southern,0.65,0.539,0.547,0.3
+Wright State,100,100,Sports-Reference,Horizon League,0.6,0.533,0.54,-0.1
+Wyoming,100,100,Sports-Reference,Mountain West,0.579,0.364,0.537,-0.4
+Xavier,100,100,Sports-Reference,,,,,
+Yale,100,100,Sports-Reference,Ivy League,0.824,0.637,0.574,0.3
+Youngstown State,100,100,Sports-Reference,Horizon League,0.476,0.328,0.521,0.15
+Brooke,100,100,Manual D1 List,,,,,
+McNeese,100,100,Manual D1 List,Southland,0.789,0.635,0.568,0.15
+Michigan Tech,100,100,Manual D1 List,Big Ten,0.944,0.922,0.792,0.45
+Murray,100,100,Manual D1 List,MVC,0.8,0.667,0.57,-0.1
+St. Peter's,100,100,Manual D1 List,Atlantic 10,0.632,0.366,0.545,0.15
+VMI,100,100,Manual D1 List,Southern,0.3,0.193,0.495,-0.5
