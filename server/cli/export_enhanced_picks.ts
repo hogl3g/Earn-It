@@ -11,6 +11,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { CONFIDENCE_STRICT_MIN, CONFIDENCE_STRICT_LABEL, CONFIDENCE_RELAXED_MIN, CONFIDENCE_RELAXED_LABEL } from '../../shared/betting_constants.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -87,7 +88,12 @@ function calculateExpectedRoi(prob: number, winAmount: number, lossAmount: numbe
 }
 
 function enhancePicks(picks: any[], calib?: { a: number; b: number } | null): EnhancedPick[] {
-  return picks.map(pick => {
+  return picks.filter(pick => {
+    const prob = calib ? Math.max(0.01, Math.min(0.99, calib.a + calib.b * (pick.coverProb || 0.5))) : (pick.coverProb || 0.5);
+    // ⚠️  LOCKED THRESHOLDS - 100% strict and 80% relaxed are NON-NEGOTIABLE
+    // Only include picks that meet minimum quality threshold
+    return prob >= CONFIDENCE_RELAXED_MIN;
+  }).map(pick => {
     const baseProb = pick.coverProb || 0.5;
     const prob = calib ? Math.max(0.01, Math.min(0.99, calib.a + calib.b * baseProb)) : baseProb;
     const ci = calculateConfidenceInterval(prob);
@@ -96,9 +102,10 @@ function enhancePicks(picks: any[], calib?: { a: number; b: number } | null): En
     const expectedRoi = calculateExpectedRoi(prob, pick.ev_per_1 || 0.27, -0.90);
     
     // Confidence level based on two-tier system
+    // ⚠️  LOCKED THRESHOLDS - 100% strict and 80% relaxed are NON-NEGOTIABLE
     let confidence = 'RELAXED';
-    if (prob >= 1.00) confidence = 'STRICT';
-    else if (prob >= 0.80) confidence = 'RELAXED';
+    if (prob >= CONFIDENCE_STRICT_MIN) confidence = 'STRICT';
+    else if (prob >= CONFIDENCE_RELAXED_MIN) confidence = 'RELAXED';
     
     return {
       date: pick.date,

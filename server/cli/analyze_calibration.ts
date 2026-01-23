@@ -13,6 +13,14 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { normalizeTeamName } from '../../shared/team_names.js';
+import {
+  CONFIDENCE_STRICT_MIN,
+  CONFIDENCE_STRICT_LABEL,
+  CONFIDENCE_RELAXED_MIN,
+  CONFIDENCE_RELAXED_MAX,
+  CONFIDENCE_RELAXED_LABEL,
+  CONFIDENCE_LOW_LABEL
+} from '../../shared/betting_constants.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -182,9 +190,10 @@ function formatDateForGrades(inputDate: string): string {
 
 function analyzeCalibration(picks: PickRecord[], allGrades: Map<string, GradeRecord[]>): CalibrationBucket[] {
   const buckets = new Map<string, CalibrationBucket>();
+  // ⚠️  LOCKED THRESHOLDS - NEVER CHANGE - 100% strict and 80% relaxed are non-negotiable
   const bucketRanges = [
-    { min: 0.80, max: 1.00, label: '80-100% (RELAXED)' },
-    { min: 1.00, max: 1.10, label: '100%+ (STRICT)' }
+    { min: CONFIDENCE_RELAXED_MIN, max: CONFIDENCE_RELAXED_MAX, label: CONFIDENCE_RELAXED_LABEL },
+    { min: CONFIDENCE_STRICT_MIN, max: 1.10, label: CONFIDENCE_STRICT_LABEL }
   ];
   
   for (const range of bucketRanges) {
@@ -273,9 +282,9 @@ function calculateDailyMetrics(picks: PickRecord[], allGrades: Map<string, Grade
     let totalHits = 0;
     let totalProfit = 0;
     const confidenceDist: Record<string, number> = {
-      '<80%': 0,
-      '80-100% (RELAXED)': 0,
-      '100%+ (STRICT)': 0
+      [CONFIDENCE_LOW_LABEL]: 0,
+      [CONFIDENCE_RELAXED_LABEL]: 0,
+      [CONFIDENCE_STRICT_LABEL]: 0
     };
     
     for (const pick of datePicks) {
@@ -294,11 +303,11 @@ function calculateDailyMetrics(picks: PickRecord[], allGrades: Map<string, Grade
       if (didCover) totalHits++;
       totalProfit += grade.profit ?? 0;
       
-      // Confidence bucket
+      // Confidence bucket - using locked thresholds
       const cp = pick.coverProb;
-      if (cp < 0.80) confidenceDist['<80%']++;
-      else if (cp < 1.00) confidenceDist['80-100% (RELAXED)']++;
-      else confidenceDist['100%+ (STRICT)']++;
+      if (cp < CONFIDENCE_RELAXED_MIN) confidenceDist[CONFIDENCE_LOW_LABEL]++;
+      else if (cp < CONFIDENCE_STRICT_MIN) confidenceDist[CONFIDENCE_RELAXED_LABEL]++;
+      else confidenceDist[CONFIDENCE_STRICT_LABEL]++;
     }
     
     const gradeCount = datePicks.filter(p => matchPickToGrade(p, grades)).length;
