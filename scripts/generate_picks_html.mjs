@@ -34,10 +34,29 @@ fs.writeFileSync(path.join(publicDir, 'ts_projector_picks.csv'), raw, 'utf-8');
 
 const escaped = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
+// Load KenPom rankings
+let kenpomRankings = new Map(); // team_name -> ranking
+try {
+  const kenpomPath = path.join(root, 'data', 'processed', 'kenpom_metrics.json');
+  if (fs.existsSync(kenpomPath)) {
+    const kenpomData = JSON.parse(fs.readFileSync(kenpomPath, 'utf-8'));
+    if (Array.isArray(kenpomData)) {
+      kenpomData.forEach(team => {
+        if (team.team_name && team.ranking) {
+          kenpomRankings.set(team.team_name.toLowerCase(), team.ranking);
+        }
+      });
+    }
+  }
+} catch (err) {
+  console.warn('Could not load KenPom rankings');
+}
+
 // Try to locate graded results JSON for the date present in picks
 let gradesSummary = null;
 let gradesMap = null;
-let extendedHeaders = ['date', 'team_a', 'team_b', 'picked_team', 'confidence', 'tier'];
+let pickedTeamMap = null; // Store which team was picked for each game
+let extendedHeaders = ['date', 'team_a', 'team_b', 'team_a_rank', 'team_b_rank', 'spread', 'moneyline'];
 
 try {
   // Parse the date from the first row (ISO string in column 0)
@@ -50,6 +69,18 @@ try {
   const gradesJsonPath = (yyyy && mm && dd)
     ? path.join(root, 'data', 'results', `grades_${yyyy}${mm}${dd}.json`)
     : null;
+
+  // Also load picked teams from CSV
+  pickedTeamMap = new Map();
+  rows.forEach(line => {
+    const cols = line.split(',');
+    if (cols.length >= 4) {
+      const team_a = cols[1];
+      const team_b = cols[2];
+      const picked_team = cols[3];
+      pickedTeamMap.set(`${team_a}|${team_b}`, picked_team);
+    }
+  });
 
   if (gradesJsonPath && fs.existsSync(gradesJsonPath)) {
     let gj = fs.readFileSync(gradesJsonPath, 'utf-8');
@@ -74,20 +105,31 @@ const tableRows = rows.map((line) => {
   const teamACol = cols[1];
   const teamBCol = cols[2];
   const pickedTeamCol = cols[3];
-  const confidenceCol = cols[4];
-  const tierCol = cols[5];
+  const spreadCol = cols[6] || '';
+  const moneylineCol = cols[7] || '';
   
   const key = `${teamACol}|${teamBCol}`;
   const grade = gradesMap ? gradesMap.get(key) : null;
   
-  // Build display columns
+  // Get KenPom rankings
+  const rankA = kenpomRankings.get(teamACol.toLowerCase()) || '—';
+  const rankB = kenpomRankings.get(teamBCol.toLowerCase()) || '—';
+  
+  // Determine if row should be highlighted (picked team row)
+  const isTeamAPicked = pickedTeamCol === teamACol;
+  const isTeamBPicked = pickedTeamCol === teamBCol;
+  const highlightClass = isTeamAPicked ? ' style="background-color: #90EE90; font-weight: bold;"' : 
+                         isTeamBPicked ? ' style="background-color: #90EE90; font-weight: bold;"' : '';
+  
+  // Build display columns (removed: picked_team, confidence, tier)
   const displayCols = [
     dateCol,
-    teamACol,           // Home team (column 1)
-    teamBCol,           // Away team (column 2)
-    pickedTeamCol,      // Picked team
-    confidenceCol,      // Confidence %
-    tierCol,            // Tier (STRICT/RELAXED)
+    teamACol,           // Home team
+    teamBCol,           // Away team
+    String(rankA),      // Team A KenPom rank
+    String(rankB),      // Team B KenPom rank
+    spreadCol,          // Spread
+    moneylineCol,       // Moneyline
   ];
   
   // Add grade info if available
@@ -100,7 +142,7 @@ const tableRows = rows.map((line) => {
     );
   }
 
-  return `<tr>${displayCols.map((c) => {
+  return `<tr${highlightClass}>${displayCols.map((c) => {
     const val = escaped(c);
     return `<td>${val}</td>`;
   }).join('')}</tr>`;
