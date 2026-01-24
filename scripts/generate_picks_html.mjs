@@ -56,7 +56,7 @@ try {
 let gradesSummary = null;
 let gradesMap = null;
 let pickedTeamMap = null; // Store which team was picked for each game
-let extendedHeaders = ['date', 'team_a', 'team_b', 'team_a_rank', 'team_b_rank', 'spread', 'moneyline'];
+let extendedHeaders = ['date', 'team_a', 'team_b', 'team_a_rank', 'team_b_rank', 'line', 'moneyline'];
 
 try {
   // Parse the date from the first row (ISO string in column 0)
