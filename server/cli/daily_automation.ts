@@ -97,7 +97,61 @@ async function loadTeamMetrics(): Promise<Map<string, TeamMetrics>> {
     
     return map;
   } catch (err) {
-    console.warn('⚠️  Metrics file not found, returning empty map');
+    // If metrics file doesn't exist, try to merge ESPN + KenPom data
+    console.log('ℹ️  Merging ESPN and KenPom data...');
+    return mergeMetrics();
+  }
+}
+
+/**
+ * Merge ESPN team stats with KenPom metrics
+ */
+async function mergeMetrics(): Promise<Map<string, TeamMetrics>> {
+  const map = new Map<string, TeamMetrics>();
+  
+  try {
+    // Load ESPN stats
+    const espnPath = path.join(root, 'data', 'processed', 'espn_team_stats.json');
+    const espnData = JSON.parse(await fs.readFile(espnPath, 'utf-8'));
+    
+    // Load KenPom metrics
+    const kenpomPath = path.join(root, 'data', 'processed', 'kenpom_metrics.json');
+    const kenpomData = JSON.parse(await fs.readFile(kenpomPath, 'utf-8'));
+    
+    // Create KenPom lookup
+    const kenpomMap = new Map();
+    for (const team of kenpomData) {
+      kenpomMap.set(team.team_name.toLowerCase(), team);
+    }
+    
+    // Merge ESPN with KenPom
+    for (const espnTeam of espnData) {
+      const kenpom = kenpomMap.get(espnTeam.team_name.toLowerCase()) || {};
+      
+      const merged: TeamMetrics = {
+        team_name: espnTeam.team_name,
+        pts_for: espnTeam.pts_for || 0,
+        pts_against: espnTeam.pts_against || 0,
+        pts_differential: (espnTeam.pts_for || 0) - (espnTeam.pts_against || 0),
+        fg_pct: espnTeam.fg_pct || 0.45,
+        reb: espnTeam.reb || 38,
+        ast: espnTeam.ast || 15,
+        turnover_margin: espnTeam.turnover_margin || 0,
+        adjusted_efficiency: kenpom.adjusted_efficiency || 1.0,
+        ranking: kenpom.ranking || 250,
+        conference_rank: 0,
+        wins: espnTeam.wins || 0,
+        losses: espnTeam.losses || 0,
+        last_updated: new Date().toISOString(),
+      };
+      
+      map.set(espnTeam.team_name.toLowerCase(), merged);
+    }
+    
+    console.log(`✅ Merged ${map.size} teams`);
+    return map;
+  } catch (err) {
+    console.error('❌ Could not merge metrics:', err);
     return new Map();
   }
 }

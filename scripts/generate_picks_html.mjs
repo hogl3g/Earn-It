@@ -56,7 +56,7 @@ try {
 let gradesSummary = null;
 let gradesMap = null;
 let pickedTeamMap = null; // Store which team was picked for each game
-let extendedHeaders = ['date', 'team_a', 'team_b', 'team_a_rank', 'team_b_rank', 'line', 'moneyline'];
+let extendedHeaders = ['date', 'team_a', 'team_b', 'line', 'moneyline'];
 
 try {
   // Parse the date from the first row (ISO string in column 0)
@@ -107,6 +107,7 @@ const tableRows = rows.map((line) => {
   const pickedTeamCol = cols[3];
   const spreadCol = cols[6] || '';
   const moneylineCol = cols[7] || '';
+  const alignmentCol = cols[8] || ''; // Not displayed but available
   
   const key = `${teamACol}|${teamBCol}`;
   const grade = gradesMap ? gradesMap.get(key) : null;
@@ -121,15 +122,13 @@ const tableRows = rows.map((line) => {
   const highlightClass = isTeamAPicked ? ' style="background-color: #90EE90; font-weight: bold;"' : 
                          isTeamBPicked ? ' style="background-color: #90EE90; font-weight: bold;"' : '';
   
-  // Build display columns (removed: picked_team, confidence, tier)
+  // Build display columns (matches SportsLine format)
   const displayCols = [
     dateCol,
     teamACol,           // Home team
     teamBCol,           // Away team
-    String(rankA),      // Team A KenPom rank
-    String(rankB),      // Team B KenPom rank
-    spreadCol,          // Spread
-    moneylineCol,       // Moneyline
+    spreadCol,          // Spread (Vegas line)
+    moneylineCol,       // Moneyline (Vegas odds)
   ];
   
   // Add grade info if available

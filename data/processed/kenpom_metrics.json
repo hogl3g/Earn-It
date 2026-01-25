@@ -1,22 +1,27 @@
 [
   {
-    "ranking": 1,
     "team_name": "Arizona",
-    "adjusted_efficiency": 1.124,
-    "offensive_efficiency": 1.185,
-    "defensive_efficiency": 0.934,
-    "power_rating": 28.5,
-    "strength_of_schedule": 1.04,
-    "last_updated": "2026-01-23"
+    "ranking": 1,
+    "adjusted_efficiency": 1.185
   },
   {
-    "ranking": 2,
+    "team_name": "Kansas",
+    "ranking": 3,
+    "adjusted_efficiency": 1.155
+  },
+  {
     "team_name": "Duke",
-    "adjusted_efficiency": 1.118,
-    "offensive_efficiency": 1.172,
-    "defensive_efficiency": 0.945,
-    "power_rating": 27.8,
-    "strength_of_schedule": 1.03,
-    "last_updated": "2026-01-23"
+    "ranking": 95,
+    "adjusted_efficiency": 0.952
+  },
+  {
+    "team_name": "Houston",
+    "ranking": 18,
+    "adjusted_efficiency": 1.065
+  },
+  {
+    "team_name": "Gonzaga",
+    "ranking": 7,
+    "adjusted_efficiency": 1.125
   }
 ]

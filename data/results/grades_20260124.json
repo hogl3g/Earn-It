@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "date": "2026-01-24",
+    "wins": 2,
+    "losses": 0,
+    "total_picks": 2,
+    "hit_rate": "100%"
+  },
+  "rows": [
+    {
+      "date": "2026-01-24",
+      "team_a": "Arizona",
+      "team_b": "Stanford",
+      "picked_team": "Arizona",
+      "a_score": 89,
+      "b_score": 65,
+      "margin": 24,
+      "won": true
+    },
+    {
+      "date": "2026-01-24",
+      "team_a": "Kansas",
+      "team_b": "Baylor",
+      "picked_team": "Kansas",
+      "a_score": 78,
+      "b_score": 71,
+      "margin": 7,
+      "won": true
+    }
+  ]
+}

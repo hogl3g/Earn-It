@@ -2,14 +2,61 @@
   {
     "team_name": "Arizona",
     "conference": "Pac-12",
-    "wins": 18,
+    "wins": 15,
+    "losses": 1,
+    "pts_for": 88.5,
+    "pts_against": 62.2,
+    "fg_pct": 0.52,
+    "reb": 44.1,
+    "ast": 18.2,
+    "turnover_margin": 3.4
+  },
+  {
+    "team_name": "Kansas",
+    "conference": "Big 12",
+    "wins": 14,
     "losses": 2,
-    "pts_for": 85.5,
-    "pts_against": 68.3,
-    "fg_pct": 0.475,
-    "reb": 38.2,
-    "ast": 17.1,
-    "turnover_margin": 2.1,
-    "last_game_date": "2026-01-23"
+    "pts_for": 85.3,
+    "pts_against": 68.1,
+    "fg_pct": 0.495,
+    "reb": 41.2,
+    "ast": 17.5,
+    "turnover_margin": 2.8
+  },
+  {
+    "team_name": "Duke",
+    "conference": "ACC",
+    "wins": 5,
+    "losses": 9,
+    "pts_for": 72.5,
+    "pts_against": 78.3,
+    "fg_pct": 0.415,
+    "reb": 36.5,
+    "ast": 13.7,
+    "turnover_margin": -1.2
+  },
+  {
+    "team_name": "Houston",
+    "conference": "American",
+    "wins": 7,
+    "losses": 6,
+    "pts_for": 76.8,
+    "pts_against": 72.4,
+    "fg_pct": 0.438,
+    "reb": 37.7,
+    "ast": 14.1,
+    "turnover_margin": 0.1
+  },
+  {
+    "team_name": "Gonzaga",
+    "conference": "WCC",
+    "wins": 12,
+    "losses": 2,
+    "pts_for": 84.2,
+    "pts_against": 68.5,
+    "fg_pct": 0.485,
+    "reb": 42.3,
+    "ast": 17.8,
+    "turnover_margin": 2.9
   }
 ]
