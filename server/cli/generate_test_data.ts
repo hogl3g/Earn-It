@@ -89,12 +89,13 @@ async function generateTestData() {
     { team_name: 'Gonzaga', ranking: 7, adjusted_efficiency: 1.125 },
   ];
 
-  // Create today's schedule with lines
+  // Create today's schedule with REALISTIC lines and moneylines
+  // Each game has unique odds based on team strength differential
   const today = new Date().toISOString().split('T')[0];
   const scheduleData = `date,team_a,team_b,spread,moneyline_a,moneyline_b
-${today},Arizona,Duke,-14.5,-500,+380
-${today},Kansas,Houston,-3.5,-145,+115
-${today},Gonzaga,Houston,-7.0,-280,+220`;
+${today},Arizona,Duke,-14.5,-540,+400
+${today},Kansas,Houston,-3.5,-165,+135
+${today},Gonzaga,Houston,-7.0,-310,+240`;
 
   // Create yesterday's results for grading
   const yesterday = new Date(Date.now() - 86400000).toISOString().split('T')[0];

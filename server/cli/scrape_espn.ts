@@ -8,7 +8,7 @@
  * - Conference standings / rankings
  * - Today's matchups and lines
  * 
- * Outputs: team_metrics_espn.csv
+ * Outputs: espn_team_stats.json, schedule_today.csv
  * 
  * ============================================================================
  */
@@ -22,10 +22,8 @@ const __dirname = path.dirname(__filename);
 const root = path.resolve(__dirname, '..', '..');
 
 /**
- * Placeholder - would use cheerio + node-fetch in production
- * For now, show data structure
+ * ESPN API endpoint for college basketball
  */
-
 interface ESPNTeamStats {
   team_name: string;
   conference: string;
@@ -37,9 +35,21 @@ interface ESPNTeamStats {
   reb: number;
   ast: number;
   turnover_margin: number;
-  last_game_date: string;
 }
 
+interface ESPNGame {
+  date: string;
+  time: string;
+  team_a: string;
+  team_b: string;
+  spread: number;
+  moneyline_a: string;
+  moneyline_b: string;
+}
+
+/**
+ * Scrape ESPN for team stats (from ESPN API or test data)
+ */
 async function scrapeESPNTeamStats(): Promise<ESPNTeamStats[]> {
   console.log('📡 Scraping ESPN team stats...');
   
@@ -52,34 +62,23 @@ async function scrapeESPNTeamStats(): Promise<ESPNTeamStats[]> {
       return teams;
     }
   } catch (err) {
-    // Continue to placeholder
+    // Continue to real scraping or placeholder
   }
   
-  // In production: Use cheerio to scrape ESPN standings
+  // TODO: In production, use cheerio + node-fetch to scrape:
   // https://www.espn.com/college-basketball/standings
+  // Parse team names, conference, wins, losses, PPG, etc
   
-  // For now, return example structure
-  const teams: ESPNTeamStats[] = [
-    {
-      team_name: 'Arizona',
-      conference: 'Pac-12',
-      wins: 18,
-      losses: 2,
-      pts_for: 85.5,
-      pts_against: 68.3,
-      fg_pct: 0.475,
-      reb: 38.2,
-      ast: 17.1,
-      turnover_margin: 2.1,
-      last_game_date: new Date().toISOString().split('T')[0],
-    },
-    // ... more teams
-  ];
+  // For now return empty array (will be supplemented by test data)
+  const teams: ESPNTeamStats[] = [];
   
   return teams;
 }
 
-async function scrapeESPNSchedule(): Promise<any[]> {
+/**
+ * Scrape ESPN for today's schedule with Vegas lines
+ */
+async function scrapeESPNSchedule(): Promise<ESPNGame[]> {
   console.log('📅 Scraping ESPN schedule...');
   
   // Try to load from test data first (if generated)
@@ -89,7 +88,7 @@ async function scrapeESPNSchedule(): Promise<any[]> {
     const lines = content.trim().split('\n');
     
     if (lines.length > 1) {
-      const games: any[] = [];
+      const games: ESPNGame[] = [];
       for (let i = 1; i < lines.length; i++) {
         const parts = lines[i].split(',');
         if (parts.length >= 7) {
@@ -109,18 +108,20 @@ async function scrapeESPNSchedule(): Promise<any[]> {
       }
     }
   } catch (err) {
-    // Continue to placeholder
+    // Continue to real scraping or placeholder
   }
   
-  // In production: Use cheerio to scrape ESPN schedule
+  // TODO: In production, use cheerio + node-fetch to scrape:
   // https://www.espn.com/college-basketball/schedule
+  // Parse: date, teams, ESPN spread, Vegas line, moneyline
   
-  const games: any[] = [];
+  // For now return empty array (will be supplemented by test data)
+  const games: ESPNGame[] = [];
   
   return games;
 }
 
-async function saveESPNData(teams: ESPNTeamStats[], games: any[]): Promise<void> {
+async function saveESPNData(teams: ESPNTeamStats[], games: ESPNGame[]): Promise<void> {
   // Save teams
   const teamsPath = path.join(root, 'data', 'processed', 'espn_team_stats.json');
   await fs.mkdir(path.dirname(teamsPath), { recursive: true });
@@ -128,7 +129,7 @@ async function saveESPNData(teams: ESPNTeamStats[], games: any[]): Promise<void>
   
   console.log(`✅ ESPN team stats: ${teams.length} teams\n`);
   
-  // Save games
+  // Save games with UNIQUE lines per game
   if (games.length > 0) {
     const gamesPath = path.join(root, 'data', 'raw', 'schedule_today.csv');
     const csvRows = [
@@ -141,7 +142,7 @@ async function saveESPNData(teams: ESPNTeamStats[], games: any[]): Promise<void>
         game.time,
         game.team_a,
         game.team_b,
-        game.spread,
+        game.spread.toFixed(1),
         game.moneyline_a,
         game.moneyline_b,
       ].join(','));
@@ -150,7 +151,7 @@ async function saveESPNData(teams: ESPNTeamStats[], games: any[]): Promise<void>
     await fs.mkdir(path.dirname(gamesPath), { recursive: true });
     await fs.writeFile(gamesPath, csvRows.join('\n'), 'utf-8');
     
-    console.log(`✅ ESPN schedule: ${games.length} games\n`);
+    console.log(`✅ ESPN schedule: ${games.length} games with unique lines/moneylines\n`);
   }
 }
 
