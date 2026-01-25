@@ -38,6 +38,18 @@ interface KenPomTeam {
 async function scrapeKenPomRankings(): Promise<KenPomTeam[]> {
   console.log('📡 Scraping KenPom rankings...');
   
+  // Try to load from test data first (if generated)
+  try {
+    const testPath = path.join(root, 'data', 'processed', 'kenpom_metrics.json');
+    const content = await fs.readFile(testPath, 'utf-8');
+    const teams = JSON.parse(content);
+    if (Array.isArray(teams) && teams.length > 0) {
+      return teams;
+    }
+  } catch (err) {
+    // Continue to placeholder
+  }
+  
   // In production: Use cheerio to scrape kenpom.com
   // KenPom updates daily typically around 10-11 AM ET
   

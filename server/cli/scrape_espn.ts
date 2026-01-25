@@ -43,6 +43,18 @@ interface ESPNTeamStats {
 async function scrapeESPNTeamStats(): Promise<ESPNTeamStats[]> {
   console.log('📡 Scraping ESPN team stats...');
   
+  // Try to load from test data first (if generated)
+  try {
+    const testPath = path.join(root, 'data', 'processed', 'espn_team_stats.json');
+    const content = await fs.readFile(testPath, 'utf-8');
+    const teams = JSON.parse(content);
+    if (Array.isArray(teams) && teams.length > 0) {
+      return teams;
+    }
+  } catch (err) {
+    // Continue to placeholder
+  }
+  
   // In production: Use cheerio to scrape ESPN standings
   // https://www.espn.com/college-basketball/standings
   
@@ -70,20 +82,40 @@ async function scrapeESPNTeamStats(): Promise<ESPNTeamStats[]> {
 async function scrapeESPNSchedule(): Promise<any[]> {
   console.log('📅 Scraping ESPN schedule...');
   
+  // Try to load from test data first (if generated)
+  try {
+    const testPath = path.join(root, 'data', 'raw', 'schedule_today.csv');
+    const content = await fs.readFile(testPath, 'utf-8');
+    const lines = content.trim().split('\n');
+    
+    if (lines.length > 1) {
+      const games: any[] = [];
+      for (let i = 1; i < lines.length; i++) {
+        const parts = lines[i].split(',');
+        if (parts.length >= 7) {
+          games.push({
+            date: parts[0],
+            time: '7:00 PM ET',
+            team_a: parts[2],
+            team_b: parts[3],
+            spread: parseFloat(parts[4]),
+            moneyline_a: parts[5],
+            moneyline_b: parts[6],
+          });
+        }
+      }
+      if (games.length > 0) {
+        return games;
+      }
+    }
+  } catch (err) {
+    // Continue to placeholder
+  }
+  
   // In production: Use cheerio to scrape ESPN schedule
   // https://www.espn.com/college-basketball/schedule
   
-  const games: any[] = [
-    // {
-    //   date: 'YYYY-MM-DD',
-    //   time: 'HH:MM ET',
-    //   team_a: 'Team A',
-    //   team_b: 'Team B',
-    //   spread: -3.5,
-    //   moneyline_a: '-150',
-    //   moneyline_b: '+130',
-    // }
-  ];
+  const games: any[] = [];
   
   return games;
 }
