@@ -1,1 +1,0 @@
-Backtest complete. Start bankroll=1000, End bankroll=2026.23
