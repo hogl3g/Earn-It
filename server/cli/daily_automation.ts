@@ -301,8 +301,18 @@ async function runDailyAutomation() {
     const metricsA = metrics.get(game.team_a.toLowerCase());
     const metricsB = metrics.get(game.team_b.toLowerCase());
     
+    // VALIDATION: Both teams must exist in merged data
     if (!metricsA || !metricsB) {
-      console.log(`⏭️  SKIP: ${game.team_a} vs ${game.team_b} (missing metrics)\n`);
+      const missing = !metricsA ? game.team_a : game.team_b;
+      console.log(`⏭️  SKIP: ${game.team_a} vs ${game.team_b} (${missing} not in KenPom)\n`);
+      continue;
+    }
+    
+    // VALIDATION: Both teams must have KenPom ranking (not placeholder)
+    // KenPom ranking 250+ is placeholder for unranked teams
+    if (metricsA.ranking >= 250 || metricsB.ranking >= 250) {
+      const unranked = metricsA.ranking >= 250 ? game.team_a : game.team_b;
+      console.log(`⏭️  SKIP: ${game.team_a} vs ${game.team_b} (${unranked} unranked)\n`);
       continue;
     }
     

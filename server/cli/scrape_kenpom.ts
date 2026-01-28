@@ -19,6 +19,8 @@
 import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import fetch from 'node-fetch';
+import * as cheerio from 'cheerio';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -38,47 +40,67 @@ interface KenPomTeam {
 async function scrapeKenPomRankings(): Promise<KenPomTeam[]> {
   console.log('📡 Scraping KenPom rankings...');
   
-  // Try to load from test data first (if generated)
   try {
-    const testPath = path.join(root, 'data', 'processed', 'kenpom_metrics.json');
-    const content = await fs.readFile(testPath, 'utf-8');
-    const teams = JSON.parse(content);
-    if (Array.isArray(teams) && teams.length > 0) {
+    const response = await fetch('https://kenpom.com/');
+    const html = await response.text();
+    const $ = cheerio.load(html);
+    
+    const teams: KenPomTeam[] = [];
+    
+    // Parse KenPom table rows
+    $('table#ratings-table tbody tr').each((idx, row) => {
+      try {
+        const cells = $(row).find('td');
+        if (cells.length < 5) return;
+        
+        const ranking = idx + 1;
+        const teamCell = cells.eq(1).text().trim();
+        
+        // Remove any extra whitespace and URL components
+        const teamName = teamCell.split('\n')[0].trim();
+        
+        // Parse efficiency metrics
+        const adjEfficiency = parseFloat(cells.eq(2).text().trim()) / 100 || 1.0;
+        const offEfficiency = parseFloat(cells.eq(3).text().trim()) / 100 || 1.05;
+        const defEfficiency = parseFloat(cells.eq(4).text().trim()) / 100 || 0.95;
+        
+        // Estimate power rating (adjusted efficiency * 25 + 15)
+        const powerRating = adjEfficiency * 25 + 15;
+        
+        // Estimate strength of schedule (from table if available, default 1.0)
+        const sos = parseFloat(cells.eq(5).text().trim()) || 1.0;
+        
+        teams.push({
+          ranking,
+          team_name: teamName,
+          adjusted_efficiency: adjEfficiency,
+          offensive_efficiency: offEfficiency,
+          defensive_efficiency: defEfficiency,
+          power_rating: powerRating,
+          strength_of_schedule: sos,
+          last_updated: new Date().toISOString().split('T')[0],
+        });
+      } catch (e) {
+        // Skip malformed rows
+      }
+    });
+    
+    if (teams.length > 0) {
       return teams;
     }
   } catch (err) {
-    // Continue to placeholder
+    console.error('⚠️  Failed to scrape KenPom:', err);
   }
   
-  // In production: Use cheerio to scrape kenpom.com
-  // KenPom updates daily typically around 10-11 AM ET
-  
-  // For now, return example structure
-  const teams: KenPomTeam[] = [
-    {
-      ranking: 1,
-      team_name: 'Arizona',
-      adjusted_efficiency: 1.124,
-      offensive_efficiency: 1.185,
-      defensive_efficiency: 0.934,
-      power_rating: 28.5,
-      strength_of_schedule: 1.04,
-      last_updated: new Date().toISOString().split('T')[0],
-    },
-    {
-      ranking: 2,
-      team_name: 'Duke',
-      adjusted_efficiency: 1.118,
-      offensive_efficiency: 1.172,
-      defensive_efficiency: 0.945,
-      power_rating: 27.8,
-      strength_of_schedule: 1.03,
-      last_updated: new Date().toISOString().split('T')[0],
-    },
-    // ... more teams
-  ];
-  
-  return teams;
+  // Fallback to test data
+  try {
+    const testPath = path.join(root, 'data', 'processed', 'kenpom_metrics.json');
+    const content = await fs.readFile(testPath, 'utf-8');
+    return JSON.parse(content);
+  } catch {
+    // Return default teams if no test data available
+    return [];
+  }
 }
 
 async function saveKenPomData(teams: KenPomTeam[]): Promise<void> {
