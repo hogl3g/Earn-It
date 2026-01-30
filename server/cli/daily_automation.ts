@@ -39,9 +39,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const root = path.resolve(__dirname, '..', '..');
 
-const CONFIDENCE_STRICT_MIN = 1.00;  // 100%
+const CONFIDENCE_STRICT_MIN = 0.99;  // 99%
 const CONFIDENCE_RELAXED_MIN = 0.80; // 80%
-const CONFIDENCE_SOFT_MIN = 0.55;    // 55% for limited data
+const CONFIDENCE_SOFT_MIN = 0.80;    // align soft to relaxed (no sub-80 picks)
 
 interface TeamMetrics {
   team_name: string;
