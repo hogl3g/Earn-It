@@ -1,8 +1,0 @@
-numpy
-pandas
-scipy
-requests
-pyyaml
-sqlalchemy
-gspread
-google-auth

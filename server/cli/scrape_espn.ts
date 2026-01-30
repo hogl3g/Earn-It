@@ -220,7 +220,7 @@ async function parseScheduleHTML(html: string, today: Date): Promise<ESPNGame[]>
       return games;
     }
   } catch (err) {
-    console.log(`⚠️  ESPN HTML parser failed: ${err?.message || err}`);
+    console.log(`⚠️  ESPN HTML parser failed: ${(err as any)?.message || err}`);
   }
   
   // Fallback to test data ONLY if web scrape completely fails

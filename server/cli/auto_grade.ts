@@ -261,7 +261,7 @@ async function main() {
   console.log(`📊 Cumulative: ${currentRecord.wins}-${currentRecord.losses}\n`);
   
   // Check for losses in STRICT tier
-  const strictLosses = grades.filter(g => !g.won && g.confidence >= 1.00);
+  const strictLosses = grades.filter(g => !g.won && (g as any).confidence >= 1.00);
   if (strictLosses.length > 0) {
     console.log(`🚨 CRITICAL: ${strictLosses.length} STRICT picks lost (0 losses acceptable!)`);
     console.log('   Model may need recalibration\n');

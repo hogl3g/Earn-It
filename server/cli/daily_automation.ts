@@ -41,6 +41,7 @@ const root = path.resolve(__dirname, '..', '..');
 
 const CONFIDENCE_STRICT_MIN = 1.00;  // 100%
 const CONFIDENCE_RELAXED_MIN = 0.80; // 80%
+const CONFIDENCE_SOFT_MIN = 0.55;    // 55% for limited data
 
 interface TeamMetrics {
   team_name: string;
@@ -171,42 +172,43 @@ async function saveTeamMetrics(metrics: Map<string, TeamMetrics>): Promise<void>
 
 /**
  * Calculate team strength score (0.0 - 1.0)
- * Based on: pts differential, efficiency, field goal %, rebounding, assists
+ * Improved: More sensitive to point differential
  */
 function calculateTeamScore(metrics: TeamMetrics): number {
   if (!metrics) return 0.5;
   
-  // Normalize each metric to 0-1 range
-  // Assuming typical D1 ranges:
-  // - Points differential: -30 to +30
-  // - Adjusted efficiency: 0.85 to 1.15
-  // - FG%: 0.35 to 0.55
+  // Points differential is the strongest indicator
+  // Normalize to 0-1 range with sensible D1 bounds
+  const pts_diff_norm = Math.max(0, Math.min(1, (metrics.pts_differential + 20) / 40));
   
-  const pts_diff_norm = Math.max(0, Math.min(1, (metrics.pts_differential + 30) / 60));
+  // Other metrics as refinements
   const eff_norm = Math.max(0, Math.min(1, (metrics.adjusted_efficiency - 0.85) / 0.30));
   const fg_norm = Math.max(0, Math.min(1, (metrics.fg_pct - 0.35) / 0.20));
-  const reb_norm = Math.max(0, Math.min(1, (metrics.reb - 30) / 10)); // Per game
-  const ast_norm = Math.max(0, Math.min(1, (metrics.ast - 12) / 8));  // Per game
+  const reb_norm = Math.max(0, Math.min(1, (metrics.reb - 30) / 10));
+  const ast_norm = Math.max(0, Math.min(1, (metrics.ast - 12) / 8));
   
-  // Weighted average (efficiency is most important)
+  // Heavily weight differential + efficiency (best indicators of team quality)
   const score = (
-    pts_diff_norm * 0.25 +
-    eff_norm * 0.35 +
-    fg_norm * 0.15 +
-    reb_norm * 0.15 +
-    ast_norm * 0.10
+    pts_diff_norm * 0.45 +      // Increased from 0.25
+    eff_norm * 0.30 +           // Decreased from 0.35
+    fg_norm * 0.10 +            // Decreased from 0.15
+    reb_norm * 0.10 +           // Unchanged
+    ast_norm * 0.05             // Decreased from 0.10
   );
   
   return Math.max(0.01, Math.min(0.99, score));
 }
 
 /**
- * Convert score differential to win probability (logistic function)
+ * Convert score differential to win probability
+ * Improved: More aggressive scaling for closer matchups
  */
 function scoreToProbability(scoreA: number, scoreB: number): number {
   const delta = scoreA - scoreB;
-  const k = 3.0; // Scaling factor
-  const hca = 0.025; // Home court advantage ~2.5 points / 100 score range
+  
+  // Adaptive scaling: closer games have steeper curve
+  const k = Math.abs(delta) < 0.1 ? 4.0 : 2.5; // Sharper near parity
+  const hca = 0.03; // Home court advantage
   
   const prob = 1 / (1 + Math.exp(-k * (delta + hca)));
   return Math.max(0.01, Math.min(0.99, prob));
@@ -298,21 +300,27 @@ async function runDailyAutomation() {
   for (const game of games) {
     if (!game.team_a || !game.team_b) continue;
     
-    const metricsA = metrics.get(game.team_a.toLowerCase());
-    const metricsB = metrics.get(game.team_b.toLowerCase());
+    let metricsA = metrics.get(game.team_a.toLowerCase());
+    let metricsB = metrics.get(game.team_b.toLowerCase());
     
-    // VALIDATION: Both teams must exist in merged data
+    // Only process games where both teams have real ESPN data
+    // Skip games with unranked/default metrics
     if (!metricsA || !metricsB) {
-      const missing = !metricsA ? game.team_a : game.team_b;
-      console.log(`⏭️  SKIP: ${game.team_a} vs ${game.team_b} (${missing} not in KenPom)\n`);
+      console.log(`⏭️  SKIP: ${game.team_a} vs ${game.team_b} (missing metrics)`);
       continue;
     }
     
-    // VALIDATION: Both teams must have KenPom ranking (not placeholder)
-    // KenPom ranking 250+ is placeholder for unranked teams
-    if (metricsA.ranking >= 250 || metricsB.ranking >= 250) {
-      const unranked = metricsA.ranking >= 250 ? game.team_a : game.team_b;
-      console.log(`⏭️  SKIP: ${game.team_a} vs ${game.team_b} (${unranked} unranked)\n`);
+    // Check if both teams have real stats (not defaults)
+    const aHasRealStats = metricsA.pts_for > 0 && metricsA.pts_for !== 75.0;
+    const bHasRealStats = metricsB.pts_for > 0 && metricsB.pts_for !== 75.0;
+    
+    if (!aHasRealStats && !bHasRealStats) {
+      console.log(`⏭️  SKIP: ${game.team_a} vs ${game.team_b} (no real stats for either team)\n`);
+      continue;
+    }
+    
+    if (!aHasRealStats || !bHasRealStats) {
+      console.log(`⏭️  SKIP: ${game.team_a} vs ${game.team_b} (one team has no real stats)\n`);
       continue;
     }
     
@@ -334,8 +342,11 @@ async function runDailyAutomation() {
       game.spread, game.moneyline_a, game.moneyline_b
     );
     
-    // Only include if >= 80%
-    if (confidence >= CONFIDENCE_RELAXED_MIN) {
+    // Only include if >= 55% with good offensive data, or >= 80% otherwise
+    const hasGoodOffensiveData = metricsA.pts_for !== 75.0 && metricsB.pts_for !== 75.0;
+    const threshold = hasGoodOffensiveData ? CONFIDENCE_SOFT_MIN : CONFIDENCE_RELAXED_MIN;
+    
+    if (confidence >= threshold) {
       picks.push({
         date: game.date,
         team_a: game.team_a,
@@ -352,7 +363,7 @@ async function runDailyAutomation() {
       console.log(`   vs ${game.team_a === pickedTeam ? game.team_b : game.team_a}`);
       console.log(`   Spread: ${game.spread} | ${alignment}\n`);
     } else {
-      console.log(`⏭️  SKIP: ${game.team_a} vs ${game.team_b} (${Math.round(confidence * 100)}% - below 80%)\n`);
+      console.log(`⏭️  SKIP: ${game.team_a} vs ${game.team_b} (${Math.round(confidence * 100)}% - below ${Math.round(threshold * 100)}%)\n`);
     }
   }
   

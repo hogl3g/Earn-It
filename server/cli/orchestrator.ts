@@ -64,7 +64,7 @@ const STEPS: Step[] = [
   },
   {
     name: 'HTML Generator',
-    command: 'node scripts/generate_picks_html.mjs',
+    command: 'npx tsx server/cli/generate_picks_html.ts',
     required: true,
     description: 'Generate HTML with picks and wins/losses box',
   },
