@@ -373,8 +373,7 @@ async function runDailyAutomation() {
   console.log(`${'='.repeat(80)}\n`);
   
   if (picks.length === 0) {
-    console.log('ℹ️  No picks >= 80% confidence today\n');
-    return;
+    console.log('ℹ️  No picks >= 80% confidence today — writing empty CSV for HTML\n');
   }
   
   // Save picks CSV
@@ -406,6 +405,18 @@ async function runDailyAutomation() {
   await fs.writeFile(publicPath, csvRows.join('\n'), 'utf-8');
   
   console.log('✅ Picks saved to ts_projector_picks.csv\n');
+
+  // Regenerate HTML for GitHub Pages
+  try {
+    const { spawnSync } = await import('child_process');
+    const scriptPath = path.join(root, 'scripts', 'generate_picks_html.mjs');
+    const result = spawnSync('node', [scriptPath], { stdio: 'inherit' });
+    if (result.status !== 0) {
+      console.warn('⚠️  HTML generation failed; picks CSV still updated.');
+    }
+  } catch (err) {
+    console.warn('⚠️  Could not run HTML generator:', err);
+  }
 }
 
 runDailyAutomation().catch(err => {
