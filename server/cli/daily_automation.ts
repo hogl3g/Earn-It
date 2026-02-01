@@ -40,8 +40,8 @@ const __dirname = path.dirname(__filename);
 const root = path.resolve(__dirname, '..', '..');
 
 const CONFIDENCE_STRICT_MIN = 0.99;  // 99%
-const CONFIDENCE_RELAXED_MIN = 0.76; // 76%
-const CONFIDENCE_SOFT_MIN = 0.76;    // align soft to relaxed (no sub-76 picks)
+const CONFIDENCE_RELAXED_MIN = 0.70; // 70%
+const CONFIDENCE_SOFT_MIN = 0.70;    // align soft to relaxed (no sub-70 picks)
 
 const normalizeTeamName = (name: string) =>
   name
