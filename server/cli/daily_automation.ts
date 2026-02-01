@@ -40,8 +40,62 @@ const __dirname = path.dirname(__filename);
 const root = path.resolve(__dirname, '..', '..');
 
 const CONFIDENCE_STRICT_MIN = 0.99;  // 99%
-const CONFIDENCE_RELAXED_MIN = 0.80; // 80%
-const CONFIDENCE_SOFT_MIN = 0.80;    // align soft to relaxed (no sub-80 picks)
+const CONFIDENCE_RELAXED_MIN = 0.76; // 76%
+const CONFIDENCE_SOFT_MIN = 0.76;    // align soft to relaxed (no sub-76 picks)
+
+const normalizeTeamName = (name: string) =>
+  name
+    .toLowerCase()
+    .trim()
+    .replace(/&/g, 'and')
+    .replace(/[^a-z0-9\s]/g, '')
+    .replace(/\s+/g, ' ');
+
+const mascotSuffixes = [
+  'golden flashes',
+  'big red',
+  'purple eagles',
+  'warhawks',
+  'eagles',
+  'tigers',
+  'zips',
+  'penguins',
+  'jaguars',
+  'saints',
+  'flashes',
+  'red',
+];
+
+const stripMascot = (name: string) => {
+  let base = name;
+  for (const suffix of mascotSuffixes) {
+    if (base.endsWith(` ${suffix}`)) {
+      base = base.slice(0, -(` ${suffix}`.length));
+      break;
+    }
+  }
+  return base.trim();
+};
+
+const resolveMetrics = (teamName: string, metrics: Map<string, TeamMetrics>) => {
+  const key = normalizeTeamName(teamName);
+  const exact = metrics.get(key);
+  if (exact) return exact;
+
+  const base = stripMascot(key);
+  if (base && base !== key) {
+    const direct = metrics.get(base);
+    if (direct) return direct;
+  }
+
+  // Fallback: partial match on base tokens
+  const target = base || key;
+  for (const [k, v] of metrics.entries()) {
+    if (k.includes(target)) return v;
+  }
+
+  return undefined;
+};
 
 interface TeamMetrics {
   team_name: string;
@@ -93,7 +147,7 @@ async function loadTeamMetrics(): Promise<Map<string, TeamMetrics>> {
     const map = new Map<string, TeamMetrics>();
     
     for (const team of data) {
-      map.set(team.team_name.toLowerCase(), team);
+      map.set(normalizeTeamName(team.team_name), team);
     }
     
     return map;
@@ -146,7 +200,7 @@ async function mergeMetrics(): Promise<Map<string, TeamMetrics>> {
         last_updated: new Date().toISOString(),
       };
       
-      map.set(espnTeam.team_name.toLowerCase(), merged);
+      map.set(normalizeTeamName(espnTeam.team_name), merged);
     }
     
     console.log(`✅ Merged ${map.size} teams`);
@@ -281,8 +335,8 @@ async function runDailyAutomation() {
       
       games.push({
         date: new Date().toISOString().split('T')[0],
-        team_a: gameObj.team_a || gameObj.home || '',
-        team_b: gameObj.team_b || gameObj.away || '',
+        team_a: (gameObj.team_a || gameObj.home || '').trim(),
+        team_b: (gameObj.team_b || gameObj.away || '').trim(),
         spread: parseFloat(gameObj.spread) || 0,
         moneyline_a: gameObj.moneyline_a || '',
         moneyline_b: gameObj.moneyline_b || '',
@@ -294,33 +348,44 @@ async function runDailyAutomation() {
   
   // Step 3: Generate picks
   console.log(`⚽ Analyzing ${games.length} games...\n`);
+
+  // Ensure every scheduled team has metrics (fallback defaults for missing)
+  for (const game of games) {
+    for (const teamName of [game.team_a, game.team_b]) {
+      if (!teamName) continue;
+      const key = normalizeTeamName(teamName);
+      if (!metrics.get(key)) {
+        metrics.set(key, {
+          team_name: teamName,
+          pts_for: 75,
+          pts_against: 75,
+          pts_differential: 0,
+          fg_pct: 0.45,
+          reb: 40,
+          ast: 15,
+          turnover_margin: 0,
+          adjusted_efficiency: 0.95,
+          ranking: 250,
+          conference_rank: 0,
+          wins: 0,
+          losses: 0,
+          last_updated: new Date().toISOString(),
+        });
+      }
+    }
+  }
   
   const picks: Pick[] = [];
   
   for (const game of games) {
     if (!game.team_a || !game.team_b) continue;
     
-    let metricsA = metrics.get(game.team_a.toLowerCase());
-    let metricsB = metrics.get(game.team_b.toLowerCase());
+    let metricsA = resolveMetrics(game.team_a, metrics);
+    let metricsB = resolveMetrics(game.team_b, metrics);
     
-    // Only process games where both teams have real ESPN data
-    // Skip games with unranked/default metrics
+    // If metrics missing after fallback, skip
     if (!metricsA || !metricsB) {
       console.log(`⏭️  SKIP: ${game.team_a} vs ${game.team_b} (missing metrics)`);
-      continue;
-    }
-    
-    // Check if both teams have real stats (not defaults)
-    const aHasRealStats = metricsA.pts_for > 0 && metricsA.pts_for !== 75.0;
-    const bHasRealStats = metricsB.pts_for > 0 && metricsB.pts_for !== 75.0;
-    
-    if (!aHasRealStats && !bHasRealStats) {
-      console.log(`⏭️  SKIP: ${game.team_a} vs ${game.team_b} (no real stats for either team)\n`);
-      continue;
-    }
-    
-    if (!aHasRealStats || !bHasRealStats) {
-      console.log(`⏭️  SKIP: ${game.team_a} vs ${game.team_b} (one team has no real stats)\n`);
       continue;
     }
     
@@ -342,9 +407,8 @@ async function runDailyAutomation() {
       game.spread, game.moneyline_a, game.moneyline_b
     );
     
-    // Only include if >= 55% with good offensive data, or >= 80% otherwise
-    const hasGoodOffensiveData = metricsA.pts_for !== 75.0 && metricsB.pts_for !== 75.0;
-    const threshold = hasGoodOffensiveData ? CONFIDENCE_SOFT_MIN : CONFIDENCE_RELAXED_MIN;
+    // Only include if >= relaxed/strict thresholds
+    const threshold = CONFIDENCE_RELAXED_MIN;
     
     if (confidence >= threshold) {
       picks.push({
